@@ -1,0 +1,222 @@
+<apex:page title="テーブル設定取得" name="テーブル設定取得"
+           Controller="SetupCheck_DescribeController"
+           showHeader="true" sidebar="false" >
+<apex:form id="setupcheck_form">
+<style>
+  .ItemLabel {
+    text-align: center;
+    background-color: #FFA07A;
+    width: 100px;
+    height: 25px;
+  }
+  .txt-white {
+    color: #FFFFFF;
+  }
+  .font-bold {
+    font-weight: bold;
+  }
+  table.result-table {
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 100%;
+  }
+  table.result-table caption {
+    margin-top: 1em;
+    text-align: center;
+  }
+  table.result-table th,
+  table.result-table td {
+    padding: 4px 6px;
+  }
+  table.result-table th {
+    border-bottom: solid 1px #E23D28;
+    border-right: solid 1px #E23D28;
+    background: #FFA07A;
+    text-align: center;
+  }
+  table.result-table td {
+    border-bottom: solid 1px #E23D28;
+    border-right: solid 1px #E23D28;
+  }
+  table.result-table tr {
+    backgroundColor:#FFFFFF;
+  }
+  .no_cls {
+    display : {!IF(checknum, '', 'none')};
+    text-align: center;
+  }
+  .label_cls {
+    display : {!IF(checklbl, '', 'none')};
+  }
+  .name_cls {
+    display : {!IF(checknme, '', 'none')};
+  }
+  .type_cls {
+    display : {!IF(checktyp, '', 'none')};
+  }
+  .length_cls {
+    display : {!IF(checklgt, '', 'none')};
+  }
+  .picklist_cls {
+    display : {!IF(checkplv, '', 'none')};
+  }
+  .nillable_cls {
+    display : {!IF(checknul, '', 'none')};
+    text-align: center;
+  }
+  .custom_cls {
+    display : {!IF(checkcst, '', 'none')};
+    text-align: center;
+  }
+  .help_cls {
+    display : {!IF(checkhlt, '', 'none')};
+  }
+  .noncstm_row_cls {
+    display : {!IF(radiodspcol = 'CST', 'none', '')};
+  }
+  .cstm_row_cls {
+    display : {!IF(radiodspcol = 'STD', 'none', '')};
+  }
+</style>
+<apex:actionFunction action="{!viewPage}" name="execPageRefresh" />
+    <table id="selectArea">
+        <tr>
+            <th class="ItemLabel txt-white">
+                表示列
+            </th>
+            <td>
+                <apex:inputCheckbox id="checknum" value="{!checknum}" selected="{!checknum}" title="NO列を表示します" />
+                <apex:outputLabel value="NO" for="checknum"/>
+                <apex:inputCheckbox id="checklbl" value="{!checklbl}" selected="{!checklbl}" title="表示ラベル列を表示します" />
+                <apex:outputLabel value="表示ラベル" for="checklbl"/>
+                <apex:inputCheckbox id="checknme" value="{!checknme}" selected="{!checknme}" title="API参照名列を表示します" />
+                <apex:outputLabel value="API参照名" for="checknme"/>
+                <apex:inputCheckbox id="checktyp" value="{!checktyp}" selected="{!checktyp}" title="データ型列を表示します" />
+                <apex:outputLabel value="データ型" for="checktyp"/>
+                <apex:inputCheckbox id="checklgt" value="{!checklgt}" selected="{!checklgt}" title="文字数列を表示します" />
+                <apex:outputLabel value="文字数" for="checklgt"/>
+                <apex:inputCheckbox id="checkplv" value="{!checkplv}" selected="{!checkplv}" title="選択リスト値列を表示します" />
+                <apex:outputLabel value="選択リスト値" for="checkplv"/>
+                <apex:inputCheckbox id="checknul" value="{!checknul}" selected="{!checknul}" title="必須列を表示します" />
+                <apex:outputLabel value="必須" for="checknul"/>
+                <apex:inputCheckbox id="checkcst" value="{!checkcst}" selected="{!checkcst}" title="カスタム列を表示します" />
+                <apex:outputLabel value="カスタム" for="checkcst"/>
+                <apex:inputCheckbox id="checkhlt" value="{!checkhlt}" selected="{!checkhlt}" title="ヘルプテキスト列を表示します" />
+                <apex:outputLabel value="ヘルプテキスト" for="checkhlt"/>
+            </td>
+        </tr>
+        <tr>
+            <th class="ItemLabel txt-white">
+                表示項目
+            </th>
+            <td>
+                <apex:selectRadio value="{!radiodspcol}" id="radiodspcol" title="表示する項目を選択します">
+                    <apex:selectOptions value="{!DispType}"/>
+                </apex:selectRadio>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <apex:outputText value="テーブル　：　" />
+    <apex:selectList value="{!SelectObj}" size="1" multiselect="false" onchange="execPageRefresh();" title="表示するテーブルを選択します">
+        <apex:selectOptions value="{!ObjAllName}"/>
+    </apex:selectList>
+    <apex:commandButton action="{!viewPage}" value="表示" id="theExecButton" alt="選択したテーブルの設定を表示します" title="選択したテーブルの設定を表示します" />
+    <br/>
+    <br/>
+    <a name="result_table_top"></a>
+    <div style="display:{!IF(SelectObj <> '' , '', 'none')};" >
+        <table class="result-table" >
+            <caption><apex:outputText value="{!SelectObjLb + '（' + SelectObjNm + '）' }" styleClass="font-bold" /></caption>
+            <thead>
+                <tr>
+                    <th class="no_cls txt-white">NO</th>
+                    <th class="label_cls txt-white">
+                        <apex:commandLink action="{!sortItems}" id="labelCommandLink" styleClass="txt-white" title="表示ラベルでソートします" >
+                            表示ラベル
+                            <apex:param name="s_item" value="Label_Label" assignTo="{!sortitem}" />
+                        </apex:commandLink>
+                    </th>
+                    <th class="name_cls">
+                        <apex:commandLink action="{!sortItems}" id="nameCommandLink" styleClass="txt-white" title="API参照名でソートします" >
+                            API参照名
+                            <apex:param name="s_item" value="Label_Name" assignTo="{!sortitem}" />
+                        </apex:commandLink>
+                    </th>
+                    <th class="type_cls">
+                        <apex:commandLink action="{!sortItems}" id="typeCommandLink" styleClass="txt-white" title="データ型でソートします" >
+                            データ型
+                            <apex:param name="s_item" value="Label_type" assignTo="{!sortitem}" />
+                        </apex:commandLink>
+                    </th>
+                    <th class="length_cls">
+                        <apex:commandLink action="{!sortItems}" id="lengthCommandLink" styleClass="txt-white" title="文字数でソートします" >
+                            文字数
+                            <apex:param name="s_item" value="Label_Length" assignTo="{!sortitem}" />
+                        </apex:commandLink>
+                    </th>
+                    <th class="picklist_cls txt-white">選択リスト</th>
+                    <th class="nillable_cls txt-white">必須</th>
+                    <th class="custom_cls txt-white">カスタム</th>
+                    <th class="help_cls txt-white">ヘルプテキスト</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!TableVal}" var="item" id="theFieldTable">
+                    <tr class="{!IF(item.Label_Custom , 'cstm_row_cls', 'noncstm_row_cls')}"
+                        onMouseOver="this.style.backgroundColor='#FFF5EE';"
+                        onMouseOut="this.style.backgroundColor='#FFFFFF'">
+                        <td class="no_cls">
+                            <apex:outputText value="{!item.Label_No}" />
+                        </td>
+                        <td class="label_cls">
+                            <apex:outputText value="{!item.Label_Label}" />
+                        </td>
+                        <td class="name_cls">
+                            <apex:outputText value="{!item.Label_Name}" />
+                        </td>
+                        <td class="type_cls">
+                            <apex:outputText value="{!item.Label_Type}" />
+                        </td>
+                        <td class="length_cls">
+                            <apex:outputText value="{!item.Label_Length}" /><br />
+                        </td>
+                        <td class="picklist_cls">
+                            {!IF(item.Label_PicklistValues_flg , '', '　')}
+                            <!-- getPicklistValues のガバナ制限数10があるのでフレームを利用 -->
+                            <!-- 別ページで選択リスト値を取得する -->
+                            <span id="span_{!item.Label_Name}"></span>
+                            <apex:iframe id="picklist_iframe"
+                                         src="{!IF( AND(item.Label_PicklistValues_flg, checkplv) ,
+                                                $Page.SetupCheck_PicklistValuesGet + '?field_name=' & item.Label_Name & '&sobject_name=' & SelectObjNm,
+                                                $Page.SetupCheck_BlankPage)}"
+                                         height="1" width="1"
+                                         frameborder="0" scrolling="false" />
+                        </td>
+                        <td class="nillable_cls">
+                            <apex:outputText value="{!IF( NOT(item.Label_Nillable) , '○', '')}" />
+                            <br/>
+                        </td>
+                        <td class="custom_cls">
+                            <apex:outputText value="{!IF(item.Label_Custom , '○', '')}" />
+                            <br/>
+                        </td>
+                        <td class="help_cls">
+                            {!IF(item.Label_HelpText_flg , '', '　')}
+                            <apex:repeat value="{!item.Label_HelpText}" var="helptxt" id="HelpTextRepeat">
+                                <apex:outputText value="{!helptxt}" id="theHelpTextValue" /><br />
+                            </apex:repeat>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        <br />
+        <a href="#result_table_top">ページ上部へ</a>
+    </div>
+</apex:form>
+</apex:page>

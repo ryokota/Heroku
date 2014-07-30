@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>RFA R1 - Stores the Profit Center Hierarchy within the RFA Application. Profit Centers will also be referenced on specific RFAs.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ActiveInactive__c</fullName>
+        <externalId>false</externalId>
+        <label>Active/Inactive</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>NeedRecalculation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used for recalculation of sharing model</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update Sharing for Attached RFAs ボタンは再計算フラグがチェックされているとき、および収益センターが有効なときに実行されます。</inlineHelpText>
+        <label>Need Recalculation</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ProfitCenterName__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Profit Center</label>
+    <listViews>
+        <fullName>All_Active</fullName>
+        <columns>NAME</columns>
+        <columns>ProfitCenterName__c</columns>
+        <columns>ActiveInactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ActiveInactive__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>All - Active</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Inactive</fullName>
+        <columns>NAME</columns>
+        <columns>ProfitCenterName__c</columns>
+        <columns>ActiveInactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ActiveInactive__c</field>
+            <operation>equals</operation>
+            <value>Inactive</value>
+        </filters>
+        <label>All - Inactive</label>
+        <language>ja</language>
+    </listViews>
+    <nameField>
+        <label>Profit Center Number</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01Id00000016kuSEAQ_00Nd000000594cmEAA</fullName>
+        <active>true</active>
+        <errorMessage>You may only select Active Profit Centers and the Profit Center must have a Location Coordinator assigned to it. Contact the appropriate Location Coordinator if you cannot find a particular Profit Center.</errorMessage>
+        <field>RFA__c.ProfitCenterNumber__c</field>
+        <filterItems>
+            <field>ProfitCenter__c.ActiveInactive__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>RFA_Profit Center</name>
+    </namedFilters>
+    <searchLayouts>
+        <customTabListAdditionalFields>ProfitCenterName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ActiveInactive__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ProfitCenterName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ActiveInactive__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ProfitCenterName__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ActiveInactive__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>ProfitCenterName__c</searchFilterFields>
+        <searchFilterFields>ActiveInactive__c</searchFilterFields>
+        <searchResultsAdditionalFields>ProfitCenterName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ActiveInactive__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>Update_Sharing_for_Attached_RFAs</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Update Sharing for Attached RFAs</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var needRecalFlag={!ProfitCenter__c.NeedRecalculation__c};
+var activeFlag=&quot;{! ProfitCenter__c.ActiveInactive__c }&quot;;
+if(needRecalFlag==false || activeFlag==&apos;Inactive&apos;)
+{
+
+    alert(&apos;プロフィットセンターは共有用再計算のコンテンツがないか、またはステータスが有効ではありません。/ Profit center has no contents for sharing recalculation or has inactive status. &apos;);
+
+} else if(needRecalFlag==true)
+{
+    var confirmationMsg=window.confirm(&quot;このプロフィットセンターの共有について、再度確認して下さい。/ Are you sure you want to recalculate the sharing for this profit center? &quot;);
+    if(confirmationMsg)
+    {
+        /*var pdif=&quot;{!ProfitCenter__c.Id}&quot;;
+		var isLCFlag=sforce.apex.execute(&quot;RFA_WS06_CheckLC&quot;,&quot;isLocationCoorinator&quot;, {pfId:pdif}); 
+	
+        if(isLCFlag==&apos;true&apos;)
+	{*/			
+
+var loc=&quot;/apex/RFA_VFP10_ProfitCenterRecalculation?id={!ProfitCenter__c.Id}&quot;;
+window.parent.location.href = loc;
+
+	/*} else {
+			
+	    window.alert(&apos;権限がありません。/ You are not authorized person to perform this action.&apos;);
+	 }*/
+     }
+	else
+	{
+		window.alert(&quot;共有用再計算できない / No sharing recalculation will be done. &quot;);
+	}
+}</url>
+    </webLinks>
+</CustomObject>

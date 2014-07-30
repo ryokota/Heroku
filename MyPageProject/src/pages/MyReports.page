@@ -1,0 +1,13 @@
+<apex:page >
+
+<!--タイトル-->
+<apex:sectionheader title="個人ページ"></apex:sectionheader>
+<P style="padding-bottom:10px"></P>
+
+<c:ClippingReport reportUrl="/00O10000002yym6" reportTitle="進行中の受注の状況"/>
+<P style="padding-top:10px"></P>
+<Big><Strong><a href="https://ap.salesforce.com/a03?fcf=00B10000003O8gM">延長確認へ</a></Strong></Big>
+<c:ClippingReport reportUrl="/00O10000002z1BK" reportTitle="未完了の延長確認"/>
+<c:ClippingReport reportUrl="/00O10000002yynJ" reportTitle="契約一覧"/>
+
+</apex:page>

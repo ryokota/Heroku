@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Milestone1_Project__c$Name</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Project__c$Project_Status_View__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Milestone1_Project__c$Function__c</column>
+            <operator>equals</operator>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Milestone1_Project__c$RecordType</column>
+            <operator>equals</operator>
+            <value>Milestone1_Project__c.Finance</value>
+        </criteriaItems>
+        <language>ja</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Milestone1_Project__c$Project_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Milestone1_Project__c$Sub_Function__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Standard : Matrix Report(Finance)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Milestone1_Projects__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Milestone1_Project__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

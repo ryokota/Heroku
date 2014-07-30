@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.UserName__c</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.ApprovalRequestedOn__c</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.ApprovalRecievedDateTime__c</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.ApprovalRecommendation__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Stage__c</field>
+    </columns>
+    <description>metrics report for approval time by approver for in-process RFAs</description>
+    <filter>
+        <criteriaItems>
+            <column>CHILD_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>NAG Metrics_Approver Approval Time-InPro</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$RFA__c$RFAUserRole__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.CirculationDate__c</dateColumn>
+        <endDate>2013-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-01-01</startDate>
+    </timeFrameFilter>
+</Report>

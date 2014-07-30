@@ -1,0 +1,104 @@
+<apex:page standardController="RFA__c" showheader="false">
+    <table width="100%">
+        <tr>
+        <td>
+               <!-- <img src="{!$Resource.coke_RFA_logo}" width="240" height="60"/> -->
+               <img src="{!$Resource.CCEJ_Logo}" width="240" height="60"/> 
+        </td>
+        <td align="left">
+                <a href="javascript:self.close()">Close Window</a><br/>
+                <a href="javascript:window.print();">Print This Page</a>
+        </td>
+        </tr>
+    </table>
+    
+     <!--  <apex:detail subject="{!RFA__c}" relatedList="false" title="true"/>  -->
+    <apex:pageblock >
+        <apex:pageblocksection columns="2" title="{!$Label.RFA_PDF_General_Information}">
+            <apex:outputField Value="{!RFA__c.Name}" />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Budget_Approval_Number__c}"/>                 
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Stage__c}"     />
+            <apex:outputField Value="{!RFA__c.ReturnReason__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Close_Reason__c}"     />
+            <apex:outputField Value="{!RFA__c.RecordTypeId}"     />
+            <apex:outputField Value="{!RFA__c.DataClassificationNew__c}"     />
+            <apex:outputField Value="{!RFA__c.Legal_Entity__c}"     />
+            <apex:outputField Value="{!RFA__c.Requested_By__c}"     />
+            <apex:outputField Value="{!RFA__c.Cost_Center_Number__r.Name}"     />
+            <apex:outputField Value="{!RFA__c.LastModifiedById}"     />
+            <apex:outputField Value="{!RFA__c.CostCenterName__c}"  />
+            <apex:outputField Value="{!RFA__c.CirculationDate__c}"     />
+            <apex:outputField Value="{!RFA__c.CreatedById}"     />
+            <apex:outputField Value="{!RFA__c.CompletionDate__c}"     />
+        </apex:pageblocksection>
+
+        <apex:pageblocksection columns="2" title="{!$Label.RFA_PDF_Request_Details}">
+            <apex:outputField Value="{!RFA__c.RequestTitle__c}"     />
+        </apex:pageblocksection>
+
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_COA_Category}">
+            <apex:outputField Value="{!RFA__c.PrimaryCOACategory__c}"   />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory__c}"     />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory2__c}"     />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory3__c}"     />
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Detailed_Business_Trip_Information}">
+            <apex:outputField Value="{!RFA__c.Destination__c}"     />
+            <apex:outputField Value="{!RFA__c.Purpose__c}"     />
+            <apex:pageblocksection columns="2" showheader="false">
+                <apex:outputField Value="{!RFA__c.Start_Date__c}"     />
+                <apex:outputField Value="{!RFA__c.End_Date__c}"     />
+            </apex:pageblocksection>
+            <apex:outputField Value="{!RFA__c.Number_of_Nights__c}"     />
+            <apex:outputField Value="{!RFA__c.Transportation__c}"     />
+            <apex:outputField Value="{!RFA__c.Estimated_Cost_Transportation__c}"     />
+            <apex:outputField Value="{!RFA__c.Estimated_Cost_Accommodation__c}"     />
+            <apex:outputField Value="{!RFA__c.Total_Estimated_Cost__c}"     />
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_In_the_case_of_overseas_trip_please_fill_in_fields_below_for_insurance}">
+            <apex:outputField Value="{!RFA__c.Home_Address__c}"     />
+            <apex:outputField Value="{!RFA__c.Home_PhoneNumber__c}"     />
+            <apex:outputField Value="{!RFA__c.Gender__c}"     />
+            <apex:outputField Value="{!RFA__c.Date_of_Birth__c}"     />
+        </apex:pageblocksection>
+        
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Remarks}">
+            <apex:outputField Value="{!RFA__c.Remarks_TravelExpense__c}"     />
+        </apex:pageblocksection>
+
+    </apex:pageblock>
+    
+    <!-- 
+    <div>
+      <apex:relatedList list="Three_Year_Cash_Spend__r" rendered="{!RFA__c.RecordTypeId != '01210000000QsJ8AAK'}" /><br/><br/>
+    </div> -->
+     
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_RFA_Approvers_Users}">
+            <apex:Pageblocktable value="{!RFA__c.RFA_User_Roles__r}" var="RFA_User_Roles">
+                <apex:column value="{!RFA_User_Roles.name}"/> 
+                <apex:column value="{!RFA_User_Roles.ApprovalOrder__c}"/> 
+                <apex:column value="{!RFA_User_Roles.UserName__c}"/> 
+                <apex:column value="{!RFA_User_Roles.RecordTypeId}"/> 
+                <apex:column value="{!RFA_User_Roles.Approver_Source__c}"/> 
+                <apex:column value="{!RFA_User_Roles.COA_L2_Function_E__c}"/> 
+                <apex:column value="{!RFA_User_Roles.COA_Function__c}"/> 
+                <apex:column value="{!RFA_User_Roles.COA_Acronym__c}"/> 
+                <apex:column value="{!RFA_User_Roles.COA_Group__c}"/> 
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+      <!--  <div>
+       <apex:relatedList list="NotesAndAttachments" pageSize="100" /> 
+      </div>--> 
+      <!--
+      <div>
+       <c:RFA_C08_RFAHistory subject="{!RFA__c.ID}"></c:RFA_C08_RFAHistory> 
+      </div> -->
+</apex:page>

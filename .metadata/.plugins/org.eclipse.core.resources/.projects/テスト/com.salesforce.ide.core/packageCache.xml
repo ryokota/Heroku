@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<types xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types isSubType="false">
+    <name>AccountCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>AccountOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>AnalyticSnapshot</name>
+  </types>
+  <types isSubType="false">
+    <members>TestClass</members>
+    <members>SpreadsheetController</members>
+    <name>ApexClass</name>
+    <members>Constant</members>
+    <members>StaffTriggerHelper</members>
+    <members>startHereController</members>
+    <members>Test_TimeCardCheck</members>
+    <members>Test_TimeCardCheckHelper</members>
+    <members>Test_Utility</members>
+    <members>TimeCardCheckController</members>
+    <members>TimeCardCheckHelper</members>
+    <members>TimeCardDao</members>
+    <members>TimeCardWrapperClass</members>
+    <members>Utility</members>
+    <members>XMLDom</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexComponent</name>
+  </types>
+  <types isSubType="false">
+    <members>TestPage</members>
+    <members>SpreadSheetTestPage</members>
+    <name>ApexPage</name>
+    <members>Start_Here</members>
+    <members>TimeCardCheck</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexTrigger</name>
+    <members>Staff_SFO_AfterInsert_BeforeUpdate</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexTriggerCoupling</name>
+  </types>
+  <types isSubType="false">
+    <name>ApprovalProcess</name>
+  </types>
+  <types isSubType="false">
+    <name>AssignmentRule</name>
+    <members>Case.Standard</members>
+    <members>Lead.Standard</members>
+  </types>
+  <types isSubType="false">
+    <name>AuthProvider</name>
+  </types>
+  <types isSubType="false">
+    <name>AutoResponseRule</name>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>BusinessProcess</name>
+  </types>
+  <types isSubType="false">
+    <name>CallCenter</name>
+  </types>
+  <types isSubType="false">
+    <name>CampaignCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CampaignOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CaseCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CaseOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>Community</name>
+    <members>Internal Ideas</members>
+  </types>
+  <types isSubType="false">
+    <name>ContactCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>ContactOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomApplication</name>
+    <members>CustomApplication</members>
+    <members>Force_com</members>
+    <members>SharedForceOsaka</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomApplicationComponent</name>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>CustomField</name>
+    <members>Account.Active__c</members>
+    <members>Account.CustomerPriority__c</members>
+    <members>Account.NumberofLocations__c</members>
+    <members>Account.SLA__c</members>
+    <members>Account.SLAExpirationDate__c</members>
+    <members>Account.SLASerialNumber__c</members>
+    <members>Account.UpsellOpportunity__c</members>
+    <members>account_SFO__c.address__c</members>
+    <members>account_SFO__c.building__c</members>
+    <members>account_SFO__c.city__c</members>
+    <members>account_SFO__c.fax__c</members>
+    <members>account_SFO__c.kananame__c</members>
+    <members>account_SFO__c.mailaddress__c</members>
+    <members>account_SFO__c.name__c</members>
+    <members>account_SFO__c.phone__c</members>
+    <members>account_SFO__c.postalcode__c</members>
+    <members>account_SFO__c.states__c</members>
+    <members>account_SFO__c.TEIKOKU_code__c</members>
+    <members>assign_SFO__c.assigned_end__c</members>
+    <members>assign_SFO__c.assigned_order__c</members>
+    <members>assign_SFO__c.assigned_start__c</members>
+    <members>assign_SFO__c.assigned_team__c</members>
+    <members>assign_SFO__c.order_start_date__c</members>
+    <members>assign_SFO__c.ordername__c</members>
+    <members>assign_SFO__c.ordertype__c</members>
+    <members>assign_SFO__c.scheduled_date__c</members>
+    <members>assign_SFO__c.teamleader__c</members>
+    <members>assign_SFO__c.trainingterm__c</members>
+    <members>Case.EngineeringReqNumber__c</members>
+    <members>Case.PotentialLiability__c</members>
+    <members>Case.Product__c</members>
+    <members>Case.SLAViolation__c</members>
+    <members>Contact.Languages__c</members>
+    <members>Contact.Level__c</members>
+    <members>cost_SFO__c.approve_limit__c</members>
+    <members>cost_SFO__c.approve_number__c</members>
+    <members>cost_SFO__c.approve_status__c</members>
+    <members>cost_SFO__c.cost_type__c</members>
+    <members>cost_SFO__c.delete_date__c</members>
+    <members>cost_SFO__c.description__c</members>
+    <members>cost_SFO__c.extra_cost__c</members>
+    <members>cost_SFO__c.invoiced_amount__c</members>
+    <members>cost_SFO__c.invoiced_date__c</members>
+    <members>cost_SFO__c.memo__c</members>
+    <members>cost_SFO__c.payment_recipient__c</members>
+    <members>cost_SFO__c.receipt_date__c</members>
+    <members>cost_SFO__c.receipt_request_date__c</members>
+    <members>cost_SFO__c.receipt_status__c</members>
+    <members>cost_SFO__c.record_month__c</members>
+    <members>cost_SFO__c.scheduled_amount__c</members>
+    <members>cost_SFO__c.scheduled_cost_type__c</members>
+    <members>cost_SFO__c.scheduled_description__c</members>
+    <members>cost_SFO__c.scheduled_payment_recipient__c</members>
+    <members>cost_SFO__c.schejuled_receipt_yyyymm__c</members>
+    <members>cost_SFO__c.SFO_invoiced__c</members>
+    <members>cost_SFO__c.WF_schejuled_receipt__c</members>
+    <members>follow_SFO__c.contact_date__c</members>
+    <members>follow_SFO__c.contact_person__c</members>
+    <members>follow_SFO__c.employment_type__c</members>
+    <members>follow_SFO__c.followdetail__c</members>
+    <members>follow_SFO__c.from_pasona__c</members>
+    <members>follow_SFO__c.interview_date__c</members>
+    <members>follow_SFO__c.interview_scheduled__c</members>
+    <members>follow_SFO__c.joined_company__c</members>
+    <members>follow_SFO__c.result__c</members>
+    <members>follow_SFO__c.scheduled_joined_date__c</members>
+    <members>follow_SFO__c.staff__c</members>
+    <members>follow_SFO__c.Sys_next_follow_limit__c</members>
+    <members>follow_SFO__c.Sys_staffstatus__c</members>
+    <members>Lead.CurrentGenerators__c</members>
+    <members>Lead.NumberofLocations__c</members>
+    <members>Lead.Primary__c</members>
+    <members>Lead.ProductInterest__c</members>
+    <members>Lead.SICCode__c</members>
+    <members>Opportunity.CurrentGenerators__c</members>
+    <members>Opportunity.DeliveryInstallationStatus__c</members>
+    <members>Opportunity.MainCompetitors__c</members>
+    <members>Opportunity.OrderNumber__c</members>
+    <members>Opportunity.TrackingNumber__c</members>
+    <members>order_SFO__c.accountID__c</members>
+    <members>order_SFO__c.accountname__c</members>
+    <members>order_SFO__c.application_date__c</members>
+    <members>order_SFO__c.approval_date__c</members>
+    <members>order_SFO__c.cancel_date__c</members>
+    <members>order_SFO__c.contract_date__c</members>
+    <members>order_SFO__c.delivery_date__c</members>
+    <members>order_SFO__c.department__c</members>
+    <members>order_SFO__c.inspection_date__c</members>
+    <members>order_SFO__c.job_memo__c</members>
+    <members>order_SFO__c.jobowner__c</members>
+    <members>order_SFO__c.jobowner_phone__c</members>
+    <members>order_SFO__c.judgment_YesNo__c</members>
+    <members>order_SFO__c.order_finished_date__c</members>
+    <members>order_SFO__c.order_start_date__c</members>
+    <members>order_SFO__c.order_status__c</members>
+    <members>order_SFO__c.orderdetail__c</members>
+    <members>order_SFO__c.ordername__c</members>
+    <members>order_SFO__c.ordertype__c</members>
+    <members>order_SFO__c.reference_date__c</members>
+    <members>order_SFO__c.refusal_date__c</members>
+    <members>order_SFO__c.refusal_reason__c</members>
+    <members>order_SFO__c.scheduled_date__c</members>
+    <members>order_SFO__c.shippingdocument_date__c</members>
+    <members>Plot_Chart_Data__c.AccountId__c</members>
+    <members>Plot_Chart_Data__c.Cost_For_Making_Index__c</members>
+    <members>Plot_Chart_Data__c.Number_Of_Index_Calculation_Objects_FP__c</members>
+    <members>Plot_Chart_Data__c.Project_Name__c</members>
+    <members>Plot_Chart_Data__c.Type__c</members>
+    <members>progress_SFO__c.order__c</members>
+    <members>progress_SFO__c.order_name__c</members>
+    <members>progress_SFO__c.order_start__c</members>
+    <members>progress_SFO__c.order_type__c</members>
+    <members>progress_SFO__c.progress_list__c</members>
+    <members>progress_SFO__c.report__c</members>
+    <members>progress_SFO__c.report_date__c</members>
+    <members>progress_SFO__c.scheduled_date__c</members>
+    <members>staff_SFO__c.address2__c</members>
+    <members>staff_SFO__c.address__c</members>
+    <members>staff_SFO__c.age__c</members>
+    <members>staff_SFO__c.birthday__c</members>
+    <members>staff_SFO__c.collect_memo__c</members>
+    <members>staff_SFO__c.confirmedTEL__c</members>
+    <members>staff_SFO__c.contract_OffJT__c</members>
+    <members>staff_SFO__c.contract_OJT__c</members>
+    <members>staff_SFO__c.filing_chosashodaku__c</members>
+    <members>staff_SFO__c.filing_fuyokojo__c</members>
+    <members>staff_SFO__c.filing_kojinjoho__c</members>
+    <members>staff_SFO__c.filing_koza__c</members>
+    <members>staff_SFO__c.filing_nenkin__c</members>
+    <members>staff_SFO__c.filing_seiyaku__c</members>
+    <members>staff_SFO__c.filing_senseisyo__c</members>
+    <members>staff_SFO__c.filing_tukin__c</members>
+    <members>staff_SFO__c.fname_kana__c</members>
+    <members>staff_SFO__c.hourlyrate_OffJT__c</members>
+    <members>staff_SFO__c.hourlyrate_OJT__c</members>
+    <members>staff_SFO__c.jobobjective__c</members>
+    <members>staff_SFO__c.joined_day__c</members>
+    <members>staff_SFO__c.latest_follow__c</members>
+    <members>staff_SFO__c.leader__c</members>
+    <members>staff_SFO__c.leaflet_send__c</members>
+    <members>staff_SFO__c.line__c</members>
+    <members>staff_SFO__c.lname_kana__c</members>
+    <members>staff_SFO__c.logicaldelete_date__c</members>
+    <members>staff_SFO__c.logicaldelete_reason__c</members>
+    <members>staff_SFO__c.next_follow_date__c</members>
+    <members>staff_SFO__c.OffJTend__c</members>
+    <members>staff_SFO__c.OffJTstart__c</members>
+    <members>staff_SFO__c.OJTend__c</members>
+    <members>staff_SFO__c.OJTstart__c</members>
+    <members>staff_SFO__c.phone1__c</members>
+    <members>staff_SFO__c.phone2__c</members>
+    <members>staff_SFO__c.postalcode__c</members>
+    <members>staff_SFO__c.purestaffcode__c</members>
+    <members>staff_SFO__c.salary_receipt__c</members>
+    <members>staff_SFO__c.sex__c</members>
+    <members>staff_SFO__c.staffentrydate__c</members>
+    <members>staff_SFO__c.staffstatus__c</members>
+    <members>staff_SFO__c.states__c</members>
+    <members>staff_SFO__c.station__c</members>
+    <members>staff_SFO__c.Sys_next_follow_limit__c</members>
+    <members>staff_SFO__c.Sys_pending_over__c</members>
+    <members>staff_SFO__c.Sys_placement_flag__c</members>
+    <members>staff_SFO__c.Sys_scheduled_joined_date__c</members>
+    <members>staff_SFO__c.team__c</members>
+    <members>staff_SFO__c.Toal_OverTime_Hour__c</members>
+    <members>staff_SFO__c.Total_OverTime_18__c</members>
+    <members>staff_SFO__c.trafficfee__c</members>
+    <members>staff_SFO__c.traineeage__c</members>
+    <members>staff_SFO__c.traineetype__c</members>
+    <members>staff_SFO__c.trainingterm__c</members>
+    <members>team_SFO__c.team_end__c</members>
+    <members>team_SFO__c.team_start__c</members>
+    <members>team_SFO__c.teamleader__c</members>
+    <members>team_SFO__c.trainingterm__c</members>
+    <members>timecard_SFO__c.CreatedDate_custom__c</members>
+    <members>timecard_SFO__c.Holiday__c</members>
+    <members>timecard_SFO__c.Kbn__c</members>
+    <members>timecard_SFO__c.MidNight_Rest_Time__c</members>
+    <members>timecard_SFO__c.Rest_Time__c</members>
+    <members>timecard_SFO__c.staff__c</members>
+    <members>timecard_SFO__c.Syukkin_Date__c</members>
+    <members>timecard_SFO__c.syukkinn_Scon__c</members>
+    <members>timecard_SFO__c.Syussya_bi__c</members>
+    <members>timecard_SFO__c.Syussya_Time__c</members>
+    <members>timecard_SFO__c.Syussya_Time_value__c</members>
+    <members>timecard_SFO__c.Taisya_bi__c</members>
+    <members>timecard_SFO__c.Taisya_Hour__c</members>
+    <members>timecard_SFO__c.Taisya_Time__c</members>
+    <members>timecard_SFO__c.Taisya_Time_value__c</members>
+    <members>timecard_SFO__c.Taisyo_data__c</members>
+    <members>timecard_SFO__c.Working_Time__c</members>
+    <members>timecard_SFO__c.worknote__c</members>
+    <members>timecard_SFO__c.workrecord__c</members>
+    <members>timecard_SFO__c.zangyo_time_18pm__c</members>
+    <members>timecard_SFO__c.zangyou__c</members>
+  </types>
+  <types isSubType="true" parent="CustomLabels">
+    <name>CustomLabel</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomLabels</name>
+    <members>CustomLabels</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomObject</name>
+    <members>account_SFO__c</members>
+    <members>assign_SFO__c</members>
+    <members>cost_SFO__c</members>
+    <members>follow_SFO__c</members>
+    <members>order_SFO__c</members>
+    <members>Plot_Chart_Data__c</members>
+    <members>progress_SFO__c</members>
+    <members>staff_SFO__c</members>
+    <members>team_SFO__c</members>
+    <members>timecard_SFO__c</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectTranslation</name>
+    <members>account_SFO__c-ja</members>
+    <members>assign_SFO__c-ja</members>
+    <members>cost_SFO__c-ja</members>
+    <members>follow_SFO__c-ja</members>
+    <members>order_SFO__c-ja</members>
+    <members>Plot_Chart_Data__c-ja</members>
+    <members>progress_SFO__c-ja</members>
+    <members>staff_SFO__c-ja</members>
+    <members>team_SFO__c-ja</members>
+    <members>timecard_SFO__c-ja</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomPageWebLink</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomTab</name>
+    <members>account_SFO__c</members>
+    <members>assign_SFO__c</members>
+    <members>cost_SFO__c</members>
+    <members>follow_SFO__c</members>
+    <members>order_SFO__c</members>
+    <members>Plot_Chart_Data__c</members>
+    <members>progress_SFO__c</members>
+    <members>staff_SFO__c</members>
+    <members>Start_Here</members>
+    <members>Tab</members>
+    <members>team_SFO__c</members>
+    <members>TimeCard</members>
+    <members>timecard_SFO__c</members>
+  </types>
+  <types isSubType="false">
+    <name>Dashboard</name>
+  </types>
+  <types isSubType="false">
+    <name>DataCategoryGroup</name>
+  </types>
+  <types isSubType="false">
+    <name>Document</name>
+    <members>SafetyConfirmationFolder04t10000000TvLG</members>
+    <members>SFO_docs</members>
+    <members>SafetyConfirmationFolder</members>
+    <members>SFO_commu</members>
+    <members>SafetyConfirmationFolder/pasona_logo.gif</members>
+    <members>SafetyConfirmationFolder04t10000000TvLG/pasona_logo04t10000000TvLG.gif</members>
+    <members>SFO_commu/demand_20110315.xls</members>
+    <members>SFO_commu/manual_report.ppt</members>
+    <members>SFO_docs/EA.zip</members>
+    <members>SFO_docs/SFO_demand.xls</members>
+    <members>SFO_docs/SFO_demand0309.xls</members>
+  </types>
+  <types isSubType="false">
+    <name>EmailTemplate</name>
+    <members>unfiled$public</members>
+    <members>unfiled$public/MarketingProductInquiryResponse</members>
+    <members>unfiled$public/SalesNewCustomerEmail</members>
+    <members>unfiled$public/SupportCaseAssignmentNotification</members>
+    <members>unfiled$public/SupportCaseCreatedPhoneInquiries</members>
+    <members>unfiled$public/SupportCaseCreatedWebInquiries</members>
+    <members>unfiled$public/SupportCaseResponse</members>
+    <members>unfiled$public/SupportEscalatedCaseNotification</members>
+    <members>unfiled$public/SupportEscalatedCaseReassignment</members>
+    <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
+    <members>unfiled$public/SupportSelfServiceNewLoginandPassword</members>
+    <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
+    <members>unfiled$public/SupportSelfServiceResetPassword</members>
+    <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
+  </types>
+  <types isSubType="false">
+    <name>EscalationRule</name>
+    <members>Case.Standard</members>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>FieldSet</name>
+  </types>
+  <types isSubType="false">
+    <name>Flow</name>
+  </types>
+  <types isSubType="false">
+    <name>Group</name>
+  </types>
+  <types isSubType="false">
+    <name>HomePageComponent</name>
+  </types>
+  <types isSubType="false">
+    <name>HomePageLayout</name>
+    <members>DE Default</members>
+  </types>
+  <types isSubType="false">
+    <name>Layout</name>
+    <members>Account-Account %28Marketing%29 Layout</members>
+    <members>Account-Account %28Sales%29 Layout</members>
+    <members>Account-Account %28Support%29 Layout</members>
+    <members>Account-Account Layout</members>
+    <members>account_SFO__c-accountレイアウト</members>
+    <members>Asset-Asset Layout</members>
+    <members>assign_SFO__c-assignレイアウト</members>
+    <members>Campaign-Campaign Layout</members>
+    <members>CampaignMember-Campaign Member Page Layout</members>
+    <members>Case-Case %28Marketing%29 Layout</members>
+    <members>Case-Case %28Sales%29 Layout</members>
+    <members>Case-Case %28Support%29 Layout</members>
+    <members>Case-Case Layout</members>
+    <members>CaseClose-Close Case Layout</members>
+    <members>Contact-Contact %28Marketing%29 Layout</members>
+    <members>Contact-Contact %28Sales%29 Layout</members>
+    <members>Contact-Contact %28Support%29 Layout</members>
+    <members>Contact-Contact Layout</members>
+    <members>Contract-Contract Layout</members>
+    <members>cost_SFO__c-costレイアウト</members>
+    <members>Event-Event Layout</members>
+    <members>follow_SFO__c-followレイアウト</members>
+    <members>Global-Global Layout</members>
+    <members>Idea-Idea Layout</members>
+    <members>Lead-Lead %28Marketing%29 Layout</members>
+    <members>Lead-Lead %28Sales%29 Layout</members>
+    <members>Lead-Lead %28Support%29 Layout</members>
+    <members>Lead-Lead Layout</members>
+    <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+    <members>Opportunity-Opportunity %28Sales%29 Layout</members>
+    <members>Opportunity-Opportunity %28Support%29 Layout</members>
+    <members>Opportunity-Opportunity Layout</members>
+    <members>OpportunityLineItem-Opportunity Product Layout</members>
+    <members>order_SFO__c-受託案件レイアウト</members>
+    <members>Plot_Chart_Data__c-プロットチャートデータレイアウト</members>
+    <members>Pricebook2-価格表 レイアウト</members>
+    <members>Product2-Product Layout</members>
+    <members>progress_SFO__c-progressレイアウト</members>
+    <members>Solution-Solution Layout</members>
+    <members>staff_SFO__c-staffレイアウト</members>
+    <members>Task-Task Layout</members>
+    <members>team_SFO__c-teamレイアウト</members>
+    <members>timecard_SFO__c-タイムカードレイアウト</members>
+    <members>User-User Layout</members>
+  </types>
+  <types isSubType="false">
+    <name>LeadCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>LeadOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>Letterhead</name>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>ListView</name>
+    <members>Account.AllAccounts</members>
+    <members>Account.MyAccounts</members>
+    <members>Account.NewLastWeek</members>
+    <members>Account.NewThisWeek</members>
+    <members>Account.PlatinumandGoldSLACustomers</members>
+    <members>account_SFO__c.All</members>
+    <members>account_SFO__c.All1</members>
+    <members>Activity.AllActivities</members>
+    <members>Activity.MyActivities</members>
+    <members>Activity.TodaysTasks</members>
+    <members>Activity.UpcomingEvents</members>
+    <members>Asset.AllAssets</members>
+    <members>assign_SFO__c.All</members>
+    <members>Campaign.AllActiveCampaigns</members>
+    <members>Campaign.MyActiveCampaigns</members>
+    <members>Case.AllClosedCases</members>
+    <members>Case.AllOpenCases</members>
+    <members>Case.InternationalEscalations</members>
+    <members>Case.InternationalPlatinumGold</members>
+    <members>Case.InternationalSilverBronze</members>
+    <members>Case.MyCases</members>
+    <members>Case.MyOpenCases</members>
+    <members>Case.PartnerRelations</members>
+    <members>Case.USEscalations</members>
+    <members>Case.USPlatinumGold</members>
+    <members>Case.USSilverBronze</members>
+    <members>Contact.AllContacts</members>
+    <members>Contact.BirthdaysThisMonth</members>
+    <members>Contact.MyContacts</members>
+    <members>Contact.NewLastWeek</members>
+    <members>Contact.NewThisWeek</members>
+    <members>Contract.AllActivatedContracts</members>
+    <members>Contract.AllContracts</members>
+    <members>Contract.AllDraftContracts</members>
+    <members>Contract.AllInApprovalContracts</members>
+    <members>Contract.MyActivatedContracts</members>
+    <members>Contract.MyDraftContracts</members>
+    <members>Contract.MyInApprovalContracts</members>
+    <members>cost_SFO__c.All</members>
+    <members>follow_SFO__c.All</members>
+    <members>Idea.Ideas_Last_7_Days</members>
+    <members>Lead.AllOpenLeads</members>
+    <members>Lead.InternationalLeads</members>
+    <members>Lead.MyUnreadLeads</members>
+    <members>Lead.TodaysLeads</members>
+    <members>Lead.USLeads</members>
+    <members>Lead.ViewCustom1</members>
+    <members>Lead.ViewCustom2</members>
+    <members>Opportunity.AllOpportunities</members>
+    <members>Opportunity.ClosingNextMonth</members>
+    <members>Opportunity.ClosingThisMonth</members>
+    <members>Opportunity.MyOpportunities</members>
+    <members>Opportunity.NewLastWeek</members>
+    <members>Opportunity.NewThisWeek</members>
+    <members>Opportunity.Private</members>
+    <members>Opportunity.Won</members>
+    <members>order_SFO__c.All</members>
+    <members>Plot_Chart_Data__c.All</members>
+    <members>Plot_Chart_Data__c.View</members>
+    <members>Product2.AllProducts</members>
+    <members>progress_SFO__c.All</members>
+    <members>Solution.AllReviewedSolutions</members>
+    <members>Solution.AllUnreviewedSolutions</members>
+    <members>staff_SFO__c.all</members>
+    <members>staff_SFO__c.collect_check</members>
+    <members>staff_SFO__c.No_1_term_staff_list</members>
+    <members>staff_SFO__c.No_2_term_staff_list</members>
+    <members>staff_SFO__c.Team_Undetermined_list</members>
+    <members>team_SFO__c.All</members>
+    <members>timecard_SFO__c.lastmonth</members>
+    <members>timecard_SFO__c.thismonth</members>
+    <members>timecard_SFO__c.TimeCard_Check_Absence</members>
+    <members>timecard_SFO__c.TimeCard_Check_Soutai</members>
+    <members>timecard_SFO__c.TimeCard_Check_Tardiness</members>
+    <members>timecard_SFO__c.TimeCard_No_Check</members>
+    <members>timecard_SFO__c.today</members>
+    <members>timecard_SFO__c.tomorrow</members>
+    <members>timecard_SFO__c.View_d_2</members>
+    <members>User.ActiveUsers</members>
+    <members>User.AdminUsers</members>
+    <members>User.AllUsers</members>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>NamedFilter</name>
+    <members>order_SFO__c.nf_01IA0000001tyvPMAQ_00NA0000007QGHQMA4</members>
+    <members>staff_SFO__c.nf_01IA0000001twkSMAQ_00NA0000007QGEvMAO</members>
+    <members>team_SFO__c.nf_01IA0000001twkNMAQ_00NA0000007Q8E0MAK</members>
+  </types>
+  <types isSubType="false">
+    <name>OpportunityCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>OpportunityOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>PermissionSet</name>
+  </types>
+  <types isSubType="false">
+    <name>Profile</name>
+    <members>Admin</members>
+    <members>Chatter External User</members>
+    <members>Chatter Free User</members>
+    <members>Chatter Moderator User</members>
+    <members>ContractManager</members>
+    <members>Custom%3A Marketing Profile</members>
+    <members>Custom%3A Sales Profile</members>
+    <members>Custom%3A Support Profile</members>
+    <members>CustomerManager</members>
+    <members>MarketingProfile</members>
+    <members>Partner</members>
+    <members>ReadOnly</members>
+    <members>SolutionManager</members>
+    <members>Standard</members>
+    <members>StandardAul</members>
+  </types>
+  <types isSubType="false">
+    <name>Queue</name>
+    <members>InternationalEscalations</members>
+    <members>InternationalLeads</members>
+    <members>InternationalPlatinumGold</members>
+    <members>InternationalSilverBronze</members>
+    <members>PartnerRelations</members>
+    <members>USEscalations</members>
+    <members>USLeads</members>
+    <members>USPlatinumGold</members>
+    <members>USSilverBronze</members>
+  </types>
+  <types isSubType="false">
+    <name>QuickAction</name>
+    <members>LogACall</members>
+    <members>NewAccount</members>
+    <members>NewCase</members>
+    <members>NewChildCase</members>
+    <members>NewContact</members>
+    <members>NewEvent</members>
+    <members>NewLead</members>
+    <members>NewNote</members>
+    <members>NewOpportunity</members>
+    <members>NewTask</members>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>RecordType</name>
+  </types>
+  <types isSubType="false">
+    <name>RemoteSiteSetting</name>
+    <members>ApexDevNet</members>
+  </types>
+  <types isSubType="false">
+    <name>Report</name>
+    <members>sfdcjtimecard</members>
+    <members>staff_Report</members>
+    <members>unfiled$public</members>
+    <members>sfdcjtimecard/Total_TimeCard_OverTime20Hour</members>
+    <members>sfdcjtimecard/Total_TimeCard_OverTime30</members>
+    <members>staff_Report/employment_list</members>
+    <members>staff_Report/follow_list</members>
+    <members>staff_Report/Total_Staff</members>
+    <members>staff_Report/Total_Staff_Matrix</members>
+  </types>
+  <types isSubType="false">
+    <name>ReportType</name>
+    <members>trainee_follow</members>
+  </types>
+  <types isSubType="false">
+    <name>Role</name>
+    <members>CEO</members>
+    <members>CFO</members>
+    <members>ChannelSalesTeam</members>
+    <members>COO</members>
+    <members>CustomerSupportInternational</members>
+    <members>CustomerSupportNorthAmerica</members>
+    <members>DirectorChannelSales</members>
+    <members>DirectorDirectSales</members>
+    <members>EasternSalesTeam</members>
+    <members>InstallationRepairServices</members>
+    <members>MarketingTeam</members>
+    <members>SVPCustomerServiceSupport</members>
+    <members>SVPHumanResources</members>
+    <members>SVPSalesMarketing</members>
+    <members>VPInternationalSales</members>
+    <members>VPMarketing</members>
+    <members>VPNorthAmericanSales</members>
+    <members>WesternSalesTeam</members>
+  </types>
+  <types isSubType="false">
+    <name>SamlSsoConfig</name>
+  </types>
+  <types isSubType="false">
+    <name>Scontrol</name>
+    <members>Feed</members>
+    <members>Scontrol1</members>
+  </types>
+  <types isSubType="false">
+    <name>Settings</name>
+    <members>Activities</members>
+    <members>Address</members>
+    <members>Case</members>
+    <members>ChatterAnswers</members>
+    <members>Company</members>
+    <members>Contract</members>
+    <members>Ideas</members>
+    <members>Knowledge</members>
+    <members>Mobile</members>
+    <members>Opportunity</members>
+    <members>Product</members>
+    <members>Quote</members>
+    <members>Security</members>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>SharingReason</name>
+  </types>
+  <types isSubType="false">
+    <name>StandardObject</name>
+    <members>Account</members>
+    <members>AccountContactRole</members>
+    <members>Activity</members>
+    <members>Asset</members>
+    <members>Campaign</members>
+    <members>CampaignMember</members>
+    <members>Case</members>
+    <members>CaseContactRole</members>
+    <members>Contact</members>
+    <members>ContentVersion</members>
+    <members>Contract</members>
+    <members>ContractContactRole</members>
+    <members>Event</members>
+    <members>Idea</members>
+    <members>Lead</members>
+    <members>Opportunity</members>
+    <members>OpportunityCompetitor</members>
+    <members>OpportunityContactRole</members>
+    <members>OpportunityLineItem</members>
+    <members>PartnerRole</members>
+    <members>Pricebook2</members>
+    <members>Product2</members>
+    <members>Site</members>
+    <members>SiteChangelist</members>
+    <members>Solution</members>
+    <members>Task</members>
+    <members>User</members>
+  </types>
+  <types isSubType="false">
+    <name>StaticResource</name>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>ValidationRule</name>
+    <members>account_SFO__c.Check_postalcode</members>
+    <members>cost_SFO__c.DC_receipt_date_beforetoday</members>
+    <members>cost_SFO__c.DC_request_date_after_receipt_date</members>
+    <members>cost_SFO__c.DC_request_date_beforetoday</members>
+    <members>cost_SFO__c.NGblank_receipt_section</members>
+    <members>cost_SFO__c.NGblank_record_month</members>
+    <members>cost_SFO__c.NGinput_unscheduled</members>
+    <members>order_SFO__c.DC_approval_date</members>
+    <members>order_SFO__c.DC_inspection_date</members>
+    <members>order_SFO__c.DC_order_finished_date</members>
+    <members>order_SFO__c.DC_order_start_date_after_reference_date</members>
+    <members>order_SFO__c.DC_reference_date_beforetoday</members>
+    <members>order_SFO__c.NGblank_contract_date</members>
+    <members>order_SFO__c.NGblank_order_start_date</members>
+    <members>order_SFO__c.NGblank_refusal_date</members>
+    <members>order_SFO__c.NGblank_refusal_reason</members>
+    <members>order_SFO__c.NGinput_approval_date</members>
+    <members>order_SFO__c.NGinput_cancel</members>
+    <members>order_SFO__c.NGinput_inspection_date</members>
+    <members>order_SFO__c.NGinput_order_start_date</members>
+    <members>staff_SFO__c.check_postalcode</members>
+    <members>staff_SFO__c.DC_delete_date_after_OffJTstart</members>
+    <members>staff_SFO__c.DC_delete_date_before_OJTend</members>
+    <members>staff_SFO__c.DC_trainingterm</members>
+    <members>staff_SFO__c.NGblank_delete_date</members>
+  </types>
+  <types isSubType="true" parent="CustomObject">
+    <name>WebLink</name>
+    <members>Account.Billing</members>
+    <members>Campaign.ViewCampaignInfluenceReport</members>
+    <members>Case.UpsellCrosssellOpportunity</members>
+    <members>follow_SFO__c.To_new_follow</members>
+    <members>Opportunity.DeliveryStatus</members>
+    <members>staff_SFO__c.OathWordPrint</members>
+  </types>
+  <types isSubType="false">
+    <name>Workflow</name>
+    <members>Account</members>
+    <members>account_SFO__c</members>
+    <members>Asset</members>
+    <members>assign_SFO__c</members>
+    <members>Campaign</members>
+    <members>CampaignMember</members>
+    <members>Case</members>
+    <members>Contact</members>
+    <members>Contract</members>
+    <members>cost_SFO__c</members>
+    <members>Event</members>
+    <members>follow_SFO__c</members>
+    <members>Idea</members>
+    <members>Lead</members>
+    <members>Opportunity</members>
+    <members>OpportunityLineItem</members>
+    <members>order_SFO__c</members>
+    <members>Organization</members>
+    <members>Plot_Chart_Data__c</members>
+    <members>Product2</members>
+    <members>progress_SFO__c</members>
+    <members>Site</members>
+    <members>Solution</members>
+    <members>staff_SFO__c</members>
+    <members>Task</members>
+    <members>team_SFO__c</members>
+    <members>timecard_SFO__c</members>
+    <members>User</members>
+    <members>UserLicense</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowActionFlow</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowAlert</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowChatterPost</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowFieldUpdate</name>
+    <members>cost_SFO__c.sm_cost_complete</members>
+    <members>cost_SFO__c.sm_cost_delete</members>
+    <members>cost_SFO__c.sm_cost_estimate</members>
+    <members>cost_SFO__c.sm_cost_ongoing</members>
+    <members>cost_SFO__c.sm_cost_untreated</members>
+    <members>order_SFO__c.sm_order_cancel</members>
+    <members>order_SFO__c.sm_order_delivery</members>
+    <members>order_SFO__c.sm_order_inquiry</members>
+    <members>order_SFO__c.sm_order_inspection</members>
+    <members>order_SFO__c.sm_order_preparation</members>
+    <members>order_SFO__c.sm_order_refusal</members>
+    <members>order_SFO__c.sm_order_running</members>
+    <members>staff_SFO__c.Auto_joined_date</members>
+    <members>staff_SFO__c.Auto_OffJTend</members>
+    <members>staff_SFO__c.Auto_OffJTstart</members>
+    <members>staff_SFO__c.Auto_OJTend</members>
+    <members>staff_SFO__c.Auto_OJTstart</members>
+    <members>staff_SFO__c.sm_SFOstaff_employee</members>
+    <members>staff_SFO__c.sm_SFOstaff_OffJT</members>
+    <members>staff_SFO__c.sm_SFOstaff_OJT</members>
+    <members>staff_SFO__c.sm_SFOstaff_pending</members>
+    <members>staff_SFO__c.sm_SFOstaff_pending_over</members>
+    <members>staff_SFO__c.sm_SFOstaff_prologue</members>
+    <members>staff_SFO__c.sm_SFOstaff_retirement</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowKnowledgePublish</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowOutboundMessage</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowQuickCreate</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowRule</name>
+    <members>cost_SFO__c.状態遷移_cost予定</members>
+    <members>cost_SFO__c.状態遷移_cost処理中</members>
+    <members>cost_SFO__c.状態遷移_cost取消</members>
+    <members>cost_SFO__c.状態遷移_cost完了</members>
+    <members>cost_SFO__c.状態遷移_cost未処理</members>
+    <members>order_SFO__c.状態遷移_order仕掛中</members>
+    <members>order_SFO__c.状態遷移_order企業CXL</members>
+    <members>order_SFO__c.状態遷移_order受託準備中</members>
+    <members>order_SFO__c.状態遷移_order引合中</members>
+    <members>order_SFO__c.状態遷移_order検収中</members>
+    <members>order_SFO__c.状態遷移_order納品完了</members>
+    <members>order_SFO__c.状態遷移_order辞退</members>
+    <members>staff_SFO__c.状態遷移_SFOstaffOffJT</members>
+    <members>staff_SFO__c.状態遷移_SFOstaffOJT</members>
+    <members>staff_SFO__c.状態遷移_SFOstaff入社前</members>
+    <members>staff_SFO__c.状態遷移_SFOstaff就職未決定</members>
+    <members>staff_SFO__c.状態遷移_SFOstaff就職決定</members>
+    <members>staff_SFO__c.状態遷移_SFOstaff求職中</members>
+    <members>staff_SFO__c.状態遷移_SFOstaff退職</members>
+    <members>staff_SFO__c.自動入力_入社日</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowSend</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowTask</name>
+  </types>
+</types>

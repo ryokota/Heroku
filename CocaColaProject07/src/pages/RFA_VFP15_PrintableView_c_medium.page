@@ -1,0 +1,276 @@
+<apex:page standardController="RFA__c" showheader="false" extensions="RFA_PDF_RelatedListController">
+    <table width="100%">
+        <tr>
+        <td>
+               <!-- <img src="{!$Resource.coke_RFA_logo}" width="240" height="60"/> -->
+               <img src="{!$Resource.CCEJ_Logo}" width="240" height="60"/> 
+        </td>
+        <td align="left">
+                <a href="javascript:self.close()">Close Window</a><br/>
+                <a href="javascript:window.print();">Print This Page</a>
+        </td>
+        </tr>
+    </table>
+    
+     <!--  <apex:detail subject="{!RFA__c}" relatedList="false" title="true"/>  -->
+    <apex:pageblock >
+        <apex:pageblocksection columns="2" title="{!$Label.RFA_PDF_General_Information}">
+            <apex:outputField Value="{!RFA__c.Name}" />
+            <apex:outputField Value="{!RFA__c.Related_RFA_1_Name__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Related_RFA_2_Name__c}"     />
+            <!--<apex:outputText label="{!$ObjectType.RFA__c.Fields.Related_RFA_2__c.label}" Value="{!RFA__c.Related_RFA_2__r}"     />--> 
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Related_RFA_3_Name__c}"     />
+            <apex:outputField Value="{!RFA__c.Stage__c}"     />
+            <apex:outputField Value="{!RFA__c.ReturnReason__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Close_Reason__c}"     />
+            <apex:outputField Value="{!RFA__c.RecordTypeId}"     />
+            <apex:outputField Value="{!RFA__c.DataClassificationNew__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.Legal_Entity__c}"     />
+            <apex:outputField Value="{!RFA__c.Requested_By__c}"     />
+            <apex:outputField Value="{!RFA__c.Cost_Center_Number__r.Name}"     />
+
+            <!-- <apex:outputField Value="{!RFA__c.LastModifiedById}"     />  -->
+            <apex:outputText label="{!$Label.RFA_PDF_LastModifiedName}" Value="{!RFA__c.LastModifiedBy.Name}"     />
+
+
+            <apex:outputField Value="{!RFA__c.CostCenterName__c}"  />
+            <apex:outputField Value="{!RFA__c.CirculationDate__c}"     />
+            <!--  <apex:outputField Value="{!RFA__c.CreatedById}"     />-->
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.CompletionDate__c}"     />
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Request_Details}">
+            <apex:outputField Value="{!RFA__c.RequestTitle__c}"     />
+            <apex:pageblocksection columns="2" showheader="false">
+	            <apex:outputField Value="{!RFA__c.RequestAmountFunctionalCurrency__c}"     />
+	            <apex:outputField Value="{!RFA__c.ThreeYearCashSpendTotalFC__c}"     />
+	            <apex:outputLabel for=""/>
+	            <apex:outputField Value="{!RFA__c.CapitalExpenditureTotalFC__c}"     />
+	            <apex:outputField Value="{!RFA__c.InitialBudgetYear__c}"     />
+	            <apex:outputField Value="{!RFA__c.IsthisanAnnualCapitalPlanrequest__c}"     />
+	            <apex:outputField Value="{!RFA__c.BudgetType__c}"     />
+	            <apex:outputField Value="{!RFA__c.Budget_Approval_Number__c}"     />
+	            <apex:outputField Value="{!RFA__c.ExpectedCommitmentDate__c}"     />
+	            <apex:outputLabel for=""/>
+	            <apex:outputField Value="{!RFA__c.CommentsaboutExpectedCommitmentDate__c}"     />
+	            <apex:outputLabel for=""/>
+	            <apex:outputField Value="{!RFA__c.Expected_Cash_Spend_Date__c}"     />
+	            <apex:outputLabel for=""/>
+	            <apex:outputField Value="{!RFA__c.Expected_Capitalization_Date__c}"     />
+        	</apex:pageblocksection>
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_COA_Category}">
+            <apex:outputField Value="{!RFA__c.PrimaryCOACategory__c}"   />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory__c}"     />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory2__c}"     />
+            <apex:outputField Value="{!RFA__c.PrimaryCOASubCategory3__c}"     />
+	        <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.SecondCOACategory__c}"     />
+            <apex:outputField Value="{!RFA__c.SecondCOASubCategory__c}"     />
+            <apex:outputField Value="{!RFA__c.SecondCOASubCategory2__c}"     />
+            <apex:outputField Value="{!RFA__c.SecondCOASubCategory3__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.ThirdCOACategory__c}"     />
+            <apex:outputField Value="{!RFA__c.ThirdCOASubCategory__c}"     />
+            <apex:outputField Value="{!RFA__c.ThirdCOASubCategory2__c}"     />
+            <apex:outputField Value="{!RFA__c.ThirdCOASubCategory3__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField Value="{!RFA__c.BoardSubItem__c}"     />
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Business_Case}">
+            <apex:outputField label="{!$Label.RFA_PDFGuideline1}" Value="{!RFA__c.Objectives_Rationale_Background__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField label="{!$Label.RFA_PDFGuideline2}" Value="{!RFA__c.Benefits_Financial_Metrics_Assumptions__c}"     />        
+            <apex:outputLabel for=""/>
+            <apex:outputField label="{!$Label.RFA_PDFGuideline3}" Value="{!RFA__c.Cost_Estimates__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField label="{!$Label.RFA_PDFGuideline4}" Value="{!RFA__c.Risks_and_Alternatives__c}"     />
+            <apex:outputLabel for=""/>
+            <apex:outputField label="{!$Label.RFA_PDFGuideline5}" Value="{!RFA__c.Other_Considerations__c}"     />
+        </apex:pageblocksection>
+        
+        <!-- このセクションは不要なので削除  
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Other_Supporting_Documents}">
+            <apex:outputField Value="{!RFA__c.Other_Supporting_Documents_G__c}"     />
+        </apex:pageblocksection>
+        -->
+        
+        <apex:pageblocksection columns="2" title="{!$Label.RFA_PDF_Business_Case_Financials}">
+            <apex:outputField Value="{!RFA__c.CashflowYears__c}"     />
+            <apex:outputField Value="{!RFA__c.NPVUSD__c}"     />
+            <apex:outputField Value="{!RFA__c.DiscountedPaybackPeriodYears__c}"     />
+            <apex:outputField Value="{!RFA__c.WACC__c}"     />
+            <apex:outputField Value="{!RFA__c.IRR__c}"     />
+            <apex:outputField Value="{!RFA__c.Tax_Rate__c}"     />
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Capital_Request_Details}">
+            <c:RFA_C04_Capital_Expenditure_STD_PDF RecordRFAIds="{!RFA__c.ID}" editVisibleFlag="{!$CurrentPage.parameters.visible}" renderComponent="{!$Component.pageMessage}"/>
+        </apex:pageblocksection>
+        
+    </apex:pageblock>
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Three_Year_Cash_Spend}">
+            <apex:Pageblocktable value="{!ThreeYearCashSpendList}" var="Three_Year_Cash_Spend">
+                <apex:column value="{!Three_Year_Cash_Spend.Year__c}"/> 
+                <apex:column value="{!Three_Year_Cash_Spend.X3YearCashSpendFunc__c}"/>                 
+                <apex:column value="{!Three_Year_Cash_Spend.Q1CashSpendFunc__c}"/> 
+                <apex:column value="{!Three_Year_Cash_Spend.Q2CashSpendFunc__c}"/> 
+                <apex:column value="{!Three_Year_Cash_Spend.Q3CashSpendFunc__c}"/> 
+                <apex:column value="{!Three_Year_Cash_Spend.Q4CashSpendFunc__c}"/> 
+                <apex:column value="{!Three_Year_Cash_Spend.IncrementalVolumebyYear__c}"/>   
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_RFA_Approvers_Users}">
+            <apex:Pageblocktable value="{!RFAUserRoleList}" var="RFA_User_Roles" >
+                <apex:column HeaderValue="{!$Label.RFA_PDF_RecordTypeName}">
+                	 <apex:outputField Value="{!RFA_User_Roles.RecordTypeId}"/> 
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.ApprovalOrder__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.ApprovalOrder__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.UserName__c.label}"> 
+                	<apex:outputText Value="{!RFA_User_Roles.UserName__r.Name}"/>
+                </apex:column>
+               <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.L2_Function__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.L2_Function__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.Department__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.Department__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.Company_Name__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.Company_Name__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.COA_Group__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.COA_Group__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.COA_Acronym__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.COA_Acronym__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFAUserRole__c.Fields.ApprovalRecommendation__c.label}">
+                	<apex:outputText Value="{!RFA_User_Roles.ApprovalRecommendation__c}"/>
+                </apex:column>
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+    
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_NotesAndAttachments}">
+            <apex:Pageblocktable value="{!RFA__c.NotesAndAttachments}" var="NotesAndAttachments">
+                <apex:column HeaderValue="{!$Label.RFA_PDF_Title}" Value="{!NotesAndAttachments.title}"/>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_LastModified}"  Value="{!NotesAndAttachments.LastModifiedDate}"/>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_CreatedName}" Value="{!NotesAndAttachments.CreatedBy.Name}"/> 
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Related_RFA}">
+            <apex:Pageblocktable value="{!RFA__c.Related_RFA_1__r}" var="Related_RFA_1">
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Name.label}">
+                	<apex:outputText Value="{!Related_RFA_1.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_RecordTypeName}">
+                	<apex:outputText Value="{!Related_RFA_1.RecordType.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestTitle__c.label}">
+                	<apex:outputText Value="{!Related_RFA_1.RequestTitle__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestAmountFunctionalCurrency__c.label}">
+                	<apex:outputText Value="{!Related_RFA_1.RequestAmountFunctionalCurrency__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Stage__c.label}">
+                	<apex:outputText Value="{!Related_RFA_1.Stage__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_CreatedName}">
+                	<apex:outputText Value="{!Related_RFA_1.CreatedBy.Name} {!Related_RFA_1.CreatedDate}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_LastModifiedName}">
+                	<apex:outputText Value="{!Related_RFA_1.LastModifiedBy.Name} {!Related_RFA_1.LastModifiedDate}"/>
+                </apex:column> 
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Related_RFA_2}">
+            <apex:Pageblocktable value="{!RFA__c.Related_RFA_2__r}" var="Related_RFA_2">
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Name.label}">
+                	<apex:outputText Value="{!Related_RFA_2.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_RecordTypeName}">
+                	<apex:outputText Value="{!Related_RFA_2.RecordType.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestTitle__c.label}">
+                	<apex:outputText Value="{!Related_RFA_2.RequestTitle__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestAmountFunctionalCurrency__c.label}">
+                	<apex:outputText Value="{!Related_RFA_2.RequestAmountFunctionalCurrency__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Stage__c.label}">
+                	<apex:outputText Value="{!Related_RFA_2.Stage__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_CreatedName}">
+                	<apex:outputText Value="{!Related_RFA_2.CreatedBy.Name} {!Related_RFA_2.CreatedDate}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_LastModifiedName}">
+                	<apex:outputText Value="{!Related_RFA_2.LastModifiedBy.Name} {!Related_RFA_2.LastModifiedDate}"/>
+                </apex:column> 
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    
+    <apex:pageblock >
+        <apex:pageblocksection columns="1" title="{!$Label.RFA_PDF_Related_RFA_3}">
+            <apex:Pageblocktable value="{!RFA__c.Related_RFA_3__r}" var="Related_RFA_3">
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Name.label}">
+                	<apex:outputText Value="{!Related_RFA_3.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_RecordTypeName}">
+                	<apex:outputText Value="{!Related_RFA_3.RecordType.Name}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestTitle__c.label}">
+                	<apex:outputText Value="{!Related_RFA_3.RequestTitle__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.RequestAmountFunctionalCurrency__c.label}">
+                	<apex:outputText Value="{!Related_RFA_3.RequestAmountFunctionalCurrency__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$ObjectType.RFA__c.Fields.Stage__c.label}">
+                	<apex:outputText Value="{!Related_RFA_3.Stage__c}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_CreatedName}">
+                	<apex:outputText Value="{!Related_RFA_3.CreatedBy.Name} {!Related_RFA_3.CreatedDate}"/>
+                </apex:column>
+                <apex:column HeaderValue="{!$Label.RFA_PDF_LastModifiedName}">
+                	<apex:outputText Value="{!Related_RFA_3.LastModifiedBy.Name} {!Related_RFA_3.LastModifiedDate}"/>
+                </apex:column> 
+            </apex:Pageblocktable>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    <!-- 
+     <div>
+       <apex:relatedList list="RFA_User_Roles__r" pageSize="100" /> 
+      </div>
+
+      <div>
+       <apex:relatedList list="NotesAndAttachments" pageSize="100" /> 
+      </div> 
+      --> 
+      <!--
+      <div>
+       <c:RFA_C08_RFAHistory subject="{!RFA__c.ID}"></c:RFA_C08_RFAHistory> 
+      </div> -->
+      
+</apex:page>

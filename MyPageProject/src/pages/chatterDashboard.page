@@ -1,0 +1,372 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com - 2/24/2010 -->
+<apex:page controller="chatterDashboard2" tabstyle="Chatter_Dashboard__tab" action="{!doSubmit}">
+    
+    <script>function setFocusOnLoad() {}</script>
+    
+    <apex:includescript value="{!URLFOR( $Resource.chatterDashboard, 'jquery.min.js' )}" />
+    <apex:includescript value="{!URLFOR( $Resource.chatterDashboard, 'highcharts.js' )}" />
+    <apex:stylesheet value="{!URLFOR( $Resource.chatterDashboard, 'styles.css' )}" />
+    
+    <!--[if IE]>
+       <script src="{!URLFOR( $Resource.chatterDashboard, 'excanvas.compiled.js' )}" type="text/javascript"></script>
+    <![endif]-->
+
+<apex:sectionheader title="Chatterダッシュボード" />
+
+<apex:form id="theform">
+    <apex:pageblock >
+        <apex:pageblocksection showheader="false" columns="5">
+            <apex:pageblocksectionitem >
+                <apex:outputlabel for="uid" value="ユーザー" />
+                <apex:inputfield id="uid" value="{!ulookup.ownerid}" />
+            </apex:pageblocksectionitem>
+            <apex:pageblocksectionitem >
+                <apex:commandbutton value="分析の実行" action="{!doSubmit}" rerender="theform,JSdata" />
+                <apex:commandbutton value="リセット" action="{!doReset}" rerender="theform,JSdata" immediate="true" />
+            </apex:pageblocksectionitem>
+        </apex:pageblocksection>
+        
+        <apex:pageblocksection title="フォロー状況" columns="2">
+            <apex:outputpanel rendered="{!followercount > 0}">
+                <p>{!ulookupname}さんは <span class="bigFont">{!followercount}</span>人の同僚にフォロー{!if( followercount > 1, '', '' )}されています<apex:outputtext value=" Here's a few of them." rendered="{!followercount > MAX_ICONS}"/></p>
+                <apex:repeat value="{!allfollowers}" var="u" rows="{!MAX_ICONS}">
+                    <div class="userIcon">
+                        <c:userPhoto uid="{!u.uid}" v="1" height="32" styleclass="results_user_pic" title="{!u.uname}" linked="true" />
+                    </div>
+                </apex:repeat>
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!followercount = 0}">
+                <p>{!ulookupname}さんをフォローしている同僚はいません</p>
+            </apex:outputpanel>             
+            
+            <apex:outputpanel rendered="{!followingcount > 0}">
+                <p>{!ulookupname}さんは <span class="bigFont">{!followingcount}</span>人の同僚をフォローしています<apex:outputtext value=" Here's a few of them." rendered="{!followingcount > MAX_ICONS}"/></p>
+                <apex:repeat value="{!allfollowing}" var="u" rows="{!MAX_ICONS}">
+                    <div class="userIcon">
+                        <c:userPhoto uid="{!u.uid}" v="1" height="32" styleclass="results_user_pic" title="{!u.uname}" linked="true" />
+                    </div>
+                </apex:repeat>
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!followingcount = 0}">
+                <p>{!ulookupname}さんがフォローしている同僚はいません</p>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!notfollowingthem.size > 0}">
+                <p>{!ulookupname}さんがフォロー返しをしていない同僚が <span class="bigFont">{!notfollowingthem.size}</span>人います</p>
+                <apex:repeat value="{!notfollowingthem}" var="u" >
+                    <div class="userIcon">
+                        <c:userPhoto uid="{!u.uid}" v="1" height="32" styleclass="results_user_pic" title="{!u.uname}" linked="true" />
+                    </div>
+                </apex:repeat>
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!notfollowingthem.size = 0}">
+                <p>{!ulookupname}さんは <span class="bigFont">全員</span> にフォロー返しをしています</p>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!notfollowingme.size > 0}">
+                <p>{!ulookupname}さんにフォロー返しをしていない同僚が <span class="bigFont">{!notfollowingme.size}</span>{!if( notfollowingme.size > 1, "", "" )}人います</p>
+                <apex:repeat value="{!notfollowingme}" var="u" >
+                    <div class="userIcon">
+                        <c:userPhoto uid="{!u.uid}" v="1" height="32" styleclass="results_user_pic" title="{!u.uname}" linked="true" />
+                    </div>
+                </apex:repeat>
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!notfollowingme.size = 0}">
+                <p><span class="bigFont">全員</span> が{!ulookupname}さんにフォロー返しをしています</p>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!mutualFriends.size > 0}">
+                <p>{!ulookupname}さんはお互いにフォローしている同僚が <span class="bigFont">{!mutualFriends.size}</span>人います{!if( mutualFriends.size > 1, '', '')}</p>
+                <apex:repeat value="{!mutualFriends}" var="u" >
+                    <div class="userIcon">
+                        <c:userPhoto uid="{!u.uid}" v="1" height="32" styleclass="results_user_pic" title="{!u.uname}" linked="true" />           
+                    </div>
+                </apex:repeat>
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!mutualFriends.size = 0}">
+                <p>{!ulookupname}さんはお互いにフォローしている同僚がいません</p>
+            </apex:outputpanel>
+        
+        </apex:pageblocksection>
+        <apex:pageblocksection title="利用状況" columns="2">
+            <apex:outputpanel >
+                <div id="chatter-status-updates" style="width: 350px; height: 350px"></div>
+            </apex:outputpanel>
+            
+            <apex:outputpanel >
+                <div id="all-status-updates" style="width: 500px; height: 350px"></div>
+            </apex:outputpanel>
+                        
+            <apex:outputpanel rendered="{!showAccts}">
+                <div id="top-chatter-accounts" style="width: 500px; height: 400px"></div>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!showOpportunities}">
+                <div id="top-chatter-oppties" style="width: 525px; height: 400px"></div>
+            </apex:outputpanel>
+            
+            <apex:outputpanel rendered="{!showCases}">
+                <div id="top-chatter-cases" style="width: 525px; height: 400px"></div>
+            </apex:outputpanel>
+        
+        </apex:pageblocksection>
+    
+        </apex:pageblock>
+    </apex:form>
+    
+<apex:outputpanel id="JSdata">  
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var chart1 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'chatter-status-updates',
+            defaultSeriesType: 'column',
+            margin: [30, 0, 30, 30]
+         },
+         title: {
+            text: '{!JSINHTMLENCODE(ulookupname)} さんの今週のフィード'
+         },
+         xAxis: {
+            categories: [
+                <apex:repeat value="{!mychats}" var="c">
+                    '{!JSINHTMLENCODE(c.key)}',
+                </apex:repeat>            
+            ]
+         },
+         legend: { enabled: false },
+         credits: { enabled: false },
+         tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.x +'</b>: '+ this.y +' 回';
+                    }
+         },
+         yAxis: {
+            title: {
+               text: '# Updates'
+            }
+         },
+         series: [{
+            name: '{!JSINHTMLENCODE(ulookupname)}',
+            data: [
+                <apex:repeat value="{!mychats}" var="c">
+                    {!JSINHTMLENCODE(c.val)},
+                </apex:repeat>
+            ]
+         }]
+      });
+      
+      var chart2 = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'all-status-updates',
+                    defaultSeriesType: 'column',
+                    margin: [30, 0, 70, 40]
+                },
+                title: {
+                    text: '今週のフィード数Top10{!$ObjectType.User.label}'
+                },
+                xAxis: {
+                    categories: [
+                        <apex:repeat value="{!allchats}" var="c">
+                            '{!JSINHTMLENCODE(c.key)}',
+                        </apex:repeat>            
+                    ],
+                    labels: {
+                         rotation: -45,
+                         align: 'right',
+                         style: {
+                             font: 'normal 12px Verdana, sans-serif'
+                         }
+                      }             
+                },
+                tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.x +'</b>: '+ this.y +' 回';
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        events: {
+                            click: function(e) { 
+                                window.location = '/'+ e.point.options.recID;
+                            }
+                        }
+                    }
+                },
+                credits: { enabled: false },
+                legend: { enabled: false },
+                series: [{
+                    name: 'Chatter Updates',
+                    data: [
+                        <apex:repeat value="{!allchats}" var="c">
+                            { y: {!JSINHTMLENCODE(c.val)}, recID: '{!JSINHTMLENCODE(c.recID)}' },
+                        </apex:repeat>
+                    ]
+                }]
+            });
+      
+      var chart3 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'top-chatter-accounts',
+            defaultSeriesType: 'column',
+            margin: [30, 30, 80, 30]
+         },
+         title: {
+            text: '今週一番更新があった{!$ObjectType.Account.label}'
+         },
+         credits: { enabled: false },
+         legend: { enabled: false },
+         xAxis: {
+            categories: [
+                <apex:repeat value="{!topaccts}" var="c">
+                    '{!JSINHTMLENCODE(c.key)}',
+                </apex:repeat>            
+            ],
+            labels: {
+                         rotation: -45,
+                         align: 'right',
+                         style: {
+                             font: 'normal 12px Verdana, sans-serif'
+                         }
+            }   
+         },
+         tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.x +'</b>: '+ this.y +' 回';
+                    }
+         },
+         plotOptions: {
+                            column: {
+                                events: {
+                                    click: function(e) { 
+                                        window.location = '/'+ e.point.options.recID;
+                                    }
+                                }
+                            }
+         },
+         yAxis: {
+            title: {
+               text: '# Updates'
+            }
+         },
+         series: [{
+            name: 'Status Updates',
+            data: [
+                <apex:repeat value="{!topaccts}" var="c">
+                    { y: {!JSINHTMLENCODE(c.val)}, recID: '{!JSINHTMLENCODE(c.recID)}' },
+                </apex:repeat>
+            ]
+         }]
+      });
+      
+      var chart4 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'top-chatter-oppties',
+            defaultSeriesType: 'column',
+            margin: [30, 30, 80, 30]
+         },
+         title: {
+            text: '今週一番更新があった{!$ObjectType.Opportunity.label}'
+         },
+         credits: { enabled: false },
+         legend: { enabled: false },
+         tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.x +'</b>: '+ this.y +' 回';
+                    }
+         },
+         xAxis: {
+            categories: [
+                <apex:repeat value="{!topoppties}" var="c">
+                    '{!JSINHTMLENCODE(c.key)}',
+                </apex:repeat>            
+            ],
+            labels: {
+                         rotation: -45,
+                         align: 'right',
+                         style: {
+                             font: 'normal 12px Verdana, sans-serif'
+                         }
+            }   
+         },
+         plotOptions: {
+                            column: {
+                                events: {
+                                    click: function(e) { 
+                                        window.location = '/'+ e.point.options.recID;
+                                    }
+                                }
+                            }
+         },
+         yAxis: {
+            title: {
+               text: '# Updates'
+            }
+         },
+         series: [{
+            name: 'Status Updates',
+            data: [
+                <apex:repeat value="{!topoppties}" var="c">
+                    { y: {!JSINHTMLENCODE(c.val)}, recID: '{!JSINHTMLENCODE(c.recID)}' },
+                </apex:repeat>
+            ]
+         }]
+      });
+      
+      var chart5 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'top-chatter-cases',
+            defaultSeriesType: 'column',
+            margin: [30, 30, 80, 30]
+         },
+         credits: { enabled: false },
+         legend: { enabled: false },
+         title: {
+            text: '今週一番更新があった{!$ObjectType.case.label}'
+         },
+         xAxis: {
+            categories: [
+                <apex:repeat value="{!topcases}" var="c">
+                    '{!JSINHTMLENCODE(c.key)}',
+                </apex:repeat>            
+            ],
+            labels: {
+                         rotation: -45,
+                         align: 'right',
+                         style: {
+                             font: 'normal 12px Verdana, sans-serif'
+                         }
+            }   
+         },
+         tooltip: {
+                    formatter: function() {
+                        return '<b>'+ this.x +'</b>: '+ this.y +' 回';
+                    }
+         },
+         plotOptions: {
+                            column: {
+                                events: {
+                                    click: function(e) { 
+                                        window.location = '/'+ e.point.options.recID;
+                                    }
+                                }
+                            }
+         },
+         yAxis: {
+            title: {
+               text: '# Updates'
+            }
+         },
+         series: [{
+            name: 'Status Updates',
+            data: [
+                <apex:repeat value="{!topcases}" var="c">
+                    { y: {!JSINHTMLENCODE(c.val)}, recID: '{!JSINHTMLENCODE(c.recID)}' },
+                </apex:repeat>
+            ]
+         }]
+      });
+      
+   });
+   </script>
+</apex:outputpanel>
+</apex:page>

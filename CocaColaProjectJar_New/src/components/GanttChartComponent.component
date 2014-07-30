@@ -1,0 +1,81 @@
+<apex:component controller="GanttController">
+
+    <apex:attribute name="target" type="String" required="true" 
+                    description="The Project This is For" assignTo="{!mytarget}" />
+    <apex:attribute name="readonly" type="String"
+                    description="enable the event handlers like resizing and moving."/>
+    <apex:attribute name="pageSize" type="String" default="30" description="The number of elements to display on each page" />
+    <apex:attribute name="taskLevelMax" type="Integer" default="999" description="The max level of tasks to include"
+    assignTo="{!maxTaskLevel}" />
+    <apex:attribute name="includeJquery" type="Boolean" default="true" description="Select whether to include jQuery library" />
+
+    <apex:includeScript value="{!URLFOR($Resource.Milestone1_Charts, 'date.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'moment.min.js')}"/>
+
+    <apex:outputPanel rendered="{!includeJquery}">
+        <apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'jquery.min.js')}"   />
+    </apex:outputPanel>
+    
+    <apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'jquery.fn.gantt.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryGantt, 'style.css')}"/>
+    
+    <apex:includeScript value="/soap/ajax/20.0/connection.js"/>
+
+    <br/><br/>          
+    <div class="gantt" id="ganttChart{!target}"></div>
+    
+    <script type="text/javascript">
+    var g{!target} = jQuery.noConflict();
+    
+    g{!target}(function() {
+
+            "use strict";
+
+            var dropEvent = function (data) {
+                        var startDate = data["start"];
+                        var endDate = data["end"];
+                        var id = data["id"];
+                        var sobject; 
+                        sobject = new sforce.SObject("{!objectType}");
+                        sobject["{!idFieldName}"] = id;
+                        sobject["{!startDateFieldName}"] = startDate;
+                        sobject["{!endDateFieldName}"] = endDate;
+                            
+                        sforce.connection.sessionId = "{!$Api.Session_ID}";
+                        sforce.connection.update([sobject],{
+                                onSuccess : function(result){
+                                            },
+                                onFailure : function(result){
+                                                alert('{!$Label.Milestone1_AnErrorHasOcurred}' +': '+result);
+                                            }
+                        })
+                    };
+
+            g{!target}("#ganttChart{!target}").gantt({
+                source: <apex:outputText value="{!fiveLevelsData}" />,
+                navigate: "scroll",
+                maxScale: "months",
+                scale: "weeks",
+                itemsPerPage: {!pageSize},
+                onItemClick: function(data) {
+                        if(data && data.id){
+                            parent.location.href = '/'+data.id;
+                        }                    
+                },
+                onAddClick: function(dt, rowId) {
+//                    alert("Empty space clicked - add an item!");
+                },
+                onRender: function() {
+                    if (window.console && typeof console.log === "function") {
+                        console.log("chart rendered");
+                    }
+                }
+            });
+
+        });
+
+    </script>
+    
+    
+
+</apex:component>

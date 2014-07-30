@@ -1,0 +1,25 @@
+#Wed Dec 18 19:43:19 GMT+09:00 2013
+sourceHoverBackgroundColor=255,255,225
+content_assist_proposals_foreground=0,0,0
+CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.userDefinedPatternsEnabled=true
+spelling_locale_initialized=true
+CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.userDefinedPatterns=*.cls-meta.xml, *.component-meta.xml, *.page-meta.xml, *.trigger-meta.xml
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+tabWidthPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter=true
+fontPropagated=true
+org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter=true
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter=true
+org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter=true
+content_assist_proposals_background=255,255,255
+org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter=true
+org.eclipse.jdt.ui.formatterprofiles.version=11
+org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter=true
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*=true
+CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.TAG_DUMMY_TO_TEST_EXISTENCE=storedViewPreferences

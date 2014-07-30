@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestAmountFunctionalCurrency__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CHILD_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFAUserRole__c.UserName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFAUserRole__c.ApprovalRecommendation__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>All RFAs by Approver</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$RFA__c$RFAUserRole__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>RFA__c.RequestTitle__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.CirculationDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

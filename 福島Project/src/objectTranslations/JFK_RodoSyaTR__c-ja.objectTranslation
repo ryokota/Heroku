@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>労働者TR</value>
+    </caseValues>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>Biko__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集回 --></label>
+        <name>BosyuKai__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集年度 --></label>
+        <name>BosyuNendo__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生日 --></label>
+        <name>Error_HasseiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生 --></label>
+        <name>Error_Hassei__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生時の担当者 --></label>
+        <name>Error_HasseijinoTantosya__c</name>
+        <relationshipLabel><!-- 労働者TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- エラー内容 --></label>
+        <name>Error_Naiyo__c</name>
+    </fields>
+    <fields>
+        <help><!-- 当該支給時期に変更がなければ、前期雇用形態を設定する --></help>
+        <label><!-- 変更雇用形態 --></label>
+        <name>Henko_KoyoKeitai__c</name>
+        <relationshipLabel><!-- 労働者TR (変更雇用形態) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 補充労働者 --></label>
+        <name>HojuRodosyaFLG__c</name>
+    </fields>
+    <fields>
+        <label><!-- JK備考欄表示内容 --></label>
+        <name>JK_Bikoran__c</name>
+        <picklistValues>
+            <masterLabel>1ヶ月と1日以上連続無給欠勤による停止期間あり。</masterLabel>
+            <translation><!-- 1ヶ月と1日以上連続無給欠勤による停止期間あり。 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>再雇用率8割超による停止期間あり。</masterLabel>
+            <translation><!-- 再雇用率8割超による停止期間あり。 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>必要労働者数未達による停止期間あり。</masterLabel>
+            <translation><!-- 必要労働者数未達による停止期間あり。 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>支給決定日前に離職したため、支給額算定せず。</masterLabel>
+            <translation><!-- 支給決定日前に離職したため、支給額算定せず。 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>支給要件を満たさないため、支給額算定せず。</masterLabel>
+            <translation><!-- 支給要件を満たさないため、支給額算定せず。 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>申請が取り下げられたため、支給額算定せず。</masterLabel>
+            <translation><!-- 申請が取り下げられたため、支給額算定せず。 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 事業所TR（支給時期） --></label>
+        <name>JigyosyoTR_ShikyuJiki__c</name>
+        <relationshipLabel><!-- 労働者TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 実際の支給対象期間開始日 --></label>
+        <name>JissaiNoShikyuKikan_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実際の支給対象期間終了日 --></label>
+        <name>JissaiNoShikyuKikan_SyuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目実績支給金額 --></label>
+        <name>JissekiShikyuKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目実績支給金額 --></label>
+        <name>JissekiShikyuKingaku_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目実績支給金額 --></label>
+        <name>JissekiShikyuKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- ○回目 --></label>
+        <name>KaiMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 期間内離職有 --></label>
+        <name>KikannaiRisyoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目雇用形態変更有 --></label>
+        <name>KoyoKeitai_HenkoAri_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目雇用形態変更有 --></label>
+        <name>KoyoKeitai_HenkoAri_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目雇用形態変更有 --></label>
+        <name>KoyoKeitai_HenkoAri_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用形態変更開始日 --></label>
+        <name>KoyoKeitai_HenkoKaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用契約終了日 --></label>
+        <name>KoyoKeiyaku_SyuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目休止日数 --></label>
+        <name>KyushiDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目休止日数 --></label>
+        <name>KyushiDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目休止日数 --></label>
+        <name>KyushiDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- ○年目 --></label>
+        <name>NenMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目残金額 --></label>
+        <name>NokoriKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目残金額 --></label>
+        <name>NokoriKingaku_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目残金額 --></label>
+        <name>NokoriKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者 --></label>
+        <name>Rodosya__c</name>
+        <relationshipLabel><!-- 労働者TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 1年目支給日数 --></label>
+        <name>ShikyuDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目支給日数 --></label>
+        <name>ShikyuDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目支給日数 --></label>
+        <name>ShikyuDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給実績金額 --></label>
+        <name>ShikyuJissekiKingaku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定金額 --></label>
+        <name>ShikyuKetteiKingaku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給対象日数 --></label>
+        <name>ShikyuTaisyoDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目停止日数 --></label>
+        <name>TeishiDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目停止日数 --></label>
+        <name>TeishiDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目停止日数 --></label>
+        <name>TeishiDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目予定残金額 --></label>
+        <name>YoteiNokoriKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目予定残金額 --></label>
+        <name>YoteiNokoriKingaku_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目予定残金額 --></label>
+        <name>YoteiNokoriKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目予定支給日数 --></label>
+        <name>YoteiShikyuDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目予定支給日数 --></label>
+        <name>YoteiShikyuDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目予定支給日数 --></label>
+        <name>YoteiShikyuDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目予定支給金額 --></label>
+        <name>YoteiShikyuKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目予定支給金額 --></label>
+        <name>YoteiShikyuKingaku_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目予定支給金額 --></label>
+        <name>YoteiShikyuKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目予定残日数 --></label>
+        <name>YoteiZanDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目予定残日数 --></label>
+        <name>YoteiZanDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目予定残日数 --></label>
+        <name>YoteiZanDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1年目残日数 --></label>
+        <name>ZanDays_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2年目残日数 --></label>
+        <name>ZanDays_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3年目残日数 --></label>
+        <name>ZanDays_3rdYear__c</name>
+    </fields>
+    <fields>
+        <help><!-- 1-1では労働者の「雇用形態」を設定する
+1-2以降では前期の「変更雇用形態」を設定する --></help>
+        <label><!-- 前期雇用形態 --></label>
+        <name>Zenki_KoyoKeitai__c</name>
+        <relationshipLabel><!-- 労働者TR --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>労働者TRレイアウト</layout>
+        <sections>
+            <label><!-- 1年目予定 --></label>
+            <section>1年目予定</section>
+        </sections>
+        <sections>
+            <label><!-- 1年目実績 --></label>
+            <section>1年目実績</section>
+        </sections>
+        <sections>
+            <label><!-- 2年目予定 --></label>
+            <section>2年目予定</section>
+        </sections>
+        <sections>
+            <label><!-- 2年目実績 --></label>
+            <section>2年目実績</section>
+        </sections>
+        <sections>
+            <label><!-- 3年目予定 --></label>
+            <section>3年目予定</section>
+        </sections>
+        <sections>
+            <label><!-- 3年目実績 --></label>
+            <section>3年目実績</section>
+        </sections>
+        <sections>
+            <label><!-- エラー内容（1列） --></label>
+            <section>エラー内容（1列）</section>
+        </sections>
+        <sections>
+            <label><!-- エラー情報 --></label>
+            <section>エラー情報</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>ID</nameFieldLabel>
+</CustomObjectTranslation>

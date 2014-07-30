@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>17.0</apiVersion>
+    <description>ガバナ制約回避用
+・別ページを利用しすべての選択リスト値を取得</description>
+    <label>テーブル設定取得（選択リスト値）</label>
+</ApexPage>

@@ -1,0 +1,185 @@
+<apex:page controller="JFK_HRController" showHeader="false">
+    <!--  <apex:pageMessages id="msg" rendered="true"/> --> 
+    <head>
+        <style type="text/css">
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <apex:pageBlock title="【HR】変更履歴簿" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!add}" value="追加" rerender="msg"/>
+                <apex:commandButton action="{!saveMoment}" value="一時保存" rerender="msg"/>
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                <apex:commandButton action="{!apply}" value="本申請"/>
+                <apex:commandButton action="{!approve}" value="承認"/>
+                <apex:commandButton action="{!cancel}" value="取下げ"/>
+                <apex:commandButton action="{!close}" value="戻る"/>
+            </apex:pageBlockButtons>
+
+            <apex:inputHidden value="{!jigyoshoTRId}"/>
+            
+            <apex:pageBlockSection title="" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="募集年度"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="募集回"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="支給or実績"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="支給時期"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+      
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Account.Fields.Name.label}"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="労働者"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="変更項目<br/>（事業所関連）" escape="false"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="変更項目<br/>（労働者関連）" escape="false"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="債権者有無"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="県確認要or済"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="変更前"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="変更後"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="変更理由"/>
+                    <apex:inputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+            <apex:pageBlockSection title="基本情報　/　変更履歴情報" columns="1">
+	            <table align="center" height="100%" width="100%" id="resultGroup">
+	                <tr>
+	                    <td>
+	                        <DIV style="height: 100%; width: 100%; overflow: scroll; scrollbar-face-color: #220022; scrollbar-highlight-color: #220022;
+	                                    scrollbar-shadow-color: #220022; scrollbar-3dlight-color: #220022; scrollbar-arrow-color: #000000; 
+	                                    scrollbar-track-color: #220022; scrollbar-darkshadow-color: #220022; 
+	                                    filter:chroma(color=#220022)"> 
+	                            
+			                    <apex:pageblocktable value="{!listJFKCommonTRHR}" var="commonTR" id="resultGroup" border="10px">                    
+			                        <apex:column headerValue="" width="3%">
+			                            <apex:facet name="header">
+			                                <apex:inputCheckbox title="全てにチェック" onclick="selectCheckboxes(this,'inputId')"/>
+			                            </apex:facet>
+			                            <apex:inputCheckbox title="チェック" value="{!commonTR.checkflag}" id="inputId" >
+			                            </apex:inputCheckbox>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="変更<br/>箇所" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>               
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="債権者<br/>有無" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>  
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="労働者<br/>番号" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="対象<br/>労働者名" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>    
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="労働者<br/>種別" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="変更前<br/>データ" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>    
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="変更後<br/>データ" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="変更<br/>理由" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                            <apex:facet name="header">
+                    						<apex:outputLabel value="県確認要<br/>or不要" escape="false"/>
+                    					</apex:facet>
+
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                            <apex:facet name="header">
+                    						<apex:outputLabel value="１次担当<br/>入力者" escape="false"/>			                            
+                    					</apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="１次担当<br/>入力日" escape="false"/>	
+			                            </apex:facet>
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="１次担当<br/>確認" escape="false"/>	
+			                            </apex:facet>			                        	
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="2次担当<br/>入力者" escape="false"/>	
+			                            </apex:facet>	
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="2次担当<br/>入力日" escape="false"/>	
+			                            </apex:facet>	
+			                        </apex:column>
+			                        <apex:column width="5%">
+			                        	<apex:facet name="header">
+			                        		<apex:outputLabel value="2次担当<br/>確認" escape="false"/>	
+			                            </apex:facet>	
+			                        </apex:column>
+			                    </apex:pageblocktable>
+	                        </div>
+	                    </td>
+	                </tr>
+	            </table>
+			</apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

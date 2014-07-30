@@ -1,0 +1,80 @@
+<apex:page standardController="HR_Primary_Evaluators__c" extensions="HR_Evaculation3Controller">
+<apex:includeScript value="{!URLFOR($Resource.TableSorter, 'tablesorter.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.TableSorter, 'jquery-latest.js')}"/>
+        <style type="text/css">
+        
+			.sample_02{
+				width:100%;
+				border-collapse: separate;
+				border-spacing: 0px;
+				border-top: 1px solid #ccc;
+				border-left: 1px solid #ccc;
+			}
+			.sample_02 th{
+				width: 25%;
+				padding: 4px;
+				text-align: left;
+				vertical-align: top;
+				color: #444;
+				background-color: #ccc;
+				border-top: 1px solid #fff;
+				border-left: 1px solid #fff;
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+			.sample_02 td{
+				padding: 4px;
+				background-color: #fafafa;
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+			
+		#sortable-table1 {
+			width: 50%;
+			border-collapse: collapse;
+		}
+		#sortable-table1 td, #sortable-table1 th {
+			border: solid 1px black;
+		}
+			
+        </style>
+        
+<script type="text/javascript">
+$(function(){
+alert('俺の人生1');
+$("#myTable").tablesorter();
+alert('俺の人生2');
+});
+
+	function ChangeData(test){
+	
+    alert('{!EvaculationList}');
+    var myList = new Array();
+    myList = '{!EvaculationList}';
+    alert(test);
+    }
+    
+</script>
+
+	<table class="sample_02" id="myTable" >
+		<thead>
+			<tr>
+				<th>SAMPLE02</th>
+				<th>デザイン</th>
+				<th>枠線</th>
+				<th>カラー</th>
+			</tr>
+		</thead>
+		<tbody>
+			<apex:repeat value="{!EvaculationList}" var="v_Evaculation" id="Evaculation">
+			<tr>
+				<td>{!v_Evaculation.Primary_Assessment_Rank1__c}</td>
+				<td>{!v_Evaculation.Primary_Assessment_Rank2__c}</td>
+				<td>{!v_Evaculation.Primary_Assessment_Rank3__c}</td>
+				<td>{!v_Evaculation.Primary_Assessment_Rank4__c}</td>
+			</tr>
+			</apex:repeat>
+		</tbody>
+	</table>
+
+</apex:page>

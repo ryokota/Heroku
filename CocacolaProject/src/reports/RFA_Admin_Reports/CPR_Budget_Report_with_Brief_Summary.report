@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RFA__c.Capital_Expenditures__r$InvestmentObjectiveCategory__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c$RequestAmountFunctionalCurrency__c</field>
+    </columns>
+    <description>CPR Budget Report with Executive Summary for CapEx binder</description>
+    <format>Tabular</format>
+    <name>CPR Budget Report with Brief Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Capital_Expenditure_with_RFA__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,18 @@
+<apex:page standardController="Milestone1_Project__c" extensions="Milestone1_Charts_Gantt_Helper" sidebar="false">
+
+    <apex:form >
+        <apex:commandLink target="_self" action="{!cancel}" 
+                     rendered="{!!allowView}" >{!$Label.Milestone1_Back}</apex:commandLink>
+
+        <apex:outputPanel rendered="{!!allowView}">
+            <c:GanttChartComponent target="{!myId}" pageSize="999" />
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!allowView}">
+            <c:GanttChartComponent target="{!myId}" pageSize="12" />
+        </apex:outputPanel>
+        
+        <apex:outputLink target="_top" value="{!$Page.Project_GanttChart}?Id={!myId}&p=" 
+                        rendered="{!allowView}">{!$Label.Milestone1_FullView}</apex:outputLink>   
+    </apex:form>
+ 
+</apex:page>

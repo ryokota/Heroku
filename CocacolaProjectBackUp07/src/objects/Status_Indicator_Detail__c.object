@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Accomplishments_This_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Accomplishments This Period</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Action_to_be_taken__c</fullName>
+        <externalId>false</externalId>
+        <label>Action to be taken</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(Project_Budget__c, 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot;
+)</formula>
+        <label>Budget</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Control__c</fullName>
+        <externalId>false</externalId>
+        <label>Control</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Under control</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Over budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Behind schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ahead of schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stabilizing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cust_Oblig__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE( Customer_Obligations__c , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Cust Oblig</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cust_Sat__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Customer_Satisfaction__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Cust Sat</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Obligations__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Obligations</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Satisfaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Satisfaction</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Emp_Sat__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Employee_Satisfaction__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Emp Sat</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Satisfaction__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Satisfaction</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Exec_Engage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Executive_Engagement__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Exec Engage</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Executive_Engagement__c</fullName>
+        <externalId>false</externalId>
+        <label>Executive Engagement</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Go_Live__c</fullName>
+        <externalId>false</externalId>
+        <label>Go Live</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Gov__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Governance__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Gov</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Governance__c</fullName>
+        <externalId>false</externalId>
+        <label>Governance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Items_for_Management_Attn__c</fullName>
+        <externalId>false</externalId>
+        <label>Items for Management Attn</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PDF_Link__c</fullName>
+        <description>PDFのリンク先</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;../apex/Milestone_BI_MatrixReport?Id=&quot;+ Id , &quot;PDF&quot;)</formula>
+        <label>PDF</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planned_But_Not_Accomplished__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned But Not Accomplished</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Planned_For_The_Next_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned For The Next Period</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Budget</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Close Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Phase</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Prepare</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Architect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Validate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Schedule</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Scope</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>Milestone1_Project__c</referenceTo>
+        <relationshipLabel>Status Indicator</relationshipLabel>
+        <relationshipName>Status_Indicator</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Project_on_Hold__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Project on Hold</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Schedule__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Project_Schedule__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Schedule</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scope__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE( 
+CASE(  Project_Scope__c  , 
+&quot;Green&quot;, &quot;/resource/capicons/green.jpg&quot;, 
+&quot;Yellow&quot;, &quot;/resource/capicons/yellow.jpg&quot;, 
+&quot;Red&quot;, &quot;/resource/capicons/red.jpg&quot;, 
+&quot;/resource/capicons/gray.jpg&quot;), &quot;status color&quot; 
+)</formula>
+        <label>Scope</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Summary - Project Status</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>プロジェクト指標</label>
+    <nameField>
+        <label>Status Indicator Name</label>
+        <type>Text</type>
+    </nameField>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Status_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Scope__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Schedule__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Budget__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Cust_Sat__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Exec_Engage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Cust_Oblig__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Gov__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Emp_Sat__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Scope__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Schedule__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Budget__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Cust_Sat__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Exec_Engage__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Cust_Oblig__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Gov__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Emp_Sat__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Status_Date__c</searchFilterFields>
+        <searchFilterFields>Scope__c</searchFilterFields>
+        <searchFilterFields>Schedule__c</searchFilterFields>
+        <searchFilterFields>Budget__c</searchFilterFields>
+        <searchFilterFields>Cust_Sat__c</searchFilterFields>
+        <searchFilterFields>Exec_Engage__c</searchFilterFields>
+        <searchFilterFields>Cust_Oblig__c</searchFilterFields>
+        <searchFilterFields>Gov__c</searchFilterFields>
+        <searchFilterFields>Emp_Sat__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

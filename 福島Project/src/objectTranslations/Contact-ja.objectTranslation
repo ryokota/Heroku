@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>労働者</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者のアクセス権</value>
+        </caseValues>
+        <name>contact_access</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者のアクセス権</value>
+        </caseValues>
+        <name>contact_access_level</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 取引先</value>
+        </caseValues>
+        <name>contact_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 通貨</value>
+        </caseValues>
+        <name>contact_currency</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 説明</value>
+        </caseValues>
+        <name>contact_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 ディビジョン</value>
+        </caseValues>
+        <name>contact_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者の編集</value>
+        </caseValues>
+        <name>contact_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 メール</value>
+        </caseValues>
+        <name>contact_email</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 Fax</value>
+        </caseValues>
+        <name>contact_fax</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者の項目</value>
+        </caseValues>
+        <name>contact_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者履歴</value>
+        </caseValues>
+        <name>contact_history</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者履歴レポート</value>
+        </caseValues>
+        <name>contact_history_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 ID</value>
+        </caseValues>
+        <name>contact_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者情報</value>
+        </caseValues>
+        <name>contact_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 携帯</value>
+        </caseValues>
+        <name>contact_mobile</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者名</value>
+        </caseValues>
+        <name>contact_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 メモ</value>
+        </caseValues>
+        <name>contact_note</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 番号</value>
+        </caseValues>
+        <name>contact_number</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 所有者</value>
+        </caseValues>
+        <name>contact_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 所有者(別名)</value>
+        </caseValues>
+        <name>contact_owner_alias</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 電話</value>
+        </caseValues>
+        <name>contact_phone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者レコード</value>
+        </caseValues>
+        <name>contact_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者レコードタイプ</value>
+        </caseValues>
+        <name>contact_record_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>上司の労働者</value>
+        </caseValues>
+        <name>contact_reports_to</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者の役割</value>
+        </caseValues>
+        <name>contact_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者の役割 ID</value>
+        </caseValues>
+        <name>contact_role_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者の役割レポート</value>
+        </caseValues>
+        <name>contact_role_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者フェーズ ID</value>
+        </caseValues>
+        <name>contact_stage_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 状況</value>
+        </caseValues>
+        <name>contact_status</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者 種別</value>
+        </caseValues>
+        <name>contact_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>労働者ビュー</value>
+        </caseValues>
+        <name>contact_view</name>
+    </fields>
+    <fields>
+        <label><!-- 震災時の住所（市町村名） --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- 全角カタカナで入力してください。（姓と名の間に全角スペース）を入れてください。 --></help>
+        <label><!-- フリガナ --></label>
+        <name>Furigana__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補充元労働者 --></label>
+        <name>HojuMoto_Rodosya__c</name>
+        <relationshipLabel><!-- 取引先責任者 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所コード --></label>
+        <name>JigyoshoCD__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所名 --></label>
+        <name>JigyoshoMei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 欠番 --></label>
+        <name>Ketsuban__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用保険被保険者番号 --></label>
+        <name>KoyoHokenHokensyaNO__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用区分 --></label>
+        <name>KoyoKBN__c</name>
+        <relationshipLabel><!-- 取引先責任者 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 雇用形態変更日 --></label>
+        <name>KoyoKeitai_HenkoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用形態 --></label>
+        <name>KoyoKeitai__c</name>
+        <relationshipLabel><!-- 雇用形態 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 雇用契約開始日 --></label>
+        <name>KoyoKeiyaku_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用契約終了日 --></label>
+        <name>KoyoKeiyaku_SyuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用種類 --></label>
+        <name>KoyoSyurui__c</name>
+        <relationshipLabel><!-- 雇用種類 --></relationshipLabel>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 離職日 --></label>
+        <name>RisyokuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 離職理由 --></label>
+        <name>RisyokuRiyu__c</name>
+        <picklistValues>
+            <masterLabel>事業主都合</masterLabel>
+            <translation><!-- 事業主都合 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>自己都合</masterLabel>
+            <translation><!-- 自己都合 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 労働者コード --></label>
+        <name>RodosyaCD__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者番号 --></label>
+        <name>RodosyaNO__c</name>
+    </fields>
+    <fields>
+        <label><!-- 性別 --></label>
+        <name>Seibetsu__c</name>
+        <picklistValues>
+            <masterLabel>女</masterLabel>
+            <translation><!-- 女 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>男</masterLabel>
+            <translation><!-- 男 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 申請額 --></label>
+        <name>ShinseiGaku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給開始日 --></label>
+        <name>Syikyu_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 終了 --></label>
+        <name>Syuryo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 特記事項 --></label>
+        <name>TokkiJiko__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇入れ年月日 --></label>
+        <name>YatoiIre_Nengappi__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- 日付の大小に誤りがあります。 --></errorMessage>
+        <name>Contact_chkDate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+</CustomObjectTranslation>

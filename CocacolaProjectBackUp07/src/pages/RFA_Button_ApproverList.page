@@ -1,0 +1,90 @@
+<!--replacement for Page: RFA_RF1_50_LocationCoordinator_V2-->
+<apex:page title="Approver List" standardController="RFA__c" Extensions="RFA_VFC_ApproverListController" showHeader="false" sidebar="false" readOnly="true" cache="false">
+
+<!--<apex:sectionHeader title="Location Coordinators"/>-->
+<!--<apex:sectionHeader title="承認者 / Approvers"/>-->
+<!--<apex:sectionHeader title="承認者一覧 / Following is the list of all coordinators for :"/>-->
+<apex:sectionHeader title="{!$Label.RFA_ApprovalBox00}"/>
+
+<!--<apex:outputtext value="Following is the list of all location coordinators for : "/><br/><br/>-->
+<apex:outputtext value="{!$Label.RFA_ApprovalBox01}"/><br/><br/>
+
+<!--Profit Center Number : <b><apex:outputlabel value="{!rfaObj.ProfitCenterNumber__r.name}"/></b><br/>-->
+<!--収益センター番号 / Profit Center Number : <b><apex:outputlabel value="{!rfaObj.ProfitCenterNumber__r.name}"/></b><br/> -->
+
+<!--Profit Center Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <b><apex:outputfield value="{!rfaObj.ProfitCenterName__c}"/></b><br/>-->
+<!--収益センター名 / Profit Center Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <b><apex:outputfield value="{!rfaObj.ProfitCenterName__c}"/></b><br/> -->
+
+<apex:form >
+<apex:pageBlock >   
+	<!--
+   <apex:pageBlockButtons location="top" >
+   <apex:outputPanel id="myButtons">
+        <apex:commandButton action="{!Beginning}" title="Beginning" value="First" disabled="{!disablePrevious}" reRender="myPanel,myButtons"/>
+        <apex:commandButton action="{!Previous}" title="Previous" value="Previous" disabled="{!disablePrevious}" reRender="myPanel,myButtons"/>      
+        <apex:commandButton action="{!Next}" title="Next" value="Next" disabled="{!disableNext}" reRender="myPanel,myButtons"/>
+        <apex:commandButton action="{!End}" title="End" value="Last" disabled="{!disableNext}" reRender="myPanel,myButtons"/>        
+   </apex:outputPanel>
+   </apex:pageBlockButtons>
+   -->
+ 
+   <!--apex:pageBlockSection title="Total List Size: {!total_size}" collapsible="false" -->
+   <apex:outputPanel id="myPanel" >
+   <b>{!$Label.RFA_ApproverList_Record}: {!total_size}</b>
+   <br></br><br></br>
+   <apex:pageMessages id="theMessages" />
+      <!--<apex:pageBlockTable value="{!LocationCoordinators}" var="rec" align="center" id="thePageBlock"  >-->
+      <apex:pageBlockTable value="{!Approvers}" var="rec" align="center" id="thePageBlock"  >
+   <!-- UserName-->
+   <apex:column >
+    <apex:facet name="header" >             
+      <apex:outputText value="{!$ObjectType.RFAUserRole__c.Fields.UserName__c.Label}" />
+    </apex:facet>        
+    <apex:outputText value="{!rec.UserName__r.name}" />        
+   </apex:column>
+   
+   <apex:column value="{!rec.ApprovalOrder__c}" />
+   <apex:column value="{!rec.ApprovalRecommendation__c}" />  
+   <apex:column value="{!rec.ApprovalComments__c}" /> 
+   <apex:column value="{!rec.ApprovalNotes__c}" /> 
+   <apex:column value="{!rec.Approver_Source__c}" />
+   <apex:column value="{!rec.UserName__r.COA_Group__c}" />
+   <apex:column value="{!rec.UserName__r.COA_Acronym__c}" />
+   <!--<apex:column value="{!rec.UserName__r.L2_Function_E__c}" />
+   <apex:column value="{!rec.UserName__r.L3_Function_E__c}" />
+   <apex:column value="{!rec.UserName__r.L4_Function_E__c}" /> -->  
+        
+   <!--UserLevel-->
+   <!-- removed by Jia Hu on 2013/10/29 -->
+       <!--
+       <apex:column >
+          <apex:facet name="header" >
+            <apex:commandLink action="{!empty}"  reRender="thePageBlock">      
+              <apex:outputText value="{!$ObjectType.ProfitCenterUserRole__c.Fields.Level__c.Label}" />
+              <apex:outputText escape="false" rendered="{!sortBy=='Level__c'&&sortDir=='ASC'}">
+                <img src="/s.gif" alt="Sorted Ascending" class="sortAsc" title="Sorted Ascending" />
+              </apex:outputText>
+              <apex:outputText escape="false" rendered="{!sortBy=='Level__c'&&sortDir=='DESC'}">
+                <img src="/s.gif" alt="Sorted Descending" class="sortDesc" title="Sorted Descending" />
+              </apex:outputText>
+              <apex:param value="Level__c" name="column" assignTo="{!sortBy}" />
+              <apex:param value="{!IF(sortDir=='ASC'&&sortBy=='Level__c', 'DESC', 'ASC')}" name="direction" assignTo="{!sortDir}" />
+            </apex:commandLink>
+          </apex:facet> 
+          -->         
+           <!-- <apex:outputText value="{!rec.Level__c}" /> -->       
+        <!--</apex:column>--> 
+       
+        <!--<apex:column value="{!rec.UserType__c}" />  -->
+        <!--<apex:column value="{!rec.RecordType.Name}" /> -->
+        
+        <!--<apex:facet name="footer">Showing Page # {!pageNumber} of {!totalPages}</apex:facet> -->
+   </apex:pageBlockTable>
+    
+   </apex:outputPanel>
+ 
+   <!--/apex:pageBlockSection-->
+ 
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,2382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Chart of Authority</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>BOD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Board of Directors</description>
+        <externalId>false</externalId>
+        <label>BOD</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Committee__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Committee</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ELT_1__c</fullName>
+        <description>ELT: Executive Leadership Team</description>
+        <externalId>false</externalId>
+        <label>ELT 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_2__c</fullName>
+        <description>ELT: Executive Leadership Team</description>
+        <externalId>false</externalId>
+        <label>ELT 2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_3__c</fullName>
+        <description>ELT: Executive Leadership Team</description>
+        <externalId>false</externalId>
+        <label>ELT 3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_4__c</fullName>
+        <description>ELT: Executive Leadership Team</description>
+        <externalId>false</externalId>
+        <label>ELT 4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_5__c</fullName>
+        <externalId>false</externalId>
+        <label>ELT 5</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_6__c</fullName>
+        <externalId>false</externalId>
+        <label>ELT 6</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_7__c</fullName>
+        <externalId>false</externalId>
+        <label>ELT 7</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ELT_8__c</fullName>
+        <externalId>false</externalId>
+        <label>ELT 8</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSCO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CBIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPACO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_CokeOne_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function CokeOne 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Commercial_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Commercial 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Finance_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Finance 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_HR_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function HR 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Other_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Other 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Procurement_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Procurement 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Function_Supply_Chain_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Function Supply Chain 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 10</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 4</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 5</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 6</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 7</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 8</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Info_Copy_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Info Copy 9</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Left_Bracket__c</fullName>
+        <externalId>false</externalId>
+        <label>Left Bracket</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Left_Sign__c</fullName>
+        <externalId>false</externalId>
+        <label>Left Sign</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&gt;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt;=</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Memo__c</fullName>
+        <externalId>false</externalId>
+        <label>Memo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryCOACategory__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field allows the RFA Creator to select up to 3 COA Categories that apply to the requested transaction.</inlineHelpText>
+        <label>Primary COA Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>I. Purchase, Disposal, Revaluation or Write-off of Assets</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>II. Leases and Rental Contracts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>III. Pricing / Operating Revenues / Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IV. Operating Expenses and Purchases (not covered by General Threshold)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V. Treasury</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VI. Personnel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VII. Other Transactions / Activities / Contracts and Agreements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIII. Corporate Structures and Mergers and Acquisitions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IX. Board of Directors Approvals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryCOASubCategory2__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary COA Sub Category 2</label>
+        <picklist>
+            <controllingField>PrimaryCOASubCategory__c</controllingField>
+            <picklistValues>
+                <fullName>1. Approval of Annual Capital Budget</fullName>
+                <controllingFieldValues>A. Purchase of Fixed Assets (Capital Expenditures)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Officially and internally approved and budgeted assets (Capital Projects, Medium Projects and Small Projects)</fullName>
+                <controllingFieldValues>A. Purchase of Fixed Assets (Capital Expenditures)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Officially and internally approved and budgeted assets</fullName>
+                <controllingFieldValues>A. Purchase of Fixed Assets (Capital Expenditures)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Additional, unbudgeted Capital Projects, Medium Projects and Small Projects</fullName>
+                <controllingFieldValues>A. Purchase of Fixed Assets (Capital Expenditures)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Scope changes in previously approved Capital Projects or Small Projects</fullName>
+                <controllingFieldValues>A. Purchase of Fixed Assets (Capital Expenditures)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Sale and write-off of Fixed Assets</fullName>
+                <controllingFieldValues>B. Disposal of Fixed Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Real Estate</fullName>
+                <controllingFieldValues>B. Disposal of Fixed Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>c. Transactions Involving Intangible Rights and Assets</fullName>
+                <controllingFieldValues>B. Disposal of Fixed Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Write-offs of uncollectible trade accounts receivable and other receivables</fullName>
+                <controllingFieldValues>E. Revaluation or Write-off of Other Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Inventory Adjustments and Disposals (incl. Flush-outs)</fullName>
+                <controllingFieldValues>E. Revaluation or Write-off of Other Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Real Estate - Rental Contracts (CCEJ or Subsidiaries as Tenant)</fullName>
+                <controllingFieldValues>A. Operating Leases / Rental Contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Movable Assets (including vehicles)</fullName>
+                <controllingFieldValues>A. Operating Leases / Rental Contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Establishment of and changes to Price, Terms and Conditions Concept (PTC)</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Specific deviation or a new program to the approved Price, Terms and Conditions Concept</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. New price lists / rebate lists and changes to existing price lists / rebate lists for the full service vending machine business</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Changes of gross price lists valid for certain channels, packages and brands</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Determination of and changes to the standard cost of sales and intercompany transfer price for KO products</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6. Determination of changes to standard cost of sales for Non-KO products</fullName>
+                <controllingFieldValues>A. Approval of Pricing Policy</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Approval of the following Customer Agreement</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Approval of Customer Agreement for CS KAM</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Approval of Customer Agreement for Food KAM</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Approval of Customer Agreement for SAKAYA KAM</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Approval of Customer Agreement for VM Corporate Sales &amp; Hunter</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6. Approval of Customer Agreement for VM Div. Corporate Sales</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7. Approval of Customer Agreement for Equipment Operating Rule</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8. Approval of Customer Agreement for FV</fullName>
+                <controllingFieldValues>B. Approval of Customer Terms &amp; Conditions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Establishing or amending overall CCEJ credit policy (including credit limits)</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Initial setting of credit limits</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Changes of credit limits</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Changes of credit limits - Create less risk to the company (shortening credit terms)</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Changes of credit limits - Create more risk to the company (lengthening credit terms)</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Changes of credit limits - Create more risk to the company (lengthening credit terms) - Initial credit limit ＞ ￥ 25,000,000 and change is ＞ 25%</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Credit Period - Payment Terms ＞ 1 month and ＜ 2 months</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Credit Period - Payment Terms ≧ 2 months</fullName>
+                <controllingFieldValues>C. Credit Terms / Policies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Petty cash expenses</fullName>
+                <controllingFieldValues>A. Approval of Operating Expenses within Budget</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Raw materials and packaging materials</fullName>
+                <controllingFieldValues>A. Approval of Operating Expenses within Budget</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Payments of full service commission based on previously appproved contracts</fullName>
+                <controllingFieldValues>A. Approval of Operating Expenses within Budget</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Payment of rebates based on previously approved contracts</fullName>
+                <controllingFieldValues>A. Approval of Operating Expenses within Budget</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Budget Control</fullName>
+                <controllingFieldValues>C. Marketing Expenses</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. DME Commitment</fullName>
+                <controllingFieldValues>C. Marketing Expenses</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Establishment and changes of banking relationships</fullName>
+                <controllingFieldValues>D. Banking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Guarantees</fullName>
+                <controllingFieldValues>D. Banking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Disbursement authorization</fullName>
+                <controllingFieldValues>E. Cash Disbursements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Direct Debit authorizations</fullName>
+                <controllingFieldValues>E. Cash Disbursements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Recruting permanent employees</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Personnel transfer, Secondment (Permanent employees only) - Management</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Personnel transfer, Secondment (Permanent employees only) - Management - Inside Sub function</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Personnel transfer, Secondment (Permanent employees only) - Management - Inside Controller&apos;s Group</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Personnel transfer, Secondment (Permanent employees only) - Non-Management</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Hiring of temporary contracted and part-time employees - Temporary</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Hiring of temporary contracted and part-time employees - Contract</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Hiring of temporary contracted and part-time employees - Part-time</fullName>
+                <controllingFieldValues>B. Recruitment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Settlement of Litigation, Employee Relations issues</fullName>
+                <controllingFieldValues>C. Litigation, Termination and Dismissal of employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Termination of Permanent Employees (Excl. voluntary resignation and Punitive dismissal)</fullName>
+                <controllingFieldValues>C. Litigation, Termination and Dismissal of employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Punitive dismissal</fullName>
+                <controllingFieldValues>C. Litigation, Termination and Dismissal of employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. One-time payment and compensation in kind</fullName>
+                <controllingFieldValues>D. Compensation and Benefit</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. One-time payment and compensation in kind - ＞ 10% associate&apos;s annual base compensation</fullName>
+                <controllingFieldValues>D. Compensation and Benefit</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Salary and Wage Increases (including Job Grade changes where noted) - Management</fullName>
+                <controllingFieldValues>D. Compensation and Benefit</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Salary and Wage Increases (including Job Grade changes where noted) - Non-Management</fullName>
+                <controllingFieldValues>D. Compensation and Benefit</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Employee Benefit, Pension and compensation Plans and Programs</fullName>
+                <controllingFieldValues>D. Compensation and Benefit</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Corporate Memberships and Associations (CCEJ and Subsidiaries)</fullName>
+                <controllingFieldValues>E. Club Memberships and Other Memberships</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Corporate Memberships and Associations (CCEJ and Subsidiaries) - Applicable only to CC Association, economics and management groups, beverage industries and government organizations</fullName>
+                <controllingFieldValues>E. Club Memberships and Other Memberships</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Corporate Memberships and Associations (CCEJ and Subsidiaries) - Other than membership above 1</fullName>
+                <controllingFieldValues>E. Club Memberships and Other Memberships</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Employee Memberships</fullName>
+                <controllingFieldValues>E. Club Memberships and Other Memberships</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Employee Memberships - ＞ ￥ 100,000 or ＞ 10% of associate&apos;s annual base compensation</fullName>
+                <controllingFieldValues>E. Club Memberships and Other Memberships</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Travel authorization - Domestic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Travel authorization - Overseas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Travel Advance Payment</fullName>
+                <controllingFieldValues>H. Travel Expenses</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Company Credit Card</fullName>
+                <controllingFieldValues>H. Travel Expenses</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Charitable Donations</fullName>
+                <controllingFieldValues>A. Charitable Donations and Political Related Transactions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Political Contributions, Payments to Government Officials and all other political related transactions</fullName>
+                <controllingFieldValues>A. Charitable Donations and Political Related Transactions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. For business purpose</fullName>
+                <controllingFieldValues>B. Social Amenities, Gifts, Entertainment, Congratulatory or Condolence money, and Other Courtesies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. To employees (per item / employee)</fullName>
+                <controllingFieldValues>B. Social Amenities, Gifts, Entertainment, Congratulatory or Condolence money, and Other Courtesies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Acceptance of gifts, meals or entertainment from third parties</fullName>
+                <controllingFieldValues>B. Social Amenities, Gifts, Entertainment, Congratulatory or Condolence money, and Other Courtesies</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Procurement Contracts with Financial Commitment</fullName>
+                <controllingFieldValues>C. Supply, Purchase and Outsourcing Agreements (including Contract Manufacturing Arrangements)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Procurement Contracts without Financial Commitment</fullName>
+                <controllingFieldValues>C. Supply, Purchase and Outsourcing Agreements (including Contract Manufacturing Arrangements)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Purchase Orders (PO)</fullName>
+                <controllingFieldValues>C. Supply, Purchase and Outsourcing Agreements (including Contract Manufacturing Arrangements)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Applies to items not related to customers</fullName>
+                <controllingFieldValues>D. Advertising Allowances, Outdoor Advertising, Sponsorship, Promotions and Events</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Applies to items not related to customers - Contract review is necessary</fullName>
+                <controllingFieldValues>D. Advertising Allowances, Outdoor Advertising, Sponsorship, Promotions and Events</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Advertisement expenses which PAC is mainly responsible other than the above 1</fullName>
+                <controllingFieldValues>D. Advertising Allowances, Outdoor Advertising, Sponsorship, Promotions and Events</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Advertisement expenses which PAC is mainly responsible other than the above 1 - Contract review is necessary</fullName>
+                <controllingFieldValues>D. Advertising Allowances, Outdoor Advertising, Sponsorship, Promotions and Events</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Contract Packing Agreements</fullName>
+                <controllingFieldValues>F. Bottler and other Production and Distribution authorizations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Toll-filling and other service agreements</fullName>
+                <controllingFieldValues>F. Bottler and other Production and Distribution authorizations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. General</fullName>
+                <controllingFieldValues>H. Outside Professional Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Audit Services</fullName>
+                <controllingFieldValues>H. Outside Professional Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Legal, Tax, M&amp;A, Accounting and Non-Audit Services</fullName>
+                <controllingFieldValues>H. Outside Professional Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Marketing and Public Affairs (includes marketing, media &amp; public affairs agencies, and marketing services)</fullName>
+                <controllingFieldValues>H. Outside Professional Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Accounts Receivable Sub-Ledger Balances</fullName>
+                <controllingFieldValues>J. Financial Confirmations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Accounts Payable Sub-Ledger Balances</fullName>
+                <controllingFieldValues>J. Financial Confirmations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. General Ledger Balances</fullName>
+                <controllingFieldValues>J. Financial Confirmations</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Prepayments of trade, corporate, property tax and other taxes</fullName>
+                <controllingFieldValues>L. Tax assessments, notifications and relevant payments</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Payments based on annual tax assessments received from authorities</fullName>
+                <controllingFieldValues>L. Tax assessments, notifications and relevant payments</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Accounts</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Cost center and Profit center</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Customer Master File</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. Price Master File</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Rebate Master File</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6. Standard Cost of Sales</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7. Vendor Master File</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8. Bill of Materials (BOM)</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9. Material Master File</fullName>
+                <controllingFieldValues>N. Approval for Creation or Change of Master Files</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. IT Investments</fullName>
+                <controllingFieldValues>Q. Information Technology Investments and Website Presence</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Internet Website Presence (Website, social media and mobile applications, internet website presence)</fullName>
+                <controllingFieldValues>Q. Information Technology Investments and Website Presence</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1. Legal name changes</fullName>
+                <controllingFieldValues>B. Corporate Structures Issues</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2. Change of entity classification / legal form</fullName>
+                <controllingFieldValues>B. Corporate Structures Issues</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3. Restructuring of company operations</fullName>
+                <controllingFieldValues>B. Corporate Structures Issues</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4. New legal entity</fullName>
+                <controllingFieldValues>B. Corporate Structures Issues</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5. Setting up / closing of branches</fullName>
+                <controllingFieldValues>B. Corporate Structures Issues</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryCOASubCategory3__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary COA Sub Category 3</label>
+        <picklist>
+            <controllingField>PrimaryCOASubCategory2__c</controllingField>
+            <picklistValues>
+                <fullName>a. Real Estate</fullName>
+                <controllingFieldValues>2. Officially and internally approved and budgeted assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Investment Transactions Involving Intangible Rights and Assets</fullName>
+                <controllingFieldValues>2. Officially and internally approved and budgeted assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Funding by shift of funds from an approved current year Capital Project</fullName>
+                <controllingFieldValues>3. Additional, unbudgeted Capital Projects, Medium Projects and Small Projects</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Other</fullName>
+                <controllingFieldValues>3. Additional, unbudgeted Capital Projects, Medium Projects and Small Projects</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Inventory Count Adjustment (per location)</fullName>
+                <controllingFieldValues>2. Inventory Adjustments and Disposals (incl. Flush-outs)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Write-offs and disposal</fullName>
+                <controllingFieldValues>2. Inventory Adjustments and Disposals (incl. Flush-outs)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>c. Write-downs (incl. flush out)</fullName>
+                <controllingFieldValues>2. Inventory Adjustments and Disposals (incl. Flush-outs)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. New location or extension of existing location (㎡)</fullName>
+                <controllingFieldValues>1. Real Estate - Rental Contracts (CCEJ or Subsidiaries as Tenant)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Contract renewal</fullName>
+                <controllingFieldValues>1. Real Estate - Rental Contracts (CCEJ or Subsidiaries as Tenant)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Vehicles (including Capital Leases) - Budgeted : ≦ Total ￥ 50,000,000 and ≦ 3 Years</fullName>
+                <controllingFieldValues>2. Movable Assets (including vehicles)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Vehicles (including Capital Leases) - Budgeted : ＞ Total ￥ 50,000,000 or　＞ 3 Years</fullName>
+                <controllingFieldValues>2. Movable Assets (including vehicles)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Vehicles (including Capital Leases) - Non-Budgeted</fullName>
+                <controllingFieldValues>2. Movable Assets (including vehicles)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Other - ≦ Total ￥ 50,000,000 and ≦ 3 Years</fullName>
+                <controllingFieldValues>2. Movable Assets (including vehicles)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Other - ＞ Total ￥ 50,000,000 or　＞ 3 Years</fullName>
+                <controllingFieldValues>2. Movable Assets (including vehicles)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Establishment of and changes to PTC - KO products</fullName>
+                <controllingFieldValues>1. Establishment of and changes to Price, Terms and Conditions Concept (PTC)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Establishment of and changes to PTC - Non-KO products</fullName>
+                <controllingFieldValues>1. Establishment of and changes to Price, Terms and Conditions Concept (PTC)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Specific deviation or a new program to the approved PTC Concept - KO products</fullName>
+                <controllingFieldValues>2. Specific deviation or a new program to the approved Price, Terms and Conditions Concept</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Specific deviation or a new program to the approved PTC Concept - Non-KO products</fullName>
+                <controllingFieldValues>2. Specific deviation or a new program to the approved Price, Terms and Conditions Concept</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Approval of periodic gross price list changes for whole KO and Non-KO products range or parts thereof</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Determination of gross list price / local conditions for single SKUs - KO for existing packaging / product segments</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>c. Determination of gross list price / local conditions for single SKUs - KO for new packaging / product segments</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>d. Approval of material master request for Non-KO trading goods</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>e. Approval of material master request for Non-KO other items</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>f. Determination of gross list price for advertising material</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>g. Approval of KO-material master request for cross territory sales</fullName>
+                <controllingFieldValues>4. Changes of gross price lists valid for certain channels, packages and brands</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Approval of transfer price for sales transactions with other bottlers</fullName>
+                <controllingFieldValues>5. Determination of and changes to the standard cost of sales and intercompany transfer price for KO products</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>c. Determination and Changes for specific articles during a period (within a year)</fullName>
+                <controllingFieldValues>5. Determination of and changes to the standard cost of sales and intercompany transfer price for KO products</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Annual approval of standard cost of sales (Intercompany transfer price within CCEJ group)</fullName>
+                <controllingFieldValues>5. Determination of and changes to the standard cost of sales and intercompany transfer price for KO products</controllingFieldValues>
+                <controllingFieldValues>6. Determination of changes to standard cost of sales for Non-KO products</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Determination and Changes for specific articles during a period (within a year)</fullName>
+                <controllingFieldValues>6. Determination of changes to standard cost of sales for Non-KO products</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Field Sales Operations Customer (Excluding &quot;SAKAYA KAM&quot;)</fullName>
+                <controllingFieldValues>1. Approval of the following Customer Agreement</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. VM Customer (Excluding &quot;VM Corporate Sales &amp; Hunter&quot; and &quot;VM Div. Corporate Sales&quot;)</fullName>
+                <controllingFieldValues>1. Approval of the following Customer Agreement</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. System calculated rebates</fullName>
+                <controllingFieldValues>4. Payment of rebates based on previously approved contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Manual calculated rebates and invoices from CCCMC</fullName>
+                <controllingFieldValues>4. Payment of rebates based on previously approved contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. DME annual Budget</fullName>
+                <controllingFieldValues>1. Budget Control</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Budget shifts (between different channel or cost center)</fullName>
+                <controllingFieldValues>1. Budget Control</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>c. Budget addition</fullName>
+                <controllingFieldValues>1. Budget Control</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Bank transfer</fullName>
+                <controllingFieldValues>1. Disbursement authorization</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Cash and Checks</fullName>
+                <controllingFieldValues>1. Disbursement authorization</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. New Graduate recruitment</fullName>
+                <controllingFieldValues>1. Recruting permanent employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Mid-career recruitment - New Positions (Number Increase)</fullName>
+                <controllingFieldValues>1. Recruting permanent employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Mid-career recruitment - Replacement (vacant positions)</fullName>
+                <controllingFieldValues>1. Recruting permanent employees</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Termination of an employment agreement with temporary employees, contact employees, part-timers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Dismissal following disciplinary disposition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>a. Entertainment fee (excluding b.) (For business purpose)</fullName>
+                <controllingFieldValues>1. For business purpose</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>b. Golf, Celebration / Condolence, Association type (Customer&apos;s mutual associations) expenses (For business purpose)</fullName>
+                <controllingFieldValues>1. For business purpose</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryCOASubCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary COA Sub Category 1</label>
+        <picklist>
+            <controllingField>PrimaryCOACategory__c</controllingField>
+            <picklistValues>
+                <fullName>A. Purchase of Fixed Assets (Capital Expenditures)</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Disposal of Fixed Assets</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Transfer of Fixed Assets among consolidated CCEJ locations and operations (tangible and intangible assets)</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D. Asset Impairments</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E. Revaluation or Write-off of Other Assets</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Operating Leases / Rental Contracts</fullName>
+                <controllingFieldValues>II. Leases and Rental Contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Capital Leases(excluding Vehicles)</fullName>
+                <controllingFieldValues>II. Leases and Rental Contracts</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Approval of Pricing Policy</fullName>
+                <controllingFieldValues>III. Pricing / Operating Revenues / Marketing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Approval of Customer Terms &amp; Conditions</fullName>
+                <controllingFieldValues>III. Pricing / Operating Revenues / Marketing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Credit Terms / Policies</fullName>
+                <controllingFieldValues>III. Pricing / Operating Revenues / Marketing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Approval of Operating Expenses within Budget</fullName>
+                <controllingFieldValues>IV. Operating Expenses and Purchases (not covered by General Threshold)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Approval of Operating Expenses in excess of Budget</fullName>
+                <controllingFieldValues>IV. Operating Expenses and Purchases (not covered by General Threshold)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Marketing Expenses</fullName>
+                <controllingFieldValues>IV. Operating Expenses and Purchases (not covered by General Threshold)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D. CCEJ One-time Integration Expenses</fullName>
+                <controllingFieldValues>IV. Operating Expenses and Purchases (not covered by General Threshold)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. External Borrowings</fullName>
+                <controllingFieldValues>V. Treasury</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Intercompany Loans (within CCEJ Group)</fullName>
+                <controllingFieldValues>V. Treasury</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Derivative and other Financial Instruments</fullName>
+                <controllingFieldValues>V. Treasury</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D. Banking</fullName>
+                <controllingFieldValues>V. Treasury</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E. Cash Disbursements</fullName>
+                <controllingFieldValues>V. Treasury</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Loans, Loan Guarantees and Guarantees for Employees</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Recruitment</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Litigation, Termination and Dismissal of employees</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D. Compensation and Benefit</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E. Club Memberships and Other Memberships</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F. Collective Labor Agreements</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>G. Overtime</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>H. Travel Expenses</fullName>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Charitable Donations and Political Related Transactions</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Social Amenities, Gifts, Entertainment, Congratulatory or Condolence money, and Other Courtesies</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Supply, Purchase and Outsourcing Agreements (including Contract Manufacturing Arrangements)</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>D. Advertising Allowances, Outdoor Advertising, Sponsorship, Promotions and Events</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E. Prepaid Amounts (to customers, suppliers or other business partners)</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F. Bottler and other Production and Distribution authorizations</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>G. Consulting Services</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>H. Outside Professional Services</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I. Settlement of Litigation</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>J. Financial Confirmations</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>K. Disclosure of non-public Business and Financial Information</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>L. Tax assessments, notifications and relevant payments</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M. Manual Journal Voucher</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N. Approval for Creation or Change of Master Files</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>O. Inventory Returns from Customers</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P. Free Samples / Goodwill</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q. Information Technology Investments and Website Presence</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>R. Exceptional Transactions</fullName>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Mergers, Acquisitions, Disinvestments (including Joint Ventures)</fullName>
+                <controllingFieldValues>VIII. Corporate Structures and Mergers and Acquisitions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A. Mergers, Acquisitions, Disinvestments (including Joint Ventures) - Megers, Acquisitions and Disinvestments with value ＞ ￥500,000,000</fullName>
+                <controllingFieldValues>VIII. Corporate Structures and Mergers and Acquisitions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B. Corporate Structures Issues</fullName>
+                <controllingFieldValues>VIII. Corporate Structures and Mergers and Acquisitions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C. Corporate Seal Management</fullName>
+                <controllingFieldValues>VIII. Corporate Structures and Mergers and Acquisitions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Z. Other</fullName>
+                <controllingFieldValues>I. Purchase, Disposal, Revaluation or Write-off of Assets</controllingFieldValues>
+                <controllingFieldValues>II. Leases and Rental Contracts</controllingFieldValues>
+                <controllingFieldValues>III. Pricing / Operating Revenues / Marketing</controllingFieldValues>
+                <controllingFieldValues>IV. Operating Expenses and Purchases (not covered by General Threshold)</controllingFieldValues>
+                <controllingFieldValues>IX. Board of Directors Approvals</controllingFieldValues>
+                <controllingFieldValues>VI. Personnel</controllingFieldValues>
+                <controllingFieldValues>VII. Other Transactions / Activities / Contracts and Agreements</controllingFieldValues>
+                <controllingFieldValues>VIII. Corporate Structures and Mergers and Acquisitions</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Record_Type_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Record Type List</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Small Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capital Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Right_Bracket__c</fullName>
+        <externalId>false</externalId>
+        <label>Right Bracket</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Right_Sign__c</fullName>
+        <externalId>false</externalId>
+        <label>Right Sign</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt;</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&lt;=</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shareholder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Shareholder</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Threshold_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Threshold Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>All</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value with Record Type</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budgeted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unkown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>COA</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>Record_Type_List__c</columns>
+        <columns>PrimaryCOACategory__c</columns>
+        <columns>PrimaryCOASubCategory__c</columns>
+        <columns>PrimaryCOASubCategory2__c</columns>
+        <columns>PrimaryCOASubCategory3__c</columns>
+        <columns>Function_CokeOne_1__c</columns>
+        <columns>Memo__c</columns>
+        <columns>Threshold_Type__c</columns>
+        <columns>BOD__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>COA No.</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <searchLayouts>
+        <customTabListAdditionalFields>PrimaryCOACategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PrimaryCOASubCategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Threshold_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Shareholder__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Left_Bracket__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Left_Sign__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Right_Sign__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Right_Bracket__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Record_Type_List__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

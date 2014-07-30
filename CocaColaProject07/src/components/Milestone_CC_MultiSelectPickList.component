@@ -1,0 +1,172 @@
+<apex:component controller="Milestone_CC_Multiselect_Component">
+	<apex:attribute name="leftLabel" description="左のラベール名" type="String" required="true" />
+	<apex:attribute name="rightLabel" description="右のラベール名" type="String" required="true" />
+	<apex:attribute name="size" description="サイズ" type="Integer" required="true" />
+	<apex:attribute name="width" description="幅サイズ" type="String" required="true" />
+
+	<apex:attribute name="leftOption" description="" type="SelectOption[]" required="true" assignTo="{!leftOptions}" />
+	<apex:attribute name="rightOption" description="" type="SelectOption[]" required="true" assignTo="{!rightOptions}" />
+
+	<apex:outputPanel id="multiselectPanel" layout="block" styleClass="duelingListBox">
+		<table class="layout" align="left">
+			<tbody>
+				<tr>
+					<td width="100px">　</td>
+					<!-- 左側のパーネル Start-->
+					<td class="selectCell">
+						<apex:outputPanel layout="block" styleClass="selectTitle">
+							<apex:outputLabel value="{!leftLabel}" for="multiselectPanel:leftList" />
+						</apex:outputPanel>
+						<select id="{!$Component.multiselectPanel}:leftList" 
+								class="multilist" multiple="multiple" size="{!size}" style="width: {!width};">
+							<apex:repeat value="{!leftOptions}" var="option">
+								<option value="{!option.value}">{!option.label}</option>
+							</apex:repeat>
+						</select>
+					</td>
+					<!-- 左側のパーネル End-->
+					<!-- 追加、削除 ボターンStart-->
+					<td class="buttonCell">
+						<apex:outputPanel layout="block" styleClass="text">Add</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="text">
+							<apex:outputLink value="javascript:moveSelectedOptions('{!$Component.multiselectPanel}:leftList', 
+									'{!$Component.multiselectPanel}:rightList', '{!$Component.leftHidden}', 
+									'{!$Component.rightHidden}');" id="btnRight">
+								<apex:image value="/s.gif" alt="Add" styleClass="rightArrowIcon" title="Add" />
+							</apex:outputLink>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="text">
+							<apex:outputLink value="javascript:moveSelectedOptions('{!$Component.multiselectPanel}:rightList', 
+									'{!$Component.multiselectPanel}:leftList', '{!$Component.rightHidden}', 
+									'{!$Component.leftHidden}');" id="btnLeft">
+								<apex:image value="/s.gif" alt="Remove" styleClass="leftArrowIcon" title="Remove" />
+							</apex:outputLink>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="duelingText">Remove</apex:outputPanel>
+					</td>
+					<!-- 追加、削除 ボターンEnd-->
+					<!-- 右のパーネル Start-->
+					<td class="selectCell">
+						<apex:outputPanel layout="block" styleClass="selectTitle">
+							<apex:outputLabel value="{!rightLabel}" for="multiselectPanel:rightList" />
+						</apex:outputPanel>
+						<select id="{!$Component.multiselectPanel}:rightList" class="multilist" multiple="multiple" size="{!size}" style="width: {!width};">
+							<apex:repeat value="{!rightOptions}" var="option">
+								<option value="{!option.value}">{!option.label}</option>
+							</apex:repeat>
+						</select>
+					</td>
+					<!-- 右のパーネル End-->
+					<!-- アップ、ダウンボターン Start-->
+					<td class="buttonCell">
+						<apex:outputPanel layout="block" styleClass="text">Up</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="text">
+							<apex:outputLink value="javascript:slideSelectedOptionsUp('{!$Component.multiselectPanel}:rightList', 
+									'{!$Component.rightHidden}');" id="upBtn">
+								<apex:image value="/s.gif" alt="Up" styleClass="upArrowIcon" title="Up" />
+							</apex:outputLink>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="text">
+							<apex:outputLink value="javascript:slideSelectedOptionsDown('{!$Component.multiselectPanel}:rightList', 
+									'{!$Component.rightHidden}');" id="downBtn">
+								<apex:image value="/s.gif" alt="Down" styleClass="downArrowIcon" title="Down" />
+							</apex:outputLink>
+						</apex:outputPanel>
+						<apex:outputPanel layout="block" styleClass="text">Down</apex:outputPanel>
+					</td>
+					<!-- アップ、ダウンボターン End-->
+				</tr>
+			</tbody>
+		</table>
+		<apex:inputHidden value="{!leftOptionsHidden}" id="leftHidden" />
+		<apex:inputHidden value="{!rightOptionsHidden}" id="rightHidden" />
+	</apex:outputPanel>
+  <script type="text/javascript">
+      //該当リストパネルの値をHiddenに設定
+      function buildOutputString(listBox, hiddenInput) {
+        var str = '';
+
+        for ( var x = 0; x < listBox.options.length; x++) {
+          str += encodeURIComponent(listBox.options[x].value) + '&'
+              + encodeURIComponent(listBox.options[x].text) + '&';
+        }
+
+        hiddenInput.value = str.slice(0, -1);
+      }
+
+      // FromパネルからToパネルに移動処理
+      // それぞれのHiddenに値を設定
+      function moveSelectedOptions(idFrom, idTo, idHdnFrom, idHdnTo) {
+      	//パネル情報取得
+        listFrom = document.getElementById(idFrom);
+        listTo = document.getElementById(idTo);
+		//移動された情報は該当パネル情報から外す処理
+        for ( var x = 0; x < listTo.options.length; x++) {
+          listTo.options[x].selected = false;
+        }
+		//対象パネルから選択した値を反対パネルに追加
+        for ( var x = 0; x < listFrom.options.length; x++) {
+          if (listFrom.options[x].selected == true) {
+            listTo.appendChild(listFrom.options[x]);
+            x--;
+          }
+        }
+
+        listTo.focus();
+		//Hiddenの値設定
+        buildOutputString(listFrom, document.getElementById(idHdnFrom));
+        buildOutputString(listTo, document.getElementById(idHdnTo));
+      }
+
+      // アップボタンの制御
+      function slideSelectedOptionsUp(idList, idHidden) {
+      	//該当パネルで存在する値を取得
+        listBox = document.getElementById(idList);
+		//パネルに存在するデータを数える
+        var len = listBox.options.length;
+		//一番上の場合
+        if (len > 0 && listBox.options[0].selected == true) {
+          return;
+        }
+		//位置を上げる
+        for ( var x = 1; x < len; x++) {
+          if (listBox.options[x].selected == true) {
+            listBox.insertBefore(listBox.options[x],
+                listBox.options[x - 1]);
+          }
+        }
+
+        listBox.focus();
+		//Hiddenに値を設定
+        buildOutputString(listBox, document.getElementById(idHidden));
+      }
+
+      // Slide the selected options in the idList listbox down by one position,
+      // ダウンボタン制御
+      function slideSelectedOptionsDown(idList, idHidden) {
+      	//該当パネルで存在する値を取得
+        listBox = document.getElementById(idList);
+		//パネルに存在するデータを数える
+        var len = listBox.options.length;
+		//一番下の場合
+        if (len > 0 && listBox.options[len - 1].selected == true) {
+          return;
+        }
+		//位置を下げる
+        for ( var x = len - 1; x >= 0; x--) {
+          if (listBox.options[x].selected == true) {
+            listBox.insertBefore(listBox.options[x + 1],
+                listBox.options[x]);
+          }
+        }
+
+        listBox.focus();
+		//Hiddenに値を設定
+        buildOutputString(listBox, document.getElementById(idHidden));
+      }
+    
+    //Hiddenに値を設定
+    buildOutputString(document.getElementById('{!$Component.multiselectPanel}:leftList'), document.getElementById('{!$Component.leftHidden}'));
+    buildOutputString(document.getElementById('{!$Component.multiselectPanel}:rightList'), document.getElementById('{!$Component.rightHidden}'));
+  </script>
+</apex:component>

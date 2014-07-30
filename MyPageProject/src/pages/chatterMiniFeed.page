@@ -1,0 +1,75 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com - 2/26/2010 -->
+<apex:page controller="chatterMiniFeed" showheader="false" tabstyle="User">
+    <apex:stylesheet value="{!URLFOR( $Resource.chatterNotifications, 'styles.css' )}" />
+    <apex:includescript value="{!URLFOR( $Resource.chatterNotifications, 'scripts.js' )}" />
+    <apex:includescript value="{!URLFOR( $Resource.chatterMessages, 'scripts.js' )}" />
+    
+    <apex:includescript value="{!URLFOR( $Resource.chatterComboPack, 'jquery.js' )}" />
+    <apex:includescript value="{!URLFOR( $Resource.chatterComboPack, 'simplemodal.js' )}" />
+    
+    <apex:form id="noteform">
+    
+    <script >
+        var modalOptions = {
+        overlayClose: true,     // allow clicks on the overlay to close the dialog
+        escClose : true,            // allow escape to close
+        closeHTML:'<img src="/s.gif" class="modalCloseImg" >',
+        containerCss:{}
+        };
+        
+        //jQuery.noconflict();
+        
+        function launchMiniFeedBox() {           
+        var iFrameLink = '<iframe src="/apex/combopack__chatterminifeed?t=1" style="min-height:400px; width:100%; border:0;">';
+        jQuery('*',top.window).modal(iFrameLink, modalOptions);   
+        }
+    </script>
+    
+    <apex:outputpanel id="notes" rendered="{!!showTable}">
+        <apex:actionPoller action="{!doRefresh}" rerender="noteform" interval="20"/>
+        
+        <apex:outputtext value="表示アイテムはありません" style="font-face: Arial; font-size:14px;" rendered="{!notes.size = 0}" />
+        
+        <apex:repeat value="{!notes}" var="n" rows="5" rendered="{!notes.size > 0}">
+            <div class="notification">
+                <div class="profileImg">
+                    <c:userPhoto uid="{!n.uID}" v="1" height="16" width="16" styleclass="results_user_pic" title="{!n.uname}" linked="true" target="_top" />
+                </div>
+                <div class="note">
+                    <apex:outputlink value="/{!n.uid}" target="_top" style="font-weight:bold">{!n.uname}</apex:outputlink>
+                    <apex:outputtext value="{!n.msg}" escape="false" />
+                    <apex:outputlink value="javascript:void(0)" onclick="legacy__launchMessageBox( '{!n.popURL}', '{!n.popTitle}' );" target="_top" rendered="{!AND( LEN( n.popURL ) > 0, LEN( n.popTxt ) > 0, LEN( n.popTitle ) > 0 )}">{!n.popTxt}</apex:outputlink>
+                    <apex:outputtext value="." rendered="{!AND( LEN( n.popURL ) > 0, LEN( n.popTxt ) > 0, LEN( n.popTitle ) > 0 )}" />
+                    <br/><span class="timestr">{!n.timestr}</span>
+                </div>
+            </div>
+        </apex:repeat>
+        
+        <div style="float:right; margin-right: 10px;">
+            <apex:outputlink value="javascript:void(0)" onclick="launchMiniFeedBox();" rendered="{!notes.size > 5}">more &raquo;</apex:outputlink>
+        </div>
+    </apex:outputpanel>
+    </apex:form>
+    
+    <apex:form id="noteTable">
+    <apex:pageblock title="" rendered="{!showTable}">       
+        <apex:actionPoller action="{!doRefresh}" rerender="noteTable" interval="20"/>
+        
+        <apex:pageblocktable value="{!notes}" var="n" rows="200">
+            <apex:column style="width:35px">
+                <c:userPhoto uid="{!n.uID}" v="1" height="16" width="16" styleclass="results_user_pic" title="{!n.uname}" linked="true" target="_top" />
+            </apex:column>
+            <apex:column headervalue="Event">
+                <apex:outputlink value="/{!n.uid}" target="_top" style="font-weight:bold;color: rgb(1, 91, 167);" >{!n.uname}</apex:outputlink>
+                <apex:outputtext value="{!n.msg}" escape="false" styleClass="tLinks" />
+                <apex:outputlink value="{!n.popAltURL}" target="_top" rendered="{!AND( LEN( n.popAltURL ) > 0, LEN( n.popTxt ) > 0 )}" style="color: rgb(1, 91, 167);">{!n.popTxt}</apex:outputlink>
+                <apex:outputtext value="." rendered="{!AND( LEN( n.popAltURL ) > 0, LEN( n.popTxt ) > 0 )}" />
+            </apex:column>  
+            <apex:column headervalue="Time">
+                <span class="timestr">{!n.timestr}</span>
+            </apex:column>  
+        </apex:pageblocktable>
+    </apex:pageblock>
+    </apex:form>
+    
+</apex:page>

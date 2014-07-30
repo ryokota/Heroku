@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RFA__c.CapitalManagementAdministered__c</field>
+    </columns>
+    <columns>
+        <field>CUST_RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestAmountFunctionalCurrency__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.ProfitCenterNumberName__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.CirculationDate__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.CompletionDate__c</field>
+    </columns>
+    <description>Report of all RFAs that have the Cap Mgmt Administered field flagged</description>
+    <filter>
+        <criteriaItems>
+            <column>RFA__c.CapitalManagementAdministered__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Cap Mgmt Administered</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$RFA__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.ExpectedCommitmentDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

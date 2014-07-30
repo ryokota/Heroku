@@ -1,0 +1,42 @@
+<apex:page >
+
+<!--タイトル-->
+<apex:sectionheader title="Salesforce1Home"></apex:sectionheader>
+<P style="padding-bottom:10px"></P>
+
+<!--フルサイトへの移動-->
+<b style="font-size: large;">
+＜受注・延長確認登録など＞
+</b>
+<br></br>
+<P style="padding-bottom:5px"></P>
+<b style="font-size: medium;">
+ PCと同じ画面で操作したい場合は、フルサイトへ移動してください。
+<a href="https://ap.salesforce.com/home/home.jsp" style="color: rgb(0.0.255);">  フルサイトへ</a>
+</b>
+<P style="padding-bottom:10px"></P>
+
+<!--個人設定の変更-->
+<b style="font-size: large;">
+＜個人の設定変更＞
+</b>
+<br></br>
+<P style="padding-bottom:5px"></P>
+<b style="font-size: medium;">
+1
+<a href="https://ap.salesforce.com/ui/setup/Setup?setupid=PersonalSetup" style="color: rgb(0.0.255);">  パスワードなどの変更など</a>
+</b>
+<P style="padding-bottom:5px"></P>
+<b style="font-size: medium;">
+2　写真のUPなどプロファイル変更をする場合は、フルサイトの画面上にある
+<br></br>
+   ご自身のお名前をクリックし、私のプロファイルを選択してください。　
+</b>
+<P style="padding-bottom:10px"></P>
+
+<!--内容-->
+<b style="font-size: medium;">
+ 今後、Salesforce1の操作マニュアルなどもUPしますので、お待ちください。　
+</b>
+
+</apex:page>

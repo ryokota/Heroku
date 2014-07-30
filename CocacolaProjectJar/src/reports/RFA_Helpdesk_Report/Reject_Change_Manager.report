@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Project_Issue__c$Name</field>
+    </columns>
+    <columns>
+        <field>Project_Issue__c$Channel__c</field>
+    </columns>
+    <columns>
+        <field>Project_Issue__c$RequestDate__c</field>
+    </columns>
+    <description>差し戻し後の承認者変更</description>
+    <filter>
+        <criteriaItems>
+            <column>Project_Issue__c$Issue_Contents__c</column>
+            <operator>contains</operator>
+            <value>承認者,manag,マネージャ</value>
+        </criteriaItems>
+        <language>ja</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Reject_Change_Manager</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ProjectIssue__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Project_Issue__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

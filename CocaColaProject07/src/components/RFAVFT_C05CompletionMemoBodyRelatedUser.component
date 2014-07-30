@@ -1,0 +1,170 @@
+<!-- 
+updated by Jia Hu on 2013/11/13
+RFA_C05_Completion_Memo_Body 
+called by VFT07_Completion_Memo, as
+<c:RFA_C05_Completion_Memo_Body rfaObj="{!relatedTo}"/>
+
+RFA R1 - Component for Completion Memo Email 
+VFT07 Completion Memo / VFT07_Completion_Memo
+-->
+<apex:component access="Global">
+    <apex:attribute name="rfaObj" type="RFAUserRole__c" description="RFa object for populating email body."/>
+    
+    <style type="text/css">
+            .div
+            {
+                max-width:600px;                
+            }
+        
+        </style>
+            <div style = " font-size:14px;">
+                <p>
+                
+                    <center>
+                    <!-- logo from document / updated by Jia Hu on 2013/11/07 -->
+                    <apex:image url="{!$Label.RFA_CL129}"/>
+                    </center>
+                    <!--<center><apex:outputText value="Atlanta, Georgia" style="font-weight:bold"/></center>-->
+                </p>
+                <BR/>
+                <p><apex:outputText style="font-weight:bold" value="日付（DATE） :"/>&nbsp;{!Month(Today())}/{!Day(Today())}/{!Year(Today())}<br/></p>
+
+                <p>
+                <apex:outputText style="font-weight:bold" value="TO :"/>&nbsp;<apex:outputText value="{!rfaObj.RFA__r.ToEmailAddressCM__c}"/><br/>
+                </p>
+                <p>
+                <apex:outputText style="font-weight:bold" value="CC :"/>&nbsp;<apex:outputText value="{!rfaObj.RFA__r.CCEmailAddressCM__c}"/><br/>
+                </p>
+                <br/>
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="件名（SUBJECT） :"/></u> <br/>
+                <apex:outputText value="最終承認ステータス（Final Approval Status） - {!rfaObj.RFA__r.Name}: {!rfaObj.RFA__r.RequestTitle__c}"/><br/>
+                </p>
+
+                <!--<p>
+                <u><apex:outputText style="font-weight:bold" value="承認申請の実行先（REQUEST HAS BEEN SUBMITTED TO）  :"/></u><br/>
+                <apex:outputText value="{!rfaObj.Thefollowingitem__c}"/><br/>
+                </p>-->
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="承認ステータス（APPROVAL STATUS OF REQUEST） :"/> </u> <br/>
+                <apex:outputText value="{!rfaObj.RFA__r.Stage__c}"/><br/>
+                </p>
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="コメント/条件（COMMENTS/CONDITIONS） :"/> </u> <br/>
+                <apex:outputField value="{!rfaObj.RFA__r.CommentsConditions__c}"/><br/>
+                </p>
+                <!--<p><apex:outputText style="font-weight:bold" value="承認者コメント/条件のフォローアップ（FOLLOW-UP FOR APPROVER COMMENTS/CONDITIONS） :" rendered="{!(rfaObj.ApprovalLetterComments__c != 'Not Applicable')}"/>&nbsp; <apex:outputText value="{!rfaObj.ApprovalLetterComments__c}" rendered="{!(rfaObj.ApprovalLetterComments__c != 'Not Applicable')}" /><br/></p> -->
+
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="案件名（REQUEST TITLE） :"/></u><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.RequestTitle__c}"/><br/>
+                </p>
+   
+                
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="申請金額(円)（REQUEST AMOUNT）:"/></u><br/>
+                <apex:outputText value="{0,number, #,###}"><apex:param value="{!rfaObj.RFA__r.RequestAmountFunctionalCurrency__c}"/></apex:outputText><br/>
+                </p>
+                <!--<p><p><apex:outpuText value="{!rfaObj.ExecutiveSummary__c}"/></p></p><br/> -->
+                <p>
+                <u><apex:outputText style="font-weight:bold" value="承認申請文書リンク（REQUEST DOCUMENT LINK） :"/> </u><br/>
+                <a href="{!$label.RFA_CL026}/{!rfaObj.RFA__r.Id}">{!rfaObj.RFA__r.Name}</a><br/>
+                </p>
+               
+            <!--<table border="0" width="80%">
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="THE FOLLOWING ITEM :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.Thefollowingitem__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="REQUEST TITLE :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.RequestTitle__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="EXECUTIVE SUMMARY:"/></td>
+                        <td width="60%"></td>
+                    </tr>
+                    
+                    <tr>
+                       
+                     /*
+                     Requirement #FR1.76
+                     Description #Replaced OutputText with OutputField to maintain the line spaces in Executive Summary.
+                     History     #Modified by ASHWANI KAUSHIK on 20-May-2013
+                     */
+                     
+                     <td width="40%"></td>
+                     <td width="60%"><apex:outputField value="{!rfaObj.ExecutiveSummary__c}"/></td>
+                         
+                    </tr>
+                    
+                     <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="REQUEST DOCUMENT LINK :"/></td>
+                        <td width="60%"><a href="{!$Label.RFA_CL026}/{!rfaObj.Id}">{!rfaObj.Name}</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="PROFIT CENTER :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.ProfitCenterNumber__r.Name}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="PROFIT CENTER NAME :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.ProfitCenterName__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="REQUEST AMOUNT (USD) :"/></td>
+                        <td width="60%">
+   
+                            <apex:outputText value="{0,number, #,###}">
+                                <apex:param value="{!rfaObj.RequestAmountUSD__c}"/>
+                            </apex:outputText>    
+                              
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="FUNCTIONAL CURRENCY (FC) :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.Functional_Currency__r.Name}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="REQUEST AMOUNT (FC) :"/></td>
+                        <td width="60%">
+                            <apex:outputText value="{0,number, #,###}">
+                                <apex:param value="{!rfaObj.RequestAmountFunctionalCurrency__c}"/>
+                            </apex:outputText>  
+                        </td>           
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="CONTROL NUMBER :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.ControlNumber__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="LOCAL REFERENCE NUMBER :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.LocalReferenceNumber__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="THE APPROVAL STATUS OF YOUR REQUEST :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.Theapprovalstatusofyourrequestis__c}"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="COMMENTS/CONDITIONS :"/></td>
+                        <td width="60%"><apex:outputText value="{!rfaObj.CommentsConditions__c}"/></td>
+                    </tr>
+                    
+                     <tr>
+                        <td width="40%"><apex:outputText style="font-weight:bold" value="APPROVAL LETTER COMMENTS :"/></td>
+                        <td width="80%"><apex:outputText value="{!rfaObj.ApprovalLetterComments__c}"/></td>
+                    </tr>
+        
+                </table> -->
+            </div>
+</apex:component>

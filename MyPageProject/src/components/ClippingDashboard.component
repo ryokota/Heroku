@@ -1,0 +1,52 @@
+<apex:component controller="clsClippingReport">
+
+<apex:attribute name="dashboardUrl" description="Dashboard URL." type="String" required="true" assignTo="{!StrReportUrl}"/>
+<apex:attribute name="chartTitle" description="Clipping Chart Title." type="String"/>
+<apex:attribute name="srcChartCol" description="Source Dashboard column(1 origin)." type="Integer" required="true" assignTo="{!IntChartCol}" />
+<apex:attribute name="srcChartRow" description="Source Dashboard row(0 origin)." type="Integer" required="true" assignTo="{!IntChartRow}" />
+
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        var j$ = jQuery.noConflict();
+    </script>
+    <script type="text/javascript">
+        function fixId(myid) {
+        　　return '#' + fixName(myid);
+        }
+        function fixName(myid) {
+        　　return myid.replace(/(:|\.)/g,'\\\\$1');
+        }
+    </script>
+    <script type="text/javascript">
+        function gotoPage(pg) {
+            if(pg.length > 0) {
+                window.top.location = pg;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        j$(function(){
+            var srcId = fixId('{!$Component.src}');
+            var destId = fixId('{!$Component.dest}');
+            var ReportPanelId = fixId('{!$Component.ReportPanel}');
+
+            j$(destId).html((j$("td.col{!srcChartCol} div#dashboard_0_{!srcChartRow}", j$(srcId).text()).html()));            
+        });
+    </script>
+
+</head>
+<body>
+    <apex:outputPanel id="src" layout="block" style="display: none">
+        {!ReportHtml}
+    </apex:outputPanel>
+    <apex:outputPanel id="ReportPanel" layout="block">
+        <apex:outputtext value="{!chartTitle}" styleClass="titleLabel" rendered="{!LEN(chartTitle)>0}" />
+        <apex:outputPanel id="dest" layout="block">
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+</body>
+</html>
+</apex:component>

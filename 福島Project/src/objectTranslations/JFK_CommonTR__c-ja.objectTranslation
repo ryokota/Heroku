@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>汎用TR</value>
+    </caseValues>
+    <fields>
+        <label><!-- 募集回単位情報 --></label>
+        <name>Bosyukai_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- 審査シート --></label>
+        <name>CheckSheetTR__c</name>
+        <relationshipLabel><!-- HD情報 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- エリア区分 --></label>
+        <name>GS_Area_Kubun__c</name>
+    </fields>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>GS_Bikou__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集回 --></label>
+        <name>GS_Boshu_Kai__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集年度 --></label>
+        <name>GS_Boshu_Nendo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 審査シートURL1 --></label>
+        <name>GS_CheckSheetURL1__c</name>
+    </fields>
+    <fields>
+        <label><!-- 審査シートURL2 --></label>
+        <name>GS_CheckSheetURL2__c</name>
+    </fields>
+    <fields>
+        <label><!-- GS画面日付一括入力用 --></label>
+        <name>GS_DateIkkatuNyuryoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1次担当者ステータス --></label>
+        <name>GS_FirstTantosya_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1次担当者 --></label>
+        <name>GS_FirstTantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (1次担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- 「不備有」時のみ --></help>
+        <label><!-- 不備内容メモ --></label>
+        <name>GS_FubiNaiyo_Memo__c</name>
+        <picklistValues>
+            <masterLabel>不備</masterLabel>
+            <translation><!-- 不備 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>重点不備</masterLabel>
+            <translation><!-- 重点不備 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 発出指示受け日 --></label>
+        <name>GS_HasshutuShiji_Ukebi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所コード --></label>
+        <name>GS_JigyoshoCD__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所名 --></label>
+        <name>GS_JigyosyoMei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績報告書類引渡日 --></label>
+        <name>GS_JissekiHokokuSyorui_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績報告書類受領日 --></label>
+        <name>GS_JissekiHokokusyo_JuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績補正指導実施日 --></label>
+        <name>GS_JissekiHoseiShido_JisshiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査着手日（１次） --></label>
+        <name>GS_JissekiSyoruiShinsa_ChakusyuBi_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査着手日（２次） --></label>
+        <name>GS_JissekiSyoruiShinsa_ChakusyuBi_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査着手日 --></label>
+        <name>GS_JissekiSyoruiShinsa_ChakusyuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査完了日（１次） --></label>
+        <name>GS_JissekiSyoruiShinsa_KanryoBi_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査完了日（２次） --></label>
+        <name>GS_JissekiSyoruiShinsa_KanryoBi_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実績書類審査完了日 --></label>
+        <name>GS_JissekiSyoruiShinsa_KanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給実額電子データ引渡日 --></label>
+        <name>GS_JissekigakuData_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給実額補正指導実施日 --></label>
+        <name>GS_JissekigakuHoseiShido_JisshiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給実額電子計算着手日 --></label>
+        <name>GS_JissekigakuKeisan_ChakusyuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給実額電子計算完了日 --></label>
+        <name>GS_JissekigakuKeisan_KanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者10次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_10thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者1次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_1stTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者2次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_2ndTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者3次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_3rdTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者4次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_4thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者5次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_5thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者6次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_6thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者7次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_7thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者8次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_8thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 未提出者9次督促実施日 --></label>
+        <name>GS_Miteisyutsusya_9thTokusokuJissiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- リマインドDM発送日 --></label>
+        <name>GS_RemindDM_HassoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- リマインドDM印刷日 --></label>
+        <name>GS_RemindDM_InsatsuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- リマインドDMステータス --></label>
+        <name>GS_RemindDM_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者氏名 --></label>
+        <name>GS_RodoshaShimei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2次担当者ステータス --></label>
+        <name>GS_SecondTantosya_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2次担当者 --></label>
+        <name>GS_SecondTantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (2次担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 整理番号 --></label>
+        <name>GS_Seiri_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給電子データ受領日 --></label>
+        <name>GS_ShikyuDenshiData_JuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給時期 --></label>
+        <name>GS_ShikyuJiki__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定通知書発送日 --></label>
+        <name>GS_ShikyuKetteiTsuchisho_HassoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定通知書引渡日 --></label>
+        <name>GS_ShikyuKetteiTsuchisho_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定通知書受領日 --></label>
+        <name>GS_ShikyuKetteiTsuchisho_JuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給当申請の不備有無 --></label>
+        <name>GS_ShikyuShinseiFubi_Umu__c</name>
+        <picklistValues>
+            <masterLabel>なし</masterLabel>
+            <translation><!-- なし --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>有り</masterLabel>
+            <translation><!-- 有り --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 支給申請書類引渡日 --></label>
+        <name>GS_ShikyuShinseiSyorui_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給申請書類受領日 --></label>
+        <name>GS_ShikyuShinseisyo_JuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給書類審査着手日 --></label>
+        <name>GS_ShikyuSyoruiShinsa_ChakusyuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給書類審査完了日 --></label>
+        <name>GS_ShikyuSyoruiShinsa_KanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給予額電子データ引渡日 --></label>
+        <name>GS_ShikyuYoteigaku_Data_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給予額電子計算着手日 --></label>
+        <name>GS_ShikyuYoteigaku_Keisan_ChakusyuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給予額電子計算完了日 --></label>
+        <name>GS_ShikyuYoteigaku_Keisan_KanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給状態 --></label>
+        <name>GS_Shikyu_Joutai__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給県庁検収結果状況 --></label>
+        <name>GS_Shikyu_KenchoKensyu_Jokyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給県庁検収NG日 --></label>
+        <name>GS_Shikyu_KenchoKensyu_NGBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給県庁検収OK日 --></label>
+        <name>GS_Shikyu_KenchoKensyu_OKBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給NG対応完了日 --></label>
+        <name>GS_Shikyu_NGTaio_KanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給終了フラグ --></label>
+        <name>GS_Shikyu_Syuryo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給取消フラグ --></label>
+        <name>GS_Shikyu_Torikeshi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給額通知書発送日 --></label>
+        <name>GS_ShikyugakuTsuchisho_HassoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給額通知書受領日 --></label>
+        <name>GS_ShikyugakuTsuchisho_JuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給額通知書引渡日 --></label>
+        <name>GS_ShikyugauTsuchisho_HikiwatashiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- ステータス --></label>
+        <name>GS_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3次担当者 --></label>
+        <name>GS_ThirdTantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (3次担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 補正事項（１次） --></label>
+        <name>HD_HoseiJiko_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補正事項（２次） --></label>
+        <name>HD_HoseiJiko_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補正済（１次） --></label>
+        <name>HD_HoseiZumi_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補正済（２次） --></label>
+        <name>HD_HoseiZumi_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- ステータス --></label>
+        <name>HD_Status__c</name>
+        <picklistValues>
+            <masterLabel>HR入力</masterLabel>
+            <translation><!-- HR入力 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P補正</masterLabel>
+            <translation><!-- P補正 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>事業所確認</masterLabel>
+            <translation><!-- 事業所確認 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>完了</masterLabel>
+            <translation><!-- 完了 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>提出依頼</masterLabel>
+            <translation><!-- 提出依頼 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>県確認</masterLabel>
+            <translation><!-- 県確認 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>郵送確認</masterLabel>
+            <translation><!-- 郵送確認 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 担当者1 --></label>
+        <name>HD_Tantosya1__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 担当者2 --></label>
+        <name>HD_Tantosya2__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 相手先 --></label>
+        <name>HM_Aitesaki__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補正メモ --></label>
+        <name>HM_HoseiMemo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 対応日 --></label>
+        <name>HM_TaioBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 担当者 --></label>
+        <name>HM_Tantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>HR_Biko__c</name>
+    </fields>
+    <fields>
+        <label><!-- 変更後データ --></label>
+        <name>HR_HenkoGo_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- 変更箇所 --></label>
+        <name>HR_HenkoKasyo__c</name>
+        <picklistValues>
+            <masterLabel>その他</masterLabel>
+            <translation><!-- その他 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>フルタイム・短時間</masterLabel>
+            <translation><!-- フルタイム・短時間 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>代表者（役職　氏名）</masterLabel>
+            <translation><!-- 代表者（役職　氏名） --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>助成対象事業所　住所</masterLabel>
+            <translation><!-- 助成対象事業所　住所 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>対象労働者氏名/フリガナ</masterLabel>
+            <translation><!-- 対象労働者氏名/フリガナ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>性別</masterLabel>
+            <translation><!-- 性別 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>支給開始日</masterLabel>
+            <translation><!-- 支給開始日 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>新規雇用・再雇用</masterLabel>
+            <translation><!-- 新規雇用・再雇用 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>正規雇用・有期雇用</masterLabel>
+            <translation><!-- 正規雇用・有期雇用 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>生年月日</masterLabel>
+            <translation><!-- 生年月日 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>申請事業所　住所</masterLabel>
+            <translation><!-- 申請事業所　住所 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>申請額（万円）</masterLabel>
+            <translation><!-- 申請額（万円） --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>補助金/対象分野名称</masterLabel>
+            <translation><!-- 補助金/対象分野名称 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>雇入れ年月日</masterLabel>
+            <translation><!-- 雇入れ年月日 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>雇用保険適用事業所番号</masterLabel>
+            <translation><!-- 雇用保険適用事業所番号 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>雇用契約期間</masterLabel>
+            <translation><!-- 雇用契約期間 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>震災時の住所</masterLabel>
+            <translation><!-- 震災時の住所 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>（事業主）名称</masterLabel>
+            <translation><!-- （事業主）名称 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 変更前データ --></label>
+        <name>HR_HenkoMae_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- 変更理由 --></label>
+        <name>HR_HenkoRiyu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所情報更新日 --></label>
+        <name>HR_JigyoshoJoho_KoshinBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 確認日1 --></label>
+        <name>HR_KakuninBi_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 確認日2 --></label>
+        <name>HR_KakuninBi_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- 確認者1 --></label>
+        <name>HR_KakuninSya_1st__c</name>
+        <relationshipLabel><!-- 汎用TR (確認者1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 確認者2 --></label>
+        <name>HR_KakuninSya_2nd__c</name>
+        <relationshipLabel><!-- 汎用TR (確認者2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 県報告日 --></label>
+        <name>HR_KenHokokuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 実データ更新者 --></label>
+        <name>HR_Kosinsya__c</name>
+        <relationshipLabel><!-- 汎用TR (実データ更新者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 入力日1 --></label>
+        <name>HR_NyuryokuBi_Henko_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 入力者1 --></label>
+        <name>HR_NyuryokuSya_Henko_1st__c</name>
+        <relationshipLabel><!-- 汎用TR (入力者1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 労働者情報更新日 --></label>
+        <name>HR_RodosyaJohoKoshinBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 日付 --></label>
+        <name>JTL_Hizuke__c</name>
+    </fields>
+    <fields>
+        <label><!-- 架電内容 --></label>
+        <name>JTL_KadenNaiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 架電／受領 --></label>
+        <name>JTL_Kaden_Juryo__c</name>
+        <picklistValues>
+            <masterLabel>受領</masterLabel>
+            <translation><!-- 受領 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>架電</masterLabel>
+            <translation><!-- 架電 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 担当者 --></label>
+        <name>JTL_Tantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所(支給/実績)_年度・回 --></label>
+        <name>JigyosyoTR_YearTime__c</name>
+        <relationshipLabel><!-- 汎用TR（年度・回） --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所(支給/実績)_支給時期 --></label>
+        <name>JijyosyoTR_ShikyuJiki__c</name>
+        <relationshipLabel><!-- 汎用TR（支給時期） --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- センター担当者 --></label>
+        <name>MD_CenterTantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (センター担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 代理人 --></label>
+        <name>MD_DairiNin__c</name>
+    </fields>
+    <fields>
+        <label><!-- グループ --></label>
+        <name>MD_Group__c</name>
+        <picklistValues>
+            <masterLabel>その他</masterLabel>
+            <translation><!-- その他 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>事業主都合の離職あり（当該労働者の補充不可）</masterLabel>
+            <translation><!-- 事業主都合の離職あり（当該労働者の補充不可） --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>出向者の発生</masterLabel>
+            <translation><!-- 出向者の発生 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>委任状の提出</masterLabel>
+            <translation><!-- 委任状の提出 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>支給停止中</masterLabel>
+            <translation><!-- 支給停止中 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>連絡先の指定</masterLabel>
+            <translation><!-- 連絡先の指定 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 委任権限 --></label>
+        <name>MD_IninKengen__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所担当者 --></label>
+        <name>MD_JigyoshoTantosya__c</name>
+    </fields>
+    <fields>
+        <label><!-- 確認日 --></label>
+        <name>MD_KakuninBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 連絡先 --></label>
+        <name>MD_RenrakuSaki__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給停止開始日 --></label>
+        <name>MD_ShikyuTeishi_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 出向開始日 --></label>
+        <name>MD_SyukkoKaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 対象労働者氏名 --></label>
+        <name>MD_TaisyoRodosyaShimei__c</name>
+        <relationshipLabel><!-- 申送り事項（対象労働者） --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 停止理由 --></label>
+        <name>MD_TeishiRiyu__c</name>
+        <picklistValues>
+            <masterLabel>再雇用率80%超え</masterLabel>
+            <translation><!-- 再雇用率80%超え --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>必要労働者数未達</masterLabel>
+            <translation><!-- 必要労働者数未達 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 支給停止開始日 --></label>
+        <name>PTMKST_ShikyuTeishi_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給停止日数 --></label>
+        <name>PTMKST_ShikyuTeishi_Nissu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給停止終了日 --></label>
+        <name>PTMKST_ShikyuTeishi_SyuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- うるう年を含む --></label>
+        <name>PTMKST_Urudoshi_Wo_Fukumu__c</name>
+    </fields>
+    <fields>
+        <label><!-- １ヶ月超無給欠勤開始日 --></label>
+        <name>PTMK_KekkinnBi_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- １ヶ月超無給欠勤終了日 --></label>
+        <name>PTMK_KekkinnBi_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- 担当者 --></label>
+        <name>PTMK_Tantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- レコード区分 --></label>
+        <name>RecordKBN__c</name>
+        <picklistValues>
+            <masterLabel>GS</masterLabel>
+            <translation><!-- GS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HD</masterLabel>
+            <translation><!-- HD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation><!-- HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JTL</masterLabel>
+            <translation><!-- JTL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PTMK</masterLabel>
+            <translation><!-- PTMK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PTMKST</masterLabel>
+            <translation><!-- PTMKST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TR</masterLabel>
+            <translation><!-- TR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YS</masterLabel>
+            <translation><!-- YS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 労働者TR --></label>
+        <name>RodosyaTR__c</name>
+        <relationshipLabel><!-- 汎用TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- カテゴリー --></label>
+        <name>TR_Category__c</name>
+        <picklistValues>
+            <masterLabel>【その他】</masterLabel>
+            <translation><!-- 【その他】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【実績報告】</masterLabel>
+            <translation><!-- 【実績報告】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【実績報告＋その他】</masterLabel>
+            <translation><!-- 【実績報告＋その他】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【支給申請】</masterLabel>
+            <translation><!-- 【支給申請】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【支給申請＋その他】</masterLabel>
+            <translation><!-- 【支給申請＋その他】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【支給申請＋実績報告】</masterLabel>
+            <translation><!-- 【支給申請＋実績報告】 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>【支給申請＋実績報告＋その他】</masterLabel>
+            <translation><!-- 【支給申請＋実績報告＋その他】 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 日付／時間 --></label>
+        <name>TR_DateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- 方法 --></label>
+        <name>TR_Hoho__c</name>
+        <picklistValues>
+            <masterLabel>FAX</masterLabel>
+            <translation><!-- FAX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>その他</masterLabel>
+            <translation><!-- その他 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>メール</masterLabel>
+            <translation><!-- メール --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>窓口</masterLabel>
+            <translation><!-- 窓口 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>電話</masterLabel>
+            <translation><!-- 電話 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 事業所名 --></label>
+        <name>TR_JigyosyoMei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 回答日 --></label>
+        <name>TR_KaitoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 回答内容 --></label>
+        <name>TR_KaitoNaiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 内容 --></label>
+        <name>TR_Naiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- お名前 --></label>
+        <name>TR_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- 連絡先 --></label>
+        <name>TR_Renrakusaki__c</name>
+    </fields>
+    <fields>
+        <label><!-- ステータス --></label>
+        <name>TR_Status__c</name>
+        <picklistValues>
+            <masterLabel>完</masterLabel>
+            <translation><!-- 完 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>対応中</masterLabel>
+            <translation><!-- 対応中 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>未着</masterLabel>
+            <translation><!-- 未着 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 担当者 --></label>
+        <name>TR_Tantosya__c</name>
+        <relationshipLabel><!-- 汎用TR (担当者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>YS_Biko__c</name>
+    </fields>
+    <fields>
+        <label><!-- 賃金台帳 --></label>
+        <name>YS_ChinginDaicho__c</name>
+    </fields>
+    <fields>
+        <label><!-- 入力者 --></label>
+        <name>YS_Nyuryokusya__c</name>
+        <relationshipLabel><!-- 汎用TR (入力者) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 支給決定者or補充労働者 --></label>
+        <name>YS_ShikyuOrHoju__c</name>
+    </fields>
+    <fields>
+        <label><!-- 出勤簿又はタイムカード --></label>
+        <name>YS_SyukkinBo__c</name>
+    </fields>
+    <layouts>
+        <layout>GS_業務進捗管理表（実績報告）</layout>
+        <sections>
+            <label><!-- その他 --></label>
+            <section>その他</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- リマインドDM --></label>
+            <section>リマインドDM</section>
+        </sections>
+        <sections>
+            <label><!-- 実績報告 --></label>
+            <section>実績報告</section>
+        </sections>
+        <sections>
+            <label><!-- 実績審査 --></label>
+            <section>実績審査</section>
+        </sections>
+        <sections>
+            <label><!-- 未提出者督促 --></label>
+            <section>未提出者督促</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GS_業務進捗管理表（支給決定）</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HD_補正内容DB（実績報告）</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HD_補正内容DB（支給決定）</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HM_補正メモ</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- 項目 --></label>
+            <section>項目</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>HR_変更履歴簿</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>JTL_実績報告督促リスト</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MD_申送り事項DB</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PTMKST_支給停止期間A</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- 項目 --></label>
+            <section>項目</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PTMK_１ヶ月超の欠勤あり（実績報告）</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- 項目 --></label>
+            <section>項目</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>TR_問合せ履歴</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>YS_雇入れ日前勤務実績あり</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>汎用TRレイアウト</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- GS_業務進捗管理表（実績報告） --></label>
+        <name>GS_JigyoshoJisseki_ShikyuJiki</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- GS_業務進捗管理表（支給決定） --></label>
+        <name>GS_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HD_補正内容DB（実績報告） --></label>
+        <name>HD_JigyoshoJisseki_ShikyuJiki</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HD_補正内容DB（支給決定） --></label>
+        <name>HD_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HM_補正指導メモ（実績報告） --></label>
+        <name>HM_JigyoshoJisseki_ShikyuJiki</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- HR_変更履歴簿 --></label>
+        <name>HR_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- JTL_実績報告督促リスト --></label>
+        <name>JTL_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MD_申送り事項DB --></label>
+        <name>MD_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PTMKST_支給停止期間A --></label>
+        <name>PTMKST_ShikyuTeishiKikan_A</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PTMK_１ヶ月超の欠勤あり（実績報告） --></label>
+        <name>PTMK_1kagetsuMukyuKekkin</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- TR_問合せ履歴 --></label>
+        <name>TR_JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- YS_雇入れ日前勤務実績あり --></label>
+        <name>YS_JigyoshoJisseki_ShikyuJiki</name>
+    </recordTypes>
+    <workflowTasks>
+        <description><!-- ああああああああああああああ --></description>
+        <name>ActionTask</name>
+        <subject><!-- ああああああああああああああ --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,33 @@
+<apex:page standardController="Account" extensions="HR_Evaculation3Controller">
+
+<apex:includeScript value="{!URLFOR($Resource.TableSorter, 'jquery-latest.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.TableSorter, 'jquery.tablesorter.js')}"/>
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function()
+{
+$("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} );
+
+}
+);
+
+</script>
+
+<apex:pageBlock title="My Content">
+
+<table id="myTable" class="tablesorter" cellspacing="1">
+<thead class="rich-table-thead">
+<tr>
+<th colspan="1" scope="col">Name</th>
+</tr>
+</thead>
+<tbody>
+<apex:repeat value="{!account.Contacts}" var="item">
+<tr>
+<td><apex:outputLabel value="{!item.name}"/></td>
+</tr>
+</apex:repeat>
+</tbody>
+</table>
+</apex:pageBlock>
+</apex:page>

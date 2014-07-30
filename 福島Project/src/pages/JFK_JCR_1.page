@@ -1,0 +1,548 @@
+<apex:page Controller="JFK_JCR_1Controller" showHeader="true" standardStylesheets="true" tabStyle="JCJ_JCR__tab">
+    <style type="text/css">
+         .dateFormat {
+            display: none;
+         }
+        .flow {
+            overflow: scroll;
+            width: 100%;
+            height: 500px;
+            border: solid 1px orange;
+        }
+    </style>
+
+    <script type="text/javascript">
+        beenFocused = true;
+
+        /*
+         * @RemoteAction
+         * ShowHD Screen
+         */
+        function showHDScreen(sheetName, categoryNo, no, seqNo, obj, nendo, kai, jiki, jigyosyoId, checkSheetId, tanto, p_Hoseika, rodosyaTRId) {
+            var hantei = obj.value;
+
+            if (seqNo == 6) {
+                if (hantei == 'OK') { 
+                    checkTaisyogaiRodosya(true);
+                    return false;
+                } else {
+                    alert('対象外労働者となります。HRにて適切な処理を行ってください。');
+                    checkTaisyogaiRodosya(false);
+                    return false;
+                }
+            } else if (seqNo == 9) {
+                if (hantei == 'OK') { 
+                    checkRisyoku(false);
+                    return false;
+                } else {
+                    checkRisyoku(true);
+                    return false;
+                }
+            } else if (seqNo == 12) {
+                if (hantei == 'OK') { 
+                    checkKoyokeitaiHenko(false);
+                    return false;
+                } else {
+                    checkKoyokeitaiHenko(true);
+                    return false;
+                }
+            } else if (seqNo == 16) {
+                if (hantei == 'OK') { 
+                    checkMukyuKekkin(false);
+                    return false;
+                } else {
+                    checkMukyuKekkin(true);
+                    return false;
+                }
+            } 
+
+            var chkSheetId;
+            if (hantei == 'NG') {
+                {!$RemoteAction.JFK_JCR_1Controller.showHDScreen}(categoryNo, no, seqNo, hantei, nendo, kai, jiki, jigyosyoId, checkSheetId, tanto, rodosyaTRId, function(result, event){
+                    if(event.status) {
+                        if (result.length > 0) {
+                            chkSheetId = result;
+                            window.open('/apex/JFK_HD' 
+                                                    + '?sheetName=' + sheetName
+                                                    + '&checkSheetId=' + chkSheetId
+                                                    + '&tanto=' + tanto
+                                                    ,'HD'
+                                                    ,'height=320px, width=700px');
+                        }
+                    }
+               });
+            }                       
+
+            return false;
+        }
+
+    </script>
+        
+    <apex:include pageName="JFK_cmnJsScript"/>
+
+    <apex:pageMessages id="msg" rendered="true"/> 
+    <apex:form styleClass="form">
+        <apex:actionFunction action="{!checkTaisyogaiRodosya}" name="checkTaisyogaiRodosya" reRender="table1, table2, table3">
+            <apex:param name="param" value="param" />
+        </apex:actionFunction>
+        <apex:actionFunction action="{!checkRisyoku}" name="checkRisyoku" reRender="table3">
+            <apex:param name="param" value="param" />
+        </apex:actionFunction>
+        <apex:actionFunction action="{!checkKoyokeitaiHenko}" name="checkKoyokeitaiHenko" reRender="table3">
+            <apex:param name="param" value="param" />
+        </apex:actionFunction>
+        <apex:actionFunction action="{!checkMukyuKekkin}" name="checkMukyuKekkin" reRender="table3">
+            <apex:param name="param" value="param" />
+        </apex:actionFunction>
+    
+        <apex:pageBlock title="【JCR】実績審査チェックシート（労働者別）" mode="detail">
+            <apex:pageBlockButtons location="Top">
+                <apex:actionStatus id="mdStatus"> 
+                    <apex:facet name="stop">
+                        <apex:commandButton action="{!dummy}" value="　ＭＤ　" rendered="true" status="mdStatus" id="md"
+                                            disabled="{!isDisableButton}" immediate="true"
+                                            style="{!IF(isDisableButton, 'color:gray', IF(isExistMD, 'color:red', 'color:black'))}"
+                                            onclick="return showMDScreen('{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.id}');"/>
+                   </apex:facet>
+                   <apex:facet name="start">
+                       <apex:outputPanel >
+                          <apex:commandButton value="実行中..." status="hdStatus" disabled="true"/>
+                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                      </apex:outputPanel>
+                  </apex:facet>
+                 </apex:actionStatus>
+
+                <apex:actionStatus id="hkStatus"> 
+                    <apex:facet name="stop">
+                        <apex:commandButton action="{!dummy}" value="　ＨＫ　" rendered="true" status="hkStatus"
+                                            disabled="{!isDisableButton}" immediate="true"
+                                            style="{!IF(isDisableButton, 'color:gray', IF(isExistMD, 'color:red', 'color:black'))}"
+                                            onclick="return showHKScreen('{!jigyosyoTR.id}', '{!tantoTimes}');"
+                        />
+                   </apex:facet>
+                   <apex:facet name="start">
+                       <apex:outputPanel >
+                          <apex:commandButton value="実行中..." status="hkStatus" disabled="true"/>
+                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                      </apex:outputPanel>
+                  </apex:facet>
+                 </apex:actionStatus>
+
+                <apex:actionStatus id="hmStatus">
+                    <apex:facet name="stop">
+                        <apex:commandButton action="{!dummy}" value="　ＨＭ　" rendered="true" status="hmStatus" rerender="hmStatus"
+                                            disabled="{!isDisableButton}" immediate="true"
+                                            style="{!IF(isDisableButton, 'color:gray', IF(isExistHM, 'color:red', 'color:black'))}"
+                                            onclick="return showHMScreen('{!jigyosyoTR.id}');"/>
+                   </apex:facet>
+                   <apex:facet name="start">
+                       <apex:outputPanel >
+                          <apex:commandButton value="実行中..." status="hmStatus" disabled="true"/>
+                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                      </apex:outputPanel>
+                  </apex:facet>
+                 </apex:actionStatus>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <!-- 
+                <apex:actionStatus id="ysStatus">
+                    <apex:facet name="stop">
+                        <apex:commandButton action="{!dummy}" value="　ＹＳ　" rendered="true" status="ysStatus" rerender="ysStatus"
+                                            disabled="{!isDisableButton}" immediate="true"
+                                            style="{!IF(isDisableButton, 'color:gray', IF(isExistYS, 'color:red', 'color:black'))}"
+                                            onclick="return showYSScreen(true, '{!jigyosyoTR.id}', '{!rodosyaTR.id}');"/>
+                   </apex:facet>
+                   <apex:facet name="start">
+                       <apex:outputPanel >
+                          <apex:commandButton value="実行中..." status="hmStatus" disabled="true"/>
+                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                      </apex:outputPanel>
+                  </apex:facet>
+                 </apex:actionStatus>
+ -->
+                 <apex:actionStatus id="passbackStatus">
+                    <apex:facet name="stop">
+                        <apex:commandButton id="passback" value="差し戻し" action="{!passback}" status="passbackStatus" rerender="passbackStatus, msg"
+                                            rendered="{!Passback}" style="color:blue;" disabled="{!isDisableButton}"  immediate="true"/>
+                    </apex:facet>
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <apex:commandButton value="実行中..." status="saveStatus" disabled="true"/>
+                            <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>
+
+                <apex:actionStatus id="saveTempStatus">
+                    <apex:facet name="stop">
+                        <apex:commandButton id="saveTemp" value="一時保存" action="{!saveTemp}" status="saveTempStatus" rerender="saveTempStatus, msg"
+                                            disabled="{!isDisableButton}"/>
+                    </apex:facet>
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <apex:commandButton value="実行中..." status="saveStatus" disabled="true"/>
+                            <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>
+
+                <apex:actionStatus id="saveStatus">
+                    <apex:facet name="stop">
+                        <apex:commandButton id="save" value="チェック済" action="{!save}" status="saveStatus" rerender="saveStatus, msg"
+                                            disabled="{!isDisableButton}"/>
+                    </apex:facet>
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <apex:commandButton value="実行中..." status="saveStatus" disabled="true"/>
+                            <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>
+
+                <apex:commandButton action="{!close}" value="閉じる" immediate="true"/>
+                <br/>
+                <apex:outputLabel value="ＭＤボタンをクリックして、内容を確認してください。" rendered="{!isExistMD}" style="color:red"/>
+                <br/><br/>
+                <table width="40%" align="right">
+                    <tr>
+                        <td  width="10%">
+                            <apex:outputLabel Value="1次担当者　：　">{!IF(ISBLANK(tantosya[0]),'',tantosya[0])}</apex:outputLabel>
+                        </td>
+                        <td  width="10%">
+                            <apex:outputLabel Value="2次担当者　：　">{!IF(ISBLANK(tantosya[1]),'',tantosya[1])}</apex:outputLabel>
+                        </td>
+                        <td  width="10%">
+                            <apex:outputLabel Value="ステータス　：　">{!IF(ISBLANK(totalStatus),'',totalStatus)}</apex:outputLabel>
+                        </td>
+                        <td  width="10%">
+                            審査完了日　：　
+                            <apex:outputText value="{0, date, yyyy/MM/dd}">
+                                <apex:param value="{!shoruiShinsaKanryoDate}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+            </apex:pageBlockButtons>
+            <apex:inputHidden value="{!jigyosyoTR.id}"/>
+            <apex:inputHidden value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.id}"/>
+            <apex:inputHidden value="{!tantoTimes}"/>
+            <apex:pageBlockSection title="基本情報　/　支給決定時情報" columns="1">
+               <apex:panelGrid columns="3" width="100%">
+                   <apex:pageBlockTable value="{!bosyu}" var="bosyu" width="50%">
+                       <apex:column value="{!bosyu.Bosyu__r.BosyuNendo__c}"/> 
+                       <apex:column value="{!bosyu.Bosyu__r.BosyuKai__c}"/>
+                       <apex:column headerValue="エリア区分" value="{!areaKBN}"/>
+                       <apex:column headerValue="エリア名称" value="{!areaName}"/>
+                       <apex:column value="{!bosyu.ShikyuJiki_Sushiki__c}"/>
+                       <apex:column value="{!bosyu.ShikyuKaishiBi__c}"/>
+                       <apex:column value="{!bosyu.ShikyuShimeBi__c}"/>
+                   </apex:pageBlockTable>
+
+                   <apex:pageBlockTable value="{!rodosyaTR}" var="rodosya" width="20%">
+                        <apex:column headerValue="労働者コード" value="{!rodosyaCD}"/>
+                   </apex:pageBlockTable>
+
+                   <apex:pageBlockTable value="{!jigyosyoTR}" var="jigyosyoTR" width="30%">
+                       <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.JigyoshoCD__c}"/>
+                       <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Name}"/>
+                   </apex:pageBlockTable>
+               </apex:panelGrid>
+            </apex:pageBlockSection>
+
+            <table align="center" height="350px" width="100%" id="resultGroup">
+                <tr>
+                    <td>
+                        <DIV style="height: 350px; width: 100%; overflow: scroll; scrollbar-face-color: #220022; scrollbar-highlight-color: #220022;
+                                    scrollbar-shadow-color: #220022; scrollbar-3dlight-color: #220022; scrollbar-arrow-color: #000000; 
+                                    scrollbar-track-color: #220022; scrollbar-darkshadow-color: #220022; 
+                                    filter:chroma(color=#220022)"> 
+                            <apex:pageBlockSection title="必須チェックカテゴリ" columns="1" id="section1">
+                                <apex:panelGrid columns="1" width="100%" id="grid1">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category001}"/>
+                                    <apex:pageBlockTable value="{!CheckSheet1}" var="rec" width="100%" id="table1">
+                                        <apex:inputHidden value="{!rec.CheckSheet.Id}"/>
+                                        <apex:column value="{!rec.CheckSheet.NoForShow__c}" width="5%"/>
+                                        <apex:column value="{!rec.CheckSheet.CheckKomoku__c}" width="20%"/>
+                                        <apex:column headerValue="チェック内容解説" width="25%">
+                                            <apex:outputLabel value="{!rec.CheckSheet.CheckNaiyo__c}"/>
+                                        </apex:column>
+                                        
+                                        <apex:column headerValue="" width="10%">
+                                            <apex:outputLabel id="taisyogaiRodosya" value="対象外労働者です。" 
+                                                              rendered="{!IF(rec.CheckSheet.SEQNo__c=1, IF(showTaisyogaiRodosya, true, false), false)}"
+                                                              style="color:red"/>
+                                        </apex:column>
+
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_1st__c.label}" width="10%">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}" disabled="{!NOT(render1stPart)}" 
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}"/>
+                                            </apex:selectRadio>
+                                        </apex:column>
+                                        
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_2nd__c.label}" width="10%" style="background-color:aliceblue">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_2nd__c}" disabled="{!NOT(render2ndPart)}" 
+                                                              rendered="{!IF(showTaisyogaiRodosya, false, true)}"
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '2', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}"/>
+                                            </apex:selectRadio>
+                                        </apex:column>
+                                        <apex:column width="15%"/>
+                                     </apex:pageBlockTable>
+                                </apex:panelGrid>
+
+                                <apex:panelGrid columns="1" width="100%" id="grid2">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category002}"/>
+                                    <apex:pageBlockTable value="{!CheckSheet2}" var="rec" width="100%" id="table2">
+                                        <apex:inputHidden value="{!rec.CheckSheet.Id}"/>
+                                        <apex:column value="{!rec.CheckSheet.NoForShow__c}" width="5%"/>
+                                        <apex:column value="{!rec.CheckSheet.CheckKomoku__c}" width="20%"/>
+                                        <apex:column value="{!rec.CheckSheet.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="" width="10%">
+                                            <apex:outputLabel value="{!$ObjectType.Contact.Fields.KoyoKeitai_HenkoBi__c.label}" 
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 1, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"/>
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.KoyoKeitai_HenkoBi__c}"
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 1, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"/>
+                                            </apex:outputPanel>
+                                            <apex:outputField value="{!rodosyaInfo.KoyoKeitai_HenkoBi__c}"
+                                                             rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 1, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"/>
+
+                                            <apex:outputLabel value="{!$ObjectType.Contact.Fields.RisyokuBi__c.label}" 
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}"/>
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.RisyokuBi__c}"
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}">
+                                                    <apex:actionSupport event="onchange" action="{!checkRisyokuBi}" rerender="table1"/>
+                                                </apex:inputField>
+                                            </apex:outputPanel>
+                                            <apex:outputField value="{!rodosyaInfo.RisyokuBi__c}"
+                                                             rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}"/>
+
+                                            <apex:outputLabel value="{!$ObjectType.Contact.Fields.RisyokuRiyu__c.label}" 
+                                                              rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}"/>
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.RisyokuRiyu__c}" 
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}">
+                                                </apex:inputField>                                                                                                           
+                                            </apex:outputPanel>
+                                            <apex:outputField value="{!rodosyaInfo.RisyokuRiyu__c}" 
+                                                              rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 2, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}"/>
+                                        </apex:column>
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_1st__c.label}" width="10%">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}" disabled="{!NOT(render1stPart)}" 
+                                                              rendered="{!IF(showTaisyogaiRodosya, false, true)}"
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}"/>
+                                            </apex:selectRadio>
+                                        </apex:column>
+
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_2nd__c.label}" width="10%" style="background-color:aliceblue">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_2nd__c}" disabled="{!NOT(render2ndPart)}" 
+                                                              rendered="{!IF(showTaisyogaiRodosya, false, true)}"
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '2', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}"/>
+                                            </apex:selectRadio>
+                                        </apex:column>
+                                        <apex:column width="15%"/>
+                                    </apex:pageBlockTable>
+                               </apex:panelGrid>
+                            </apex:pageBlockSection>
+
+                            <apex:pageBlockSection title="必須チェックカテゴリ　判定" columns="1" id="section3">
+                                <apex:panelGrid columns="1" width="100%" id="grid3">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category003}"/>
+                                    <apex:pageBlockTable value="{!CheckSheet3}" var="rec" width="100%" id="table3">
+                                        <apex:inputHidden value="{!rec.CheckSheet.Id}"/>
+                                        <apex:column value="{!rec.CheckSheet.NoForShow__c}" width="5%"/>
+                                        <apex:column value="{!rec.CheckSheet.CheckKomoku__c}" width="20%"/>
+                                        <apex:column value="{!rec.CheckSheet.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="項目入力欄" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.RisyokuRiyu__c}"
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 10, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}">
+                                                </apex:inputField>                                                                                                           
+                                            </apex:outputPanel>
+
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 10, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, false, true), false), false), false)}"/>
+                                            <apex:outputField value="{!rodosyaInfo.RisyokuRiyu__c}" 
+                                                              rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 10, IF(rec.CheckSheet.ShowTextBox__c, IF(true, true, false), false), false), false)}"/>
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.RisyokuBi__c}"
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 11, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}">
+                                                    <apex:actionSupport event="onchange" action="{!checkRisyokuBi}" rerender="table1"/>
+                                                </apex:inputField>
+                                            </apex:outputPanel>
+
+                                            <apex:outputText value="入力不要" 
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 11, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, false, true), false), false), false)}"/>
+                                            <apex:outputField value="{!rodosyaInfo.RisyokuBi__c}"
+                                                              rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 11, IF(rec.CheckSheet.ShowTextBox__c, IF(isRisyoku, true, false), false), false), false)}"/>
+
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:selectList value="{!koyokeitaiSearch}" size="1"  
+                                                                 rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 13, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"
+                                                                 disabled="true">
+                                                   <apex:selectOptions value="{!koyoKeitaisSearch}"/>
+                                                </apex:selectList>
+                                            </apex:outputPanel>
+
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 13, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, false, true), false), false), false)}"/>
+                                            <apex:selectList value="{!koyoKeitaiSearch}" size="1"  
+                                                             rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 13, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}">
+                                                             disabled="true">
+                                               <apex:selectOptions value="{!koyoKeitaisSearch}"/>
+                                            </apex:selectList>
+
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 14, IF(isKoyoKeitaiHenko, false, true), false), false)}"/>
+
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!rodosyaInfo.KoyoKeitai_HenkoBi__c}"
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 15, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"/>
+                                            </apex:outputPanel>
+                                            
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c = 15, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, false, true), false), false), false)}"/>
+                                            <apex:outputField value="{!rodosyaInfo.KoyoKeitai_HenkoBi__c}"
+                                                             rendered="{!IF(tanto='2', IF(rec.CheckSheet.SEQNo__c = 15, IF(rec.CheckSheet.ShowTextBox__c, IF(isKoyoKeitaiHenko, true, false), false), false), false)}"/>
+
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1', IF(rec.CheckSheet.SEQNo__c=17, IF(isMukyuKekkin, false, true), false), false)}"/>
+
+                                            <apex:actionStatus id="ptmkStatus"> 
+                                                <apex:facet name="stop">
+                                                    <apex:commandButton action="{!dummy}" value="無給欠勤期間入力" status="ptmkStatus"
+                                                                        disabled="{!isDisableButton}" immediate="true"
+                                                                        rendered="{!IF(tanto='1'
+                                                                                    , IF(rec.CheckSheet.SEQNo__c=18
+                                                                                        , IF(isMukyuKekkin, true, false)
+                                                                                    , false)
+                                                                                , false)
+                                                                                }"
+                                                                        style="{!IF(isDisableButton, 'color:gray', IF(isExistptmk, 'color:red', 'color:black'))}"
+                                                                        onclick="return showPTMKScreen(true, '{!rodosyaTR.id}');"/>
+                                               </apex:facet>
+                                               <apex:facet name="start">
+                                                   <apex:outputPanel >
+                                                      <apex:commandButton value="実行中..." status="hdStatus" disabled="true"/>
+                                                      <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                                  </apex:outputPanel>
+                                              </apex:facet>
+                                             </apex:actionStatus>
+                                            <apex:outputText value="入力不要" 
+                                                             rendered="{!IF(tanto='1'
+                                                                        , IF(rec.CheckSheet.SEQNo__c=18
+                                                                            , IF(isMukyuKekkin, false, true)
+                                                                        , false)
+                                                                    , false)}"/>
+                                        </apex:column>
+
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_1st__c.label}" width="10%">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}" 
+                                                              rendered="{!IF(!rec.CheckSheet.ShowTextBox__c
+                                                                            , IF(!rec.CheckSheet.ShowHanteiCheckBox__c
+                                                                                , IF(rec.CheckSheet.SEQNo__c = 14, IF(isKoyoKeitaiHenko, true, false), false) ||
+                                                                                  IF(rec.CheckSheet.SEQNo__c = 17, IF(isMukyuKekkin, true, false), false)
+                                                                            , false)
+                                                                        , false)
+                                                                        }"
+                                                              disabled="{!IF(render1stPart, false, true)}"
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}" rendered="true"/>
+                                            </apex:selectRadio>
+                                            
+                                            <apex:actionStatus id="risyokuStatus">
+                                                <apex:facet name="stop">
+                                                    <apex:outputPanel >
+                                                        <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}"
+                                                                          disabled="{!IF(render1stPart, false, true)}"
+                                                                          rendered="{!IF(rec.CheckSheet.SEQNo__c=9, IF(showTaisyogaiRodosya=true, false, true), false)}"
+                                                                          onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                                          ondblclick="this.checked = false;">
+                                                            <apex:selectOptions value="{!AriNashi}" rendered="true"/>
+                                                       </apex:selectRadio>
+                                                    </apex:outputPanel>
+                                                </apex:facet>
+                                                <apex:facet name="start">
+                                                    <apex:outputPanel >
+                                                        <apex:commandButton action="{!dummy}" disabled="true" status="risyokuStatus" rendered="false"/>
+                                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                                    </apex:outputPanel>
+                                                </apex:facet>
+                                           </apex:actionStatus>
+
+                                           <apex:actionStatus id="KoyokeitaiStatus">
+                                                <apex:facet name="stop">
+                                                    <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}" 
+                                                                      disabled="{!IF(render1stPart, false, true)}"
+                                                                      rendered="{!IF(rec.CheckSheet.SEQNo__c=12, IF(showTaisyogaiRodosya, false, true), false)}"
+                                                                      onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                                      ondblclick="this.checked = false;">
+                                                        <apex:selectOptions value="{!AriNashi}" rendered="true"/>
+                                                    </apex:selectRadio>
+                                                </apex:facet>
+                                                <apex:facet name="start">
+                                                    <apex:outputPanel >
+                                                        <apex:commandButton action="{!dummy}" disabled="true" status="KoyokeitaiStatus" rendered="false"/>
+                                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                                    </apex:outputPanel>
+                                                </apex:facet>
+                                           </apex:actionStatus>
+
+                                           <apex:actionStatus id="MukyuKekkinStatus">   
+                                                <apex:facet name="stop">
+                                                    <apex:selectRadio value="{!rec.checkSheet.Hantei_1st__c}" 
+                                                                      disabled="{!IF(render1stPart, false, true)}"
+                                                                      rendered="{!IF(rec.CheckSheet.SEQNo__c=16, IF(showTaisyogaiRodosya, false, true), false)}"
+                                                                      onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '1', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                                      ondblclick="this.checked = false;">
+                                                        <apex:selectOptions value="{!AriNashi}" rendered="true"/>
+                                                    </apex:selectRadio>
+                                                </apex:facet>
+                                                <apex:facet name="start">
+                                                    <apex:outputPanel >
+                                                        <apex:commandButton action="{!dummy}" disabled="true" status="MukyuKekkinStatus" rendered="false"/>
+                                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                                    </apex:outputPanel>
+                                                </apex:facet>
+                                           </apex:actionStatus>
+                                        </apex:column>
+
+                                        <apex:column headerValue="{!$ObjectType.JFK_CheckSheetTR__c.Fields.Hantei_2nd__c.label}" width="10%" style="background-color:aliceblue">
+                                            <apex:selectRadio value="{!rec.checkSheet.Hantei_2nd__c}" disabled="{!NOT(render2ndPart)}"
+                                                              rendered="{!IF(showTaisyogaiRodosya, false, true)}"
+                                                              onchange="return showHDScreen('JCR1', {!rec.CheckSheet.CategoryNo__c}, '{!rec.CheckSheet.No__c}', {!rec.CheckSheet.SEQNo__c}, this, {!bosyu.Bosyu__r.BosyuNendo__c}, {!bosyu.Bosyu__r.BosyuKai__c}, '{!bosyu.ShikyuJiki_Sushiki__c}', '{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}', '{!rec.CheckSheet.Id}', '2', {!rec.CheckSheet.PasonaHoseiKa__c}, '{!rodosyaTRid}');"
+                                                              ondblclick="this.checked = false;">
+                                                <apex:selectOptions value="{!OkNg}"/>
+                                            </apex:selectRadio>
+                                        </apex:column>
+                                        <apex:column width="15%"/>
+                                    </apex:pageBlockTable>
+                                 </apex:panelGrid>
+                            </apex:pageBlockSection>
+
+                            <br/>
+                            {!$ObjectType.JFK_JigyosyoTR__c.Fields.Biko__c.label}
+                            <br/>
+                            <apex:inputField value="{!rodosyaTR.Biko__c}" id="biko" style="width:99%" rendered="{!NOT(isDisableButton)}"/>
+                            <apex:outputField value="{!rodosyaTR.Biko__c}" id="biko2" style="width:99%" rendered="{!isDisableButton}"/>
+                         </div>
+                    </td>
+                </tr>
+            </table>
+    	</apex:pageBlock>
+	</apex:form>
+</apex:page>

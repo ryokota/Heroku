@@ -1,0 +1,59 @@
+<apex:page controller="JFK_HDController" showHeader="false" standardStylesheets="true">
+    <head>
+        <style type="text/css">
+
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+    <apex:pageMessages id="msg" rendered="true"/> 
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <apex:pageBlock title="【HD】補正データ" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                <apex:commandButton action="{!close}" value="戻る"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection title="" columns="1" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="種別" for="syubetsu"/>
+                    <apex:outputText value="{!checkSheetCategory}" id="syubetsu"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputText value="{!checkSheet.CheckKomoku__c}"/>
+                <apex:outputText value="{!checkSheet.CheckNaiyo__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="" columns="1" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="TODO" for="sutatus"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!hd.HD_Status__c}" id="sutatus"/> 
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="補正事項" for="hoseiJiko1" rendered="{!is1stTanto}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField id="hoseiJiko1" value="{!hd.HD_HoseiJiko_1st__c}" rendered="{!is1stTanto}" style="width:500px"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="補正事項" for="hoseiJiko2" rendered="{!NOT(is1stTanto)}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField id="hoseiJiko2" value="{!hd.HD_HoseiJiko_2nd__c}" rendered="{!NOT(is1stTanto)}" style="width:500px"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

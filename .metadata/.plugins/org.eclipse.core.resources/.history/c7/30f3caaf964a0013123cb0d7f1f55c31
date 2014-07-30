@@ -1,0 +1,200 @@
+public class JFK_Menu_GSController {
+	public PageReference doSearch() {
+		
+	}
+	
+    /*
+     * kais4Search
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+    public List<SelectOption> kais4Search {
+        get {
+    		JFK_Bosyu__c[] lstKai = JFK_cmnSOQL.getBosyu_Kai();
+        
+            List<SelectOption> options = new List<SelectOption>();
+    
+            options.add(new SelectOption('', ''));
+            for (JFK_Bosyu__c bosyu : lstKai) {
+            	boolean isExists = false;
+            	for (integer i = 0; i < options.size(); i++) {
+            		if (options[i].getValue() == string.valueOf(bosyu.BosyuKai__c)) {
+            			isExists = true;
+            		}
+            	}
+            	if (!isExists) {
+	            	options.add(new SelectOption(string.valueOf(bosyu.BosyuKai__c), string.valueOf(bosyu.BosyuKai__c)));
+            	}
+        	}
+	        return options;
+        }
+    }
+        
+    /*
+     * showMessage
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+     public boolean showMessage {
+     	get {
+        	return isShowMessage;
+     	}
+     }
+        
+    /*
+     * nendos4Search
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+    public List<SelectOption> nendos4Search {
+        get {
+    		JFK_Bosyu__c[] lstNendo = JFK_cmnSOQL.getBosyu_Nendo();
+    
+            List<SelectOption> options = new List<SelectOption>();
+    
+            options.add(new SelectOption('', ''));
+            for (JFK_Bosyu__c bosyu : lstNendo) {
+            	boolean isExists = false;
+            	for (integer i = 0; i < options.size(); i++) {
+            		if (options[i].getValue() == string.valueOf(bosyu.BosyuNendo__c)) {
+            			isExists = true;
+            		}
+            	}
+            	if (!isExists) {
+                	options.add(new SelectOption(string.valueOf(bosyu.BosyuNendo__c), string.valueOf(bosyu.BosyuNendo__c)));
+            	}
+            }
+            return options;
+        }
+    }
+    
+   
+    
+    /*
+     * jikis4Search
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+    public List<SelectOption> jikis4Search {
+        get {
+			JFK_Bosyu__c[]  lstJiki = JFK_cmnSOQL.getBosyu_Jiki();
+
+            List<SelectOption> options = new List<SelectOption>();
+    
+            options.add(new SelectOption('', ''));
+            for (JFK_Bosyu__c bosyu : lstJiki) {
+            	boolean isExists = false;
+            	for (integer i = 0; i < options.size(); i++) {
+            		if (options[i].getValue() == string.valueOf(bosyu.ShikyuJiki_Sushiki__c)) {
+            			isExists = true;
+            		}
+            	}
+            	if (!isExists) {
+	            	options.add(new SelectOption(string.valueOf(bosyu.ShikyuJiki_Sushiki__c), string.valueOf(bosyu.ShikyuJiki_Sushiki__c)));
+            	}
+        	}
+	        return options;
+        }
+    }
+
+    /*
+     * areas4Search
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+    public List<SelectOption> areas4Search {
+        get {
+			JFK_CommonM__c[] lstArea = JFK_cmnSOQL.getCommonM(JFK_cmnConstant.COMMON_M_AREA);                            	
+            
+            List<SelectOption> options = new List<SelectOption>();
+    
+            options.add(new SelectOption('', ''));
+            for (JFK_CommonM__c area : lstArea) {
+            	options.add(new SelectOption(string.valueOf(area.Code__c + ':' + area.Name), string.valueOf(area.Code__c + ':' + area.Name)));
+        	}
+	        return options;
+        }
+    }
+
+    /*
+     * doSearch
+     * 引数 ：
+     * 戻り値：
+     * 概要 ：
+     */
+    public PageReference doSearch() {
+	    // Initiate Wrapper & Set
+        lstWrapper = new List<wrapper>();
+		EntireSelectedIds.clear();
+		
+        try {
+			// エラーチェック
+/*
+            if (checkError()) {
+                return null;
+            }
+*/
+            // 該当件数チェック
+            string strSOQL = 'SELECT'
+                            + '  COUNT()'
+		                    + ' FROM JFK_JigyosyoTR__c'
+		                    + ' WHERE Nendo_Kai_Jigyosyo__c != null';
+			strSOQL +=  createCriteria();
+	        
+			integer recCnt = Database.countQuery(strSOQL);
+			
+			// 最大件数を超える時、処理中止
+			if (recCnt > Limits.getLimitQueryLocatorRows()) {
+                ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO,System.Label.JFK_Info002));
+                return null;
+        	}
+        						
+            // 該当データ取得
+            strSOQL = 'SELECT'
+                            + '  id'
+                            + ', Name'
+                            + ', BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuNendo__c'
+                            + ', BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuKai__c'
+                            + ', BosyuJoho_ShikyuJiki__r.ShikyuJiki_Sushiki__c'
+                            + ', Nendo_Kai_Jigyosyo__r.SeiriNO__c'
+                            + ', Nendo_Kai_Jigyosyo__r.Area__c'
+                            + ', Nendo_Kai_Jigyosyo__r.JigyoshoCD__c'
+                            + ', Nendo_Kai_Jigyosyo__r.Account__r.Name'
+                            + ', Nendo_Kai_Jigyosyo__r.Account__r.Address_Shinsei__c'
+                            + ', Nendo_Kai_Jigyosyo__r.Account__r.KoyoHokenTekiyoJigyosyoNO__c'
+                            + ', ('
+                            + '     SELECT' 
+                            + '               GS_FirstTantosya__c' 
+                            + '             , GS_SecondTantosya__c' 
+                            + '             , GS_FirstTantosya__r.Name' 
+                            + '             , GS_SecondTantosya__r.Name' 
+                            + '             , GS_FirstTantosya_Status__c'
+                            + '             , GS_SecondTantosya_Status__c' 
+                            + '             , GS_JissekiSyoruiShinsa_ChakusyuBi_1st__c' 
+                            + '             , GS_JissekiSyoruiShinsa_ChakusyuBi_2nd__c' 
+                            + '             , GS_JissekiSyoruiShinsa_ChakusyuBi__c' 
+                            + '             , GS_JissekiHoseiShido_JisshiBi__c' 
+                            + '             , GS_JissekiSyoruiShinsa_KanryoBi_1st__c' 
+                            + '             , GS_JissekiSyoruiShinsa_KanryoBi_2nd__c' 
+                            + '             , GS_JissekiSyoruiShinsa_KanryoBi__c'
+                            + '             , GS_JissekiHokokusyo_JuryoBi__c'
+                            + '             FROM JigyosyoTR_Time__r '
+							+ '             WHERE RecordKBN__c = \'' + String.escapeSingleQuotes(JFK_cmnConstant.COMMON_MANAGE_INFO_GS) + '\''
+							+ '             AND   RodosyaTR__c = NULL'
+            				+ ' )'
+		                    + ' FROM JFK_JigyosyoTR__c'
+		                    + ' WHERE Nendo_Kai_Jigyosyo__c != null';
+			strSOQL +=  createCriteria();
+	        strSOQL += ' ORDER BY BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuNendo__c'
+	        		+  ',BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuKai__c'
+	        		+  ',BosyuJoho_ShikyuJiki__r.ShikyuJiki_Sushiki__c'
+	        		+  ',Nendo_Kai_Jigyosyo__r.Area__c'
+	        		+  ',Nendo_Kai_Jigyosyo__r.SeiriNO__c';
+        
+    }
+}

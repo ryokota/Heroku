@@ -1,0 +1,66 @@
+<apex:page controller="JFK_MDController" showHeader="false">
+    <head>
+        <style type="text/css">
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+    
+    <apex:pageMessages id="msg" rendered="true"/> 
+    <apex:form >
+        <apex:pageBlock title="【MD】申し送り事項" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg, detailSection, tableSection"/>
+                <apex:commandButton action="{!close}" value="戻る" immediate="true"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="" columns="2" collapsible="true" id="detailSection" rendered="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.MD_Group__c.label}" for="group"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!MD.MD_Group__c}" id="group"/>
+                        <apex:actionSupport event="onchange" action="{!showItems}" rerender="detailSection"/>
+                    </apex:outputPanel>
+              　</apex:pageBlockSectionItem>
+                <apex:outputLabel value=""/>
+                
+                <apex:inputField value="{!MD.MD_KakuninBi__c}" rendered="{!doRender[0]}"/>
+                <apex:outputField value="{!MD.MD_CenterTantosya__c}" rendered="{!doRender[1]}"/>
+                <apex:inputField value="{!MD.MD_JigyoshoTantosya__c}" rendered="{!doRender[2]}"/>
+                <apex:inputField value="{!MD.MD_RenrakuSaki__c}" rendered="{!doRender[3]}"/>
+                <apex:inputField value="{!MD.MD_DairiNin__c}" rendered="{!doRender[4]}"/>
+                <apex:inputField value="{!MD.MD_IninKengen__c}" rendered="{!doRender[5]}"/>
+                <apex:inputField value="{!MD.MD_TeishiRiyu__c}" rendered="{!doRender[6]}"/>
+                <apex:inputField value="{!MD.MD_ShikyuTeishi_KaishiBi__c}" rendered="{!doRender[7]}"/>
+                <apex:inputField value="{!MD.MD_TaisyoRodosyaShimei__c}" rendered="{!doRender[8]}"/>
+                <apex:inputField value="{!MD.MD_SyukkoKaishiBi__c}" rendered="{!doRender[9]}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="" columns="1" collapsible="true" id="tableSection" rendered="true">
+                <apex:pageBlockTable value="{!tableMD}" var="md" width="100%" id="blockTable">
+                    <apex:column >
+                        <apex:commandLink action="{!doDelete}" onClick="if (!confirmDelete()) return false;" reRender="blockTable">削除
+                            <apex:param name="id" value="{!md.Id}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column value="{!md.MD_Group__c}" rendered="true"/> 
+                    <apex:column value="{!md.MD_KakuninBi__c}" rendered="{!doRenderTable[0]}"/>
+                    <apex:column value="{!md.MD_CenterTantosya__c}" rendered="{!doRenderTable[1]}"/>
+                    <apex:column value="{!md.MD_JigyoshoTantosya__c}" rendered="{!doRenderTable[2]}"/>
+                    <apex:column value="{!md.MD_RenrakuSaki__c}" rendered="{!doRenderTable[3]}"/>
+                    <apex:column value="{!md.MD_DairiNin__c}" rendered="{!doRenderTable[4]}"/>
+                    <apex:column value="{!md.MD_IninKengen__c}" rendered="{!doRenderTable[5]}"/>
+                    <apex:column value="{!md.MD_TeishiRiyu__c}" rendered="{!doRenderTable[6]}"/>
+                    <apex:column value="{!md.MD_ShikyuTeishi_KaishiBi__c}" rendered="{!doRenderTable[7]}"/>
+                    <apex:column value="{!md.MD_TaisyoRodosyaShimei__c}" rendered="{!doRenderTable[8]}"/>
+                    <apex:column value="{!md.MD_SyukkoKaishiBi__c}" rendered="{!doRenderTable[9]}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

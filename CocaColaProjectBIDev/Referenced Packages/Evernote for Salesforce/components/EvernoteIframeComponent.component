@@ -1,0 +1,293 @@
+<apex:component id="EvernoteIframeComponent" allowDML="true" controller="Evernote.EvernoteController">
+    <!-- Component attributes that are used in the JS Remote functions -->
+    <apex:attribute type="String" name="ObjectType" id="ObjectType" description="If the object type is Account (or) Contact (or) Opportunity in context" />
+    <apex:attribute type="String" name="SalesforceRecordId" id="SalesforceRecordId" description="Salesforce record Id of Account (or) Contact (or) Opportunity in context" />
+    <apex:attribute type="String" name="EvernoteURI" description="Pass in different URLs so we can call from different user pages and maintain just 1 component"/>
+    <apex:includeScript value="{!URLFOR($Resource.Evernote__easyXDM, 'easyXDM/easyXDM.min.js')}"  />
+    <apex:includeScript value="{!URLFOR($Resource.Evernote__easyXDM, 'easyXDM/json2.js')}"  />
+    <style type="text/css">
+        #embedded iframe {
+            width: 100%;
+        }
+    </style>
+    <script>
+    
+        if (typeof console === "undefined"){
+            console={};
+            console.log = function(){
+               return;
+            }
+        }
+        window.viewPortHeight = document.documentElement.clientHeight;
+        window.SFDC = window.SFDC || {
+            
+            getUserEmail: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getUserEmail}',
+                                                            handleUserEmailResult,
+                                                            {escape:true});
+            }, 
+            setUserAuthToken: function(msg) 
+            {
+                var token = msg.token;
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.setUserAuthToken}',
+                                                            token,
+                                                            handleSetUserAuthTokenResult,
+                                                            {escape:true});
+            },
+            getUserAuthToken: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getUserAuthToken}',
+                                                            handleGetUserAuthTokenResult,
+                                                            {escape:true});
+            },
+            deleteUserAuthToken: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.deleteUserAuthToken}',
+                                                            handleDeleteUserAuthTokenResult,
+                                                            {escape:true});
+            },
+            linkNote: function(note)
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.linkNote}',
+                                                            '{!SalesforceRecordId}',
+                                                            JSON.stringify(note),
+                                                            handleLinkNoteResult,
+                                                            {escape:true});
+            },
+            unlinkNote: function(note)
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.unlinkNote}',
+                                                            '{!SalesforceRecordId}',
+                                                            JSON.stringify(note),
+                                                            handleUnlinkNoteResult,
+                                                            {escape:true});
+            },
+            getRecordInfo: function()
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getRecordInfoDetail}',
+                                                            '{!SalesforceRecordId}','{!URLFOR("/")}',
+                                                            handleGetRecordInfoResult,
+                                                            {escape:true});
+            },
+            getLinkedNotes: function()
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getLinkedNotes}',
+                                                            '{!SalesforceRecordId}',
+                                                            handleGetLinkedNotesResult,
+                                                            {escape:true});
+            },
+            setBusinessAuthToken: function(msg) 
+            {
+                var token = msg.token;
+
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.setBusinessAuthToken}',
+                                                            token,
+                                                            handleSetBusinessAuthTokenResult,
+                                                            {escape:true});
+            },
+            getBusinessAuthToken: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getBusinessAuthToken}',
+                                                            handleGetBusinessAuthTokenResult,
+                                                            {escape:true});
+            },
+            deleteBusinessAuthToken: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.deleteBusinessAuthToken}',
+                                                            handleDeleteBusinessAuthTokenResult,
+                                                            {escape:true});
+            },
+            setUserNotebookId: function(msg) 
+            {
+                var token = msg.token;
+
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.setUserNotebookId}',
+                                                            token,
+                                                            handleSetUserNotebookIdResult,
+                                                            {escape:true});
+            },
+            getUserNotebookId: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getUserNotebookId}',
+                                                            handleGetUserNotebookIdResult,
+                                                            {escape:true});
+            },
+            deleteUserNotebookId: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.deleteUserNotebookId}',
+                                                            handleDeleteUserNotebookIdResult,
+                                                            {escape:true});
+            },
+            getStartURL: function() 
+            {
+                Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.EvernoteController.getStartURL}',
+                                                            handleGetStartURLResult,
+                                                            {escape:true});
+            },
+            openPopupWindow: function(msg)
+            {
+                window.open(msg, '', 'width=1028px,height=800px');
+            }
+        };
+        
+        function handleSetUserAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleSetUserAuthTokenResponse(result);
+            }
+        }
+        
+        function handleGetUserAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleGetUserAuthTokenResponse(result);
+            }
+        }
+        
+        function handleDeleteUserAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+            } else {
+                rpc.handleDeleteUserAuthTokenResponse(result);
+            }
+        }
+        
+        function handleUserEmailResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleUserEmailResponse(result);
+            }
+        }
+        
+        function handleGetRecordInfoResult(result, event)
+        {
+            if(event.type == 'exception')
+            {
+                console.log(event.message);
+            }
+            else
+            {
+                rpc.handleGetRecordInfoResponse(result);
+            }
+        }
+        
+        function handleLinkNoteResult(result, event)
+        {
+            if(event.type == 'exception')
+            {
+                console.log(event.message);
+            }
+            else
+            {
+                rpc.handleLinkNoteResponse(result);
+            }
+        }
+        
+        function handleUnlinkNoteResult(result, event)
+        {
+            if(event.type == 'exception')
+            {
+                console.log(event.message);
+            }
+            else
+            {
+                rpc.handleUnlinkNoteResponse(result);
+            }
+        }
+        
+        function handleGetLinkedNotesResult(result, event)
+        {
+            if(event.type == 'exception')
+            {
+                console.log(event.message);
+            }
+            else
+            {
+                rpc.handleGetLinkedNotesResponse(result);
+            }
+        }
+        /* Reloaded the parent window */
+        function popUpClosed() 
+        {
+            parent.location.href = '{!URLFOR("/" + $CurrentPage.parameters.id)}';
+        }
+        
+        function handleSetBusinessAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleSetBusinessAuthTokenResponse(result);
+            }
+        }
+        
+        function handleGetBusinessAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleGetBusinessAuthTokenResponse(result);
+            }
+        }
+        
+        function handleDeleteBusinessAuthTokenResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                alert('success');
+                rpc.handleDeleteBusinessAuthTokenResponse(result);
+            }
+        }
+        
+        function handleSetUserNotebookIdResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleSetUserNotebookIdResponse(result);
+            }
+        }
+        
+        function handleGetUserNotebookIdResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                //alert(event.message);
+            } else {
+                rpc.handleGetUserNotebookIdResponse(result);
+            }
+        }
+        
+        function handleDeleteUserNotebookIdResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleDeleteUserNotebookIdResponse(result);
+            }
+        }
+        
+        function handleGetStartURLResult(result, event) 
+        {
+            if(event.type == 'exception') {
+                console.log(event.message);
+            } else {
+                rpc.handleGetStartURLResponse(result);
+            }
+        }
+    </script>
+    
+    <!-- Evernote.js included from Evernote platform -->
+    <script src="{!EvernoteURI}" type="text/javascript"></script>
+    <!-- Div for Iframe for Evernote application -->
+    <apex:pageBlock >
+        <div id="embedded" style="height:800px" />
+    </apex:pageBlock>
+</apex:component>

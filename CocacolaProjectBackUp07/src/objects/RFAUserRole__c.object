@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Agent1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agent 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Agent1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agent2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agent 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Agent2</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agent3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agent 3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Agent3</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AgentsAssigned__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Agent1__c) &amp;&amp;  ISBLANK( Agent2__c) &amp;&amp; ISBLANK( Agent3__c), &quot;No&quot;, &quot;Yes&quot;)</formula>
+        <label>Agents Assigned?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alias__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.Alias</formula>
+        <label>Alias</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApprovalComments__c</fullName>
+        <description>IF($RecordType.Name == &apos;Info Copy Only&apos;, &quot;Info Copy Only&quot;, &quot;&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add comment in both Japanese and English, if any non-Japanese recipient is involved in the approval process (either approver or info copy).</inlineHelpText>
+        <label>Condition / Reason</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ApprovalNotes__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ApprovalOrder__c</fullName>
+        <defaultValue>null</defaultValue>
+        <description>IF( $RecordType.Name  = &quot;Approver&quot;, 1,0) will get error in VF page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>回覧の承認順序です。数字の小さい順に承認待ち通知メールが配信されます。同じ番号の場合は同時に通知を受け取ります。</inlineHelpText>
+        <label>Approval Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApprovalProcess__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approval Process</label>
+        <referenceTo>ApprovalProcess__c</referenceTo>
+        <relationshipName>Approvers</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalRecievedDateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>ApprovalRecieved DateTime</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalRecommendation__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Recommendation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unconditionally Approved / 承認（条件なし）</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conditionally Approved / 承認（条件付き）</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected / 否認</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Approval / 承認待ち</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Return to Requester / 差し戻し</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalRequestedOn__c</fullName>
+        <description>RFA R1 - Field to track when Approval is requested to the Approver</description>
+        <externalId>false</externalId>
+        <label>Approval Requested On</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Count of approval number for each approver</description>
+        <externalId>false</externalId>
+        <label>Approval Count</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApprovedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RFA_User_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Approver Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Requester</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capital Mgmt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Treasury Mgr</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fix Asset Mgr</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ELT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Info Copy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COA Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COA Single</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CokeOne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>COA_Acronym__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.COA_Acronym__c</formula>
+        <label>COA Acronym</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_Function__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(UserName__r.COA_Function__c)</formula>
+        <label>COA Function</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_Group__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(UserName__r.COA_Group__c)</formula>
+        <label>COA Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_L2_Function_E__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L2_Function_E__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COA L2 Function E</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_L3_Function_E__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L3_Function_E__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COA L3 Function E</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_L4_Function_E__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L4_Function_E__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COA L4 Function E</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_L_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L_level__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COA L Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COA_Location_E__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.Location_E__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COA Location E</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.CompanyName</formula>
+        <label>Company Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.Department</formula>
+        <label>Department</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DoNotSendEmail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Do Not Send E-mail</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DuplicateRecord__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To Identify if the POC or CoCreator are duplicate on RFA</description>
+        <externalId>false</externalId>
+        <label>DuplicateRecord</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.Email</formula>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>L2_Function__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L2_Function_E__c</formula>
+        <label>L2 Function</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>L3_Function__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L3_Function_E__c</formula>
+        <label>L3 Function</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>L4_Function__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.L4_Function_E__c</formula>
+        <label>L4 Function</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>UserName__r.Location_E__c</formula>
+        <label>Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <defaultValue>&quot;承認プロセスに日本人以外が含まれる場合は、日本語と英語の両方でコメントの記述をお願いします。&quot;  + BR()+ 
+&quot;Add comment in both Japanese and English, if any non-Japanese recipient is involved in the approval process (either approver or info copy).&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NotifyUsers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NotifyUsers</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notifyagent1firsttime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Notification to identify if an e-mail notification has been sent to the agent 1 selected user.</description>
+        <externalId>false</externalId>
+        <label>Notifyagent1firsttime</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notifyagent2firsttime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Notification to identify if an e-mail notification has been sent to the agent 2 selected user.</description>
+        <externalId>false</externalId>
+        <label>Notifyagent2firsttime</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notifyagent3firsttime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Notification to identify if an e-mail notification has been sent to the agent 3 selected user.</description>
+        <externalId>false</externalId>
+        <label>Notifyagent3firsttime</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notifyuserfirsttime__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Notifyuserfirsttime</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RFAStage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(RFA__r.Stage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RFAStage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RFA__c</fullName>
+        <externalId>false</externalId>
+        <label>RFA</label>
+        <referenceTo>RFA__c</referenceTo>
+        <relationshipLabel>RFA Approvers/Users</relationshipLabel>
+        <relationshipName>RFA_User_Roles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>TECH_IsComplete__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*
+updated by Jia Hu on 2013/12/03
+*/
+/*
+IF(
+  AND(
+    NOT( OR (
+      ISPICKVAL(ApprovalRecommendation__c, &quot;Awaiting Approval&quot;)
+      ,
+      ISPICKVAL(ApprovalRecommendation__c, &quot;承認待ち&quot;)
+      )
+    ),   
+    NOT(
+      ISPICKVAL(ApprovalRecommendation__c, &quot;&quot;)
+    )
+  ), 
+  &quot;true&quot;, 
+  &quot;false&quot;
+)
+*/
+
+IF(
+  AND(
+    NOT(
+      ISPICKVAL(ApprovalRecommendation__c, &quot;Awaiting Approval / 承認待ち&quot;)
+    )
+    ,   
+    NOT(
+      ISPICKVAL(ApprovalRecommendation__c, &quot;&quot;)
+    )
+  ), 
+  &quot;true&quot;, 
+  &quot;false&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TECH_TimeInAwaitingApproval__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( ApprovalRecommendation__c, &apos;Awaiting Approval&apos;) , 
+(NOW() -  ApprovalRequestedOn__c) , 
+ ApprovalRecievedDateTime__c - ApprovalRequestedOn__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DaysPendingApproval</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserName__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RFAUserRoles</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User_Name_Unique__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>User Name Unique</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>isComplete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isComplete</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>RFA Approver/User</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>UserName__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Abe_Hirotaka02010207</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Abe Hirotaka</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <label>0201-0207【Abe Hirotaka】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Akachi_Fumio</fullName>
+        <columns>RFA__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Akachi Fumio</value>
+        </filters>
+        <label>0217-0221【Akachi Fumio】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Inoue_Yutaka</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Inoue Yutaka</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <label>0202-0208【Inoue Yutaka】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Nistor_Dan</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Nistor Dan</value>
+        </filters>
+        <label>0131-0209【Nistor Dan】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Ozeki_Haruko</fullName>
+        <columns>RFA__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Ozeki Haruko</value>
+        </filters>
+        <label>0217-0228【Ozeki Haruko】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Prillaman_Kevin</fullName>
+        <columns>RFA__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Prillaman Kevin</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <label>0203-0214【Prillaman Kevin】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Sato_Kazuhito</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Sato Kazuhito</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <label>0202-0208【Sato Kazuhito】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Delegation_Singh_Gill_Shehnaz</fullName>
+        <columns>RFA__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>UserName__c</columns>
+        <columns>ApprovalRecommendation__c</columns>
+        <columns>Agent1__c</columns>
+        <columns>RFAStage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </filters>
+        <filters>
+            <field>UserName__c</field>
+            <operation>equals</operation>
+            <value>Singh Gill Shehnaz</value>
+        </filters>
+        <filters>
+            <field>ApprovalRecommendation__c</field>
+            <operation>notContain</operation>
+            <value>Unconditionally Approved / 承認（条件なし）,Conditionally Approved / 承認（条件付き）,Rejected</value>
+        </filters>
+        <label>0201-0207【Singh Gill Shehnaz】Delegation</label>
+        <language>ja</language>
+        <sharedTo>
+            <group>PT_Team</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>Details-{00000000}</displayFormat>
+        <label>Approval Details</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>RFA Approvers/Users</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>RUR_Approver</fullName>
+        <active>true</active>
+        <description>本申請の承認者を割当てます</description>
+        <label>Approver</label>
+        <picklistValues>
+            <picklist>ApprovalRecommendation__c</picklist>
+            <values>
+                <fullName>Conditionally Approved %2F 承認%EF%BC%88条件付き%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %2F 否認</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return to Requester %2F 差し戻し</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unconditionally Approved %2F 承認%EF%BC%88条件なし%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approver_Source__c</picklist>
+            <values>
+                <fullName>Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requester</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>RUR_InfoCopyOnly</fullName>
+        <active>true</active>
+        <description>本申請の参照者を指定します</description>
+        <label>Info Copy Only</label>
+        <picklistValues>
+            <picklist>ApprovalRecommendation__c</picklist>
+            <values>
+                <fullName>Conditionally Approved %2F 承認%EF%BC%88条件付き%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %2F 否認</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unconditionally Approved %2F 承認%EF%BC%88条件なし%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approver_Source__c</picklist>
+            <values>
+                <fullName>Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requester</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>RUR_PrimaryPointofContact</fullName>
+        <active>true</active>
+        <description>本申請の主担当者を指定します</description>
+        <label>Primary Point of Contact</label>
+        <picklistValues>
+            <picklist>ApprovalRecommendation__c</picklist>
+            <values>
+                <fullName>Conditionally Approved %2F 承認%EF%BC%88条件付き%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %2F 否認</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unconditionally Approved %2F 承認%EF%BC%88条件なし%EF%BC%89</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approver_Source__c</picklist>
+            <values>
+                <fullName>Approver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requester</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RFA__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UserName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>UserName__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UserName__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>UserName__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Approval_Order_Error</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( RecordType.Id = &quot;01210000000QsJj&quot; 
+&amp;&amp;  ApprovalOrder__c = 0  , true, false)</errorConditionFormula>
+        <errorDisplayField>ApprovalOrder__c</errorDisplayField>
+        <errorMessage>Please enter the approval order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Change_for_Approvers_from_COA</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( TEXT(Approver_Source__c) != null ,  ISCHANGED(UserName__c), false)</errorConditionFormula>
+        <errorDisplayField>UserName__c</errorDisplayField>
+        <errorMessage>Can&apos;t change the user of Approver from COA rules!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR01_CommentsMandatoryCondApp</fullName>
+        <active>true</active>
+        <description>RFA R1 - Approval Comments is required when Approval Recommendation provided as Conditionally Approved or Rejected</description>
+        <errorConditionFormula>AND( $RecordType.DeveloperName = &apos;RUR_Approver&apos;,  
+OR(
+ ISPICKVAL(
+   ApprovalRecommendation__c, 
+  &apos;Conditionally Approved / 承認（条件付き）&apos;), 
+ ISPICKVAL(
+  ApprovalRecommendation__c, 
+  &apos;Rejected / 否認&apos;) 
+),  
+ISBLANK(ApprovalComments__c) 
+)
+
+/*
+AND( $RecordType.DeveloperName = &apos;RUR_Approver&apos;,  OR(ISPICKVAL(ApprovalRecommendation__c, &apos;Conditionally Approved&apos;), ISPICKVAL(ApprovalRecommendation__c, &apos;Rejected&apos;) ),  ISBLANK(ApprovalComments__c) )
+*/</errorConditionFormula>
+        <errorDisplayField>ApprovalComments__c</errorDisplayField>
+        <errorMessage>Approval Comment is required when Approval Recommendation is selected as Conditionally Approved or Rejected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR02_UniqueAgentSelection</fullName>
+        <active>true</active>
+        <description>RFA R1 - Check for unique selection of agents in the system</description>
+        <errorConditionFormula>OR(
+AND(NOT(ISBLANK(Agent1__c)), OR(Agent1__c == Agent2__c, Agent1__c == Agent3__c)),
+AND(NOT(ISBLANK(Agent2__c)), OR(Agent2__c == Agent1__c, Agent2__c == Agent3__c)), 
+AND(NOT(ISBLANK(Agent3__c)), OR(Agent3__c == Agent1__c, Agent2__c == Agent3__c))
+)</errorConditionFormula>
+        <errorMessage>Same User can not be selected more than once as a Agent for the same Approver</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR03_ApproverCannotBeAgent</fullName>
+        <active>true</active>
+        <description>RFA R1 - Validation rule to restrict users for selecting the Approver as agent for itself</description>
+        <errorConditionFormula>OR(UserName__c == Agent1__c, UserName__c == Agent2__c, UserName__c == Agent3__c)</errorConditionFormula>
+        <errorMessage>Same User can not be selected as Approver and Agent for the Same record</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR04_NoUpdRecom_in_Circul_Validatio</fullName>
+        <active>true</active>
+        <description>RFA R1 - Do not allow Approval Recommendation and Approval Comments to be populated unless the Approval Process lookup field is populated.</description>
+        <errorConditionFormula>ApprovalProcess__c == &quot;&quot;  &amp;&amp;  ApprovalComments__c != &quot;Info Copy Only&quot; &amp;&amp;
+(NOT( ISBLANK( TEXT (ApprovalRecommendation__c ))) || NOT( ISBLANK(ApprovalComments__c )))</errorConditionFormula>
+        <errorMessage>The Approval Recommendation field and the Approval Comments field can only be populated once the approval record has been submitted to the Approver.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR05_AppandAgent_in_Circul_Validatio</fullName>
+        <active>true</active>
+        <description>RFA R1 - Approver and Agent references cannot be changed if Approval Recommendation has been received from the Original Actor or its associated Agent</description>
+        <errorConditionFormula>NOT(ISPICKVAL( ApprovalRecommendation__c, &quot;Awaiting Approval&quot;)) &amp;&amp; 
+NOT(ISPICKVAL( ApprovalRecommendation__c, &quot;&quot;)) 
+&amp;&amp;
+(
+  (ISCHANGED(UserName__c) 
+   || ISCHANGED(Agent1__c) 
+   || ISCHANGED(Agent2__c) 
+   || ISCHANGED(Agent3__c)
+)
+ &amp;&amp;
+ (
+   NOT(
+     OR($Profile.Name = &quot;System Administrator&quot;,  
+        $Profile.Name = &quot;システム管理者&quot; )
+     )
+   )
+)
+
+/*
+NOT(ISPICKVAL( ApprovalRecommendation__c, &quot;Awaiting Approval&quot;)) &amp;&amp; 
+NOT(ISPICKVAL( ApprovalRecommendation__c, &quot;&quot;)) &amp;&amp;
+(ISCHANGED(UserName__c) || ISCHANGED(Agent1__c) || ISCHANGED(Agent2__c) || ISCHANGED(Agent3__c))
+*/</errorConditionFormula>
+        <errorMessage>Approver or Agent cannot be changed after Approval Recommendation has been received.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR06_Unblank_Approval_Recommendation</fullName>
+        <active>false</active>
+        <description>User cannot reset the approval recommendation while the RFA is in Circulation
+Disabled by Jia Hu on 2013/12/09  Need TO Check!!</description>
+        <errorConditionFormula>AND( 
+ISBLANK(TEXT(ApprovalRecommendation__c)), 
+NOT(ISBLANK(PRIORVALUE(ApprovalRecommendation__c))), 
+ISPICKVAL( RFA__r.Stage__c, &quot;Circulation&quot;), 
+OR( 
+ISPICKVAL( ApprovalProcess__r.Status__c , &quot;In Progress&quot;), 
+ISPICKVAL( ApprovalProcess__r.Status__c, &quot;Completed&quot;) 
+) 
+)</errorConditionFormula>
+        <errorDisplayField>ApprovalRecommendation__c</errorDisplayField>
+        <errorMessage>Approval Recommendation must be populated while the RFA is in Circulation. Select a valid Approval Recommendation or Cancel to return to the previous page.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR07_NoUpdApprover_in_Circulation</fullName>
+        <active>true</active>
+        <description>RFA R1 - Do not allow User Name to be updated unless the Approval Process lookup field is not populated.</description>
+        <errorConditionFormula>NOT( ISBLANK ( TEXT (ApprovalRecommendation__c) )) &amp;&amp; ISCHANGED(  UserName__c )</errorConditionFormula>
+        <errorDisplayField>UserName__c</errorDisplayField>
+        <errorMessage>The User Name field cannot be changed once the approval record has been submitted to the Approver.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR09_Lock_RecordType</fullName>
+        <active>true</active>
+        <description>Cannot change record type value</description>
+        <errorConditionFormula>ISCHANGED( RecordTypeId )</errorConditionFormula>
+        <errorMessage>Cannot Change Record Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR10_Lock_ApproverOrder</fullName>
+        <active>true</active>
+        <description>The approver order of &quot;Maniwa Daisuke &quot; could not be modified.</description>
+        <errorConditionFormula>AND(
+OR(
+RFA__r.RecordType.DeveloperName=&apos;RFA_SmallProjectRequest&apos;,
+RFA__r.RecordType.DeveloperName=&apos;RFA_CapitalProjectRequest&apos;,
+RFA__r.RecordType.DeveloperName=&apos;RFA_Small_Project_Request&apos;
+),
+ISCHANGED( ApprovalOrder__c ),
+UserName__r.CommunityNickname=&apos;daisuke.maniwa&apos;
+
+)</errorConditionFormula>
+        <errorDisplayField>ApprovalOrder__c</errorDisplayField>
+        <errorMessage>This order could not be modified.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RUR_VR_CommentsMandatoryCondApp</fullName>
+        <active>true</active>
+        <description>RFA R1 - Approval Comments is required when Approval Recommendation provided as Unconditionally Approved</description>
+        <errorConditionFormula>AND( 
+$RecordType.DeveloperName = &apos;RUR_Approver&apos;,  
+ISPICKVAL(ApprovalRecommendation__c, &apos;Unconditionally Approved / 承認（条件なし）&apos;),  
+!ISBLANK(ApprovalComments__c) 
+)
+
+
+/*
+AND( 
+$RecordType.DeveloperName = &apos;RUR_Approver&apos;,  
+OR(ISPICKVAL(ApprovalRecommendation__c, &apos;Unconditionally Approved&apos;), ISPICKVAL(ApprovalRecommendation__c, &apos;承認（条件なし）&apos;)),  
+!ISBLANK(ApprovalComments__c) 
+)*/</errorConditionFormula>
+        <errorDisplayField>ApprovalComments__c</errorDisplayField>
+        <errorMessage>Approval Comment is NOT required when Approval Recommendation is selected as Unconditionally Approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requester_Same_To_Approver</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+  $RecordType.DeveloperName = &apos;RUR_Approver&apos;,
+   UserName__c =  RFA__r.CreatedById 
+)</errorConditionFormula>
+        <errorDisplayField>UserName__c</errorDisplayField>
+        <errorMessage>Requester can&apos;t be the approver.</errorMessage>
+    </validationRules>
+</CustomObject>

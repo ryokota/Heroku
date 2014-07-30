@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支給停止ワーク</value>
+    </caseValues>
+    <fields>
+        <label><!-- 0.募集M助成単価 --></label>
+        <name>BosyuM_JyoseiTanka__c</name>
+        <relationshipLabel><!-- 支給停止ワーク --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 状態変更日 --></label>
+        <name>ChangeDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- 取引先責任者 --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- 支給停止ワーク --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 採番テスト --></label>
+        <name>Field1__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.5_1年目補正額 --></label>
+        <name>HoseiShikyuKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.5_2年目補正額 --></label>
+        <name>HoseiShikyuKingaku_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.5_3年目補正額 --></label>
+        <name>HoseiShikyuKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所TR（支給時期） --></label>
+        <name>JigyosyoTR_ShikyuJiki__c</name>
+        <relationshipLabel><!-- 支給停止ワーク --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 1.6_1年目実支給額 --></label>
+        <name>JitsuShikyugaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.6_2年目実支給額 --></label>
+        <name>JitsuShikyugaku_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.6_3年目実支給額 --></label>
+        <name>JitsuShikyugaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.1_1年目除外日数 --></label>
+        <name>Jyogai_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.2_2年目除外日数 --></label>
+        <name>Jyogai_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.3_3年目除外日数 --></label>
+        <name>Jyogai_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.1年目単価 --></label>
+        <name>JyoseiTanka_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.2年目単価 --></label>
+        <name>JyoseiTanka_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.0_経過日数 --></label>
+        <name>KeikaNissu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.支給対象日数 --></label>
+        <name>KikanNissu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.2_1年目日数 --></label>
+        <name>Nissu_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.2_2年目日数 --></label>
+        <name>Nissu_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.2_3年目日数 --></label>
+        <name>Nissu_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者番号 --></label>
+        <name>RodosyaNO__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者番号 --></label>
+        <name>RodosyaNoFormula__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.労働者TR --></label>
+        <name>RodosyaTR__c</name>
+        <relationshipLabel><!-- 支給停止ワーク (0.労働者TR) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 0.支給期間開始日 --></label>
+        <name>ShikyuKikanKaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.支給期間終了日 --></label>
+        <name>ShikyuKikanSyuryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.4_1年目支給額累計 --></label>
+        <name>ShikyuKingakuRuikei_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.4_2年目支給額累計 --></label>
+        <name>ShikyuKingakuRuikei_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.4_3年目支給額累計 --></label>
+        <name>ShikyuKingakuRuikei_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.3_1年目支給金額 --></label>
+        <name>ShikyuKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.3_2年目支給金額 --></label>
+        <name>ShikyuKingaku_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.3_3年目支給金額 --></label>
+        <name>ShikyuKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.当期支給金額 --></label>
+        <name>ShikyuKingaku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.0_支給予定判定日 --></label>
+        <name>ShikyuYoteiHanteiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.1_1年目支給予定金額 --></label>
+        <name>ShikyuYoteiKingaku_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.2_2年目支給予定金額 --></label>
+        <name>ShikyuYoteiKingaku_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.3_3年目支給予定金額 --></label>
+        <name>ShikyuYoteiKingaku_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4.9_支給予定金額 --></label>
+        <name>ShikyuYoteiKingaku__c</name>
+    </fields>
+    <fields>
+        <label><!-- ソート順 --></label>
+        <name>Sort__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.3年目単価 --></label>
+        <name>SyoseiTanka_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.単価計算基準日 --></label>
+        <name>Tanka_KijunBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.停止日数 --></label>
+        <name>TeishiNissu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.閏年を含む --></label>
+        <name>Urudoshi_wo_Fukumu__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.7_1年目残日数 --></label>
+        <name>ZanNissu_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.7_2年目残日数 --></label>
+        <name>ZanNissu_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.7_3年目残日数 --></label>
+        <name>ZanNissu_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.8_1年目残支払日数 --></label>
+        <name>ZanShiharaiNissu_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.8_2年目残支払日数 --></label>
+        <name>ZanShiharaiNissu_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.8_3年目残支払日数 --></label>
+        <name>ZanShiharaiNissu_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 0.前期労働者TR --></label>
+        <name>Zenki_RodosyaTR__c</name>
+        <relationshipLabel><!-- 支給停止ワーク --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 1.0_1年目前期累計日数 --></label>
+        <name>Zenki_RuikeiNissu_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.0_2年目前期累計日数 --></label>
+        <name>Zenki_RuikeiNissu_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.0_3年目前期累計日数 --></label>
+        <name>Zenki_RuikeiNissu_3rdYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1.1_1年目前期支給額累計 --></label>
+        <name>Zenki_ShikyuGaku_Ruikei_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2.1_2年目前期支給額累計 --></label>
+        <name>Zenki_ShikyuGaku_Ruikei_2ndYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3.1_3年目前期支給額累計 --></label>
+        <name>Zenki_ShikyuGaku_Ruikei_3rdYear__c</name>
+    </fields>
+    <layouts>
+        <layout>支給条件変更レイアウト</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>支給額計算ワーク</layout>
+        <sections>
+            <label><!-- 1年目 --></label>
+            <section>1年目</section>
+        </sections>
+        <sections>
+            <label><!-- 2年目 --></label>
+            <section>2年目</section>
+        </sections>
+        <sections>
+            <label><!-- 3年目 --></label>
+            <section>3年目</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- 基本情報（共通） --></label>
+            <section>基本情報（共通）</section>
+        </sections>
+        <sections>
+            <label><!-- 基本情報（労働者） --></label>
+            <section>基本情報（労働者）</section>
+        </sections>
+        <sections>
+            <label><!-- 基本情報（募集要項） --></label>
+            <section>基本情報（募集要項）</section>
+        </sections>
+        <sections>
+            <label><!-- 基本情報（支給時期） --></label>
+            <section>基本情報（支給時期）</section>
+        </sections>
+        <sections>
+            <label><!-- 基準日以降の支給金額 --></label>
+            <section>基準日以降の支給金額</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- 優先順位判定 --></label>
+        <name>Ranking</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 支給停止日設定 --></label>
+        <name>Setting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 支給条件変更タイミング --></label>
+        <name>Timing</name>
+    </recordTypes>
+</CustomObjectTranslation>

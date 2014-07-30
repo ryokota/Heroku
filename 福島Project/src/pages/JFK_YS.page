@@ -1,0 +1,43 @@
+<apex:page controller="JFK_YSController" showHeader="false" standardStylesheets="true">
+    <head>
+        <style type="text/css">
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+
+    <apex:pageMessages id="msg" rendered="true"/> 
+    <apex:form >
+        <apex:pageBlock title="【YS】雇入れ日前勤務実績あり" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                 <apex:commandButton action="{!close}" value="閉じる"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection title="" columns="2" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="労働者名"/>
+                    <apex:outputText value="{!rodosyaMei}"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputLabel value=""/>
+<!-- 20131113 下記項目廃止
+                <apex:inputField value="{!ys.YS_SyukkinBo__c}"/>
+                <apex:inputField value="{!ys.YS_ChinginDaicho__c}"/>
+     20131113 下記項目廃止 -->
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="" columns="1" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="内容" for="memo"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!ys.YS_Biko__c}" style="width:80%" id="memo"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

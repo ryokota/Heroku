@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SPR Report for each Geography for Capital Budget Submission</description>
+    <filter>
+        <criteriaItems>
+            <column>RFA__c$IncludeInCapitalReports__c</column>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFA__c$RecordType</column>
+            <operator>equals</operator>
+            <value>RFA__c.RFA_SmallProjectRequest</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFA__c$InitialBudgetYear__c</column>
+            <operator>equals</operator>
+            <value>2014</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFA__c$IsthisanAnnualCapitalPlanrequest__c</column>
+            <operator>equals</operator>
+            <value>Yes</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFA__c.Capital_Expenditures__r$AssetCategory__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFA__c$RecordType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SPRs by BU by Asset Category</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Capital_Expenditure_with_RFA__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

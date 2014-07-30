@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>&quot;HOWTO: Get Started with Milestones PM&quot;というサンプルプロジェクトを確認してください。</label>
+        <name>BeSureToExploreTheSampleProject</name>
+    </customLabels>
+    <customLabels>
+        <label>提出</label>
+        <name>Button_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト詳細画面のヘッダー --></label>
+        <name>CC_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestoneのTaskでのメール送信制御 --></label>
+        <name>CC_MilestoneTask_SendMail_Flg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面の選択可能なユーザ --></label>
+        <name>CC_allUserList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のボタン_キャンセル --></label>
+        <name>CC_btn_cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のボタン_保存 --></label>
+        <name>CC_btn_save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面の選択されたユーザ --></label>
+        <name>CC_selectedUserList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC_title_Delays --></label>
+        <name>CC_title_Delays</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のタイトル_推定 --></label>
+        <name>CC_title_Estimates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CC ユーザ名 --></label>
+        <name>CC_title_UserName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のタイトル_ブロック --></label>
+        <name>CC_title_blocked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のタイトル_情報 --></label>
+        <name>CC_title_info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CCリスト画面のタイトル_ユーザリスト --></label>
+        <name>CC_title_userList</name>
+    </customLabels>
+    <customLabels>
+        <label>資本申請詳細が保存されていません。保存をするには、Complete Updateボタンをクリックしてください。</label>
+        <name>CapitalExpenditureSTD_01</name>
+    </customLabels>
+    <customLabels>
+        <label>投資計画申請の内容に最も適した投資目的分類を選択し、申請金額を資産分類別の額に詳細化したものを提示します。
+なお、入力された金額の合計はRFA申請額 と一致しなければなりません。
+「更新完了」ボタンを押して変更を保存して下さい。</label>
+        <name>Capital_Detail_Guidelines</name>
+    </customLabels>
+    <customLabels>
+        <label>ここをクリックして</label>
+        <name>ClickHere</name>
+    </customLabels>
+    <customLabels>
+        <label>このアプリを初期化するにはここをクリック</label>
+        <name>ClickHereToInitializeThisApp</name>
+    </customLabels>
+    <customLabels>
+        <label>コミュニティ</label>
+        <name>Community</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_PreTaskComplete_err --></label>
+        <name>Custom_Milestone_PreTaskComplete_err</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Info --></label>
+        <name>Custom_Milestone_Role_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Info_En --></label>
+        <name>Custom_Milestone_Role_Info_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Info_Jp --></label>
+        <name>Custom_Milestone_Role_Info_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_PM --></label>
+        <name>Custom_Milestone_Role_PM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_PM_En --></label>
+        <name>Custom_Milestone_Role_PM_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_PM_Jp --></label>
+        <name>Custom_Milestone_Role_PM_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Staff --></label>
+        <name>Custom_Milestone_Role_Staff</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Staff_En --></label>
+        <name>Custom_Milestone_Role_Staff_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Staff_Jp --></label>
+        <name>Custom_Milestone_Role_Staff_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Task_err_three --></label>
+        <name>Custom_Milestone_Task_err_three</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_err_create --></label>
+        <name>Custom_Milestone_err_create</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_err_del --></label>
+        <name>Custom_Milestone_err_del</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_err_edit --></label>
+        <name>Custom_Milestone_err_edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_err_permission --></label>
+        <name>Custom_Milestone_err_permission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_err_pm --></label>
+        <name>Custom_Milestone_err_pm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Chatter Note --></label>
+        <name>Evernote__Chatter_Note</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FR1.70 --></label>
+        <name>FR1_70</name>
+    </customLabels>
+    <customLabels>
+        <label>コミュニティで質問する場合は、&lt;a href=&quot;http://success.salesforce.com/answers&quot;&gt;Salesforce Answers&lt;/a&gt;でお願いします。&lt;span&gt;test&lt;/span&gt;</label>
+        <name>ForCommunityAssistance</name>
+    </customLabels>
+    <customLabels>
+        <label>ヘルプ</label>
+        <name>GettingHelp</name>
+    </customLabels>
+    <customLabels>
+        <label>注意</label>
+        <name>ImportantUpper</name>
+    </customLabels>
+    <customLabels>
+        <label>初期設定が完了しました！</label>
+        <name>InitializationComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>以下のボタンをクリックして設定の初期化をしてください。</label>
+        <name>InitializeYourConfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label>&lt;a href=&quot;http://blogs.developerforce.com/labs/2011/08/howto-contribute-to-milestones-pm-code-not-required-opensource.html&quot;&gt;詳細はこちら&lt;/a&gt;.</label>
+        <name>LearnMore</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ALiasNotFound --></label>
+        <name>Milestone1_ALiasNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AllItems --></label>
+        <name>Milestone1_AllItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AllOpenTasks --></label>
+        <name>Milestone1_AllOpenTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AnErrorHasOcurred --></label>
+        <name>Milestone1_AnErrorHasOcurred</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back --></label>
+        <name>Milestone1_Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blocked Tasks --></label>
+        <name>Milestone1_BlockedTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blocked_Tasks --></label>
+        <name>Milestone1_Blocked_Tasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Calendar --></label>
+        <name>Milestone1_Calendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CalendarLegend --></label>
+        <name>Milestone1_CalendarLegend</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>Milestone1_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Check &quot;Active&quot; --></label>
+        <name>Milestone1_CheckActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click &quot;New Email Service&quot;. --></label>
+        <name>Milestone1_ClickNewEmailService</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click &quot;Save and New Email Address&quot;. --></label>
+        <name>Milestone1_ClickSaveAndNewEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Content is not allowed in prolog. --></label>
+        <name>Milestone1_ContentIsNotAllowedInProlog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CurrentExport --></label>
+        <name>Milestone1_CurrentExport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DidNotMatch --></label>
+        <name>Milestone1_DidNotMatch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EnterAcommand --></label>
+        <name>Milestone1_EnterAcommand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expenses --></label>
+        <name>Milestone1_Expenses</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Filter --></label>
+        <name>Milestone1_Filter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FilterCalendarBy --></label>
+        <name>Milestone1_FilterCalendarBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_FilterProjectBy --></label>
+        <name>Milestone1_FilterProjectBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Friday --></label>
+        <name>Milestone1_Friday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FromUsersNotFound --></label>
+        <name>Milestone1_FromUsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Full Month --></label>
+        <name>Milestone1_FullMonth</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FullView --></label>
+        <name>Milestone1_FullView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Getting Started --></label>
+        <name>Milestone1_GettingStarted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Give a Email Service Name &quot;Email To Milestone Task&quot;. --></label>
+        <name>Milestone1_GiveEmailServiceName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go to Setup -&gt; Develop -&gt; Email Services --></label>
+        <name>Milestone1_GoToSetupDevelopEmailServices</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import --></label>
+        <name>Milestone1_Import</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Failed - -  Milestone was unable to import your file. --></label>
+        <name>Milestone1_ImportFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ImportLocalTemplateXML --></label>
+        <name>Milestone1_ImportLocalTemplateXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Template --></label>
+        <name>Milestone1_ImportTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ImportTemplateXML --></label>
+        <name>Milestone1_ImportTemplateXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_InactiveUsersError --></label>
+        <name>Milestone1_InactiveUsersError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incomplete Tasks By Priority --></label>
+        <name>Milestone1_IncompleteTasksByPriority</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incomplete Tasks By Projects --></label>
+        <name>Milestone1_IncompleteTasksByProjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient privileges to access project. --></label>
+        <name>Milestone1_InsufficientPrivileges</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient privileges to access parent milestone. --></label>
+        <name>Milestone1_InsufficientPrivilegesToAccessParentMilestone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidName --></label>
+        <name>Milestone1_InvalidName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidVersion --></label>
+        <name>Milestone1_InvalidVersion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Late Tasks --></label>
+        <name>Milestone1_LateTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading --></label>
+        <name>Milestone1_Loading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logs --></label>
+        <name>Milestone1_Logs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MainMenu --></label>
+        <name>Milestone1_MainMenu</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MaximumPer --></label>
+        <name>Milestone1_MaximumPer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone Application Post Installation Instructions --></label>
+        <name>Milestone1_MilestoneApplicationPostInstallation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestoneClone --></label>
+        <name>Milestone1_MilestoneClone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone is Complete, the Task can not be moved --></label>
+        <name>Milestone1_MilestoneIsComplete</name>
+    </customLabels>
+    <customLabels>
+        <label>前の画面に戻って移動するマイルストーンを1つ以上選択してください。</label>
+        <name>Milestone1_MilestoneRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label>移動しようとしているマイルストーンはすでにこのプロジェクトに割り当てられています。選択内容を確認して、もう一度やり直してください。</label>
+        <name>Milestone1_MilestoneYouAreAttempting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones --></label>
+        <name>Milestone1_Milestones</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestonesCalendar --></label>
+        <name>Milestone1_MilestonesCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestonesOpenTasks --></label>
+        <name>Milestone1_MilestonesOpenTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones should not be moved to different Projects, except through the &quot;Move t --></label>
+        <name>Milestone1_MilestonesShouldNotBeMoved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Monday --></label>
+        <name>Milestone1_Monday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneCancel --></label>
+        <name>Milestone1_MoveMilestoneCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneRecordsToMove --></label>
+        <name>Milestone1_MoveMilestoneRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneS --></label>
+        <name>Milestone1_MoveMilestoneS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneSave --></label>
+        <name>Milestone1_MoveMilestoneSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_Cancel --></label>
+        <name>Milestone1_MoveMilestone_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_Save --></label>
+        <name>Milestone1_MoveMilestone_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_s --></label>
+        <name>Milestone1_MoveMilestone_s</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskCancel --></label>
+        <name>Milestone1_MoveTaskCancel</name>
+    </customLabels>
+    <customLabels>
+        <label>時間、費用、またはNotes＆添付ファイルレコードが関連しているため、選択した1つ以上のタスクを移動することはできません。</label>
+        <name>Milestone1_MoveTaskDetailAttachmentsRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailCancel --></label>
+        <name>Milestone1_MoveTaskDetailCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailS --></label>
+        <name>Milestone1_MoveTaskDetailS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailSave --></label>
+        <name>Milestone1_MoveTaskDetailSave</name>
+    </customLabels>
+    <customLabels>
+        <label>前の画面に戻って移動する1つ以上のタスクのレコードを選択してください。</label>
+        <name>Milestone1_MoveTaskDetailTaskRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label>前の画面に戻って移動するマイルストーンを1つ以上選択してください。</label>
+        <name>Milestone1_MoveTaskRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskS --></label>
+        <name>Milestone1_MoveTaskS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskSave --></label>
+        <name>Milestone1_MoveTaskSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Incomplete Tasks --></label>
+        <name>Milestone1_MyIncompleteTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyMilestonesOnly --></label>
+        <name>Milestone1_MyMilestonesOnly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyProjectsAndSubProjectItems --></label>
+        <name>Milestone1_MyProjectsAndSubProjectItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyTasks --></label>
+        <name>Milestone1_MyTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyTasksOnly --></label>
+        <name>Milestone1_MyTasksOnly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_NewFieldToReplaceInactiveUsers --></label>
+        <name>Milestone1_NewFieldToReplaceInactiveUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewMilestoneName --></label>
+        <name>Milestone1_NewMilestoneName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewProjectName --></label>
+        <name>Milestone1_NewProjectName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No import XML files selected. Please select an XML file to import. --></label>
+        <name>Milestone1_NoImportXMLFilesSelected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No projects! --></label>
+        <name>Milestone1_NoProjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrganizationsVersion --></label>
+        <name>Milestone1_OrganizationsVersion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OverdueTasks --></label>
+        <name>Milestone1_OverdueTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PleaseUseFormat --></label>
+        <name>Milestone1_PleaseUseFormat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectCannotBeNull --></label>
+        <name>Milestone1_ProjectCannotBeNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectClone --></label>
+        <name>Milestone1_ProjectClone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectDetail --></label>
+        <name>Milestone1_ProjectDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectIsTooLarge --></label>
+        <name>Milestone1_ProjectIsTooLarge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectXML --></label>
+        <name>Milestone1_ProjectXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectXMLImport --></label>
+        <name>Milestone1_ProjectXMLImport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Projects --></label>
+        <name>Milestone1_Projects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectsCalendar --></label>
+        <name>Milestone1_ProjectsCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectsMustBeExported --></label>
+        <name>Milestone1_ProjectsMustBeExported</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuickSearch --></label>
+        <name>Milestone1_QuickSearch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RegexFwdRe --></label>
+        <name>Milestone1_RegexFwdRe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalesforceDMLError --></label>
+        <name>Milestone1_SalesforceDMLError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Saturday --></label>
+        <name>Milestone1_Saturday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>Milestone1_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select the Apex Class &quot;Milestone1_Email_Handler&quot;. --></label>
+        <name>Milestone1_SelectTheApexClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set &quot;Accept Attachments&quot; to &quot;All&quot;. --></label>
+        <name>Milestone1_SetAcceptAttachmentsToAll</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set &quot;Accept Email From&quot; to &quot;All Email Addresses&quot;. --></label>
+        <name>Milestone1_SetAcceptEmailFromToAllEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set All Failure Response options to &apos;Bounce Message&apos;. --></label>
+        <name>Milestone1_SetAllFailureResponseOptions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Settings already exist.  No changes made. --></label>
+        <name>Milestone1_SettingsAlreadyExistNoChanges</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Setup A New Email Address. --></label>
+        <name>Milestone1_SetupNewEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sub-milestones can only go one level deep. Please select a top-level milestone a --></label>
+        <name>Milestone1_SubMilestonesCanOnlyGoOneLevelDeep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissing --></label>
+        <name>Milestone1_SubjectMissing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissingAlias --></label>
+        <name>Milestone1_SubjectMissingAlias</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissingTask --></label>
+        <name>Milestone1_SubjectMissingTask</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submit --></label>
+        <name>Milestone1_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Summary --></label>
+        <name>Milestone1_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SummarySearch --></label>
+        <name>Milestone1_SummarySearch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sunday --></label>
+        <name>Milestone1_Sunday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TaskNotFound --></label>
+        <name>Milestone1_TaskNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- A task you are attempting to move is already assigned to this milestone. Please --></label>
+        <name>Milestone1_TaskYouAreAttempting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tasks --></label>
+        <name>Milestone1_Tasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TasksCalendar --></label>
+        <name>Milestone1_TasksCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The Project cannot be null. This is a critical error during import of XML. Pleas --></label>
+        <name>Milestone1_TheProjectCannotBeNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The XML file for your project has been successfully created, and can be found in --></label>
+        <name>Milestone1_TheXMLFileForYourProjectHasBeenSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The XML file is too large. --></label>
+        <name>Milestone1_TheXMLFileIsTooLarge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thealias --></label>
+        <name>Milestone1_Thealias</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thursday --></label>
+        <name>Milestone1_Thursday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Times --></label>
+        <name>Milestone1_Times</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- To configure the Email To Task Service --></label>
+        <name>Milestone1_ToConfigureTheEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ToUsersNotFound --></label>
+        <name>Milestone1_ToUsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click here --></label>
+        <name>Milestone1_ToViewXML_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to view the XML file in the My Personal Documents folder. --></label>
+        <name>Milestone1_ToViewXML_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click here --></label>
+        <name>Milestone1_ToYourProject_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to return to your project. --></label>
+        <name>Milestone1_ToYourProject_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Top Level Milestone has predecessor and cannot be moved.  Remove that predecesso --></label>
+        <name>Milestone1_TopLevelMilestoneHasPredecessor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Top Level Milestone has successors and cannot be moved.  Redirect those successo --></label>
+        <name>Milestone1_TopLevelMilestoneHasSuccessors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tuesday --></label>
+        <name>Milestone1_Tuesday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UsersNotFound --></label>
+        <name>Milestone1_UsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Wednesday --></label>
+        <name>Milestone1_Wednesday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your project could not successfully be exported to an XML document. --></label>
+        <name>Milestone1_YourProjectCouldNotSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label>Milestones PMはオープンソースソフトウェアです。</label>
+        <name>MilestonesPMISOpenSource</name>
+    </customLabels>
+    <customLabels>
+        <label>Milestones PMは公式サポートがありません。</label>
+        <name>MilestonesPMIsUnsupported</name>
+    </customLabels>
+    <customLabels>
+        <label>次のステップ</label>
+        <name>NextSteps</name>
+    </customLabels>
+    <customLabels>
+        <label>サマリー</label>
+        <name>ProjectSummary_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label>Milestones PMの利用を開始しましょう。</label>
+        <name>ProjectSummary_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者</label>
+        <name>RFA_ApprovalBox00</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者一覧</label>
+        <name>RFA_ApprovalBox01</name>
+    </customLabels>
+    <customLabels>
+        <label>承認経路</label>
+        <name>RFA_ApprovalRouting01</name>
+    </customLabels>
+    <customLabels>
+        <label>RFA詳細</label>
+        <name>RFA_ApprovalRouting02</name>
+    </customLabels>
+    <customLabels>
+        <label>承認プロセス</label>
+        <name>RFA_ApprovalRouting03</name>
+    </customLabels>
+    <customLabels>
+        <label>承認順序</label>
+        <name>RFA_ApprovalRouting04</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者</label>
+        <name>RFA_ApprovalRouting05</name>
+    </customLabels>
+    <customLabels>
+        <label>承認内容</label>
+        <name>RFA_ApprovalRouting06</name>
+    </customLabels>
+    <customLabels>
+        <label>確定</label>
+        <name>RFA_ApprovalRouting07</name>
+    </customLabels>
+    <customLabels>
+        <label>総レコード数</label>
+        <name>RFA_ApproverList_Record</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC1 --></label>
+        <name>RFA_BOD_CC1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC2 --></label>
+        <name>RFA_BOD_CC2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC3 --></label>
+        <name>RFA_BOD_CC3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC4 --></label>
+        <name>RFA_BOD_CC4</name>
+    </customLabels>
+    <customLabels>
+        <label>キャンセル</label>
+        <name>RFA_Button_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>申請取下げ</label>
+        <name>RFA_Button_CloseRFA</name>
+    </customLabels>
+    <customLabels>
+        <label>差し戻し</label>
+        <name>RFA_Button_ReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label>申請</label>
+        <name>RFA_Button_SendtoCirculation</name>
+    </customLabels>
+    <customLabels>
+        <label>承認コメント確認</label>
+        <name>RFA_Button_ShowApprovers</name>
+    </customLabels>
+    <customLabels>
+        <label>確定</label>
+        <name>RFA_Button_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label>審査確定</label>
+        <name>RFA_CL010</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete RFA Button Label --></label>
+        <name>RFA_CL011</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Completion Memo Button Label --></label>
+        <name>RFA_CL012</name>
+    </customLabels>
+    <customLabels>
+        <label>主要連絡先をRFA承認者/ユーザ セクションに追加してください</label>
+        <name>RFA_CL0133</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL026 --></label>
+        <name>RFA_CL026</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL043 --></label>
+        <name>RFA_CL043</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL044 --></label>
+        <name>RFA_CL044</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL045 --></label>
+        <name>RFA_CL045</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL046 --></label>
+        <name>RFA_CL046</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL047 --></label>
+        <name>RFA_CL047</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL048 --></label>
+        <name>RFA_CL048</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL049 --></label>
+        <name>RFA_CL049</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Small Project Request ( 25MM＜≦50MM ) --></label>
+        <name>RFA_CL050</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capital Project Request --></label>
+        <name>RFA_CL051</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL057 --></label>
+        <name>RFA_CL057</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者の順番が正しくありません</label>
+        <name>RFA_CL061</name>
+    </customLabels>
+    <customLabels>
+        <label>回覧申請前に承認者を追加してください。</label>
+        <name>RFA_CL062</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者または校閲者から提出してください</label>
+        <name>RFA_CL063</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cash Spent Additional Years --></label>
+        <name>RFA_CL070</name>
+    </customLabels>
+    <customLabels>
+        <label>承認回覧がすでに送信されています</label>
+        <name>RFA_CL071</name>
+    </customLabels>
+    <customLabels>
+        <label>資産申請詳細更新</label>
+        <name>RFA_CL086</name>
+    </customLabels>
+    <customLabels>
+        <label>更新完了</label>
+        <name>RFA_CL087</name>
+    </customLabels>
+    <customLabels>
+        <label>キャンセル</label>
+        <name>RFA_CL088</name>
+    </customLabels>
+    <customLabels>
+        <label>資産分類</label>
+        <name>RFA_CL089</name>
+    </customLabels>
+    <customLabels>
+        <label>円</label>
+        <name>RFA_CL090</name>
+    </customLabels>
+    <customLabels>
+        <label>投資目的分類</label>
+        <name>RFA_CL092</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL093 --></label>
+        <name>RFA_CL093</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL094 --></label>
+        <name>RFA_CL094</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL095 --></label>
+        <name>RFA_CL095</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL096 --></label>
+        <name>RFA_CL096</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL097 --></label>
+        <name>RFA_CL097</name>
+    </customLabels>
+    <customLabels>
+        <label>ステータスを変更することはできません</label>
+        <name>RFA_CL100</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- https://fina- - sbtest1.cs9.my.salesforce.com --></label>
+        <name>RFA_CL103</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL107 --></label>
+        <name>RFA_CL107</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL111 --></label>
+        <name>RFA_CL111</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL112 --></label>
+        <name>RFA_CL112</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL113 --></label>
+        <name>RFA_CL113</name>
+    </customLabels>
+    <customLabels>
+        <label>RFAが申請者に差し戻されている間は、コーディネーター管理項目を更新することはできません。</label>
+        <name>RFA_CL118</name>
+    </customLabels>
+    <customLabels>
+        <label>差し戻しを行う場合は、差し戻し理由を必ず入力してください。</label>
+        <name>RFA_CL119</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL123 --></label>
+        <name>RFA_CL123</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL124 --></label>
+        <name>RFA_CL124</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL125 --></label>
+        <name>RFA_CL125</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL126 --></label>
+        <name>RFA_CL126</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL127 --></label>
+        <name>RFA_CL127</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL128 --></label>
+        <name>RFA_CL128</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL129 --></label>
+        <name>RFA_CL129</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL130 --></label>
+        <name>RFA_CL130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Org Wide Email Address --></label>
+        <name>RFA_CL131</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BCC in case of error in PC Realignment --></label>
+        <name>RFA_CL132</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL134 --></label>
+        <name>RFA_CL134</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL135 --></label>
+        <name>RFA_CL135</name>
+    </customLabels>
+    <customLabels>
+        <label>承認が終わっていない場合は申請を完了することができません。もう一度回覧にまわすか、RFA承認者/ユーザから承認者と情報コピーのみを削除してください。</label>
+        <name>RFA_CL136</name>
+    </customLabels>
+    <customLabels>
+        <label>回覧中ステータスの申請から承認者を削除することはできません。もし承認者が不要になった場合、承認者レコードを編集するか承認依頼不要の手続きのどちらも可能です。承認者は回覧前あるいは回覧後ステータス中から削除が可能です。</label>
+        <name>RFA_CL137</name>
+    </customLabels>
+    <customLabels>
+        <label>システムからすでにこのユーザ宛に通知を送っています。レコードは削除・編集ができません。コーディネーターに連絡してください。</label>
+        <name>RFA_CL138</name>
+    </customLabels>
+    <customLabels>
+        <label>クローズしたRFAに承認者を追加することはできません</label>
+        <name>RFA_CL139</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approver --></label>
+        <name>RFA_CL140</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info Copy Only --></label>
+        <name>RFA_CL141</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Primary Point of Contact --></label>
+        <name>RFA_CL142</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA lookup field ID --></label>
+        <name>RFA_CL144</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce ID of RFA Approver/User custom Object --></label>
+        <name>RFA_CL145</name>
+    </customLabels>
+    <customLabels>
+        <label>ガイドライン</label>
+        <name>RFA_CapitalExpenditure_Guideline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CapitalMgmt Approver 1 --></label>
+        <name>RFA_CapitalMgmt_Approver_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Capital Fix Asset Mgr --></label>
+        <name>RFA_Capital_Fix_Asset_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Capital Treasury Mgr --></label>
+        <name>RFA_Capital_Treasury_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Delete Flag --></label>
+        <name>RFA_Delete_Flag</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email BoardApproval --></label>
+        <name>RFA_Email_BoardApproval</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email CloseRFA --></label>
+        <name>RFA_Email_CloseRFA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email CompleteRFA --></label>
+        <name>RFA_Email_CompleteRFA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email ResumefromReturntoRequester --></label>
+        <name>RFA_Email_ResumefromReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email ReturntoRequester --></label>
+        <name>RFA_Email_ReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label>回覧を開始するには承認者および問い合わせ先の登録が必須となります</label>
+        <name>RFA_ErrorMsg_AssignPPOC_Approver</name>
+    </customLabels>
+    <customLabels>
+        <label>添付ファイルが必要です</label>
+        <name>RFA_ErrorMsg_Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label>カンマや特殊文字は入力できません</label>
+        <name>RFA_ErrorMsg_CapitalExpenditureNumber</name>
+    </customLabels>
+    <customLabels>
+        <label>条件 / 理由を入力してください</label>
+        <name>RFA_ErrorMsg_CommentRQ</name>
+    </customLabels>
+    <customLabels>
+        <label>キャピタルマネジメント、直属のマネージャーとなる承認者は削除できません</label>
+        <name>RFA_ErrorMsg_DeleteCM_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label>エラー：情報の不足、もしくは正しく入力されていません</label>
+        <name>RFA_ErrorMsg_MissingData</name>
+    </customLabels>
+    <customLabels>
+        <label>回覧中は編集できません</label>
+        <name>RFA_ErrorMsg_NoEditPermission</name>
+    </customLabels>
+    <customLabels>
+        <label>問合せ先をすべて削除することはできません</label>
+        <name>RFA_ErrorMsg_PPOC</name>
+    </customLabels>
+    <customLabels>
+        <label>3ヵ年現金支出合計額が申請合計金額と一致しません</label>
+        <name>RFA_ErrorMsg_RQAmount_3year</name>
+    </customLabels>
+    <customLabels>
+        <label>資産申請詳細の合計額が申請合計金額と一致しません</label>
+        <name>RFA_ErrorMsg_RQAmount_CapitalR</name>
+    </customLabels>
+    <customLabels>
+        <label>差し戻し理由を入力してください</label>
+        <name>RFA_ErrorMsg_ReturnReason</name>
+    </customLabels>
+    <customLabels>
+        <label>承認内容を選択してください</label>
+        <name>RFA_ErrorMsg_SelectRecommendation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.50 --></label>
+        <name>RFA_FR1_50</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.51_01 --></label>
+        <name>RFA_FR1_51_01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.51_02 --></label>
+        <name>RFA_FR1_51_02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.89 --></label>
+        <name>RFA_FR1_89</name>
+    </customLabels>
+    <customLabels>
+        <label>RFA承認申請履歴</label>
+        <name>RFA_History</name>
+    </customLabels>
+    <customLabels>
+        <label>資産申請詳細が保存されていません。保存をするには更新完了ボタンをクリックしてください。</label>
+        <name>RFA_Msg_CapitalExpenditureUpdate</name>
+    </customLabels>
+    <customLabels>
+        <label>取下げ理由を入力してください</label>
+        <name>RFA_Msg_CloseReason</name>
+    </customLabels>
+    <customLabels>
+        <label>よろしいですか？</label>
+        <name>RFA_Msg_Confirmation</name>
+    </customLabels>
+    <customLabels>
+        <label>承認プロセスに日本人以外が含まれる場合は、日本語と英語の両方でコメントの記述をお願いします。</label>
+        <name>RFA_Msg_EJComment_Approval</name>
+    </customLabels>
+    <customLabels>
+        <label>承認プロセスに日本人以外が含まれる場合は、日本語と英語の両方で記述をお願いします。</label>
+        <name>RFA_Msg_EJComment_Circulation</name>
+    </customLabels>
+    <customLabels>
+        <label>自動表示される承認経路が実態と異なる場合は、申請者にて承認経路を修正してください</label>
+        <name>RFA_Msg_SelectApprover</name>
+    </customLabels>
+    <customLabels>
+        <label>（例：　直属上司および承認者が表示されない時は、申請者にて当該者を追加・削除）</label>
+        <name>RFA_Msg_SelectApprover2</name>
+    </customLabels>
+    <customLabels>
+        <label>RFA差し戻し</label>
+        <name>RFA_Override01</name>
+    </customLabels>
+    <customLabels>
+        <label>差し戻し理由</label>
+        <name>RFA_Override02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Attendees --></label>
+        <name>RFA_PDF_Attendees</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Benefits / Financial Metrics / Assumptions --></label>
+        <name>RFA_PDF_Benefits_Financial_Metrics_Assumptions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Business Case Financials --></label>
+        <name>RFA_PDF_Business_Case_Financials</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- COA Category --></label>
+        <name>RFA_PDF_COA_Category</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capital Request Details --></label>
+        <name>RFA_PDF_Capital_Request_Details</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cost Estimates --></label>
+        <name>RFA_PDF_Cost_Estimates</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Costs --></label>
+        <name>RFA_PDF_Costs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Detailed Business Trip Information --></label>
+        <name>RFA_PDF_Detailed_Business_Trip_Information</name>
+    </customLabels>
+    <customLabels>
+        <label>参加者情報</label>
+        <name>RFA_PDF_Detailed_Entertainment_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- General Information --></label>
+        <name>RFA_PDF_General_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- In the case of overseas trip, please fill in fields below for insurance purpose. --></label>
+        <name>RFA_PDF_In_the_case_of_overseas_trip_please_fill_in_fields_below_for_insurance</name>
+    </customLabels>
+    <customLabels>
+        <label>メモ＆添付</label>
+        <name>RFA_PDF_NotesAndAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Objectives/Rationale/Background --></label>
+        <name>RFA_PDF_Objectives_Rationale_Background</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Other Considerations --></label>
+        <name>RFA_PDF_Other_Considerations</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Other Supporting Documents --></label>
+        <name>RFA_PDF_Other_Supporting_Documents</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Approvers/Users --></label>
+        <name>RFA_PDF_RFA_Approvers_Users</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remarks --></label>
+        <name>RFA_PDF_Remarks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Request Details --></label>
+        <name>RFA_PDF_Request_Details</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Risks and Alternatives --></label>
+        <name>RFA_PDF_Risks_and_Alternatives</name>
+    </customLabels>
+    <customLabels>
+        <label>3ヵ年現金支出</label>
+        <name>RFA_PDF_Three_Year_Cash_Spend</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Where the costs per person exceed ¥15,000, please provide further explanation. --></label>
+        <name>RFA_PDF_Where_the_costs_per_person_exceed_15_000_please_provide_further</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Project Finance --></label>
+        <name>RFA_Project_Finance</name>
+    </customLabels>
+    <customLabels>
+        <label>RFA申請取下げ</label>
+        <name>RFA_RQClose01</name>
+    </customLabels>
+    <customLabels>
+        <label>取下げ理由</label>
+        <name>RFA_RQClose02</name>
+    </customLabels>
+    <customLabels>
+        <label>確定</label>
+        <name>RFA_RQClose03</name>
+    </customLabels>
+    <customLabels>
+        <label>承認内容</label>
+        <name>RFA_Recommendation01</name>
+    </customLabels>
+    <customLabels>
+        <label>承認者</label>
+        <name>RFA_Recommendation02</name>
+    </customLabels>
+    <customLabels>
+        <label>承認内容</label>
+        <name>RFA_Recommendation03</name>
+    </customLabels>
+    <customLabels>
+        <label>条件 / 理由</label>
+        <name>RFA_Recommendation04</name>
+    </customLabels>
+    <customLabels>
+        <label>コメント</label>
+        <name>RFA_Recommendation05</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA System --></label>
+        <name>RFA_System</name>
+    </customLabels>
+    <customLabels>
+        <label>このセクションは、複数のプロジェクトや投資を入力し、申請合計金額を資産分類と投資目的分類ごとにまとめられるようになっています。
+なお、入力された金額の合計はRFA申請額 と一致しなければなりません。
+「更新完了」ボタンを押して変更を保存して下さい。</label>
+        <name>Small_Request_Guidelines</name>
+    </customLabels>
+    <customLabels>
+        <label>自分のプロジェクト作成をはじめてみましょう！</label>
+        <name>StartCreatingYourFirstProject</name>
+    </customLabels>
+    <customLabels>
+        <label>このサンプルプロジェクトには Milestones PMから得られる様々なアイディアが含まれています。</label>
+        <name>ThisSampleProjectIncludes</name>
+    </customLabels>
+    <customLabels>
+        <label>アイディアや問題を報告するには、&lt;a href=&quot;https://github.com/ForceDotComLabs/Milestones-PM&quot;&gt;Milestones PM on Github&lt;/a&gt;.へお願いします。</label>
+        <name>ToSubmitIdeasOrIssues</name>
+    </customLabels>
+    <customLabels>
+        <label>初期化処理で作成された&quot;Getting Started&quot;プロジェクトを開いて下さい。</label>
+        <name>ViewTheGettingStartedProject</name>
+    </customLabels>
+    <customLabels>
+        <label>あなたからの問題報告、アイディア、ドキュメント作成、コード改修、その他全ての形でのプロジェクトへの参加を歓迎します。</label>
+        <name>WeWelcomeYourIssueReports</name>
+    </customLabels>
+    <customLabels>
+        <label>Milestones PM へようこそ － プロジェクトマネジメント</label>
+        <name>WelcomeToMilestonesPM</name>
+    </customLabels>
+    <customLabels>
+        <label>サマリーページに移動して、サンプルプロジェクトを確認してください。</label>
+        <name>YouCanNowGoTo</name>
+    </customLabels>
+    <customLabels>
+        <label>その後の手順は簡単です。</label>
+        <name>YourNextFewSteps</name>
+    </customLabels>
+    <customTabs>
+        <label>マトリックスレポート</label>
+        <name>Matrix_Report</name>
+    </customTabs>
+    <customTabs>
+        <label>はじめに</label>
+        <name>Milestone1_Getting_Started</name>
+    </customTabs>
+    <customTabs>
+        <label>インポートテンプレート</label>
+        <name>Milestone1_Import_Project_Template</name>
+    </customTabs>
+    <customTabs>
+        <label>サマリー</label>
+        <name>Milestone1_Summary</name>
+    </customTabs>
+    <customTabs>
+        <label>カレンダー</label>
+        <name>Milestone_Calendar</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- テーブル設定取得 --></label>
+        <name>SetupCheckVFTab</name>
+    </customTabs>
+</Translations>

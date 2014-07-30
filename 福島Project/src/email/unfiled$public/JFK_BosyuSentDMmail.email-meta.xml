@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>支給対象期の締め日の30日前に、DMをセンター長、チーム長宛に自動送信</description>
+    <encodingKey>ISO-2022-JP</encodingKey>
+    <name>JFK_BosyuSentDMmail</name>
+    <style>none</style>
+    <subject>支給対象期の締日についてのお知らせ</subject>
+    <type>text</type>
+</EmailTemplate>

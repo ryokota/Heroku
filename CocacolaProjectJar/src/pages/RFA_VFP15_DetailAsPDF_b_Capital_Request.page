@@ -1,0 +1,426 @@
+<apex:page standardController="RFA__c" renderAs="PDF" applyHtmlTag="false" showHeader="false">
+    <apex:stylesheet value="{!$Resource.RFA_VFP_PDF_CSS}"/>
+    <head>
+        <style type="text/css">
+            body { font-family: Arial Unicode MS; }
+            td { vertical-align:top; }
+            .word { word-break: break-all; }
+            .break { page-break-before: always; }
+            .font { font-size: 8pt; }
+        </style>
+    </head>
+    <body>
+    <div height="1030px" width="780px" style="word-break: break-all;page-break-after: always;text-align:top;" class="font">
+        <table style="width:100%;height:60px;" >
+            <tr>
+                <td>
+                       <!-- <img src="{!$Resource.coke_RFA_logo}" width="240" height="60"/> -->
+                       <img src="{!$Resource.CCEJ_Logo}" width="240px" height="60px"/> 
+                </td>
+            </tr>
+        </table>
+        <!--  <apex:panelGrid columns="4" border="0" cellspacing="5" cellPadding="2" width="100%" style="left:100px;right:200px;">-->
+        <table style="margin-left:10px;margin-top:10px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>        
+        <table style="margin-left:100px;width:97%;height:60px;text-align:top;">
+            <tr>
+                <td style="width:17%;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Name.label}"     />
+                </td>
+                <td style="width:28%;">
+                    <apex:outputLabel Value="{!RFA__c.Name}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Related_RFA__c.label}"     />
+                </td>
+                <td style="width:28%;">
+                    <apex:outputLabel Value="{!RFA__c.Related_RFA__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Stage__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Stage__c}" escape="false"    />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ReturnReason__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ReturnReason__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="margin-left:50%;width:17%;text-align:left;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Close_Reason__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Close_Reason__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.RecordTypeId.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.RecordType.Name}" escape="false"    />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.DataClassificationNew__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.DataClassificationNew__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Legal_Entity__c.label}"     />
+                </td>
+                <td style="width28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Legal_Entity__c}" escape="false"    />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Requested_By__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Requested_By__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Cost_Center_Number__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Cost_Center_Number__r.Name}" escape="false"    />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.LastModifiedById.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.LastModifiedBy.Name}" escape="false"   />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.CostCenterName__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.CostCenterName__c}"  escape="false"   />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.CirculationDate__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.CirculationDate__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.CreatedById.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.CreatedBy.Name}" escape="false"    />
+                </td>
+                <td style="width:17%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.CompletionDate__c.label}"     />
+                </td>
+                <td style="width:28%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.CompletionDate__c}" escape="false"    />
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left:10px;margin-top:115px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+        <table style="margin-left:100px;width:97%;height:60px;text-align:top;">
+            <tr>
+                <td style="width:20%;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.RequestTitle__c.label}"     />
+                </td>
+                <td style="width:70%;">
+                    <apex:outputLabel Value="{!RFA__c.RequestTitle__c}" escape="false"   />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.RequestAmountFunctionalCurrency__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.RequestAmountFunctionalCurrency__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ExpectedCommitmentDate__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ExpectedCommitmentDate__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.CommentsaboutExpectedCommitmentDate__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.CommentsaboutExpectedCommitmentDate__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr class="line">
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Expected_Cash_Spend_Date__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Expected_Cash_Spend_Date__c}" escape="false"    />
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left:10px;margin-top:55px;width:97%;height:10px;" frame="above">
+        </table>
+        <table style="margin-left:100px;width:650px;height:60px;text-align:top;">
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.PrimaryCOACategory__c.label}"     />
+                </td>
+                <td style="width:70%;height:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!RFA__c.PrimaryCOACategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.PrimaryCOASubCategory__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.PrimaryCOASubCategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.PrimaryCOASubCategory2__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.PrimaryCOASubCategory2__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.PrimaryCOASubCategory3__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.PrimaryCOASubCategory3__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.SecondCOACategory__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.SecondCOACategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.SecondCOASubCategory__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.SecondCOASubCategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.SecondCOASubCategory2__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.SecondCOASubCategory2__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.SecondCOASubCategory3__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.SecondCOASubCategory3__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ThirdCOACategory__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ThirdCOACategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ThirdCOASubCategory__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ThirdCOASubCategory__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ThirdCOASubCategory2__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ThirdCOASubCategory2__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.ThirdCOASubCategory3__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.ThirdCOASubCategory3__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.BoardSubItem__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.BoardSubItem__c}" escape="false"    />
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left:10px;margin-top:200px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+        <table style="margin-left:100px;width:650px;height:60px;text-align:top;">
+            <tr >
+                <td style="width:20%;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.BCG_Objectives_Rationale_Background__c.label}"     />
+                </td>
+                <td style="width:70%;height:20%;">
+                    <apex:outputLabel Value="{!RFA__c.BCG_Objectives_Rationale_Background__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr>
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Objectives_Rationale_Background__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Objectives_Rationale_Background__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.BCGBenefit_FinancialMatrix_Assumption_CS__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.BCGBenefit_FinancialMatrix_Assumption_CS__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Benefits_Financial_Metrics_Assumptions__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Benefits_Financial_Metrics_Assumptions__c}" escape="false"    />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div height="1030px" width="780px" style="word-break: break-all;margin-top:10px;" class="font">
+        <table style="margin-left:100px;width:650px;height:60px;text-align:top;">           
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.BCG_Cost_Estimates_CPSP__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.BCG_Cost_Estimates_CPSP__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Cost_Estimates__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Cost_Estimates__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Risks_and_Alternatives_CPSP__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Risks_and_Alternatives_CPSP__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Risks_and_Alternatives__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Risks_and_Alternatives__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Other_Considerations_CPSP__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Other_Considerations_CPSP__c}" escape="false"    />
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Other_Considerations__c.label}"     />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Other_Considerations__c}" escape="false"/>
+                </td>
+            </tr>
+            <tr >
+                <td style="width:20%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Other_Supporting_Documents_CPSP__c.label}"    />
+                </td>
+                <td style="width:70%;BORDER-TOP: #EFEFEF 1px solid;">
+                    <apex:outputText Value="{!RFA__c.Other_Supporting_Documents_CPSP__c}" escape="false"/>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left:10px;margin-top:570px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+        <table style="margin-left:100px;width:650px;height:60px;">
+            <tr>
+                <td style="width:20%;">
+                    <apex:outputLabel Value="{!$ObjectType.RFA__c.Fields.Admin_Comment__c.label}"     />
+                </td>
+                <td style="width:70%;height:20%;">
+                    <apex:outputLabel Value="{!RFA__c.Admin_Comment__c}" escape="false"/>
+                </td>
+            </tr>
+        </table>
+
+    <apex:outputpanel rendered="{!If(RFA__c.RecordType.Name=$Label.RFA_CL050,true,IF(RFA__c.RecordType.Name=$Label.RFA_CL051,true,false))}" layout="none">
+    <div style="border: 1px solid #D4DADC;border-color:#ECECEC;border-collapse: separate;border-spacing: 2px;border-style:inset;    display: table-row;vertical-align: inherit;border-color: inherit; text-align: right;font-weight: bold;white-space: nowrap;border-style:inset;border: 1px solid #D4DADC;border-color:#ECECEC;">
+        <c:RFA_C04_Capital_Expenditure RecordRFAIds="{!RFA__c.ID}" rendered="{!If(RFA__c.RecordType.Name=$Label.RFA_CL050,true,IF(RFA__c.RecordType.Name=$Label.RFA_CL051,true,false))}"  />
+    </div>
+    </apex:outputpanel><br/>
+        
+        
+        <table style="margin-left:10px;width:97%;margin-top:15px;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+        <table style="margin-left:100px;width:650px;height:30px;">
+            <tr>
+                <td style="width:97%;">
+                    <apex:relatedList list="RFA_User_Roles__r" pageSize="100" />
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left:10px;margin-top:80px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+    <!--    <table style="margin-left:100px;width:650px;height:30px;">
+            <tr>
+                <td style="width:97%;">
+                    <apex:relatedList list="NotesAndAttachments" pageSize="100" /> 
+                </td>
+            </tr>
+        </table> -->
+        <table style="margin-left:10px;margin-top:60px;width:97%;height:10px;BORDER-TOP: #0000cc 1px solid;" frame="above">
+        </table>
+        <!--</apex:panelGrid>-->
+    </div>
+    </body>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page controller="BatchStartController">
+    <apex:form >
+        <apex:commandbutton action="{!start}" value="起動" />
+    </apex:form>
+</apex:page>

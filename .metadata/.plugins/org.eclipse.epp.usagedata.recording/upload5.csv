@@ -1,0 +1,226 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"ERROR [2013-11-11 14:43:38,429] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148618438
+error,log,,,"ERROR [2013-11-11 14:43:38,439] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148618447
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148626615
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384148626637
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148632835
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384148634069
+error,log,,,"ERROR [2013-11-11 14:43:54,972] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148634981
+error,log,,,"ERROR [2013-11-11 14:43:54,981] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148634991
+error,log,,,"ERROR [2013-11-11 14:43:54,991] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148634996
+error,log,,,"ERROR [2013-11-11 14:43:59,012] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148639015
+error,log,,,"ERROR [2013-11-11 14:43:59,016] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148639019
+error,log,,,"ERROR [2013-11-11 14:43:59,019] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148639023
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148647257
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148647349
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148650480
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384148650508
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148652969
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148654402
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384148664673
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148672904
+error,log,,,"ERROR [2013-11-11 14:44:33,563] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148673566
+error,log,,,"ERROR [2013-11-11 14:44:33,567] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148673577
+error,log,,,"ERROR [2013-11-11 14:44:33,577] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148673587
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384148686255
+error,log,,,"ERROR [2013-11-11 14:44:47,225] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148687228
+error,log,,,"ERROR [2013-11-11 14:44:47,228] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148687231
+error,log,,,"ERROR [2013-11-11 14:44:47,232] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148687235
+error,log,,,"ERROR [2013-11-11 14:44:49,757] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148689765
+error,log,,,"ERROR [2013-11-11 14:44:49,765] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148689771
+error,log,,,"ERROR [2013-11-11 14:44:49,771] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148689774
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148692837
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384148693019
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148756018
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148756211
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148757800
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384148757988
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148764545
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148764721
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148773853
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148774032
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148776277
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384148776535
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384148784299
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148785888
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384148838810
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384148838981
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384148848065
+error,log,,,"ERROR [2013-11-11 14:47:28,789] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148848793
+error,log,,,"ERROR [2013-11-11 14:47:28,794] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384148848803
+error,log,,,"ERROR [2013-11-11 14:47:28,803] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384148848810
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineStart",1384148864250
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineStart",1384148864444
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148868407
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148868651
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148868864
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148869111
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384148869369
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384148892319
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384148904322
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384148917322
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384148924195
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149000556
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149001994
+error,log,,,"ERROR [2013-11-11 14:50:02,710] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149002718
+error,log,,,"ERROR [2013-11-11 14:50:02,719] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149002729
+error,log,,,"ERROR [2013-11-11 14:50:02,729] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149002733
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149008854
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149009240
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149019266
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149041343
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149044001
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149060760
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149096953
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149223254
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149239595
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149239782
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149259351
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149268760
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149275719
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149366108
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149371700
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149402665
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149409327
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149409597
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.cut",1384149414515
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384149422669
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149428288
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149460008
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149460191
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149470423
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149470618
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149473745
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149474216
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149475453
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149475605
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149533470
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384149546904
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384149548466
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149550092
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384149569150
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384149569326
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149570150
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149579850
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149587012
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384149587036
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149596352
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384149602687
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149604359
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149630755
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384149630795
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384149631337
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149635720
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149637398
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149654988
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149658233
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384149662119
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149664438
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384149670121
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384149671190
+error,log,,,"ERROR [2013-11-11 15:01:11,832] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149671835
+error,log,,,"ERROR [2013-11-11 15:01:11,835] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149671844
+error,log,,,"ERROR [2013-11-11 15:01:11,844] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149671852
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384149678734
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149680646
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149688527
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149688942
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149720884
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149721088
+error,log,,,"ERROR [2013-11-11 15:02:06,542] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149726545
+error,log,,,"ERROR [2013-11-11 15:02:06,546] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149726555
+error,log,,,"ERROR [2013-11-11 15:02:06,555] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149726563
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149726855
+error,log,,,"ERROR [2013-11-11 15:02:07,575] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149727578
+error,log,,,"ERROR [2013-11-11 15:02:07,578] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149727582
+error,log,,,"ERROR [2013-11-11 15:02:07,582] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149727585
+error,log,,,"ERROR [2013-11-11 15:02:10,098] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149730106
+error,log,,,"ERROR [2013-11-11 15:02:10,106] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149730113
+error,log,,,"ERROR [2013-11-11 15:02:10,113] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149730116
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149735802
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149735933
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149755809
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149756012
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149758548
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149758750
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149759856
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149760091
+error,log,,,"ERROR [2013-11-11 15:02:59,173] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149779177
+error,log,,,"ERROR [2013-11-11 15:02:59,177] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149779187
+error,log,,,"ERROR [2013-11-11 15:02:59,187] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149779196
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384149779863
+error,log,,,"ERROR [2013-11-11 15:03:00,701] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149780702
+error,log,,,"ERROR [2013-11-11 15:03:00,702] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149780703
+error,log,,,"ERROR [2013-11-11 15:03:00,703] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149780705
+error,log,,,"ERROR [2013-11-11 15:03:03,218] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149783222
+error,log,,,"ERROR [2013-11-11 15:03:03,222] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384149783232
+error,log,,,"ERROR [2013-11-11 15:03:03,232] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384149783241
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384149791322
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149791513
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149833084
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149840124
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384149863000
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149867752
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149869194
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384149892010
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384149910674
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149918800
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149920367
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149939314
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384149997464
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150002559
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150002765
+activated,view,org.eclipse.jdt.ui,3.6.1.r361_v20100825-0800,"org.eclipse.jdt.ui.PackageExplorer",1384150019283
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150020801
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150041561
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150041611
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150046382
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150051432
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150087382
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384150115734
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384150142984
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150154876
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150169289
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150228308
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150228511
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150228743
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150229167
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150229394
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150229687
+error,log,,,"ERROR [2013-11-11 15:10:30,552] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150230562
+error,log,,,"ERROR [2013-11-11 15:10:30,562] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150230572
+error,log,,,"ERROR [2013-11-11 15:10:30,572] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384150230577
+error,log,,,"ERROR [2013-11-11 15:10:32,089] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150232098
+error,log,,,"ERROR [2013-11-11 15:10:32,098] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150232105
+error,log,,,"ERROR [2013-11-11 15:10:32,105] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384150232109
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384150233348
+error,log,,,"ERROR [2013-11-11 15:10:34,121] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150234129
+error,log,,,"ERROR [2013-11-11 15:10:34,129] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150234140
+error,log,,,"ERROR [2013-11-11 15:10:34,140] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384150234143
+error,log,,,"ERROR [2013-11-11 15:10:37,659] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150237668
+error,log,,,"ERROR [2013-11-11 15:10:37,668] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150237677
+error,log,,,"ERROR [2013-11-11 15:10:37,677] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384150237689
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150245949
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150246145
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150258688
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150266090
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150269733
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150271145
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150282509
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150298887
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150307692
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150308537
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384150332647
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150332836
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150337644
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150342247
+error,log,,,"ERROR [2013-11-11 15:12:27,398] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150347407
+error,log,,,"ERROR [2013-11-11 15:12:27,407] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384150347416
+error,log,,,"ERROR [2013-11-11 15:12:27,417] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384150347422
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150359038
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384150368703
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150376129
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150390531
+closed,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384150390531
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150394078
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384150396343

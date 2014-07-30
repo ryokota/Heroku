@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0">
+
+<channel>
+	<title>Force.com Blogs</title>
+	
+	<link>http://blogs.developerforce.com</link>
+	<description/>
+	<lastBuildDate>Thu, 07 Nov 2013 18:02:21 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+		<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" href="http://feeds.feedburner.com/SforceBlog" rel="self" type="application/rss+xml"/><feedburner:info uri="sforceblog"/><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" href="http://pubsubhubbub.appspot.com/" rel="hub"/><feedburner:emailServiceId>SforceBlog</feedburner:emailServiceId><feedburner:feedburnerHostname>http://feedburner.google.com</feedburner:feedburnerHostname><feedburner:feedFlare href="http://add.my.yahoo.com/rss?url=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo4.gif">Subscribe with My Yahoo!</feedburner:feedFlare><feedburner:feedFlare href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with NewsGator</feedburner:feedFlare><feedburner:feedFlare href="http://feeds.my.aol.com/add.jsp?url=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://o.aolcdn.com/favorites.my.aol.com/webmaster/ffclient/webroot/locale/en-US/images/myAOLButtonSmall.gif">Subscribe with My AOL</feedburner:feedFlare><feedburner:feedFlare href="http://www.bloglines.com/sub/http://feeds.feedburner.com/SforceBlog" src="http://www.bloglines.com/images/sub_modern11.gif">Subscribe with Bloglines</feedburner:feedFlare><feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes</feedburner:feedFlare><feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare><feedburner:feedFlare href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FSforceBlog" src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">Subscribe with Pageflakes</feedburner:feedFlare><item>
+		<title>Announcing Salesforce Mobile SDK 2.1, just in time for the $1 Million Hackathon</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/bzNie326sA4/announcing-salesforce-mobile-sdk-2-1-just-in-time-for-the-1-million-hackathon.html</link>
+		<comments>http://blogs.developerforce.com/engineering/2013/11/announcing-salesforce-mobile-sdk-2-1-just-in-time-for-the-1-million-hackathon.html#comments</comments>
+		<pubDate>Thu, 07 Nov 2013 18:02:21 +0000</pubDate>
+		<dc:creator>Eugene Oksman</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://25.13731</guid>
+		<description><![CDATA[Just in time for Dreamforce and the Salesforce $1 Million Hackaton, the Mobile SDK team is proud to announce the brand new 2.1 release.  If you are looking to build a native iOS or Android mobile app for your business needs or even the hackathon, the Mobile SDK is the best place to get started. [...]]]></description>
+				<content:encoded><![CDATA[<p>Just in time for Dreamforce and the <a href="http://dreamforce.com/hackathon">Salesforce $1 Million Hackaton</a>, the Mobile SDK team is proud to announce the brand new 2.1 release.  If you are looking to build a native iOS or Android mobile app for your business needs or even the hackathon, the Mobile SDK is the best place to get started.</p>
+<p>The latest version focuses on major new functionality and library upgrades to give more flexibility to mobile app developers.</p>
+<p><b>Push Notifications Pilot</b><br />
+Registration and delivery of push notifications are now supported for Connected Apps where push notification capability is enabled.</p>
+<p><b>File API Support</b><br />
+The SDK now provides convenience methods that build specialized REST requests to download, upload, and share Files from Salesforce.  Two new sample apps: FileExplorer and HybridFileExplorer have been added to demonstrate the new functionality.</p>
+<p><b>Networking Library Enhancements</b><br />
+The underlying networking libraries have been replaced with Volley on Android and MKNetworkKit on iOS. Now developers have the ability to configure advanced features, such as managing the network queue and cancelation of requests.</p>
+<p><b>SmartSync for Any REST Endpoint</b><br />
+SmartSync now supports for custom endpoints , such as Apex and other REST APIs using the Force.RemoteObject class.</p>
+<p>&nbsp;</p>
+<p><b>Android Specific Updates</b></p>
+<ul>
+<li>Upgraded SQLCipher to v2.2.2, in order to support Android 4.3 (Jellybean) and Android 4.4 (Kit Kat).</li>
+<li>Added the ability to merge Android Manifest files from the Mobile SDK library projects, using the `manifestmerger` attribute.</li>
+<li>Added the ability for an app to supply a custom `PasscodeActivity`, using the `setPasscodeActivity()` method in `SalesforceSDKManager`.</li>
+</ul>
+<p><b>iOS Specific Updates</b></p>
+<ul>
+<li>Handling of OAuth errors is now configurable.</li>
+<li>Upgraded the openssl library to v1.0.1e, to fix possible security concerns with older versions of openssl.</li>
+</ul>
+<p><strong>Node Package Libraries</strong></p>
+<ul>
+<li> iOS: <a href="https://npmjs.org/package/forceios" target="_blank">https://npmjs.org/package/forceios</a></li>
+<li>Android: <a href="https://npmjs.org/package/forcedroid" target="_blank">https://npmjs.org/package/forcedroid</a></li>
+</ul>
+<p><strong>Source Code on Github</strong></p>
+<ul>
+<li> iOS: <a href="https://github.com/forcedotcom/SalesforceMobileSDK-iOS">https://github.com/forcedotcom/SalesforceMobileSDK-iOS</a></li>
+<li>Android: <a href="https://github.com/forcedotcom/SalesforceMobileSDK-Android">https://github.com/forcedotcom/SalesforceMobileSDK-Android<br />
+</a></li>
+</ul>
+<p><strong>To get started, we recommend that you check out the Mobile SDK Developer Guide and numerous tutorials on <a title="http://wiki.developerforce.com/page/Mobile_SDK" href="http://wiki.developerforce.com/page/Mobile_SDK">http://wiki.developerforce.com/page/Mobile_SDK</a></strong></p>
+<p>Lastly, the Mobile SDK team will be on-site in the Developer Zone at Dreamforce to help answer your questions or help you if you get stuck with your hack.  Best of luck and may the best mobile app win!</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/bzNie326sA4" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/engineering/2013/11/announcing-salesforce-mobile-sdk-2-1-just-in-time-for-the-1-million-hackathon.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/engineering/2013/11/announcing-salesforce-mobile-sdk-2-1-just-in-time-for-the-1-million-hackathon.html</feedburner:origLink></item>
+		<item>
+		<title>Bristol: Elevated!</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/OEuRE6CY64o/bristol-elevated.html</link>
+		<comments>http://blogs.developerforce.com/developer-relations/2013/11/bristol-elevated.html#comments</comments>
+		<pubDate>Thu, 07 Nov 2013 15:00:36 +0000</pubDate>
+		<dc:creator>Peter Chittum</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://26.33671</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/developer-relations/2013/11/bristol-elevated.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_crop,h_662/v1383838118/IMG_1591_zq02kc.jpg" class="alignleft wp-post-image tfe" alt="Mobile Workshop Tutorial" title="Mobile Workshop" /></a>ELEVATE Yesterday, 6 November, the hugely successful ELEVATE salesforce.com Developer Workshop visited the UK for the first time in Bristol. The event was a full-day workshop with two tracks: one for Force.com platform beginners, the other for developers wanting to build a mobile app with Force.com. Turn out was excellent with over 50 developers turning [...]]]></description>
+				<content:encoded><![CDATA[<h1>ELEVATE</h1>
+<p><img class="wp-image-33681 alignright" title="Mobile Workshop" alt="Mobile Workshop Tutorial" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_crop,h_662/v1383838118/IMG_1591_zq02kc.jpg" width="530" height="397" /></p>
+<p>Yesterday, 6 November, the hugely successful ELEVATE salesforce.com Developer Workshop visited the UK for the first time in Bristol.</p>
+<p>The event was a full-day workshop with two tracks: one for Force.com platform beginners, the other for developers wanting to build a mobile app with Force.com.</p>
+<p>Turn out was excellent with over 50 developers turning up from as far away as Glasgow. The Salesforce developer community was out in force with local developers Chris Alun Lewis and Simon Lawrence leading the beginner workshop. Much thanks to local Cloud Alliance partner <a title="Desynit ELEVATE Article" href="http://www.desynit.com/elevate-bristols-first-force-com-developer-workshop/">Desynit</a> for offering up their expertise and for lending a third developer Julio Barrado as a helper for the hands-on tutorials.</p>
+<p>In the mobile workshop, I was assisted by local Force.com MVP, Simon Goodyear.</p>
+<p>One of the joys of working as a developer evangelists is to witness the community taking an active role. Even with the growth of salesforce.com as a company, we need our community. They magnify what we do whether it is in the developer boards, on Stackexchange, or blogging. For this reason it was gratifying to see how these individuals helped bring this event to life.</p>
+<h1>Bristol Developer User Group</h1>
+<p>After the workshop, the Bristol Developer User group, aka Force-by-Force-West, held their bi-monthly meeting at the Llandogger Trow pub nearby. Salesforce MVP Francis Pindar gave a preview of the Apex 10 Commandments talk that he will be giving with fellow MVP Kevin Poorman at Dreamforce 13 in two week&#8217;s time. Unfortunately, Kevin couldn&#8217;t make it over from the states, but you can see him and Francis present this talk in the DevZone on Thursday 21 November at Dreamforce!</p>
+<p>With many new members in attendance the talk was well received. Afterward, many people remarked upon how much the community adds to their work with salesforce.com. Whether that is how to build the right report, define your object model, create custom logic with Apex, or build a killer mobile app, the documentation is great, it gets them started, but often it is the community that helps them over the line.</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/OEuRE6CY64o" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/developer-relations/2013/11/bristol-elevated.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/developer-relations/2013/11/bristol-elevated.html</feedburner:origLink></item>
+		<item>
+		<title>The Making of a $1 Million App: How to Build Your Dream Team</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/RMbEoKUbzUw/the-making-of-a-1-million-app-how-to-build-your-dream-team.html</link>
+		<comments>http://blogs.developerforce.com/developer-relations/2013/11/the-making-of-a-1-million-app-how-to-build-your-dream-team.html#comments</comments>
+		<pubDate>Wed, 06 Nov 2013 23:27:06 +0000</pubDate>
+		<dc:creator>Peter Chittum</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[#DF13]]></category>
+		<category><![CDATA[contest]]></category>
+		<category><![CDATA[designer]]></category>
+		<category><![CDATA[developer]]></category>
+		<category><![CDATA[dreamforce]]></category>
+		<category><![CDATA[hackathon]]></category>
+		<category><![CDATA[million]]></category>
+		<category><![CDATA[team]]></category>
+
+		<guid isPermaLink="false">http://26.33131</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/developer-relations/2013/11/the-making-of-a-1-million-app-how-to-build-your-dream-team.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,r_5,w_314/v1383779887/DF12_0627_9-18-12_ygu3fx.png" class="alignleft wp-post-image tfe" alt="" title="" /></a>So what is it going to take to make that $1 million app? With so much at stake teams will have to bring their A-game and pull out all the stops to out compete their rivals.  Learn how to build your Dream Team.]]></description>
+				<content:encoded><![CDATA[<p>No doubt everyone in the salesforce.com ecosystem has already heard of the <a href="http://events.developerforce.com/dreamforce/hackathon?utm_campaign=DF13_hack&amp;utm_source=DFC&amp;utm_medium=Blog" target="_blank">$1 million hackathon challenge</a> we have launched in the DevZone at Dreamforce 2013.  But just in case you haven&#8217;t, the high level is this:</p>
+<ol>
+<li>Build a mobile app</li>
+<li>Make it using something from the Salesforce Platform technologies</li>
+<li>Sign up today and start building, now through November 20</li>
+<li>Get your Hacker Pass to the Dreamforce Developer Zone to take part</li>
+<li>Winner takes home $1,000,000</li>
+</ol>
+<p>For the specific T&#8217;s and C&#8217;s, check out the <a title="Hackathon" href="http://events.developerforce.com/dreamforce/hackathon" target="_blank">official hackathon page</a>.</p>
+<p>So what is it going to take to make that $1 million app? With so much at stake teams will have to bring their A-game and pull out all the stops to out compete their rivals.</p>
+<h1>Dream Team</h1>
+<p><img class="alignright wp-image-33521" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,r_5,w_314/v1383779887/DF12_0627_9-18-12_ygu3fx.png" width="314" height="209" />No one knows today what that app will look like or who the winning team will be. You might think that winning team will will have expertise in every software project discipline. To set itself apart in addition to agile and expert coders, that app will need a team to bring to bear design, user experience, and testing.</p>
+<p>But you just don&#8217;t know. The annals of technology are riddled with stories like two guys in a garage in Palo Alto, the college sophomore who creates a site for students to share about themselves, the man who dreams of enterprise software that is as easy to use as Amazon.com.</p>
+<h1>Don&#8217;t Forget the Clicks</h1>
+<p>The Force.com Platform is also ideal for rapid application development life cycles, so expertise in configuration and declarative functionality of an org will be critical in a team.</p>
+<p>Perhaps you are a developer new to Force.com and haven&#8217;t become familiar with all that the declarative features have to offer. Draft an experienced Salesforce Administrator rockstar into your team who can help you build out those declarative features.</p>
+<p>For instance maybe you want to build reporting into your app and you&#8217;ve heard of the Analytics API, but you&#8217;ve not worked with reports and dashboards. Imagine how much a reports expert could help a team to build out killer customizable reporting logic, while a UI expert could work with them to build an awesome mobile UX that used that reporting data in a native or hybrid application.</p>
+<p>Perhaps I&#8217;m dreaming too big, but I would love to see a declarative-only entry. There is a huge amount you can do on the platform without code, and we&#8217;re adding new features every release such as the innate mobility of Chatter publisher actions in Winter &#8217;14. Could a team build a custom mobile application inside the Chatter Mobile App container?</p>
+<p>There are even declarative mobile frameworks like <a title="Salesforce+Appery.io" href="http://appery.io/salesforce/?utm_source=external&amp;utm_medium=link&amp;utm_campaign=ongoingPartnerLinks" target="_blank">Appery.io</a> that require minimal or no coding skills to get up and running. If you are looking for a team to join, or are missing a key skill set, reach out via the <a href="http://boards.developerforce.com/t5/Salesforce-1-Million-Hackathon/bd-p/dfHackathon">Discussion Boards</a>.</p>
+<p>Anyone who can build an app on the Salesforce Platform, can enter the $1 million hackathon. So <a href="http://events.developerforce.com/dreamforce/hackathon?utm_campaign=DF13_hack&amp;utm_source=DFC&amp;utm_medium=Blog" target="_blank">sign up (FREE for a limited time)</a>, build your team, and see you in San Francisco!</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/RMbEoKUbzUw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/developer-relations/2013/11/the-making-of-a-1-million-app-how-to-build-your-dream-team.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/developer-relations/2013/11/the-making-of-a-1-million-app-how-to-build-your-dream-team.html</feedburner:origLink></item>
+		<item>
+		<title>Dynamic Reporting – Integrating the Force.com Analytics and Streaming APIs</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/Irops58AtjM/dynamic-reporting-integrating-the-force-com-analytics-and-streaming-apis.html</link>
+		<comments>http://blogs.developerforce.com/developer-relations/2013/11/dynamic-reporting-integrating-the-force-com-analytics-and-streaming-apis.html#comments</comments>
+		<pubDate>Wed, 06 Nov 2013 06:37:20 +0000</pubDate>
+		<dc:creator>Pat Patterson</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[analytics api]]></category>
+		<category><![CDATA[streaming API]]></category>
+		<category><![CDATA[visualforce]]></category>
+
+		<guid isPermaLink="false">http://26.33321</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/developer-relations/2013/11/dynamic-reporting-integrating-the-force-com-analytics-and-streaming-apis.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383712783/blob_gwfflp.png" class="alignleft wp-post-image tfe" alt="Analytics Chart on a Visualforce Page" title="" /></a>The Analytics API allows you to build web pages that show your report data however you desire, but how do you ensure your users have an up-to-the-second analysis? See how to use the Streaming API to make your data come alive!]]></description>
+				<content:encoded><![CDATA[<p>Back in September, I explained <a href="http://blogs.developerforce.com/developer-relations/2013/09/using-the-salesforce-analytics-api-on-a-visualforce-page.html">how to use the Salesforce Analytics API on a Visualforce Page</a>; this time, I&#8217;ll show you how to use the <a href="http://wiki.developerforce.com/page/Streaming_API">Force.com Streaming API</a> to add life to your data.</p>
+<p>Let&#8217;s say you&#8217;ve written a marvelous UI that leverages the Analytics API (or the REST API, or JavaScript Remoting) to present data in a brilliantly digestible format:</p>
+<p><img class="wp-image-33341 alignnone" alt="Analytics Chart on a Visualforce Page" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383712783/blob_gwfflp.png" width="666" height="434" /></p>
+<p>Now, this is a snapshot of your analysis &#8211; how do you know it&#8217;s still current? Enter the Streaming API &#8211; our page can subscribe for notifications on changes to the underlying data and prompt the user to rerun the report. Take a look at the page in action:</p>
+<p><iframe width="500" height="281" src="http://www.youtube.com/embed/PHM4eycBDK0?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p><a href="https://gist.github.com/metadaddy-sfdc/7327730">Grab the source for the entire page here</a>; I&#8217;ll walk through the changes to the static Analytics page from last time.</p>
+<p>The Streaming API implements a publish/subscribe model. You (the developer) create a topic based on a SOQL query, and your client app can subscribe for notifications when the results of that query change. So, the first thing I did was to follow the instructions, in the <a href="http://www.salesforce.com/us/developer/docs/api_streaming/">Streaming API Developer&#8217;s Guide</a>, on creating a PushTopic record for notifications on any change to Merchandise Name or Quantity fields &#8211; the raw data that feeds into my analysis.</p>
+<p>This is the code I ran, in the &#8216;Execute Anonymous&#8217; window of the Developer Console:</p>
+<pre>PushTopic pushTopic = new PushTopic();
+pushTopic.Name = 'MerchandiseUpdates';
+pushTopic.Query = 'SELECT Id, Name, Quantity__c FROM Merchandise__c';
+pushTopic.ApiVersion = 29.0;
+pushTopic.NotifyForOperationCreate = true;
+pushTopic.NotifyForOperationUpdate = true;
+pushTopic.NotifyForOperationUndelete = true;
+pushTopic.NotifyForOperationDelete = true;
+pushTopic.NotifyForFields = 'Referenced';
+insert pushTopic;</pre>
+<p>I followed the instructions to test my PushTopic in <a href="http://wiki.apexdevnet.com/page/Workbench">Workbench</a>. Updating a Merchandise record&#8217;s quantity correctly generates a notification:</p>
+<p><img class="wp-image-33381 alignnone" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383716462/Screen_Shot_2013-11-05_at_9_40_18_PM_hobobb.png" width="738" height="273" /></p>
+<p>The first thing my page needs to do is to include the CometD JavaScript libraries:</p>
+<pre>&lt;apex:includeScript value="{!$Resource.cometd}"/&gt;
+&lt;apex:includeScript value="{!$Resource.jquery_cometd}"/&gt;</pre>
+<div>The following code, in the jQuery <code>$(document).ready()</code> handler, initializes the CometD library and subscribes for notifications on the MerchandiseUpdates topic:</div>
+<pre>// Initialize CometD
+$.cometd.init({
+    url: '/cometd/29.0/',
+    requestHeaders: { Authorization: 'Bearer {!$Api.Session_ID}'}
+});
+
+// Subscribe to a topic. JSON-encoded update will be returned
+// in the callback
+$.cometd.subscribe('/topic/MerchandiseUpdates', function(message) {
+    $('#output').append(JSON.stringify(message, null, '    ')+'nn');
+
+    // Prompt user to rerun report
+    $("#rerun").show();
+});</pre>
+<div>The <code>#rerun</code> button click handler hides the button and runs the report again:</div>
+<pre>// Rerun report on click
+$("#rerun").click(function(){
+    $("#rerun").hide();
+    runReport();
+});</pre>
+<p>Why do I show a button rather than simply running the report automatically? Well, running a report is relatively expensive, computationally speaking; it&#8217;s wasteful to run the report on every data change, regardless of whether the user is watching or not. So, to be good multi-tenant citizens, we prompt the user to rerun the report.</p>
+<p>Are you using the Analytics API yet? Let us know in the comments&#8230;</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/Irops58AtjM" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/developer-relations/2013/11/dynamic-reporting-integrating-the-force-com-analytics-and-streaming-apis.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/developer-relations/2013/11/dynamic-reporting-integrating-the-force-com-analytics-and-streaming-apis.html</feedburner:origLink></item>
+		<item>
+		<title>What’s better than a $1million hackathon? A FREE $1million hackathon!</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/_wf0XpImTGo/dreamforce-free-hackathon-pass.html</link>
+		<comments>http://blogs.developerforce.com/developer-relations/2013/11/dreamforce-free-hackathon-pass.html#comments</comments>
+		<pubDate>Wed, 06 Nov 2013 01:26:39 +0000</pubDate>
+		<dc:creator>Adam Seligman</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[#DF13]]></category>
+		<category><![CDATA[dreamforce]]></category>
+		<category><![CDATA[hackathon]]></category>
+
+		<guid isPermaLink="false">http://26.33171</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/developer-relations/2013/11/dreamforce-free-hackathon-pass.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,r_7,w_483/v1383700370/hackon_fbupan.jpg" class="alignleft wp-post-image tfe" alt="" title="" /></a>We got an amazing response after we launched the $1,000,000 Hackathon at Dreamforce.  But we decided we should make it even bigger. Bigger than big.  So we decided to change the Hacker Pass to be free for developers entering the Hackathon.  You got it, a million dollars up for grabs.  We&#8217;re seeing the community respond [...]]]></description>
+				<content:encoded><![CDATA[<p>We got an amazing response after we launched the $1,000,000 <a href="http://events.developerforce.com/en/dreamforce/hackathon/details" target="_blank">Hackathon at Dreamforce</a>.  But we decided we should make it even bigger. Bigger than big.  So we decided to change the Hacker Pass to be free for developers entering the Hackathon.  You got it, a million dollars up for grabs.  We&#8217;re seeing the community respond with Heroku, Force.com and ExactTarget questions.  We see them checking out GoInstant and our Mobile SDK.  Some amazing apps are coming.</p>
+<p><img class="wp-image-33181 aligncenter" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,r_7,w_483/v1383700370/hackon_fbupan.jpg" width="483" height="322" /></p>
+<p>So why did we do it?  Because a hackathon is about learning too.  So we want as many people as possible to have a chance to check out the DevZone and learn how to make mobile apps.  Anyone with HTML, JavaScript, REST API skills can make mobile apps with Salesforce.  You don&#8217;t have to be a jedi master, but you probably need a great team, a great idea, and a great platform to get your app up.</p>
+<p>We&#8217;re putting 99 bucks back in your pocket.  Buy some snacks and bring a sleeping bag. <a href="http://events.developerforce.com/en/dreamforce/hackathon/details" target="_blank">For a limited time, it&#8217;s free</a>.  Hack on!</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/_wf0XpImTGo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/developer-relations/2013/11/dreamforce-free-hackathon-pass.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/developer-relations/2013/11/dreamforce-free-hackathon-pass.html</feedburner:origLink></item>
+		<item>
+		<title>Happiness is … making an impact with Force.com</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/LUQPjLup1sU/happiness-is-making-an-impact-with-force-com.html</link>
+		<comments>http://blogs.developerforce.com/developer-relations/2013/11/happiness-is-making-an-impact-with-force-com.html#comments</comments>
+		<pubDate>Mon, 04 Nov 2013 13:37:07 +0000</pubDate>
+		<dc:creator>Mary Scotton</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[declarative]]></category>
+		<category><![CDATA[developer]]></category>
+		<category><![CDATA[non-profit]]></category>
+		<category><![CDATA[volunteer]]></category>
+
+		<guid isPermaLink="false">http://26.31671</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/developer-relations/2013/11/happiness-is-making-an-impact-with-force-com.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/bo_5px_solid_rgb:060505,c_scale,w_300/v1382982470/Cheryl_wirak2.png" class="alignleft wp-post-image tfe" alt="" title="Tears of Joy" /></a>When Cheryl Porro, VP of Agility, Innovation, and Culture, salesforce.com Technology &#38; Products, tweeted that she "almost drove someone to tears of joy" with the Salesforce Platform, I had to know more.  Read on for more about Cheryl and the impact she made with Force.com.]]></description>
+				<content:encoded><![CDATA[<p><img class="alignleft wp-image-31681" title="Tears of Joy" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/bo_5px_solid_rgb:060505,c_scale,w_300/v1382982470/Cheryl_wirak2.png" width="310" height="119" />When <a title="Cheryl Porro" href="https://twitter.com/cporro_sfdc" target="_blank">Cheryl Porro</a>, VP of Agility, Innovation, and Culture, salesforce.com Technology &amp; Products, tweeted that she &#8220;almost drove someone to tears of joy&#8221; with the Salesforce Platform, I had to know more.</p>
+<p><strong>How did you get started developing with Force.com?</strong><br />
+I got started within weeks of joining salesforce.com in 2005. I joined salesforce as a quality engineering lead on the Force.com team and one of the first things I did was help evaluate test management tools for our group. We evaluated Force.com alongside products on the market. In the end, we chose to use Force.com and I helped build what we called &#8220;QAForce&#8221; during one of my first weekends on the job.</p>
+<p><strong>How did you get started building a Force.com app for a non-profit?</strong><br />
+I am on the board of a non-profit school in San Francisco. During a finance committee meeting the Director of Finance mentioned her challenges around tracking some of the more complicated aspects of the budget to explain a large gap between projected and actual. I emailed her offline asking for more details. She mentioned that she was trying to track extended care with a spreadsheet and because of the tiered, sliding scale structure of the program the excel spreadsheet wasn&#8217;t really cutting it. I responded with &#8220;I think I can make you an app for that.&#8221; I knew this use case was a good match for Force.com and for my skill set.</p>
+<p><strong>What system were they using before Force.com?</strong><br />
+Excel spreadsheets. The Director of Finance sent me a copy of the spreadsheet with sensitive personal data removed and I started working on the app. I was heading to Phoenix on a business trip that day and I remember being excited that the plane had wifi. In the hour and a half flight I got quite a bit of the basic structure of the app set up.</p>
+<p><strong>In your tweet you say that you &#8220;almost drove someone to tears of joy&#8221; &#8211; can you tell me more about that experience?</strong><br />
+I am a consumer of the program in question and I knew that the finance office was sending me and every other parent emails when our extended care balance got low. I figured that they were doing this manually and if I could demo the email getting sent automatically when the threshold gets low it would have an impact.</p>
+<p>My first demo was with the director of finance. She was floored for sure and mentioned that this would save them 100&#8242;s of hours over the year. But the best demo was with a member of her staff who is the one doing most of the manual work. When I demoed the app for her, she just stopped and stared. She was clearly moved. I put my hand on her shoulder and said &#8220;What are you going to do with all those hours you just got back?&#8221; And she said, &#8220;Something more important!&#8221; It was a fantastic moment for me knowing how much of an impact I could have with really not too much effort. The app is 100% declarative at this point and my goal is to keep it that way to make it easier to maintain and sustain for the non-profit. I wrote a test plan for it (and found and fixed some of my own bugs!) and wrote a user guide.</p>
+<p><strong>This app is built 100% declaratively (no code). Do you have a programming background? </strong><br />
+My education is in chemical engineering, but I moved into quality engineering in 1996 when things were really starting to pick up. I picked up some coding skills in college, but was mostly self taught.  I had the chops to code this app programmatically, but the declarative approach meets all of their requirements.</p>
+<p><strong>What&#8217;s next for you and the school?</strong><br />
+This is just beginning. We need to get the app into use which we are hoping to do this week. I also helped the non-profit apply for and receive 10 free non-profit licenses and I am certain we will find more use cases that are a good fit.</p>
+<p><strong>Are you going to Dreamforce? If so, what are you looking forward to most?</strong><br />
+Of course! I love going to Dreamforce. For me it&#8217;s like wrapping up a couple of milestone birthdays, Christmas, and Halloween into one and jamming it into a single, amazing, fun-filled week. As a salesforce employee it&#8217;s one of the best times of the year. We get to get to know our customers, learn more about our products, and have a great time while doing it. I always try to spend some time in the Dev Zone either volunteering or sitting in some sessions.</p>
+<p><em>Editor&#8217;s Note:</em> Cheryl humbly failed to mention that she will be facilitating an awesome panel about Force.com Developer career growth.  Check it out here (link is to the Dreamforce org, registration required): <a title="Force.com Careers session" href="https://dreamevent.my.salesforce.com/apex/ActivityList#a093000000XdlGqAAJ" target="_blank">Force.com Careers: How Do I Get There From Here?</a></p>
+<p>If this story moved you the way it moved me, consider making an impact of your own at one of the 20,000+ non-profits that use the Salesforce Platform by volunteering your skills with <a href="http://www.taprootfoundation.org/do-probono/individuals" target="_blank">Taproot Foundation</a>,<a href="https://thecommunitycorps.secure.force.com/volunteers/VolunteerValidation" target="_blank">NPower Community Corps</a>, <a href="http://www.catchafire.org/" target="_blank">Catchafire</a> or <a href="http://www.socialcoding4good.org/home" target="_blank">SocialCoding4Good</a>. Also, if you are attending Dreamforce, look in the app for the Pledge Pro Bono campaign and you can make a pledge to perform pro bono service. Happiness is just a click (and maybe a little code) away!</p>
+<p>&nbsp;</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/LUQPjLup1sU" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/developer-relations/2013/11/happiness-is-making-an-impact-with-force-com.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/developer-relations/2013/11/happiness-is-making-an-impact-with-force-com.html</feedburner:origLink></item>
+		<item>
+		<title>Open Sourcing Performance Metrics Gathering for Salesforce Platform</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/px1R6xsVUfw/open-sourcing-performance-metrics-gathering-for-salesforce-platform-kylie.html</link>
+		<comments>http://blogs.developerforce.com/engineering/2013/11/open-sourcing-performance-metrics-gathering-for-salesforce-platform-kylie.html#comments</comments>
+		<pubDate>Fri, 01 Nov 2013 19:29:03 +0000</pubDate>
+		<dc:creator>Eric Perret</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[force.com]]></category>
+		<category><![CDATA[Jiffy]]></category>
+		<category><![CDATA[Kylie]]></category>
+		<category><![CDATA[metrics]]></category>
+		<category><![CDATA[Performance]]></category>
+		<category><![CDATA[RUM]]></category>
+		<category><![CDATA[salesforce platform]]></category>
+		<category><![CDATA[UI]]></category>
+		<category><![CDATA[usability]]></category>
+
+		<guid isPermaLink="false">http://25.12961</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/engineering/2013/11/open-sourcing-performance-metrics-gathering-for-salesforce-platform-kylie.html"><img align="left" hspace="5" width="150" src="https://lh4.googleusercontent.com/3uTW2G4VJGKr04H6EwQbJ2ddRWNSGVZkOYTxL2JvitWg5-7Yxy8B9te3A7GFNcZP0ox44GUodKarqjPURix7fHrr78_89phJP1ig-Hq3WKejGuvYygq9J9v1Lg" class="alignleft wp-post-image tfe" alt="Open Source (tm)" title="" /></a>It’s important to understand what your customers are doing on your site.  It’s even more important to understand how they’re using your site.  If something goes wrong and the end user has a bad experience, it reflects poorly on the company.  At salesforce.com we take this seriously.  One of the main indicators we use to gauge if a customer is having a good experience is looking at how long it takes for a page of the Salesforce web application to load on the browser.  We currently use an end user performance tool called jiffy to accomplish this. This post covers a version, called Kylie, we're open sourcing and how we're using it to influence current and future design of our product.]]></description>
+				<content:encoded><![CDATA[<p dir="ltr"><img class="aligncenter" alt="Open Source (tm)" src="https://lh4.googleusercontent.com/3uTW2G4VJGKr04H6EwQbJ2ddRWNSGVZkOYTxL2JvitWg5-7Yxy8B9te3A7GFNcZP0ox44GUodKarqjPURix7fHrr78_89phJP1ig-Hq3WKejGuvYygq9J9v1Lg" width="288px;" height="259px;" /></p>
+<p dir="ltr">It’s important to understand what your customers are doing on your site.  It’s even more important to understand how they’re using your site.  If something goes wrong and the end user has a bad experience, it reflects poorly on the company.  At salesforce.com we take this seriously.  One of the main indicators we use to gauge if a customer is having a good experience is looking at how long it takes for a page of the Salesforce web application to load on the browser.  We currently use an end user performance tool called jiffy to accomplish this. This post covers a version we&#8217;re open sourcing and how we&#8217;re using it to influence current and future design of our product.</p>
+<h1>Currently being used by the Salesforce Platform</h1>
+<p dir="ltr">I have had many Force.com developers ask me, “What is JiffyStubs.js?  It’s this little JavaScript file that sits at the top of every page, it’s impossible to get rid of, and doesn’t do much”.</p>
+<pre>/*
+ * This code is for Internal Salesforce use only, and subject to change without notice.
+ * Customers shouldn't reference this file in any web pages.
+ */
+(function(a){a.Perf=a.Jiffy={measure:function(a,b,d){},mark:function(c,b){return a.Perf},endMark:function(c,b){return a.Perf},stat:function(a,b){},enabled:!1}})(this);</pre>
+<p dir="ltr">This is actually a very powerful piece of code.  Well… maybe not this code, but what it connects to is very powerful.  We can change monitoring settings on a pod on-demand, and and tell it which org, which user(s), and for how long it should track the UI performance of the pages he/she visits.  When this setting is enabled, JiffyStubs.js is replaced with a URL pointing to Jiffy.js .  Jiffy.js contains JavaScript code for tracking how long the page takes to load on the browser.  It looks from the perspective of when the link or button was clicked to when the page is fully loaded in the browser.  By “fully loaded”, I mean when the page is completely rendered in the browser and all important JavaScript has finished executing.  It also captures a few other metrics:</p>
+<ul>
+<li>memory usage of the browser</li>
+<li>number of DOM nodes</li>
+<li>time spent on the server processing the request</li>
+<li>time spent in the browser handling the request</li>
+<li>any custom measurements that the Salesforce developers have added</li>
+<li><a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html">Navigation Timing metrics</a></li>
+</ul>
+<p dir="ltr">Once captured, we “beacon” or send the information back to the Salesforce pod where it can be analyzed for performance problems, or merged with other information to help find trends that are useful in making the product better.<img class="aligncenter" alt="" src="https://lh3.googleusercontent.com/sZRqcc5BOd4ThxKVcH4R0KDrRMB_I64IR_AHOVYVAViaWb8IeCy79GD3eazCBgz9hWNkPkAL8vgZ1cR0wI5ZYh_04UAOgrAJP_86IxuDNiQNsTxATfj14bKW" width="596px;" height="457px;" /></p>
+<p dir="ltr">It&#8217;s important to understand that salesforce.com never collects any user-entered data in this process. This is against our corporate policy and agreements. What we do look at are performance metrics and information about the browser being used.</p>
+<p dir="ltr">When would we want to capture metrics about UI (User Interface) / web page performance?  Typically it happens when a customer calls in and reports a performance problem.  Not just any performance problem, but one where we do not see any problems in back-end / server response time.  We have a very good handle on app server performance and database performance because your requests are running on our hardware and we have tuned it make it as efficient as possible.  When you add in the UI, it is running over the Internet (where we have little control) and on customer laptops, desktops, tablets, phones, etc with any type of browser from <a href="http://www.ie6countdown.com/">IE6</a> onwards, it cannot be 100% optimized because we do not know all of the variables that could affect it.</p>
+<h2>Open source Jiffy known as Kylie</h2>
+<p dir="ltr">Recently we release an open source UI framework called <a href="https://github.com/forcedotcom/aura">Aura</a> (see <a href="http://blog.cloudspokes.com/2013/08/first-look-salesforcecom-aura-ui.html">blog post</a>) that can be used to create dynamic websites and will be available to use from the Salesforce platform.  Following these lines, we decided to open source our UI performance metrics collecting framework (Jiffy).  As part of this initiative we renamed it Kylie and it can be downloaded from <a href="https://goo.gl/6q90ct">https://goo.gl/6q90ct</a> .  We named it Kylie because we forked the project from another one called <a href="https://github.com/lognormal/boomerang">Boomerang</a> and “in the Western Australian Aboriginal language Noongar, the settlers took the word Kiley/Kylie/Koilee to mean curved, returning stick or &#8216;boomerang&#8217;” <a href="http://en.wikipedia.org/wiki/Kylie_(name)">ref</a>.  For this version we stripped out anything specific to running on the salesforce.com platform so that it can be applied to any platform or UI framework (already compatable with Aura).</p>
+<h2>How to integrate Kylie with your project</h2>
+<p dir="ltr">So, you have your own website and are interested in collecting browser and speed metrics of your site.  Kylie makes all of this very easy to achieve this.  Right out of the box Kylie will collect metrics for you.  With a little bit of extra work, it can send the data back to the server for analysis.</p>
+<p dir="ltr">Below is the minimum code to install Kylie on your site.</p>
+<p dir="ltr">&lt;script src=&#8221;http://your-cdn.host.com/path/to/perf.js&#8221;&gt;&lt;/script&gt;<br />
+&#8230;<br />
+&lt;body onload=&#8221;Perf.onLoad()&#8221;&gt;</p>
+<p dir="ltr">Put a reference to download perf.js to the browser and call Perf.onLoad() when the page is 100% ready for the user to start interacting with it.</p>
+<p dir="ltr">What happens if you want to beacon the data back to the server?  There are 2 ways to do it.</p>
+<ol>
+<li>Compile your own copy of Kylie from source and include a command line flag to set the URL to send the data make
+<pre>BEACON_URL="/url/to/send/the/data/to"</pre>
+</li>
+<li>Include on the page a JavaScript variable which contains the URL
+<pre>&lt;script&gt;var perfOptions={bURL:"/url/to/send/the/data/to"};&lt;/script&gt;
+&lt;script src="http://your-cdn.host.com/path/to/perf.js"&gt;&lt;/script&gt;
+...
+&lt;body onload="Perf.onLoad()"&gt;</pre>
+</li>
+</ol>
+<p dir="ltr">Now that you&#8217;ve gathered metrics, you realize that a big chunk of time is spent in the browser and you are wondering what it is doing.  Kylie provides functionality to instrument the code with custom time measurements.  It will use a starting time called with an identifier, Perf.mark(&#8220;Twain&#8221;); and an ending time called with the same identifier, Perf.endMark(&#8220;Twain&#8221;); .  There are other great features built into the framework such as transaction boundaries (for AJAX heavy sites), stats collection, metrics logging levels, and more.  Many of them are documented on the <a href="https://goo.gl/6q90ct">Kylie Github page</a>.  For more detail, take a look at the source code out on Github, it’s very well documented.</p>
+<p dir="ltr">On a side note: you may be asking why we call the file perf and reference the JavaScript object as Perf.  We do this so if we want to switch from Kylie to something else in the future we do not have any references to implementation we are using for gathering metrics and we can swap out the framework rather easily.</p>
+<p>Here is a framework that salesforce.com Engineering believes is not only critical to triaging problems with our own platform, but will also be useful other developers and companies trying to keep their websites running fast.  Feel free to report any bugs or issues you encounter.  We’re really interested in receiving input from the developer community and making this framework better.</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/px1R6xsVUfw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/engineering/2013/11/open-sourcing-performance-metrics-gathering-for-salesforce-platform-kylie.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/engineering/2013/11/open-sourcing-performance-metrics-gathering-for-salesforce-platform-kylie.html</feedburner:origLink></item>
+		<item>
+		<title>Cloud Alliance Partners: 3 Must-Do’s at Dreamforce 2013</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/HuZAIDEeDak/cloud-alliance-partners-3-must-dos-at-dreamforce-2013.html</link>
+		<comments>http://blogs.developerforce.com/isv/2013/11/cloud-alliance-partners-3-must-dos-at-dreamforce-2013.html#comments</comments>
+		<pubDate>Fri, 01 Nov 2013 18:05:44 +0000</pubDate>
+		<dc:creator>Dan Streetman</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://30.8491</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/isv/2013/11/cloud-alliance-partners-3-must-dos-at-dreamforce-2013.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383321544/1_cqivs0.png" class="alignleft wp-post-image tfe" alt="" title="" /></a>With so much offered at Dreamforce, it can be difficult to know what to put on your agenda. Below is a list of three must-do’s to help Cloud Alliance Partners make the most of their Dreamforce experience.]]></description>
+				<content:encoded><![CDATA[<p>With so much offered at Dreamforce, it can be difficult to know what to put on your agenda. Below is a list of three must-do’s to help Cloud Alliance Partners make the most of their Dreamforce experience.</p>
+<p><b>1. Attend the Cloud Alliance Partner Keynote<br />
+</b><i>Monday, Nov. 18, 11am-12:30pm, Gateway Ballroom, Moscone South<br />
+</i>The Cloud Alliance Partner Keynote is the biggest cloud computing event of the year. It is an exclusive opportunity to hear from top salesforce.com executives including:</p>
+<p><img class="aligncenter" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383321544/1_cqivs0.png" width="599" height="602" /></p>
+<p>In addition to featuring this year’s <a href="http://blogs.salesforce.com/company/2012/10/the-stories-behind-our-customers-success.html">Partner Innovation Awards</a> the session will:</p>
+<div>
+<ul>
+<li>Lay out our vision for joint growth and customer success</li>
+<li>Reinforce the critical role of Cloud Alliances in driving innovation and leading the Customer Company revolution</li>
+</ul>
+<p>Space is limited and registration is filling up fast. <a href="https://www.salesforce.com/form/dreamforce/partner-keynote.jsp">Register today</a> and be a part of all the Partner excitement!</p>
+<p><b>2. Attend Consulting Partner Sessions<br />
+</b>You can expand your success at Dreamforce by attending Consulting Partner sessions. From business best practices to mobile development, these sessions are for you! Be sure to sign up for the following sessions on <a href="https://dreamevent.my.salesforce.com/apex/ActivityList">agenda builder</a>, search Role: SI Consulting Partner for these and other relevant sessions for you:</p>
+<p><img class="wp-image-8501 aligncenter" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383328618/Screen_Shot_2013-11-01_at_10_56_42_AM_dnjem7.png" width="505" height="523" /></p>
+<p><b>3. Visit the Consulting Partner Zone</b></p>
+</div>
+<p>Make The Consulting Partner Zone your home base at Dreamforce this year. Located on 3rd Floor Moscone, the Consulting Partner Zone gives you more opportunities to talk with saleforce.com experts, learn about the benefits of being a Cloud Alliance program partner, and connect with other partners and customers.</p>
+<p><img class="aligncenter" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/v1383166659/IMG_0102_wpaqrk.jpg" width="346" height="259" /></p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/HuZAIDEeDak" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/isv/2013/11/cloud-alliance-partners-3-must-dos-at-dreamforce-2013.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/isv/2013/11/cloud-alliance-partners-3-must-dos-at-dreamforce-2013.html</feedburner:origLink></item>
+		<item>
+		<title>Code Coverage and the Force.com Developer Console</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/RhpaE1-NGVQ/code-coverage-and-the-force-com-developer-console.html</link>
+		<comments>http://blogs.developerforce.com/engineering/2013/11/code-coverage-and-the-force-com-developer-console.html#comments</comments>
+		<pubDate>Fri, 01 Nov 2013 16:47:18 +0000</pubDate>
+		<dc:creator>Josh Kaplan</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[apex code]]></category>
+		<category><![CDATA[developer console]]></category>
+		<category><![CDATA[force.com]]></category>
+
+		<guid isPermaLink="false">http://25.13091</guid>
+		<description><![CDATA[<a href="http://blogs.developerforce.com/engineering/2013/11/code-coverage-and-the-force-com-developer-console.html"><img align="left" hspace="5" width="150" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,w_249/v1383324324/Code_dev_console_layout_ar8jny.png" class="alignleft wp-post-image tfe" alt="" title="" /></a>With Winter '14, there were two areas of change in the Developer Console affecting code coverage: How it is viewed in the developer console, and issues with code coverage itself.  Josh explains.]]></description>
+				<content:encoded><![CDATA[<p><img class="alignright wp-image-13531" alt="" src="http://res.cloudinary.com/hzxejch6p/image/upload/c_scale,w_249/v1383324324/Code_dev_console_layout_ar8jny.png" width="249" height="194" />Many of you have encountered issues with code coverage results following the Winter &#8217;14 release.  In fact, you&#8217;re probably here because you saw the title and thought, &#8220;Yes, I am having problems with code coverage in the developer console, what&#8217;s with that?&#8221; and clicked through. You are not alone, and we are not unaware.</p>
+<p>First off, I would like to make sure that we separate out two different changes that have happened in Winter &#8217;14: Moving code coverage viewing to the developer console, and the fact that there are issues with code coverage.  The two originate in the same place, but the developer console has nothing to do with the incomplete coverage results and missing coverage functionality you may be experiencing.</p>
+<p>The common origin of these is the addition of code coverage results to the Tooling API. We had some good reasons to do this feature! First and foremost, we are always looking to make testing and debugging perform better, and changing the way in which we store coverage is going to help us scale and perform better, today and moving forward. Beyond that, having code coverage results in the Tooling API will allow us to include them in the Eclipse plug-in, and will allow tools like Brain Engine and MavensMate to include code coverage as well.  If you are not a fan of the developer console for one reason or another, having the coverage information available in the Tooling API will eventually allow you to avoid the console for viewing code coverage.</p>
+<p><em>Note: You should Run All Tests to clear out the old-school code coverage results. If you run piecemeal, you will end up with old-school and new-school results at the same time. This is like going into the past and running into yourself (or Marty McFly). It&#8217;s bad. Run the tests to get your org to a consistent state.</em></p>
+<p>Because of the structural changes to the underlying objects, code coverage no longer appeared in the old setup UI pages. In general, we are moving away from the setup UI pages as our browser-based development alternative and towards the developer console.  It&#8217;s hard to support multiple tools that do the same thing. Doing so takes time away from the other initiatives you&#8217;ve asked us to work on! We&#8217;re not trying to delete the setup pages tomorrow, but we are not putting effort into enhancing them. Since the changes to code coverage were structural, the existing setup UI functionality was going to need refactoring to continue to work. With a finite team and infinite plans for improvement, we chose not to do the refactoring work, which would only provide duplicate functionality to what is available in the developer console.</p>
+<p>As unluck would have it, the code coverage structural changes didn&#8217;t go as planned. For the past 5-6 weeks, we have had half of the team trying to get things aligned. This is far slower than usual, but we are being far more careful than usual. When you run tests, you do NOT want us to commit your test data. But you DO want us to commit the code coverage results. We are making sure that we never make the mistake of committing test data while committing the coverage results. The coverage results you are seeing today are representative of us erring on the side of saving too little, to avoid accidentally saving too much.</p>
+<p>The good news is that we believe have the problem licked. You should start to see better code coverage results now.  This means you should see all classes and triggers in the test tab in developer console, and you should be able to see red/blue in the class and trigger files.  The developer console has always been able to show these things, but only if the data are available to be shown. The coverage results haven&#8217;t been available, and we believe this is fixed now.</p>
+<p>I know that the developer console is not perfect, and I know that developers have experienced issues in using it. Believe me, I would love to make it perfect, and we are always working in that general direction (even if we accidentally take a temporary wrong turn like this one). Please keep visiting; with every release, we are improving the experience and improving the performance. If this was your first experience with it, I apologize that your first impression was bad; please understand that the issue was not in the developer console, but in the underlying data structure changes that the console relies on.</p>
+<p>You should be returning to seeing your coverage, and I think you will agree that the developer console provides an upgrade to the setup UI pages for viewing those results.</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/RhpaE1-NGVQ" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/engineering/2013/11/code-coverage-and-the-force-com-developer-console.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/engineering/2013/11/code-coverage-and-the-force-com-developer-console.html</feedburner:origLink></item>
+		<item>
+		<title>A User’s Guide to AppExchange Partner Sessions at Dreamforce</title>
+		<link>http://feedproxy.google.com/~r/SforceBlog/~3/dnqlPTwJxjM/a-users-guide-to-appexchange-partner-sessions-at-dreamforce.html</link>
+		<comments>http://blogs.developerforce.com/isv/2013/10/a-users-guide-to-appexchange-partner-sessions-at-dreamforce.html#comments</comments>
+		<pubDate>Thu, 31 Oct 2013 15:53:31 +0000</pubDate>
+		<dc:creator>Holly Palmer</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://30.8261</guid>
+		<description><![CDATA[I recently sat down with John Richter, Sr. Manager for ISV Success and the coordinator for the ISV Success Track at Dreamforce to discuss some of the exciting sessions being planned for ISV and channel partners at Dreamforce ’13. We know Dreamforce is focused on customer success and the customer experience, but are there sessions [...]]]></description>
+				<content:encoded><![CDATA[<p>I recently sat down with John Richter, Sr. Manager for ISV Success and the coordinator for the ISV Success Track at Dreamforce to discuss some of the exciting sessions being planned for ISV and channel partners at Dreamforce ’13.</p>
+<p><b>We know Dreamforce is focused on customer success and the customer experience, but are there sessions designed specifically for partners at Dreamforce ’13?</b><br />
+Absolutely!  For us, partners are also customers and this year partners coming to Dreamforce ’13 have a wealth of options to learn not only about building apps, but about building their businesses as well.  It all starts with the <a href="https://dreamevent.my.salesforce.com/a093000000WvSnXAAV">AppExchange Partner Keynote</a> at 9am on Monday (Nov. 18), where partners can kickoff the week by hearing directly from industry experts and our program leaders.  There is a <a href="http://blogs.developerforce.com/isv/2013/10/the-enterprise-disrupted-a-monumental-year-for-the-appexchange-ecosystem.html">great blog post</a> by Sara Varni for more on the keynote.</p>
+<p>Next come the sessions.  The ISV Success track has been expanded this year to include more core training, as well as new technical deep dives.  We are introducing ‘Emerging Technology’ sessions to drive innovation within the partner ecosystem. There is a brand new track for entrepreneurs – with ISV-specific content featured in our <a href="http://p.force.com/foundersforum">Founders Forum</a> – to inspire a new generation of enterprise leaders.  And ‘Partner User Group’ sessions represent best practices that have emerged organically from our partner community.</p>
+<p><b>Wow, that sounds like a lot of options.  Is there any sort of list or guide for partners to reference when enrolling and attending sessions?</b><br />
+Yes, given the sheer number of choices, we have tried to curate the best of the best for partners by producing the <a href="http://p.force.com/df13sessions">DF13 Partner Session Guide</a>.  This <a href="http://p.force.com/df13sessions">guide</a> lists recommended sessions by role and groups.  There is something for everyone at Dreamforce this year, and we want to make sure partners make the most of their experience.  To direct others to the guide, use <a href="http://p.force.com/df13sessions">http://p.force.com/df13sessions</a>.</p>
+<p><b>What are some of the “cool” sessions this year?</b><br />
+The list is just too long, so I would say check out the <a href="http://p.force.com/df13sessions">guide</a> first!  But there are a couple of technical sessions put together by our Technical Evangelist team on my radar that I’m really excited about.  For example, “Interoperability: Combine Forces to Increase Your Opportunities.”  The title is a mouthful, but basically for the first time you will hear from partners on how they have been able to incorporate other apps into their overall solution to create even greater business opportunities.</p>
+<p>Another example, “Manage Your Business with ISV Platform Technologies and the ISV Business Org.” This is a session that we have wanted to do for a long time, where we show you best practices for automating your business processes using key ISVforce technologies like Trialforce, Channel Order App, License Management App, Support Console, as well as the ISV Business Org. This should be a must-see, even for experienced partners.</p>
+<p><b>Explain ‘Emerging Technology’ sessions. Are those new?</b><br />
+Yes, we are often asked by partners to explain how they can leverage some of our newer technologies to drive their own innovation.  So our partner business development group put together a series of sessions focusing on how new technologies like Work.com, Communities, Service Cloud, Heroku, and others can open the door to entirely new markets for our partner ecosystem.  In the <a href="https://dreamevent.my.salesforce.com/apex/ActivityList">Dreamforce App</a> you can search for ‘Emerging Technology’ or again, just check the <a href="http://p.force.com/df13sessions">guide</a> under ISV Business Development.</p>
+<p><b>There is also a new track for entrepreneurs, right?</b><br />
+Yes, the <a href="http://p.force.com/foundersforum">Founders Forum</a> track is for anyone starting a business or even thinking about starting a business.  And it is not limited to only those building commercial apps.  Many of the startup principles and best practices apply to any business.  Forbes has ranked salesforce.com as the <a href="http://www.forbes.com/innovative-companies/list/">World’s Most Innovative Company</a> for three years in a row.  We believe this achievement includes the innovation that is being driven by our partner community, not just through technical features and functionality, but through a thriving ecosystem of business success.  We want to bring some of those business best practices to the broader community. There is a <a href="http://blogs.developerforce.com/isv/2013/10/building-a-better-business-at-dreamforce.html">great blog post</a> from Mike Kreaden about the <a href="http://p.force.com/foundersforum">Founders Forum</a> Track.</p>
+<p><b>I see a lot of ‘Partner User Group’ sessions.  What are those?</b><br />
+These sessions are great opportunities for our partners to learn from each other because they are delivered BY partners, FOR partners.  Why reinvent the wheel?  We have Partner User Groups forming around the world, where partners gather with each other to discuss best practices.   This summer we had a Call for Papers to cultivate the “best of the best” ideas and solutions that partners can apply right away to their own situations.  Mike Kreaden also talks about the Partner User Groups in his <a href="http://blogs.developerforce.com/isv/2013/10/building-a-better-business-at-dreamforce.html">blog post</a>. There is a section in the <a href="http://p.force.com/df13sessions">guide</a> that lists these sessions, and you can learn more about forming a Partner User Group in your area on the Partner Portal at <a href="http://p.force.com/pug">http://p.force.com/pug</a>.</p>
+<p><b>Will there be an APP Academy at Dreamforce?</b><br />
+Yes, our APP Academy (where APP = AppExchange Partner Program) is free training that consists of modules from five phases of the partner lifecycle: Plan, Build, Distribute, Sell (&amp; Market), and Support.  It is not just about building your app, but building your business as well.  If you are new partner this is an absolute must to attend, starting with our APP Academy kickoff session on Monday (November 18) at 11:00am Pacific!  We offer virtual classrooms each month, but at Dreamforce you get expanded training with live experts. The <a href="http://p.force.com/df13sessions">guide</a> contains the breakdown of sessions that comprise the full APP Academy, including other recommended sessions.  I have also written a <a href="http://blogs.developerforce.com/isv/2013/04/app-academy-free-training-for-isv-and-channel-partners.html">blog post</a> with more details about the APP Academy. If you are an ISV or channel partner currently, you can take the APP Academy (Online version) at <a href="http://p.force.com/appacademy">http://p.force.com/appacademy</a>.</p>
+<p><b>What about Hands-On Training?</b><br />
+As always, there will be many <a href="http://www.salesforce.com/dreamforce/DF13/sessions.jsp#page=0&amp;search=hands-on+training&amp;role%5Btitle%5D=Role&amp;role%5Bvalue%5D=All&amp;industry%5Btitle%5D=Industries&amp;industry%5Bvalue%5D=All&amp;product%5Btitle%5D=Products&amp;product%5Bvalue%5D=All">Hands-On Training</a> sessions at Dreamforce.  Just as the name implies, these sessions are truly hands-on, so get ready to work!  These instructor-led sessions give attendees plenty of chances to get up close and personal with our technologies.  We have recommended several technical Hands-On Training sessions in our <a href="http://p.force.com/df13sessions">guide</a>.</p>
+<p><b>Are there sessions where customers can learn more about AppExchange apps?</b><br />
+Yes, we have a full time AppExchange curator who does nothing but eat, drink, and sleep enterprise apps!  You can see her fly through 30 apps in the AppExchange Fast &amp; Furious session, but she has also put together an amazing array of AppExchange sessions, focusing on apps for Admins, Back Office, Financial Services, Government, Healthcare, Life Sciences, Marketing, Mobile, and more.  There is even one session devoted entirely to the best Free Apps that customers can install and deploy immediately.  We list these sessions in the <a href="http://p.force.com/df13sessions">guide</a>.  Remember, this content is designed for customers, though partners are always welcome to attend.</p>
+<p><b>Where will partner sessions be held?</b><br />
+Most ISV Success sessions are located in Moscone West, on the third floor, adjacent to our AppExchange Partner Zone.  However, we have other sessions located across the campus, so be sure to check the <a href="https://dreamevent.my.salesforce.com/apex/ActivityList">Dreamforce App</a> for the correct locations and times.</p>
+<p><b>For those who cannot make it to Dreamforce (or are busy meeting with customers), will the sessions be recorded?</b><br />
+Yes, most sessions are recorded.  It sometimes takes a few weeks for the recordings to be posted to YouTube, but when they become available you will find the full list of all our partner sessions at <a href="http://p.force.com/dreamforce">http://p.force.com/dreamforce</a> (portal login required).</p>
+<p><b>Are there any webinars or events partners should tune in for to get ready for Dreamforce?</b><br />
+If you want a preview of what’s in store for partners at Dreamforce, join our special <a href="http://p.force.com/roadmap">ISV Roadmap Webinar: Dreamforce Preview</a> (must be an ISV partner, register with the portal link) on November 7 at 9am PT.</p>
+<p>In addition, <a href="http://www.salesforce.com/live">Salesforce Live</a> has a weekly series with many interesting guests on the Road to Dreamforce.  For example, you can see Ravi Belani (Managing Director, Alchemist Accelerator) discuss the new Entrepreneur Track, while our Developer Marketing Team details the new <a href="http://blogs.developerforce.com/developer-relations/2013/10/salesforce-one-million-dollar-hackathon.html">$1 million Hackathon competition</a> that was recently announced. Don’t worry if you miss an episode, you can <a href="http://www.salesforce.com/live/roadtodf13/">view all of the archived sessions here</a>.</p>
+<p><b>I’m sorry, did you just say a $1 million Hackathon at Dreamforce? So someone could actually build an app at Dreamforce and win a million dollars?</b><br />
+Yes, someone WILL build an app at Dreamforce and make a million dollars!  And who has more experience building killer apps than our ISV partners? Are you listening out there, ISVs?!</p>
+<p><b>OK, now for the most important question, will there be early (Thursday) morning sessions after the AppBash on Wednesday night?</b><br />
+[Laugh] No, not this year.  We have learned our lesson, partners! No ISV Success sessions on Thursday morning, just to give you guys a little extra sleep (if you plan on sleeping, that is!)</p>
+<p><b>Where can partners go to get more information about the ISV sessions this year?</b><br />
+OK, Here is the breakdown of all of the links &amp; resources:<br />
+<a href="https://dreamevent.my.salesforce.com/apex/ActivityList">Dreamforce App</a> &#8211; has all of the current times and locations (search for sessions)<br />
+<a href="http://p.force.com/df13sessions">DF13 Partner Session Guide</a> – a list of all of the recommended partner sessions<br />
+<a href="http://p.force.com/dreamforce">Dreamforce for Partners</a> – other important links for partners (portal login required)</p>
+<p>We’ll see you all starting with the <a href="https://dreamevent.my.salesforce.com/a093000000WvSnXAAV">AppExchange Partner Keynote</a> at 9am PT on Monday morning (Nov. 18) in the Gateway Ballroom!</p>
+<img src="http://feeds.feedburner.com/~r/SforceBlog/~4/dnqlPTwJxjM" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://blogs.developerforce.com/isv/2013/10/a-users-guide-to-appexchange-partner-sessions-at-dreamforce.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://blogs.developerforce.com/isv/2013/10/a-users-guide-to-appexchange-partner-sessions-at-dreamforce.html</feedburner:origLink></item>
+	</channel>
+</rss>

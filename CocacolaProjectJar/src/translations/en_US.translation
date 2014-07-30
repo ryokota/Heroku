@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- Be sure to explore the sample project, &quot;HOWTO: Get Started with Milestones PM&quot;. --></label>
+        <name>BeSureToExploreTheSampleProject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Button_Submit --></label>
+        <name>Button_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label>Edit</label>
+        <name>CC_Header</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestoneのTaskでのメール送信制御 --></label>
+        <name>CC_MilestoneTask_SendMail_Flg</name>
+    </customLabels>
+    <customLabels>
+        <label>All User List</label>
+        <name>CC_allUserList</name>
+    </customLabels>
+    <customLabels>
+        <label>Cancel</label>
+        <name>CC_btn_cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>Save</label>
+        <name>CC_btn_save</name>
+    </customLabels>
+    <customLabels>
+        <label>Selected User List</label>
+        <name>CC_selectedUserList</name>
+    </customLabels>
+    <customLabels>
+        <label>Delays</label>
+        <name>CC_title_Delays</name>
+    </customLabels>
+    <customLabels>
+        <label>Estimates</label>
+        <name>CC_title_Estimates</name>
+    </customLabels>
+    <customLabels>
+        <label>CC User Name</label>
+        <name>CC_title_UserName</name>
+    </customLabels>
+    <customLabels>
+        <label>Blocked</label>
+        <name>CC_title_blocked</name>
+    </customLabels>
+    <customLabels>
+        <label>Information</label>
+        <name>CC_title_info</name>
+    </customLabels>
+    <customLabels>
+        <label>CC User List</label>
+        <name>CC_title_userList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CapitalExpenditureSTD_01 --></label>
+        <name>CapitalExpenditureSTD_01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capital Detail Guidelines --></label>
+        <name>Capital_Detail_Guidelines</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click Here --></label>
+        <name>ClickHere</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click here to initialize this app --></label>
+        <name>ClickHereToInitializeThisApp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community --></label>
+        <name>Community</name>
+    </customLabels>
+    <customLabels>
+        <label>You can not edit this task without completing the preceding tasks.</label>
+        <name>Custom_Milestone_PreTaskComplete_err</name>
+    </customLabels>
+    <customLabels>
+        <label>Info</label>
+        <name>Custom_Milestone_Role_Info</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Info_En --></label>
+        <name>Custom_Milestone_Role_Info_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Info_Jp --></label>
+        <name>Custom_Milestone_Role_Info_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label>Project Manager</label>
+        <name>Custom_Milestone_Role_PM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_PM_En --></label>
+        <name>Custom_Milestone_Role_PM_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_PM_Jp --></label>
+        <name>Custom_Milestone_Role_PM_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label>Staff</label>
+        <name>Custom_Milestone_Role_Staff</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Staff_En --></label>
+        <name>Custom_Milestone_Role_Staff_En</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom_Milestone_Role_Staff_Jp --></label>
+        <name>Custom_Milestone_Role_Staff_Jp</name>
+    </customLabels>
+    <customLabels>
+        <label>Can not create excess of 7 hierarchy.</label>
+        <name>Custom_Milestone_Task_err_three</name>
+    </customLabels>
+    <customLabels>
+        <label>Not have permission to Create</label>
+        <name>Custom_Milestone_err_create</name>
+    </customLabels>
+    <customLabels>
+        <label>Not have permission to Delete</label>
+        <name>Custom_Milestone_err_del</name>
+    </customLabels>
+    <customLabels>
+        <label>Not have permission to Edit</label>
+        <name>Custom_Milestone_err_edit</name>
+    </customLabels>
+    <customLabels>
+        <label>Not have permission</label>
+        <name>Custom_Milestone_err_permission</name>
+    </customLabels>
+    <customLabels>
+        <label>(Project Manager / Record Owner) can only be add</label>
+        <name>Custom_Milestone_err_pm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Chatter Note --></label>
+        <name>Evernote__Chatter_Note</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FR1.70 --></label>
+        <name>FR1_70</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- For community assistance with Milestones PM, please visit &lt;a href=&quot;http://succes --></label>
+        <name>ForCommunityAssistance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Getting Help --></label>
+        <name>GettingHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- IMPORTANT --></label>
+        <name>ImportantUpper</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialization Complete! --></label>
+        <name>InitializationComplete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialize your configuration using the button below. --></label>
+        <name>InitializeYourConfiguration</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- &lt;a href=&quot;http://blogs.developerforce.com/labs/2011/08/howto-contribute-to-milest --></label>
+        <name>LearnMore</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ALiasNotFound --></label>
+        <name>Milestone1_ALiasNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AllItems --></label>
+        <name>Milestone1_AllItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AllOpenTasks --></label>
+        <name>Milestone1_AllOpenTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AnErrorHasOcurred --></label>
+        <name>Milestone1_AnErrorHasOcurred</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back --></label>
+        <name>Milestone1_Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blocked Tasks --></label>
+        <name>Milestone1_BlockedTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blocked_Tasks --></label>
+        <name>Milestone1_Blocked_Tasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Calendar --></label>
+        <name>Milestone1_Calendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CalendarLegend --></label>
+        <name>Milestone1_CalendarLegend</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>Milestone1_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Check &quot;Active&quot; --></label>
+        <name>Milestone1_CheckActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click &quot;New Email Service&quot;. --></label>
+        <name>Milestone1_ClickNewEmailService</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click &quot;Save and New Email Address&quot;. --></label>
+        <name>Milestone1_ClickSaveAndNewEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Content is not allowed in prolog. --></label>
+        <name>Milestone1_ContentIsNotAllowedInProlog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CurrentExport --></label>
+        <name>Milestone1_CurrentExport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DidNotMatch --></label>
+        <name>Milestone1_DidNotMatch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EnterAcommand --></label>
+        <name>Milestone1_EnterAcommand</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expenses --></label>
+        <name>Milestone1_Expenses</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Filter --></label>
+        <name>Milestone1_Filter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FilterCalendarBy --></label>
+        <name>Milestone1_FilterCalendarBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_FilterProjectBy --></label>
+        <name>Milestone1_FilterProjectBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Friday --></label>
+        <name>Milestone1_Friday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FromUsersNotFound --></label>
+        <name>Milestone1_FromUsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Full Month --></label>
+        <name>Milestone1_FullMonth</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FullView --></label>
+        <name>Milestone1_FullView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Getting Started --></label>
+        <name>Milestone1_GettingStarted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Give a Email Service Name &quot;Email To Milestone Task&quot;. --></label>
+        <name>Milestone1_GiveEmailServiceName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go to Setup -&gt; Develop -&gt; Email Services --></label>
+        <name>Milestone1_GoToSetupDevelopEmailServices</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import --></label>
+        <name>Milestone1_Import</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Failed - -  Milestone was unable to import your file. --></label>
+        <name>Milestone1_ImportFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ImportLocalTemplateXML --></label>
+        <name>Milestone1_ImportLocalTemplateXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Template --></label>
+        <name>Milestone1_ImportTemplate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ImportTemplateXML --></label>
+        <name>Milestone1_ImportTemplateXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_InactiveUsersError --></label>
+        <name>Milestone1_InactiveUsersError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incomplete Tasks By Priority --></label>
+        <name>Milestone1_IncompleteTasksByPriority</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incomplete Tasks By Projects --></label>
+        <name>Milestone1_IncompleteTasksByProjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient privileges to access project. --></label>
+        <name>Milestone1_InsufficientPrivileges</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient privileges to access parent milestone. --></label>
+        <name>Milestone1_InsufficientPrivilegesToAccessParentMilestone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidName --></label>
+        <name>Milestone1_InvalidName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidVersion --></label>
+        <name>Milestone1_InvalidVersion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Late Tasks --></label>
+        <name>Milestone1_LateTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading --></label>
+        <name>Milestone1_Loading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logs --></label>
+        <name>Milestone1_Logs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MainMenu --></label>
+        <name>Milestone1_MainMenu</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MaximumPer --></label>
+        <name>Milestone1_MaximumPer</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone Application Post Installation Instructions --></label>
+        <name>Milestone1_MilestoneApplicationPostInstallation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestoneClone --></label>
+        <name>Milestone1_MilestoneClone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone is Complete, the Task can not be moved --></label>
+        <name>Milestone1_MilestoneIsComplete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestoneRecordsToMove --></label>
+        <name>Milestone1_MilestoneRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- A milestone you are attempting to move is already assigned to this project. Plea --></label>
+        <name>Milestone1_MilestoneYouAreAttempting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones --></label>
+        <name>Milestone1_Milestones</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestonesCalendar --></label>
+        <name>Milestone1_MilestonesCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MilestonesOpenTasks --></label>
+        <name>Milestone1_MilestonesOpenTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones should not be moved to different Projects, except through the &quot;Move t --></label>
+        <name>Milestone1_MilestonesShouldNotBeMoved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Monday --></label>
+        <name>Milestone1_Monday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneCancel --></label>
+        <name>Milestone1_MoveMilestoneCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneRecordsToMove --></label>
+        <name>Milestone1_MoveMilestoneRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneS --></label>
+        <name>Milestone1_MoveMilestoneS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestoneSave --></label>
+        <name>Milestone1_MoveMilestoneSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_Cancel --></label>
+        <name>Milestone1_MoveMilestone_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_Save --></label>
+        <name>Milestone1_MoveMilestone_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveMilestone_s --></label>
+        <name>Milestone1_MoveMilestone_s</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskCancel --></label>
+        <name>Milestone1_MoveTaskCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailAttachmentsRecords --></label>
+        <name>Milestone1_MoveTaskDetailAttachmentsRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailCancel --></label>
+        <name>Milestone1_MoveTaskDetailCancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailS --></label>
+        <name>Milestone1_MoveTaskDetailS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailSave --></label>
+        <name>Milestone1_MoveTaskDetailSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskDetailTaskRecordsToMove --></label>
+        <name>Milestone1_MoveTaskDetailTaskRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskRecordsToMove --></label>
+        <name>Milestone1_MoveTaskRecordsToMove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskS --></label>
+        <name>Milestone1_MoveTaskS</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MoveTaskSave --></label>
+        <name>Milestone1_MoveTaskSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- My Incomplete Tasks --></label>
+        <name>Milestone1_MyIncompleteTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyMilestonesOnly --></label>
+        <name>Milestone1_MyMilestonesOnly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyProjectsAndSubProjectItems --></label>
+        <name>Milestone1_MyProjectsAndSubProjectItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyTasks --></label>
+        <name>Milestone1_MyTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MyTasksOnly --></label>
+        <name>Milestone1_MyTasksOnly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestone1_NewFieldToReplaceInactiveUsers --></label>
+        <name>Milestone1_NewFieldToReplaceInactiveUsers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewMilestoneName --></label>
+        <name>Milestone1_NewMilestoneName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewProjectName --></label>
+        <name>Milestone1_NewProjectName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No import XML files selected. Please select an XML file to import. --></label>
+        <name>Milestone1_NoImportXMLFilesSelected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No projects! --></label>
+        <name>Milestone1_NoProjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrganizationsVersion --></label>
+        <name>Milestone1_OrganizationsVersion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OverdueTasks --></label>
+        <name>Milestone1_OverdueTasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PleaseUseFormat --></label>
+        <name>Milestone1_PleaseUseFormat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectCannotBeNull --></label>
+        <name>Milestone1_ProjectCannotBeNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectClone --></label>
+        <name>Milestone1_ProjectClone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectDetail --></label>
+        <name>Milestone1_ProjectDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectIsTooLarge --></label>
+        <name>Milestone1_ProjectIsTooLarge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectXML --></label>
+        <name>Milestone1_ProjectXML</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectXMLImport --></label>
+        <name>Milestone1_ProjectXMLImport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Projects --></label>
+        <name>Milestone1_Projects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectsCalendar --></label>
+        <name>Milestone1_ProjectsCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProjectsMustBeExported --></label>
+        <name>Milestone1_ProjectsMustBeExported</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- QuickSearch --></label>
+        <name>Milestone1_QuickSearch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RegexFwdRe --></label>
+        <name>Milestone1_RegexFwdRe</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SalesforceDMLError --></label>
+        <name>Milestone1_SalesforceDMLError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Saturday --></label>
+        <name>Milestone1_Saturday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>Milestone1_Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select the Apex Class &quot;Milestone1_Email_Handler&quot;. --></label>
+        <name>Milestone1_SelectTheApexClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set &quot;Accept Attachments&quot; to &quot;All&quot;. --></label>
+        <name>Milestone1_SetAcceptAttachmentsToAll</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set &quot;Accept Email From&quot; to &quot;All Email Addresses&quot;. --></label>
+        <name>Milestone1_SetAcceptEmailFromToAllEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set All Failure Response options to &apos;Bounce Message&apos;. --></label>
+        <name>Milestone1_SetAllFailureResponseOptions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Settings already exist.  No changes made. --></label>
+        <name>Milestone1_SettingsAlreadyExistNoChanges</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Setup A New Email Address. --></label>
+        <name>Milestone1_SetupNewEmailAddress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sub-milestones can only go one level deep. Please select a top-level milestone a --></label>
+        <name>Milestone1_SubMilestonesCanOnlyGoOneLevelDeep</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissing --></label>
+        <name>Milestone1_SubjectMissing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissingAlias --></label>
+        <name>Milestone1_SubjectMissingAlias</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubjectMissingTask --></label>
+        <name>Milestone1_SubjectMissingTask</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submit --></label>
+        <name>Milestone1_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Summary --></label>
+        <name>Milestone1_Summary</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SummarySearch --></label>
+        <name>Milestone1_SummarySearch</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sunday --></label>
+        <name>Milestone1_Sunday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TaskNotFound --></label>
+        <name>Milestone1_TaskNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- A task you are attempting to move is already assigned to this milestone. Please --></label>
+        <name>Milestone1_TaskYouAreAttempting</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tasks --></label>
+        <name>Milestone1_Tasks</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TasksCalendar --></label>
+        <name>Milestone1_TasksCalendar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The Project cannot be null. This is a critical error during import of XML. Pleas --></label>
+        <name>Milestone1_TheProjectCannotBeNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The XML file for your project has been successfully created, and can be found in --></label>
+        <name>Milestone1_TheXMLFileForYourProjectHasBeenSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- The XML file is too large. --></label>
+        <name>Milestone1_TheXMLFileIsTooLarge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thealias --></label>
+        <name>Milestone1_Thealias</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Thursday --></label>
+        <name>Milestone1_Thursday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Times --></label>
+        <name>Milestone1_Times</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- To configure the Email To Task Service --></label>
+        <name>Milestone1_ToConfigureTheEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ToUsersNotFound --></label>
+        <name>Milestone1_ToUsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click here --></label>
+        <name>Milestone1_ToViewXML_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to view the XML file in the My Personal Documents folder. --></label>
+        <name>Milestone1_ToViewXML_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Click here --></label>
+        <name>Milestone1_ToYourProject_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to return to your project. --></label>
+        <name>Milestone1_ToYourProject_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Top Level Milestone has predecessor and cannot be moved.  Remove that predecesso --></label>
+        <name>Milestone1_TopLevelMilestoneHasPredecessor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Top Level Milestone has successors and cannot be moved.  Redirect those successo --></label>
+        <name>Milestone1_TopLevelMilestoneHasSuccessors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tuesday --></label>
+        <name>Milestone1_Tuesday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UsersNotFound --></label>
+        <name>Milestone1_UsersNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Wednesday --></label>
+        <name>Milestone1_Wednesday</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your project could not successfully be exported to an XML document. --></label>
+        <name>Milestone1_YourProjectCouldNotSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones PM is Open Source software. --></label>
+        <name>MilestonesPMISOpenSource</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Milestones PM is unsupported. --></label>
+        <name>MilestonesPMIsUnsupported</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next Steps --></label>
+        <name>NextSteps</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Project Summary Page --></label>
+        <name>ProjectSummary_FirstHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- to start using Milestones PM. --></label>
+        <name>ProjectSummary_SecondHalf</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalBox00 --></label>
+        <name>RFA_ApprovalBox00</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalBox01 --></label>
+        <name>RFA_ApprovalBox01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting01 --></label>
+        <name>RFA_ApprovalRouting01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting02 --></label>
+        <name>RFA_ApprovalRouting02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting03 --></label>
+        <name>RFA_ApprovalRouting03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting04 --></label>
+        <name>RFA_ApprovalRouting04</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting05 --></label>
+        <name>RFA_ApprovalRouting05</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting06 --></label>
+        <name>RFA_ApprovalRouting06</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ApprovalRouting07 --></label>
+        <name>RFA_ApprovalRouting07</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA ApproverList Record --></label>
+        <name>RFA_ApproverList_Record</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC1 --></label>
+        <name>RFA_BOD_CC1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC2 --></label>
+        <name>RFA_BOD_CC2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC3 --></label>
+        <name>RFA_BOD_CC3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_BOD_CC4 --></label>
+        <name>RFA_BOD_CC4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Button_Cancel --></label>
+        <name>RFA_Button_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Button_CloseRFA --></label>
+        <name>RFA_Button_CloseRFA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Button_ReturntoRequester --></label>
+        <name>RFA_Button_ReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Button_SendtoCirculation --></label>
+        <name>RFA_Button_SendtoCirculation</name>
+    </customLabels>
+    <customLabels>
+        <label>Show Approval Status</label>
+        <name>RFA_Button_ShowApprovers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Button_Submit --></label>
+        <name>RFA_Button_Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approval Submission Button Label --></label>
+        <name>RFA_CL010</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete RFA Button Label --></label>
+        <name>RFA_CL011</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Completion Memo Button Label --></label>
+        <name>RFA_CL012</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL0133 --></label>
+        <name>RFA_CL0133</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL026 --></label>
+        <name>RFA_CL026</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL043 --></label>
+        <name>RFA_CL043</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL044 --></label>
+        <name>RFA_CL044</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL045 --></label>
+        <name>RFA_CL045</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL046 --></label>
+        <name>RFA_CL046</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL047 --></label>
+        <name>RFA_CL047</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL048 --></label>
+        <name>RFA_CL048</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL049 --></label>
+        <name>RFA_CL049</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Small Project Request ( 25MM＜≦50MM ) --></label>
+        <name>RFA_CL050</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Capital Project Request --></label>
+        <name>RFA_CL051</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL057 --></label>
+        <name>RFA_CL057</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approver List is not ordered properly --></label>
+        <name>RFA_CL061</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Please add Approvers to the process before submitting it for Approval --></label>
+        <name>RFA_CL062</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- There should be either Approvers OR Reviewers to push the RFA into Circulation --></label>
+        <name>RFA_CL063</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cash Spent Additional Years --></label>
+        <name>RFA_CL070</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Process has already been submitted for Approval --></label>
+        <name>RFA_CL071</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL086 --></label>
+        <name>RFA_CL086</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL087 --></label>
+        <name>RFA_CL087</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL088 --></label>
+        <name>RFA_CL088</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL089 --></label>
+        <name>RFA_CL089</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL090 --></label>
+        <name>RFA_CL090</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL092 --></label>
+        <name>RFA_CL092</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL093 --></label>
+        <name>RFA_CL093</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL094 --></label>
+        <name>RFA_CL094</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL095 --></label>
+        <name>RFA_CL095</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL096 --></label>
+        <name>RFA_CL096</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL097 --></label>
+        <name>RFA_CL097</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You do not have permission to override the stage. --></label>
+        <name>RFA_CL100</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- https://fina- - sbtest1.cs9.my.salesforce.com --></label>
+        <name>RFA_CL103</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL107 --></label>
+        <name>RFA_CL107</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL111 --></label>
+        <name>RFA_CL111</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL112 --></label>
+        <name>RFA_CL112</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL113 --></label>
+        <name>RFA_CL113</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL118 --></label>
+        <name>RFA_CL118</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL119 --></label>
+        <name>RFA_CL119</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL123 --></label>
+        <name>RFA_CL123</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL124 --></label>
+        <name>RFA_CL124</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL125 --></label>
+        <name>RFA_CL125</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL126 --></label>
+        <name>RFA_CL126</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL127 --></label>
+        <name>RFA_CL127</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL128 --></label>
+        <name>RFA_CL128</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL129 --></label>
+        <name>RFA_CL129</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CL130 --></label>
+        <name>RFA_CL130</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Org Wide Email Address --></label>
+        <name>RFA_CL131</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BCC in case of error in PC Realignment --></label>
+        <name>RFA_CL132</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL134 --></label>
+        <name>RFA_CL134</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL135 --></label>
+        <name>RFA_CL135</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL136 --></label>
+        <name>RFA_CL136</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL137 --></label>
+        <name>RFA_CL137</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL138 --></label>
+        <name>RFA_CL138</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CL139 --></label>
+        <name>RFA_CL139</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approver --></label>
+        <name>RFA_CL140</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info Copy Only --></label>
+        <name>RFA_CL141</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Primary Point of Contact --></label>
+        <name>RFA_CL142</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA lookup field ID --></label>
+        <name>RFA_CL144</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce ID of RFA Approver/User custom Object --></label>
+        <name>RFA_CL145</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_CapitalExpenditure_Guideline --></label>
+        <name>RFA_CapitalExpenditure_Guideline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA CapitalMgmt Approver 1 --></label>
+        <name>RFA_CapitalMgmt_Approver_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Capital Fix Asset Mgr --></label>
+        <name>RFA_Capital_Fix_Asset_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Capital Treasury Mgr --></label>
+        <name>RFA_Capital_Treasury_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Delete Flag --></label>
+        <name>RFA_Delete_Flag</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email BoardApproval --></label>
+        <name>RFA_Email_BoardApproval</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email CloseRFA --></label>
+        <name>RFA_Email_CloseRFA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email CompleteRFA --></label>
+        <name>RFA_Email_CompleteRFA</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email ResumefromReturntoRequester --></label>
+        <name>RFA_Email_ResumefromReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Email ReturntoRequester --></label>
+        <name>RFA_Email_ReturntoRequester</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_AssignPPOC_Approver --></label>
+        <name>RFA_ErrorMsg_AssignPPOC_Approver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_Attachment --></label>
+        <name>RFA_ErrorMsg_Attachment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_CapitalExpenditureNumber --></label>
+        <name>RFA_ErrorMsg_CapitalExpenditureNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_CommentRQ --></label>
+        <name>RFA_ErrorMsg_CommentRQ</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_DeleteCM_Mgr --></label>
+        <name>RFA_ErrorMsg_DeleteCM_Mgr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_MissingData --></label>
+        <name>RFA_ErrorMsg_MissingData</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_NoEditPermission --></label>
+        <name>RFA_ErrorMsg_NoEditPermission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_PPOC --></label>
+        <name>RFA_ErrorMsg_PPOC</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_RQAmount_3year --></label>
+        <name>RFA_ErrorMsg_RQAmount_3year</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_RQAmount_CapitalR --></label>
+        <name>RFA_ErrorMsg_RQAmount_CapitalR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_ReturnReason --></label>
+        <name>RFA_ErrorMsg_ReturnReason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_ErrorMsg_SelectRecommendation --></label>
+        <name>RFA_ErrorMsg_SelectRecommendation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.50 --></label>
+        <name>RFA_FR1_50</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.51_01 --></label>
+        <name>RFA_FR1_51_01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.51_02 --></label>
+        <name>RFA_FR1_51_02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_FR1.89 --></label>
+        <name>RFA_FR1_89</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA History --></label>
+        <name>RFA_History</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_CapitalExpenditureUpdate --></label>
+        <name>RFA_Msg_CapitalExpenditureUpdate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_CloseReason --></label>
+        <name>RFA_Msg_CloseReason</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_Confirmation --></label>
+        <name>RFA_Msg_Confirmation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_EJComment_Approval --></label>
+        <name>RFA_Msg_EJComment_Approval</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_EJComment_Circulation --></label>
+        <name>RFA_Msg_EJComment_Circulation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_SelectApprover --></label>
+        <name>RFA_Msg_SelectApprover</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Msg_SelectApprover2 --></label>
+        <name>RFA_Msg_SelectApprover2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Override01 --></label>
+        <name>RFA_Override01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Override02 --></label>
+        <name>RFA_Override02</name>
+    </customLabels>
+    <customLabels>
+        <label>Attendees</label>
+        <name>RFA_PDF_Attendees</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Benefits / Financial Metrics / Assumptions --></label>
+        <name>RFA_PDF_Benefits_Financial_Metrics_Assumptions</name>
+    </customLabels>
+    <customLabels>
+        <label>Business Case Financials</label>
+        <name>RFA_PDF_Business_Case_Financials</name>
+    </customLabels>
+    <customLabels>
+        <label>COA Category</label>
+        <name>RFA_PDF_COA_Category</name>
+    </customLabels>
+    <customLabels>
+        <label>Capital Request Details</label>
+        <name>RFA_PDF_Capital_Request_Details</name>
+    </customLabels>
+    <customLabels>
+        <label>Cost Estimates</label>
+        <name>RFA_PDF_Cost_Estimates</name>
+    </customLabels>
+    <customLabels>
+        <label>Costs</label>
+        <name>RFA_PDF_Costs</name>
+    </customLabels>
+    <customLabels>
+        <label>Detailed Business Trip Information</label>
+        <name>RFA_PDF_Detailed_Business_Trip_Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Detailed Entertainment Information --></label>
+        <name>RFA_PDF_Detailed_Entertainment_Information</name>
+    </customLabels>
+    <customLabels>
+        <label>General Information</label>
+        <name>RFA_PDF_General_Information</name>
+    </customLabels>
+    <customLabels>
+        <label>In the case of overseas trip, please fill in fields below for insurance purpose.</label>
+        <name>RFA_PDF_In_the_case_of_overseas_trip_please_fill_in_fields_below_for_insurance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NotesAndAttachments --></label>
+        <name>RFA_PDF_NotesAndAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label>Objectives/Rationale/Background</label>
+        <name>RFA_PDF_Objectives_Rationale_Background</name>
+    </customLabels>
+    <customLabels>
+        <label>Other Considerations</label>
+        <name>RFA_PDF_Other_Considerations</name>
+    </customLabels>
+    <customLabels>
+        <label>Other Supporting Documents</label>
+        <name>RFA_PDF_Other_Supporting_Documents</name>
+    </customLabels>
+    <customLabels>
+        <label>RFA Approvers/Users</label>
+        <name>RFA_PDF_RFA_Approvers_Users</name>
+    </customLabels>
+    <customLabels>
+        <label>Remarks</label>
+        <name>RFA_PDF_Remarks</name>
+    </customLabels>
+    <customLabels>
+        <label>Request Details</label>
+        <name>RFA_PDF_Request_Details</name>
+    </customLabels>
+    <customLabels>
+        <label>Risks and Alternatives</label>
+        <name>RFA_PDF_Risks_and_Alternatives</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Three Year Cash Spend --></label>
+        <name>RFA_PDF_Three_Year_Cash_Spend</name>
+    </customLabels>
+    <customLabels>
+        <label>Where the costs per person exceed ¥15,000, please provide further explanation.</label>
+        <name>RFA_PDF_Where_the_costs_per_person_exceed_15_000_please_provide_further</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA Project Finance --></label>
+        <name>RFA_Project_Finance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_RQClose01 --></label>
+        <name>RFA_RQClose01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_RQClose02 --></label>
+        <name>RFA_RQClose02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_RQClose03 --></label>
+        <name>RFA_RQClose03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Recommendation01 --></label>
+        <name>RFA_Recommendation01</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Recommendation02 --></label>
+        <name>RFA_Recommendation02</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Recommendation03 --></label>
+        <name>RFA_Recommendation03</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Recommendation04 --></label>
+        <name>RFA_Recommendation04</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA_Recommendation05 --></label>
+        <name>RFA_Recommendation05</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RFA System --></label>
+        <name>RFA_System</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Small Request Guidelines --></label>
+        <name>Small_Request_Guidelines</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Start creating your first project. --></label>
+        <name>StartCreatingYourFirstProject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- This sample project includes the remaining configuration steps as well as ideas --></label>
+        <name>ThisSampleProjectIncludes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- To submit ideas or issues, please visit &lt;a href=&quot;https://github.com/ForceDotComL --></label>
+        <name>ToSubmitIdeasOrIssues</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View the &quot;Getting Started&quot; project created as part of your initial configuration --></label>
+        <name>ViewTheGettingStartedProject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- We welcome your issue reports, ideas, documentation, code tweaks and all other p --></label>
+        <name>WeWelcomeYourIssueReports</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Welcome to Milestones PM - Project Management --></label>
+        <name>WelcomeToMilestonesPM</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- You can now go to your project summary page to see the sample project we install --></label>
+        <name>YouCanNowGoTo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Your next few steps are easy. --></label>
+        <name>YourNextFewSteps</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Matrix Report --></label>
+        <name>Matrix_Report</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Getting Started --></label>
+        <name>Milestone1_Getting_Started</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Import Template --></label>
+        <name>Milestone1_Import_Project_Template</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Summary --></label>
+        <name>Milestone1_Summary</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Calendar --></label>
+        <name>Milestone_Calendar</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- テーブル設定取得 --></label>
+        <name>SetupCheckVFTab</name>
+    </customTabs>
+</Translations>

@@ -1,0 +1,73 @@
+<apex:page standardcontroller="Milestone1_Task__c" extensions="Milestone_CC_MultiselectController" ><apex:pageMessages />
+    <apex:sectionheader title="{!$ObjectType.Milestone1_Task__c.label} {!$Label.CC_Header}" subtitle="{!IF(ISNULL(Milestone1_Task__c.name), 'New Task',Milestone1_Task__c.name)}"/>
+    <apex:form >
+        <apex:pageblock mode="edit" title="{!$ObjectType.Milestone1_Task__c.label} {!$Label.CC_Header}">
+            <apex:pageblockbuttons >
+                <apex:message for="btn_save" />
+                <apex:commandbutton value="{!$Label.CC_btn_save}" action="{!Save}" id="btn_save"/>
+                <apex:commandbutton value="{!$Label.CC_btn_cancel}" action="{!Cancel}"/>
+            </apex:pageblockbuttons>
+            <apex:outputpanel >
+                <apex:pageblocksection title="{!$Label.CC_title_info}" showheader="true" columns="2">
+                    <apex:inputfield value="{!Milestone1_Task__c.Name}" required="true"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Assigned_To__c}" required="false"/>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >{!$ObjectType.Milestone1_Task__c.Fields.Project_Milestone__c.Label}</apex:outputLabel>
+                        <apex:actionRegion >
+                            <apex:inputfield styleclass="height:20px;padding-top:5px" value="{!Milestone1_Task__c.Project_Milestone__c}" required="true">
+                                <apex:actionSupport event="onchange" action="{!userTeamList}" reRender="id_MultiSelect" />
+                            </apex:inputfield>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                    <apex:inputfield value="{!Milestone1_Task__c.Accountable_Owner__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Parent_Task__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Start_Date__c}" required="false"/>
+                    <apex:inputTextarea rows="3" cols="40" value="{!Milestone1_Task__c.Description__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Due_Date__c}" required="false"/>
+                    
+                    <apex:inputfield value="{!Milestone1_Task__c.Priority__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Task_Stage__c}" required="false"/>
+                    <apex:outputfield value="{!Milestone1_Task__c.Short_ID__c}"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Last_Email_Received__c}" required="false"/>
+                    <!-- <apex:inputfield value="{!Milestone1_Task__c.Complete__c}" required="false"/> -->
+                    <!-- <apex:inputfield value="{!Milestone1_Task__c.Class__c}" required="false"/> -->
+                    <!-- <apex:inputfield value="{!Milestone1_Task__c.Members__c}" required="false"/> -->
+                    <apex:inputfield value="{!Milestone1_Task__c.Pre_Dependency__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Progress_picklist__c}" required="true"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Next_Dependency__c}" required="false"/>
+                    <apex:inputTextarea rows="3" cols="40" value="{!Milestone1_Task__c.Progress_Description__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Task_Status__c}" required="true"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="{!$Label.CC_title_userList}" showheader="true">
+                    <table align="right" width="100%">
+                        <tr>
+                            <td width="200px">　</td>
+                            <td align="right"><div style="width:100px;">
+                                <c:Milestone_CC_MultiSelectPickList id="id_MultiSelect" leftLabel="{!$Label.CC_allUserList}"
+                                    leftOption="{!allUsers}"
+                                    rightLabel="{!$Label.CC_selectedUserList}"
+                                    rightOption="{!selectedUsers}"
+                                    size="14"
+                                    width="150px"/></div>
+                            </td>
+                        </tr>
+                    </table>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="{!$Label.CC_title_Delays}" showheader="true" columns="1">
+                    <apex:inputfield value="{!Milestone1_Task__c.Delays_Date__c}" required="false"/>
+                    <apex:inputTextarea rows="5" cols="100" value="{!Milestone1_Task__c.Missed_Deadline_explanation__c}" required="false"/>
+                    <apex:inputTextarea rows="5" cols="100" value="{!Milestone1_Task__c.Plan_to_address_delays__c}" required="false"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="{!$Label.CC_title_blocked}" showheader="true" columns="2">
+                    <apex:inputfield value="{!Milestone1_Task__c.Blocked__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Blocked_Reason__c}" required="false"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="{!$Label.CC_title_Estimates}" showheader="true" columns="2">
+                    <apex:inputfield value="{!Milestone1_Task__c.Estimated_Hours__c}" required="false"/>
+                    <apex:inputfield value="{!Milestone1_Task__c.Estimated_Expense__c}" required="false"/>
+                </apex:pageblocksection>
+            </apex:outputpanel>
+        </apex:pageblock>
+        <apex:inputHidden value="{!Milestone1_Task__c.ProjectId__c}" />
+    </apex:form>
+</apex:page>

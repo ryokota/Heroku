@@ -1,0 +1,10 @@
+<apex:page >
+
+<!--タイトル-->
+<apex:sectionheader title=" 部のサマリー"></apex:sectionheader>
+<P style="padding-bottom:10px"></P>
+
+<c:ClippingReport reportUrl="/00O10000002zDWb" reportTitle="チーム別の受注状況"/>
+<c:ClippingReport reportUrl="/00O10000002zEu1" reportTitle="未決定の優先A案件"/>
+<c:ClippingReport reportUrl="/00O10000002zDas" reportTitle="延長確認進捗状況　全チーム表示ですいません"/>
+</apex:page>

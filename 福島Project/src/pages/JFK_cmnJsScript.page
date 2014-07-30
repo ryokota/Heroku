@@ -1,0 +1,130 @@
+<apex:page >
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        function fncScript(e, clickedClose) {
+                if (clickedClose) {
+               window.close();
+//          } else {
+//              alert('閉じるボタンを押下して画面を閉じてください。');
+//               setTimeout (function() { e.focus(); e.select();}, 200);                        
+            }
+        } 
+
+                // jQuery動作確認お試し用
+        $(function() {
+             //$('.form').effect('bounce', '', 500);
+        });
+        
+        /*
+         * confirmDelete
+         * 引数 ：
+         * 戻り値：
+         * 概要 ：
+         */
+        function confirmDelete() {
+            return confirm('削除します。よろしいですか?');
+        }
+
+        /*
+         * confirmTokusashi
+         * 引数 ：
+         * 戻り値：
+         * 概要 ：
+         */
+        function confirmTokusashi() {
+            return confirm('特差を実行します。よろしいですか?');
+        }
+
+        /*
+         * showMDScreen
+         * 引数 ：
+         * 戻り値：
+         * 概要 ：
+         */
+        function showMDScreen(jigyoshoTRParentId) {
+            window.open('/apex/JFK_MD'
+                      + '?jigyoshoTRParentId=' + jigyoshoTRParentId
+                       ,'MD'
+                       ,'height=410px, width=1200px');
+            return true;
+        }
+
+        /*
+         * showJTLScreen
+         * 引数 ：
+         * 戻り値：
+         * 概要 ：
+         */
+        function showJTLScreen(jigyoshoTRId) {
+            window.open('/apex/JFK_JTL'
+                      + '?jigyoshoTRId=' + jigyoshoTRId
+                       ,'JTL'
+                       ,'height=600px, width=660px');
+            return false;
+        }
+
+       /*
+        * showYSScreen
+        * 引数 ：
+        * 戻り値：
+        * 概要 ：
+        */
+        function showYSScreen(isShowScreen, jigyosyoTRId, rodosyaTRId) {
+            if (isShowScreen) {
+                window.open('/apex/JFK_YS'
+                            + '?rodosyaTRId=' + rodosyaTRId
+                            + '&jigyosyoTRId=' + jigyosyoTRId 
+                             ,'YS'
+                             ,'height=270px, width=600px');
+            }
+            return false;
+        }
+
+            /*
+             * showHKScreen
+             * 引数 ：
+             * 戻り値：
+             * 概要 ：
+             */
+        function showHKScreen(jigyoshoTRId, tanto) {
+            window.open('/apex/JFK_HK'
+                      + '?jigyoshoTRId=' + jigyoshoTRId
+                      + '&tanto=' + tanto
+                       ,'HK'
+                       ,'height=600px, width=1200px');
+            return true;
+        }
+
+       /*
+        * showHMScreen
+        * 引数 ：
+        * 戻り値：
+        * 概要 ：
+        */
+        function showHMScreen(jigyoshoTRId) {
+            window.open('/apex/JFK_HM'
+                      + '?jigyoshoTRId=' + jigyoshoTRId
+                        ,'HM'
+                        ,'height=600px, width=620px');
+            return false;
+        }
+
+       /*
+        * showPTMKScreen
+        * 引数 ：
+        * 戻り値：
+        * 概要 ：
+        */
+        function showPTMKScreen(isShowScreen, rodosyaTRId) {
+            if (isShowScreen) {
+                window.open('/apex/JFK_PTMK'
+                          + '?rodosyaTRId=' + rodosyaTRId
+                           ,'PTMK'
+                           ,'height=450px, width=400px');
+            }
+            return false;
+        }
+
+        </script>
+</apex:page>

@@ -1,0 +1,95 @@
+<!-- 
+    The DynamicButton component implements commandLink for with similar styling
+    with that of standard salesforce command Button.
+    
+    HTML elements use the same classes as the native salesforce button, to keep
+    visual consistency in the UI.
+    
+    The compnent contains 2 type of commandlink, one which enables a confirm box
+    before processing an action and the ohter without the confirm box. The main
+    attribute which needs to be passed to this component is button Action. 
+    ButtonAction is of type ApexPages.Action with an associated action method in 
+    the parent controller.
+    
+    This component doesnot have its own controller class and relies on the parent
+    Page class where it is being used.
+
+ -->
+<!-- called from component: RFA_C07_PageButtonSection -->
+<apex:component >
+  
+      <apex:stylesheet value="{!$Resource.RFA_STR01_CustomStyleClass}"/>
+      <script src="/soap/ajax/24.0/connection.js"></script> 
+      <script src="/soap/ajax/24.0/apex.js"></script>
+      <script type="text/javascript">
+             
+        var rfaId = "{!$CurrentPage.parameters.Id}";
+        var hasError;
+        function parentLoadFromChild(hasError, errString)
+        {   
+           
+            var reloadUrl = "/"+ rfaId;
+            if(hasError == false)
+            {                 
+                 window.parent.location.href = reloadUrl;   
+            }else
+            {
+                // error has occured
+                alert(errString);    
+                
+            }
+        }
+        
+        //called from VF page: onclick="confirmSubmit('{!label}')        
+        function confirmSubmit(labelClicked)
+        {
+               
+            var agree = window.confirm({!$Label.RFA_Msg_Confirmation}
+            	//"よろしいですか？ / Are you Sure?"
+            	);
+            
+            if(agree)
+            {
+                callControllerMethod(labelClicked);
+                
+            }   
+            
+        }
+        
+        //called from : function confirmSubmit(labelClicked)
+        function callControllerMethod(labelClicked) 
+        {
+            
+            sforce.connection.sessionId = "{!$Api.Session_ID}";
+            var serializedMesg = sforce.apex.execute("RFA_AP17_RemoteActionController","performAction", {rfaId:rfaId,labelClicked:labelClicked});
+                
+            if(serializedMesg=="" || serializedMesg==null)
+            {
+                 hasError = false;  
+            
+            }else
+            {
+                hasError = true;
+            }
+            
+            parentLoadFromChild(hasError, serializedMesg);
+             
+        }
+ 
+      </script>
+      
+      <apex:attribute name="label" type="String" required="true" description="Button label to be displayed to the user"/>
+      <apex:attribute name="target" type="String" required="false" description="Page Redirect After Action complete"/>
+      <apex:attribute name="confirm" type="boolean" required="false" description="Boolean param to display the confirmation modal"/>
+      <apex:attribute name="labelClickedParam" type="String" required="true" description="Identifier for the button clicked by the user"/>
+      <apex:messages />
+            <apex:outputPanel layout="block" id="buttonBlock">
+                
+                                
+                <apex:commandLink value="{!label}" styleClass="sfButtonComponent"  style="text-decoration:none; display: block" rendered="{!confirm}" onclick="confirmSubmit('{!label}');">
+                
+                </apex:commandLink>
+                  
+           </apex:outputPanel>
+     
+</apex:component>

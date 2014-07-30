@@ -1,0 +1,128 @@
+<apex:page renderas="pdf" controller="Milestone_BI_MatrixReport2Ctrl" >
+<html><head>
+<style>
+
+</style>
+<apex:stylesheet value="{!URLFOR($Resource.CCEJReportLogo, 'cokeone.css')}"/>
+</head>
+<apex:repeat value="{!viewList}" var="vw">
+    
+    <table class="fullWidth">
+        <tr>
+            <td width="250"><apex:image url="{!URLFOR($Resource.CCEJReportLogo, 'cokeone-logo.png')}" width="170" height="130"/></td>
+            <td>
+                <h1><apex:outputText value="{!vw.projectName}"></apex:outputText></h1>
+                <table align="right">
+	                <tr>
+	                    <td style="margin-bottom: 20px;" align="right"><apex:outputText value="Project Status:{!vw.projectStatus}" rendered="{!vw.header}" style="background-color:{!vw.bgColor}"/></td>
+	                </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <apex:outputPanel rendered="{!vw.header}">
+    <apex:outputPanel >
+    <table class="borderTable fullWidth " id="ProjectTeam">
+        <tr>
+            <th>Project Team</th>
+            <th>Transformation (Integration KPI)</th>
+        </tr>
+        <tr>
+            <td width="355px" height="130px">
+                Sponsor: {!vw.projectSponsor}<br/>
+                Leader: {!vw.projectLeader}<br/>
+                Main Members: <br/>{!vw.projectMembers}
+            </td>
+            <td width="355px" height="130px"><apex:outputText escape="false" value="{!vw.transformation}" /></td>
+        </tr>
+    </table>
+    </apex:outputPanel>
+	<table class="borderTable fullWidth overflow" id="Period">
+	    <tr>
+	        <th>
+	            <!-- (Key Events from Last Two Weeks)   -->              
+	            Accomplishments This Period
+	        </th>
+	    </tr>
+	    <tr>
+	    	<td><apex:outputText escape="false" value="{!vw.lastTwoWeeks}" /></td>
+	    </tr>
+	</table>
+	<table class="borderTable fullWidth overflow" id="plannedButNot">
+		<tr>
+			<th>Planned But Not Accomplished</th>
+	    </tr>
+	    <tr>
+	    	<td><apex:outputText escape="false" value="{!vw.plannedButNotAccomplished}" /></td>
+	    </tr>
+	</table>
+	<table class="borderTable fullWidth overflow" id="next">
+		<tr>
+			<th>Planned For The Next Period</th>
+	    </tr>
+	    <tr>
+	    	<td><apex:outputText escape="false" value="{!vw.nextTwoWeeks}" /></td>
+	    </tr>
+	</table>
+	<table class="borderTable fullWidth overflow" id="address">
+		<tr>
+    		<th>Issues Team is Addressing</th>
+    	</tr>
+    	<tr>
+    		<td><apex:outputText escape="false" value="{!vw.issuesTeamAdd}" /></td>
+    		
+    	</tr>
+    </table>
+    <table class="borderTable fullWidth overflow" id="leadershipTeam">
+		<tr>
+			<th>Issues for Escalation to Leadership Team</th>
+		</tr>
+		<tr>
+			<td><apex:outputText escape="false" value="{!vw.issuesforEscalation}" /></td>
+		</tr>
+	</table>
+	<table class="borderTable" id="Approve">
+        <tr>
+            <th>Name</th>
+            <td width="250"></td>
+        </tr>
+        <tr>
+            <th>Approve</th>
+            <td></td>
+        </tr>
+    </table>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!NOT(vw.header)}">
+    <table class="borderTable fullWidth" id="Milestones" >
+        <tr>
+            <th>Project Key Milestones</th>
+            <th>Expected Date</th>
+            <th>Actual Date</th>
+            <th>Key Upcoming Meetings Scheduled</th>
+        </tr>
+        <apex:repeat value="{!vw.miList}" var="m">
+        <tr>
+            <td width="200px"><apex:outputText value="{!m.milestoneName}"></apex:outputText></td>
+            <td width="90px">
+                <apex:outputText value="{0,date,yyyy/MM/dd}">
+                   <apex:param value="{!m.deadLine}" />
+                </apex:outputText>
+            </td>
+            <td width="90px">
+            	<apex:outputText value="{0,date,yyyy/MM/dd}">
+                   <apex:param value="{!m.completedDate}" />
+                </apex:outputText>
+            </td>
+            <td></td>
+        </tr>
+        </apex:repeat>
+    </table>
+    </apex:outputPanel>
+    
+    
+    
+    <div align="center">{!vw.currentPage} / {!totalPage}</div>
+    <div style="display:{!IF(vw.currentPage == totalPage,'none','block')};page-break-before:always;"></div><!--page split -->
+	</apex:repeat>
+</html>
+</apex:page>

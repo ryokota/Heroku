@@ -1,0 +1,181 @@
+<!-- custom button: Send to Circulation -->
+<apex:page standardController="RFA__c" extensions="RFA_VFC02_ApprovalRoutingController" sidebar="false" showHeader="false">    
+    <script type="text/javascript">
+       //**********************http://pro-thoughts.blogspot.com/2006/10/incorrect-behavior-of-windowonblur.html******//
+      //********************** FIX FOR IE WINDOW.ONBLUR FUNCTION ***************************************************//
+            var active_element;
+            var bIsMSIE;
+            
+            function initiateSelfClosing() {
+            if(navigator.appName == "Microsoft Internet Explorer") {
+                active_element = document.activeElement;
+                document.onfocusout = closeWnd;
+                bIsMSIE = true;
+            }
+              else { window.onblur = closeWnd; }
+            }
+            
+            function closeWnd() {
+            if (window.opener != null) {
+                if (bIsMSIE && (active_element != document.activeElement)) {
+                  active_element = document.activeElement;
+                }
+                else {
+                  window.close();
+                }
+              }
+            }
+            
+            function window_Close(hasError) 
+            {                                   
+                  if(hasError == false)
+                  {
+                    window.opener.parentReload();             
+                  }
+                  
+            }          
+            window.onload = initiateSelfClosing();                       
+    </script>
+    
+        <apex:form >
+                <apex:pageMessages id="pageMessage">
+                </apex:pageMessages>
+                <apex:outputText value="{!RFA__c.Stage__c}" rendered="false"/>
+                
+                <!-- removed by Jia Hu on 2013/12/01 -->
+                <!--<apex:outputText value="{!RFA__c.Level__c}" rendered="false"/>-->
+                               
+            <!-- <apex:actionFunction name="sequenceApprover" action="{!sequenceApprover}" rerender="tablePanel"/>     -->
+            <!--<apex:pageBlock title="承認経路 / Approval Routing for {!RFA__c.Name}" >-->
+            <apex:pageBlock title="{!$Label.RFA_ApprovalRouting01} {!RFA__c.Name}" >            
+                <apex:pageBlockButtons >                  
+                      <!-- <apex:commandButton value="Submit for Approval" action="{!submitForApproval}" disabled="{!activeAppProcess}" onComplete="window_Close()"/> -->
+                      <!--<apex:commandButton value="Submit for Approval" action="{!submitForApproval}" disabled="{!activeAppProcess}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>-->
+                      <apex:commandButton value="{!$Label.RFA_ApprovalRouting07}" action="{!submitForApproval}" disabled="{!activeAppProcess}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>
+                     
+                      <!-- <apex:commandButton value="Save" action="{!save}"/> -->
+                      
+                      <!--<apex:commandButton value="Cancel" onClick="{self.close();}"/>-->
+                      <apex:commandButton value="{!$Label.RFA_CL088}" onClick="{self.close();}"/>
+                     
+                </apex:pageBlockButtons>
+                <!--<apex:pageBlockSection title="RFA Detail" columns="2" collapsible="false">-->
+                <!--<apex:pageBlockSection title="RFA詳細 / RFA Detail" columns="2" collapsible="false">-->
+                <apex:pageBlockSection title="{!$Label.RFA_ApprovalRouting02}" columns="2" collapsible="false">                
+                    <apex:pageBlockSectionItem >
+                          <apex:outputlabel value="{!$ObjectType.RFA__c.fields.RequestTitle__c.Label}"/>
+                          <apex:outputText value="{!RFA__c.RequestTitle__c}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                          <apex:outputlabel value="{!$ObjectType.RFA__c.fields.Name.Label}"/>
+                          <apex:outputText value="{!RFA__c.Name}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                          <!--<apex:outputlabel value="Request Type"/>-->
+                          <!-- <apex:outputlabel value="レコードタイプ / Request Type"/>-->
+                          <!-- 
+                            updated by Jia Hu on 2013/11/13 
+                            use an extra custom field to change the label of Record Type Id field
+                          -->
+                          <apex:outputlabel value="{!$ObjectType.RFA__c.fields.Record_Type__c.Label}"/>
+                          <apex:outputText value="{!RFA__c.RecordType.Name}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <!-- removed by Jia Hu on 2013/10/28  -->
+                    <!--
+                    <apex:pageBlockSectionItem >
+                          <apex:outputlabel value="{!$ObjectType.RFA__c.fields.ProfitCenterName__c.Label}"/>
+                          <apex:outputText value="{!RFA__c.ProfitCenterName__c}"/>
+                    </apex:pageBlockSectionItem>
+                    -->
+                    
+                    <!-- added by Jia Hu on 2013/10/28  -->
+                    <apex:pageBlockSectionItem >
+                          <apex:outputlabel value="{!$ObjectType.RFA__c.fields.Cost_Center_Number_Name__c.Label}"/>
+                          <apex:outputText value="{!RFA__c.Cost_Center_Number_Name__c}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>    
+                    
+                  <!--<apex:pageBlockSection title="Approval Process" columns="1" collapsible="false">-->
+                  <!--<apex:pageBlockSection title="承認プロセス / Approval Process" columns="1" collapsible="false">-->
+                  <apex:pageBlockSection title="{!$Label.RFA_ApprovalRouting03}" columns="1" collapsible="false">
+                     
+                     <!-- removed by Jia Hu on 2013/10/24 -->
+                     <!--
+                     <apex:pageBlockSectionItem >
+                            <apex:outputlabel value="{!$ObjectType.ApprovalProcess__c.fields.ApprovalProcessLevel__c.Label}"/>
+                            <apex:outputText value="{!processInstance.ApprovalProcessLevel__c}"/>
+                     </apex:pageBlockSectionItem>
+                     --> 
+                      
+                      <apex:pageBlockSectionItem >
+                            <apex:outputlabel value="{!$ObjectType.ApprovalProcess__c.fields.Status__c.Label}"/>
+                            <apex:outputText value="{!processInstance.Status__c}"/>
+                      </apex:pageBlockSectionItem>
+                  </apex:pageBlockSection>  
+                          
+                <apex:actionRegion >
+                  <apex:outputPanel id="tablePanel">
+                 <apex:pageBlockTable id="orderingTable" value="{!sequenceList}" var="app" rendered="{!IF(approverSize > 0, true, false)}">
+                         
+                         <apex:column headerValue="{!$Label.RFA_ApprovalRouting04}"   >
+                         <!--<apex:column headerValue="承認順序/Approver Order" rendered="{!app.reorder}"   >-->
+                         <!--<apex:column headerValue="{!$Label.RFA_ApprovalRouting04}" rendered="{!app.reorder}"   >-->
+                              <center>
+                                    <apex:inputText value="{!app.sequence}" size="4" rendered="{!app.reorder}"  />
+                                    
+                                    <apex:outputText value="{!app.sequence}" rendered="{!NOT(app.reorder)}" />
+                                    
+                                    <!--<apex:outputText value="{!app.sequence}" rendered="NOT({!app.reorder})" /> -->   
+                                    <!--<apex:outputText value="{!app.sequence}"  rendered="{!NOT(app.reorder)}" />-->                             
+                              </center>                             
+                         </apex:column>
+
+                        <!-- <apex:column headerValue="承認順序/Approver Order" rendered="{!NOT(app.reorder)}"   >-->
+                         <!--<apex:column headerValue="{!$Label.RFA_ApprovalRouting04}" rendered="{!NOT(app.reorder)}"   >-->
+                              <!--<center>
+                                    <apex:outputText value="{!app.sequence}"/>--> 
+                                    <!--<apex:outputText value="{!app.sequence}" rendered="NOT({!app.reorder})" />-->    
+                                    <!--<apex:outputText value="{!app.sequence}"  rendered="{!NOT(app.reorder)}" />-->                             
+                              <!--</center>                               
+                         </apex:column>-->
+                                                
+                         <!--<apex:column value="{!app.approver.UserName__c}" headerValue="承認者/Approver"/>-->
+                         <apex:column value="{!app.approver.UserName__c}" headerValue="{!$Label.RFA_ApprovalRouting05}"/>
+                         
+                         <!-- removed by Jia Hu on 2013/11/06  -->
+                         <!-- <apex:column value="{!app.level}" headerValue="Level"/> -->
+                         
+                         <!--<apex:column value="{!app.approver.ApprovalRecommendation__c}" headerValue="承認ステータス/Approval Recommendation"/>-->
+                         <!--<apex:column value="{!app.approver.ApprovalRecommendation__c}" headerValue="{!$Label.RFA_ApprovalRouting06}"/>-->
+                         <!-- <apex:column value="{!app.approver.TECH_IsComplete__c}" headerValue="Is Complete?"/> --> 
+                         
+                         <apex:column value="{!app.approver.Approver_Source__c}" />
+                         <apex:column value="{!app.approver.UserName__r.COA_Group__c}" />
+                         <apex:column value="{!app.approver.UserName__r.COA_Acronym__c}" />
+                         <apex:column value="{!app.approver.UserName__r.L2_Function_E__c}" />
+                         <apex:column value="{!app.approver.UserName__r.L3_Function_E__c}" />
+                         <apex:column value="{!app.approver.UserName__r.L4_Function_E__c}" />
+                         
+                 </apex:pageBlockTable>
+                </apex:outputPanel>
+             </apex:actionRegion>
+            </apex:pageBlock>
+        </apex:form> 
+        
+
+        <table border="0" align="center" width="90%">
+         <tr>
+           <td><font size="2">{!$Label.RFA_Msg_SelectApprover}</font></td>
+         </tr>
+         <tr>
+           <td><font size="2">{!$Label.RFA_Msg_SelectApprover2}</font></td>
+         </tr>         
+        </table>
+        
+        
+        
+</apex:page>

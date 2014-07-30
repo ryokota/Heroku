@@ -1,0 +1,3 @@
+<apex:page tabStyle="RFA__c"> 
+ <apex:enhancedList customizable="true" type="Rfa__c" height="500" rowsPerPage="100"/>
+ </apex:page>

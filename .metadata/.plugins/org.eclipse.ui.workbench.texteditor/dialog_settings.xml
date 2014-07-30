@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="348" key="DIALOG_WIDTH"/>
+		<item value="253" key="DIALOG_Y_ORIGIN"/>
+		<item value="243" key="DIALOG_X_ORIGIN"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="1|Meiryo UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Meiryo UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="selectHandler2" key="selection"/>
+		<list key="findhistory">
+			<item value="selectHandler2"/>
+			<item value="arrayToDataTable"/>
+			<item value="onmouseout"/>
+			<item value="visualization"/>
+			<item value="drawChart"/>
+			<item value="種別"/>
+			<item value="申請"/>
+			<item value="Related_RFA_1_Name__c"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&gt;"/>
+			<item value="&lt;"/>
+			<item value="Label.RFA_PDF_"/>
+			<item value="RFA_SectionHeaders_PDF__c"/>
+			<item value="#EFEFEF"/>
+			<item value="WBR"/>
+		</list>
+	</section>
+</section>

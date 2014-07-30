@@ -1,0 +1,70 @@
+<apex:page controller="JFK_HMController" showHeader="false" standardStylesheets="true">
+    <head>
+        <style type="text/css">
+            .dateFormat {
+                display: none;
+            }
+
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+    <apex:pageMessages id="msg" rendered="true"/> 
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <apex:pageBlock title="【HM】補正メモ" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                <apex:commandButton action="{!close}" value="戻る"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection title="" columns="1" id="resultGroup1" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.HM_TaioBi__c.label}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!hm.HM_TaioBi__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.HM_Aitesaki__c.label}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!hm.HM_Aitesaki__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!hm.HM_HoseiMemo__c}" style="width:400px"/>
+             </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="1" id="resultGroup2" rendered="true" collapsible="true">
+                <apex:pageBlockTable id="blockTable" value="{!lsthmRec}" var="h" width="100%">
+                    <apex:column >
+                        <apex:commandLink action="{!doDelete}" onClick="if (!confirmDelete()) return false;" reRender="resultGroup2">削除
+                            <apex:param name="id" value="{!h.Id}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.HM_TaioBi__c.label}">
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!h.HM_TaioBi__c}"/> 
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.HM_Aitesaki__c.label}">
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!h.HM_Aitesaki__c}"/> 
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.HM_HoseiMemo__c.label}" >
+                        <apex:inputField value="{!h.HM_HoseiMemo__c}" style="width:300px"/> 
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

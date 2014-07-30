@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Report_Request_Amount_000JPY__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Requested_By__c</field>
+    </columns>
+    <description>承認待ちになっているRFAを承認者別に表示 / Shows all pending RFAs by approver.</description>
+    <filter>
+        <criteriaItems>
+            <column>CHILD_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFAUserRole__c.ApprovalRecommendation__c</column>
+            <operator>equals</operator>
+            <value>承認待ち</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFAUserRole__c.UserName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pending RFAs by Approver / 承認者別承認待ちRFA一覧</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$RFA__c$RFAUserRole__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>RFA__c.RequestTitle__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.ExpectedCommitmentDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

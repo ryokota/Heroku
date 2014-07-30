@@ -1,0 +1,566 @@
+<apex:page Controller="JFK_Menu_GSController" showHeader="true" standardStylesheets="true" id="page">
+    <apex:pageMessages id="msg" rendered="{!showMessage}"/> 
+    <style type="text/css">
+table.summary {
+    background-color: #ffffff;
+    border-top:#ffffff 3px double;
+    border-collapse: collapse;
+    font-size: 6px;
+    width: 100%;
+    color:#333333;
+} 
+table th.t_top {
+    border-bottom: #dcdddd 1px solid;
+    background-color: #efefef;
+    text-align: left;
+    padding: 1px;
+} 
+table td.t_line01 {
+    background-color: #fff;
+    text-align: left;
+    padding: 1px;
+    vertical-align: top;
+}
+table td.t_line02 {
+    background-color: #f7f8f8;
+    text-align: left;
+    padding: 1px;
+    vertical-align: top;
+}
+    
+    </style>
+    <script type="text/javascript"> 
+        //Focusを付けたくない場合 
+        beenFocused = true; 
+    </script>
+    
+    <script type="text/javascript"> 
+    //全てにチェックをつける
+    function selectCheckboxes(inpt,receivedInptID){
+        var inputCheckBox = document.getElementsByTagName("input");                  
+        for(var i=0; i<inputCheckBox.length; i++)
+            {          
+            if(inputCheckBox[i].id.indexOf(receivedInptID)!=-1){                                     
+                inputCheckBox[i].checked = inpt.checked;
+            }
+        }
+    }
+    
+    function summaryTable(summaryTableId,displayCheckId,displayCheck){
+
+        if(displayCheck == true){
+            document.getElementById(summaryTableId).style.display = 'none';
+            document.getElementById(displayCheckId).value = false;
+        }else{
+            document.getElementById(summaryTableId).style.display = 'block';
+            document.getElementById(displayCheckId).value = true;           
+        }
+    }
+
+    
+    /*
+    function displayCheck(remindDMHassouOut,remindDMHassouIn,
+                          houkokuSyoryuJuryoOut,houkokuSyoryuJuryoIn,
+                          sinsaTyakusyuOut,sinsaTyakusyuIn,
+                          sinsaKanryoOut,sinsaKanryoIn,
+                          densiDataHikiwatashiOut,densiDataHikiwatashiIn,
+                          hassyutuShijiUkeOut,hassyutuShijiUkeIn,
+                          tuutisyoHikiwatashiOut,tuutisyoHikiwatashiIn,
+                          tuutisyoJuryoOut,tuutisyoJuryoIn,
+                          tuutisyoHassouOut,tuutisyoHassouIn,
+                          houkokusyoHikiwatashiOut,houkokusyoHikiwatashiIn){
+
+    
+        if(document.getElementById(remindDMHassouOut).style.display == 'none' &&
+           document.getElementById(houkokuSyoryuJuryoOut).style.display == 'none' &&
+           document.getElementById(sinsaTyakusyuOut).style.display == 'none' &&
+           document.getElementById(sinsaKanryoOut).style.display == 'none' &&
+           document.getElementById(densiDataHikiwatashiOut).style.display == 'none' &&
+           document.getElementById(hassyutuShijiUkeOut).style.display == 'none' &&
+           document.getElementById(tuutisyoHikiwatashiOut).style.display == 'none' &&
+           document.getElementById(tuutisyoJuryoOut).style.display == 'none' &&
+           document.getElementById(tuutisyoHassouOut).style.display == 'none' &&
+           document.getElementById(houkokusyoHikiwatashiOut).style.display == 'none'){
+           
+            document.getElementById(remindDMHassouOut).style.display = 'block';
+            document.getElementById(houkokuSyoryuJuryoOut).style.display = 'block';
+            document.getElementById(sinsaKanryoOut).style.display = 'block';
+            document.getElementById(densiDataHikiwatashiOut).style.display = 'block';
+            document.getElementById(hassyutuShijiUkeOut).style.display = 'block';
+            document.getElementById(tuutisyoHikiwatashiOut).style.display = 'block';
+            document.getElementById(tuutisyoJuryoOut).style.display = 'block';
+            document.getElementById(sinsaTyakusyuOut).style.display = 'block';
+            document.getElementById(houkokusyoHikiwatashiOut).style.display = 'block';
+            document.getElementById(tuutisyoHassouOut).style.display = 'block';
+            
+            document.getElementById(remindDMHassouIn).style.display = 'none';
+            document.getElementById(houkokuSyoryuJuryoIn).style.display = 'none';
+            document.getElementById(sinsaKanryoIn).style.display = 'none';
+            document.getElementById(densiDataHikiwatashiIn).style.display = 'none';
+            document.getElementById(hassyutuShijiUkeIn).style.display = 'none';
+            document.getElementById(tuutisyoHikiwatashiIn).style.display = 'none';
+            document.getElementById(tuutisyoJuryoIn).style.display = 'none';
+            document.getElementById(sinsaTyakusyuIn).style.display = 'none';
+            document.getElementById(houkokusyoHikiwatashiIn).style.display = 'none';
+            document.getElementById(tuutisyoHassouIn).style.display = 'none';
+            
+        }else{
+            document.getElementById(remindDMHassouOut).style.display = 'none';
+            document.getElementById(houkokuSyoryuJuryoOut).style.display = 'none';
+            document.getElementById(sinsaKanryoOut).style.display = 'none';
+            document.getElementById(densiDataHikiwatashiOut).style.display = 'none';
+            document.getElementById(hassyutuShijiUkeOut).style.display = 'none';
+            document.getElementById(tuutisyoHikiwatashiOut).style.display = 'none';
+            document.getElementById(tuutisyoJuryoOut).style.display = 'none';
+            document.getElementById(sinsaTyakusyuOut).style.display = 'none';
+            document.getElementById(houkokusyoHikiwatashiOut).style.display = 'none';
+            document.getElementById(tuutisyoHassouOut).style.display = 'none';
+            
+            document.getElementById(remindDMHassouIn).style.display = 'block';
+            document.getElementById(houkokuSyoryuJuryoIn).style.display = 'block';
+            document.getElementById(sinsaKanryoIn).style.display = 'block';
+            document.getElementById(densiDataHikiwatashiIn).style.display = 'block';
+            document.getElementById(hassyutuShijiUkeIn).style.display = 'block';
+            document.getElementById(tuutisyoHikiwatashiIn).style.display = 'block';
+            document.getElementById(tuutisyoJuryoIn).style.display = 'block';
+            document.getElementById(sinsaTyakusyuIn).style.display = 'block';
+            document.getElementById(houkokusyoHikiwatashiIn).style.display = 'block';
+            document.getElementById(tuutisyoHassouIn).style.display = 'block';
+        };
+    
+    }*/
+    </script>
+
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <!-- 10秒おきに画面をリフレッシュ -->
+        <!-- <apex:actionPoller action="{!doSearch}" rerender="buttonSection, resultGroup" interval="10"/> -->
+    </apex:form>
+    <apex:form id="form">
+        <apex:pageBlock mode="edit" id="pageblock">
+            <apex:pageBlockSection id="criteriaSection" title="" columns="1">
+                <apex:panelGrid width="100%" columns="10">
+                    <apex:pageBlockSectionItem id="bosyuNendoSectionItem">
+                        <apex:outputLabel value="募集年度 : " for="bosyuNendo" />
+                        <apex:selectList id="bosyuNendo" value="{!nendo4Search}" size="1">
+                           <apex:selectOptions Value="{!nendos4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="bosyuKaiSectionItem">
+                        <apex:outputLabel value="募集回 : " for="bosyuKai"/>
+                        <apex:selectList id="bosyuKai" value="{!kai4Search}" size="1">
+                           <apex:selectOptions Value="{!kais4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="areaSectionItem">
+                        <apex:outputLabel value="エリア区分: " for="area"/>
+                            <apex:selectList id="area" value="{!area4Search}" size="1">
+                               <apex:selectOptions Value="{!areas4Search}"/>
+                            </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="seiriNoSectionItem">
+                        <apex:outputLabel value="整理番号 : " for="seiriNo"/>
+                        <apex:inputtext id="seiriNo" value="{!seiriNo4Search}" size="10"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="shikyuJikiSectionItem">
+                        <apex:outputLabel value="支給時期 : " for="shikyuJiki"/>
+                        <apex:selectList id="shikyuJiki" value="{!jiki4Search}" size="1">
+                           <apex:selectOptions Value="{!jikis4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="jigyosyoMeiSectionItem">
+                        <apex:outputLabel value="事業所名 : " for="jigyosyoMei"/>
+                        <apex:inputtext id="jigyosyoMei" value="{!jigyosyoMei4Search}" size="10"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="rodosyaMeiSectionItem">
+                        <apex:outputLabel value="労働者名 : " for="rodosyaMei"/>
+                        <apex:inputtext id="rodosyaMei" value="{!rodosyaMei4Search}" size="10"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="statusSectionItem">
+                        <apex:outputLabel value="ステータス : " for="status"/>
+                        <apex:selectList id="status" value="{!status4Search}" size="1">
+                           <apex:selectOptions Value="{!statues4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    &nbsp;&nbsp;&nbsp;
+                    <apex:actionStatus id="searchStatus">
+                        <apex:facet name="stop">
+                            <apex:commandButton value="　検　索　" action="{!doSearch}" status="searchStatus" rerender="buttonSection, resultGroup, msg"
+                                                style="color:white; background:royalblue; border-color:dimgray"/>
+                        </apex:facet>
+                        <apex:facet name="start">
+                           <apex:outputPanel >
+                              <apex:commandButton value="実行中..." status="searchStatus" disabled="true"/>
+                              <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                          </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+            <hr/>
+            <apex:outputPanel id="buttonSection">
+                <table width="59%" align="left" border="0">
+                    <tr>
+                        <td align="center" width="20%">
+                            <apex:commandButton id="SummaryButton" value="合計を折りたたむ" onclick="summaryTable('summary','{!$Component.displayCheckId}',{!displayCheck})" rerender="displayCheckId,SummaryButton"/>
+                        </td>
+                        <td style="diaplay:none">
+                            <apex:inputHidden id="displayCheckId" value="{!displayCheck}"/>
+                        </td>
+                        <td align="center" width="20%">
+                            <apex:selectList id="hidukeIkkatu" value="{!hidukeIkkatuValue}" size="1" disabled="{!ikkatuSelectDisable}">
+                               <apex:selectOptions Value="{!hidukesIkkatuList}"/>
+                            </apex:selectList>
+                        </td>
+                        <td align="left" width="50%">
+                            <apex:inputField id="hidukeInput" Value="{!jfkCommonTR.GS_DateIkkatuNyuryoku__c}"/>
+                            <script>
+                                document.getElementById('{!$Component.hidukeInput}').disabled = {!ikkatuInputDisable};
+                            </script>
+                        </td>
+                        
+                        <td align="left" width="50%">
+                            <apex:actionStatus id="dateChangeStatus">
+                                <apex:facet name="stop">
+                                    <apex:commandButton id="ikkatuHenkou" value="一括変更" action="{!doChange}" status="dateChangeStatus"  rerender="resultGroup, buttonSection," disabled="{!ikkatuDisable}"/>
+                                </apex:facet>
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <apex:commandButton value="実行中..." status="dateChangeStatus" disabled="true"/>
+                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>        
+                        </td>
+                        
+                        <td align="left" width="10%">
+                            <apex:actionStatus id="saveStatus">
+                                <apex:facet name="stop">
+                                    <apex:commandButton id="saveButton" value="保存" action="{!doSave}" status="saveStatus"  rerender="resultGroup, buttonSection," disabled="{!saveDisable}"/>
+                                </apex:facet>
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <apex:commandButton value="実行中..." status="saveStatus" disabled="true"/>
+                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </td> 
+                    </tr>
+                </table>
+                <table width="30%" align="right" border="0">
+                    <tr>
+                        <td align="center">
+                            <!-- First Button -->
+                           <apex:actionStatus id="FirstStatus">
+                                <apex:facet name="stop">
+                                    <apex:commandButton id="firstBlock" value="先頭頁" action="{!showFirstPage}" status="FirstStatus" rerender="buttonSection, resultGroup" disabled="{!firstBtnDisable}"/>
+                                 </apex:facet>
+                                 <apex:facet name="start">
+                                     <apex:outputPanel >
+                                        <apex:commandButton value="実行中..." status="FirstStatus" disabled="true"/>
+                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Previous Button -->
+                               <apex:actionStatus id="PreviousStatus">
+                                   <apex:facet name="stop">
+                                       <apex:commandButton value="前頁" action="{!showPreviousPage}" status="PreviousStatus" rerender="resultGroup, buttonSection," disabled="{!firstBtnDisable}"/>
+                                    </apex:facet>
+                                    <apex:facet name="start">
+                                        <apex:outputPanel >
+                                           <apex:commandButton value="実行中..." status="PreviousStatus" disabled="true"/>
+                                           <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                       </apex:outputPanel>
+                                   </apex:facet>
+                               </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Next Button -->
+                               <apex:actionStatus id="NextStatus">
+                                   <apex:facet name="stop">
+                                        <apex:commandButton value="次頁" action="{!showNextPage}" status="NextStatus"  rerender="resultGroup, buttonSection," disabled="{!lastBtnDisable}"/>
+                                   </apex:facet>
+                                   <apex:facet name="start">
+                                       <apex:outputPanel >
+                                          <apex:commandButton value="実行中..." status="NextStatus" disabled="true"/>
+                                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                       </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Last Button -->
+                               <apex:actionStatus id="LastStatus">
+                                    <apex:facet name="stop">
+                                        <apex:commandButton value="最終頁" action="{!showLastPage}" status="LastStatus"  rerender="resultGroup, buttonSection," disabled="{!lastBtnDisable}"/>
+                                     </apex:facet>
+                                     <apex:facet name="start">
+                                         <apex:outputPanel >
+                                            <apex:commandButton value="実行中..." status="LastStatus" disabled="true"/>
+                                            <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                        </apex:outputPanel>
+                                    </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            Page : {!PageNumber}
+                        </td>
+                    </tr>
+                </table>
+                <!-- <apex:outputPanel id="summarySection">  -->
+                    <table id="summary">
+                        <tr>
+                            <th bgcolor="#0033ff"></th>
+                            <th class="t_top">リマインドDM<br/>発送済み</th>
+                            <th class="t_top">報告書類<br/>受領済み</th>
+                            <th class="t_top">審査着手</th>
+                            <th class="t_top">審査完了</th>
+                            <th class="t_top">電子データ<br/>引渡済み</th>
+                            <th class="t_top">発出指示<br/>受領済み</th>
+                            <th class="t_top">通知書<br/>引渡済み</th>
+                            <th class="t_top">通知書<br/>受領済み</th>
+                            <th class="t_top">通知書<br/>発送済み</th>
+                            <th class="t_top">報告書類<br/>引渡済み</th>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#0033ff">全体</td>
+                            <td class="t_line01">{!remindDMHassouBosu}</td>
+                            <td class="t_line01">{!houkokusyoruiJuryoBosu}</td>
+                            <td class="t_line01">{!shinsaTyakuSyuBosu}</td>
+                            <td class="t_line01">{!shinsaKanryoBosu}</td>
+                            <td class="t_line01">{!denshiDataHikiwatashiBosu}</td>
+                            <td class="t_line01">{!hassyutushijiUkebiBosu}</td>
+                            <td class="t_line01">{!tuutisyoHikiwatashibiBosu}</td>
+                            <td class="t_line01">{!tuutisyoJuryobiBosu}</td>
+                            <td class="t_line01">{!tuutisyoHassoubiBosu}</td>
+                            <td class="t_line01">{!houkokusyoHikiwatashibiBosu}</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#0033ff">残</td>
+                            <td class="t_line02">{!remindDMHassouZan}</td>
+                            <td class="t_line02">{!houkokusyoruiJuryoZan}</td>
+                            <td class="t_line02">{!shinsaTyakuSyuZan}</td>
+                            <td class="t_line02">{!shinsaKanryoZan}</td>
+                            <td class="t_line02">{!denshiDataHikiwatashiZan}</td>
+                            <td class="t_line02">{!hassyutushijiUkebiZan}</td>
+                            <td class="t_line02">{!tuutisyoHikiwatashibiZan}</td>
+                            <td class="t_line02">{!tuutisyoJuryobiZan}</td>
+                            <td class="t_line02">{!tuutisyoHassoubiZan}</td>
+                            <td class="t_line02">{!houkokusyoHikiwatashibiZan}</td>
+                        </tr>
+                    </table>
+                <!-- </apex:outputPanel>  -->
+            </apex:outputPanel>
+
+            <apex:OutputPanel layout="block" style="overflow:auto;width:1100px;height:300px" id="commonId">
+                <apex:pageBlockSection columns="1" id="pageblocksection">
+        <!--     <apex:variable value="0" var="rowIndex" /> -->
+                    <apex:pageblocktable value="{!listJFKCommonTRGS}" var="commonTR" id="resultGroup" border="10px">                    
+                        <apex:column headerValue="" width="3%">
+                            <apex:facet name="header">
+                                <apex:inputCheckbox title="全てにチェック" onclick="selectCheckboxes(this,'inputId')"/>
+                            </apex:facet>
+                            <apex:inputCheckbox title="チェック" value="{!commonTR.checkflag}" id="inputId" >
+                                                                                
+                                <!-- <apex:actionSupport action="{!doClick}" event="onchange" rerender="commonId" /> onChange="displayCheck('{!$Component.remindDMHassouOut}',
+                                                                                                                '{!$Component.remindDMHassouIn}',
+                                                                                                                '{!$Component.houkokuSyoryuJuryoOut}',
+                                                                                                                '{!$Component.houkokuSyoryuJuryoIn}',
+                                                                                                                '{!$Component.sinsaTyakusyuOut}',
+                                                                                                                '{!$Component.sinsaTyakusyuIn}',
+                                                                                                                '{!$Component.sinsaKanryoOut}',
+                                                                                                                '{!$Component.sinsaKanryoIn}',
+                                                                                                                '{!$Component.densiDataHikiwatashiOut}',
+                                                                                                                '{!$Component.densiDataHikiwatashiIn}',
+                                                                                                                '{!$Component.hassyutuShijiUkeOut}',
+                                                                                                                '{!$Component.hassyutuShijiUkeIn}',
+                                                                                                                '{!$Component.tuutisyoHikiwatashiOut}',
+                                                                                                                '{!$Component.tuutisyoHikiwatashiIn}',
+                                                                                                                '{!$Component.tuutisyoJuryoOut}',
+                                                                                                                '{!$Component.tuutisyoJuryoIn}',
+                                                                                                                '{!$Component.tuutisyoHassouOut}',
+                                                                                                                '{!$Component.tuutisyoHassouIn}',
+                                                                                                                '{!$Component.houkokusyoHikiwatashiOut}',
+                                                                                                                '{!$Component.houkokusyoHikiwatashiIn}')"-->
+                            </apex:inputCheckbox>
+                        </apex:column>
+                        <apex:column width="3%">
+                            <apex:commandButton value="JTL"
+                                                onclick="return showJTLScreen('{!commonTR.listJFKCommonTR.JijyosyoTR_ShikyuJiki__r.id}');"/>
+                        </apex:column>
+                    
+                        <apex:column headerValue="支給状態" width="3%">
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_Shikyu_Joutai__c}" id="shikyuJoutai"/>
+                        </apex:column>
+                        <!-- 
+                        <apex:column width="20%">
+                            <apex:outputLabel value="日付一括変更 : " for="hidukeIkkatuLabel"/>
+                        </apex:column>
+                         -->
+                        
+                        <!--  <apex:column headerValue="支給終了" >
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_Shikyu_Torikeshi__c}" id="shikyuSyuryo"/>
+                        </apex:column>-->
+                        <apex:column width="3%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="事業所<br/>コード" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_JigyoshoCD__c}" id="jigyosyoCode"/>
+                        </apex:column>
+    
+                        <apex:column headerValue="事業所名" width="10%">
+                            <apex:outputLink value="/{!commonTR.listJFKCommonTR.JijyosyoTR_ShikyuJiki__r.Account__r.id}" target="_blank" rendered="{!NOT(ISNULL(commonTR.listJFKCommonTR.JijyosyoTR_ShikyuJiki__r.Account__r.id))}">{!commonTR.listJFKCommonTR.GS_JigyosyoMei__c}</apex:outputLink> 
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_JigyosyoMei__c}" id="jigyosyoMeiOut" rendered="{!ISNULL(commonTR.listJFKCommonTR.JijyosyoTR_ShikyuJiki__r.Account__r.id)}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="支給時期" width="3%">
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_ShikyuJiki__c}" id="shikyuJikiOut"/>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="1次<br/>担当者" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_FirstTantosya__r.Name}" id="firstTantosyaOut"/>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="2次<br/>担当者" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText Value="{!commonTR.listJFKCommonTR.GS_SecondTantosya__r.Name}" id="secondTantosyaOut"/>
+                        </apex:column>
+                        <apex:column headerValue="ステータス" value="{!commonTR.listJFKCommonTR.GS_Status__c}" width="5%">
+                        </apex:column>
+			            <apex:column width="5%">
+			            	<apex:facet name="header">
+			                	<apex:outputLabel value="リマインドDM<br/>発送日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="remindDMHassouOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_RemindDM_HassoBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="remindDMHassouIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_RemindDM_HassoBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="報告書類<br/>受領日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="houkokuSyoryuJuryoOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_JissekiHokokusyo_JuryoBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="houkokuSyoryuJuryoIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_JissekiHokokusyo_JuryoBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="審査<br/>着手日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="sinsaTyakusyuOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_JissekiSyoruiShinsa_ChakusyuBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="sinsaTyakusyuIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_JissekiSyoruiShinsa_ChakusyuBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+  			            	<apex:facet name="header">
+			                	<apex:outputLabel value="審査<br/>完了日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="sinsaKanryoOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_JissekiSyoruiShinsa_KanryoBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="sinsaKanryoIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_JissekiSyoruiShinsa_KanryoBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="電子データ<br/>引渡日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="densiDataHikiwatashiOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_JissekigakuData_HikiwatashiBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="densiDataHikiwatashiIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_JissekigakuData_HikiwatashiBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="発出指示<br/>受け日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="hassyutuShijiUkeOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_HasshutuShiji_Ukebi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="hassyutuShijiUkeIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_HasshutuShiji_Ukebi__c}" >
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+  			            	<apex:facet name="header">
+			                	<apex:outputLabel value="通知書<br/>引渡日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="tuutisyoHikiwatashiOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_ShikyugauTsuchisho_HikiwatashiBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="tuutisyoHikiwatashiIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_ShikyugauTsuchisho_HikiwatashiBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="通知書<br/>受領日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="tuutisyoJuryoOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_ShikyugakuTsuchisho_JuryoBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="tuutisyoJuryoIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_ShikyugakuTsuchisho_JuryoBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="通知書<br/>発送日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="tuutisyoHassouOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_ShikyugakuTsuchisho_HassoBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="tuutisyoHassouIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_ShikyugakuTsuchisho_HassoBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column width="5%">
+ 			            	<apex:facet name="header">
+			                	<apex:outputLabel value="報告書類<br/>引渡日" escape="false"/>	
+			            	</apex:facet>
+                            <apex:outputText value="{0, date, yyyy/MM/dd}" id="houkokusyoHikiwatashiOut" style="display:{!displayOut};">
+                                <apex:param value="{!commonTR.listJFKCommonTR.GS_JissekiHokokuSyorui_HikiwatashiBi__c}"/>
+                            </apex:outputText>
+                            <apex:outputPanel id="houkokusyoHikiwatashiIn" style="display:{!displayIn};">
+                                <apex:inputField value="{!commonTR.listJFKCommonTR.GS_JissekiHokokuSyorui_HikiwatashiBi__c}">
+                                </apex:inputField>
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column headerValue="備考" width="10%">
+                            <apex:outputText value="{!commonTR.listJFKCommonTR.GS_Bikou__c}" id="BikouOut"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

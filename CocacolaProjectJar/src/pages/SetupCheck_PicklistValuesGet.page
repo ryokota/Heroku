@@ -1,0 +1,13 @@
+<apex:page showHeader="false" title="選択リスト値取得" name="選択リスト値取得" Controller="SetupCheck_PicklistValuesGetController">
+<script>
+    var pick_Vals = new Array();
+    <apex:repeat value="{!val_PicklistValues}" var="pickval" id="PicklistRepeat">
+        pick_Vals.push("{!pickval}");
+    </apex:repeat>
+    var out_html = "";
+    for (i = 0; i < pick_Vals.length; i++) {
+        out_html += pick_Vals[i] + "<br />";
+    }
+    parent.document.getElementById("span_{!$CurrentPage.parameters.field_name}").innerHTML = out_html;
+</script>
+</apex:page>

@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>事業所</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所のアクセス権</value>
+        </caseValues>
+        <name>account_access</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所のアクセス権</value>
+        </caseValues>
+        <name>account_access_level</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所責任者の役割</value>
+        </caseValues>
+        <name>account_contact_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 作成者</value>
+        </caseValues>
+        <name>account_creator</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 通貨</value>
+        </caseValues>
+        <name>account_currency</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 説明</value>
+        </caseValues>
+        <name>account_description</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 詳細ページ</value>
+        </caseValues>
+        <name>account_detail_page</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 ディビジョン</value>
+        </caseValues>
+        <name>account_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所の編集</value>
+        </caseValues>
+        <name>account_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 Fax</value>
+        </caseValues>
+        <name>account_fax</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所の項目</value>
+        </caseValues>
+        <name>account_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 一般情報</value>
+        </caseValues>
+        <name>account_general</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>関連事業所</value>
+        </caseValues>
+        <name>account_hierarchy</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所履歴</value>
+        </caseValues>
+        <name>account_history</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所履歴アーカイブ</value>
+        </caseValues>
+        <name>account_history_archive</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所履歴レポート</value>
+        </caseValues>
+        <name>account_history_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 ID</value>
+        </caseValues>
+        <name>account_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所情報</value>
+        </caseValues>
+        <name>account_information</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所名</value>
+        </caseValues>
+        <name>account_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所番号</value>
+        </caseValues>
+        <name>account_number</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 所有者</value>
+        </caseValues>
+        <name>account_owner</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 所有者(別名)</value>
+        </caseValues>
+        <name>account_owner_alias</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所所有者レポート</value>
+        </caseValues>
+        <name>account_owner_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 所有者 ロール</value>
+        </caseValues>
+        <name>account_owner_role</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 会社形態</value>
+        </caseValues>
+        <name>account_ownership</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 電話</value>
+        </caseValues>
+        <name>account_phone</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 評価</value>
+        </caseValues>
+        <name>account_rating</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所レコード</value>
+        </caseValues>
+        <name>account_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所レコードタイプ</value>
+        </caseValues>
+        <name>account_record_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所レポート</value>
+        </caseValues>
+        <name>account_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所の共有</value>
+        </caseValues>
+        <name>account_sharing</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 部門</value>
+        </caseValues>
+        <name>account_site</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所ソース</value>
+        </caseValues>
+        <name>account_source</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所フェーズ ID</value>
+        </caseValues>
+        <name>account_stage_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所チーム</value>
+        </caseValues>
+        <name>account_team</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所チームメンバー</value>
+        </caseValues>
+        <name>account_team_member</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所チームメンバー ID</value>
+        </caseValues>
+        <name>account_team_member_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所チームレポート</value>
+        </caseValues>
+        <name>account_team_report</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所テリトリー</value>
+        </caseValues>
+        <name>account_territory</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所ツール</value>
+        </caseValues>
+        <name>account_tool</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 種別</value>
+        </caseValues>
+        <name>account_type</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所ビュー</value>
+        </caseValues>
+        <name>account_view</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>親事業所</value>
+        </caseValues>
+        <name>parent_account</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>親事業所 ディビジョン</value>
+        </caseValues>
+        <name>parent_account_division</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>親事業所 ID</value>
+        </caseValues>
+        <name>parent_account_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>親事業所 部門</value>
+        </caseValues>
+        <name>parent_account_site</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>個人事業所レコード</value>
+        </caseValues>
+        <name>person_account_record</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>事業所 部門</value>
+        </caseValues>
+        <name>site_account</name>
+    </fields>
+    <fields>
+        <name>AccountSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 住所（申請事業所） --></label>
+        <name>Address_Shinsei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 住所（送付先） --></label>
+        <name>Address_Sofusaki__c</name>
+    </fields>
+    <fields>
+        <label><!-- 住所（助成金対象事業所） --></label>
+        <name>Address_Taisyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 代表者（役職氏名） --></label>
+        <name>DaihyousyaYakusyokuShimei__c</name>
+    </fields>
+    <fields>
+        <help><!-- 事業区分が①か②の時入力してください。 --></help>
+        <label><!-- 補助・融資名称 --></label>
+        <name>HojoYushiName__c</name>
+    </fields>
+    <fields>
+        <label><!-- 部署名 --></label>
+        <name>HoseiShido_Aitesaki_Busyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 委任状あり --></label>
+        <name>HoseiShido_Aitesaki_IninjoAri__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事務所名・担当者名 --></label>
+        <name>HoseiShido_Aitesaki_Jimusyo_TantosyaMei__c</name>
+    </fields>
+    <fields>
+        <help><!-- 事務所名・担当者名の連絡先 --></help>
+        <label><!-- 連絡先２ --></label>
+        <name>HoseiShido_Aitesaki_Renrakusaki2__c</name>
+    </fields>
+    <fields>
+        <help><!-- 相手先担当者の連絡先 --></help>
+        <label><!-- 連絡先１ --></label>
+        <name>HoseiShido_Aitesaki_Renrakusaki__c</name>
+    </fields>
+    <fields>
+        <label><!-- 担当者氏名 --></label>
+        <name>HoseiShido_Aitesaki_TantosyaMei__c</name>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 半角数字＋半角ハイフンで入力してください。 --></help>
+        <label><!-- 雇用保険適用事業所番号 --></label>
+        <name>KoyoHokenTekiyoJigyosyoNO__c</name>
+    </fields>
+    <fields>
+        <name>Ownership</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsidiary</masterLabel>
+            <translation><!-- Subsidiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 債権者登録番号 --></label>
+        <name>SaikensyaTorokuNO__c</name>
+    </fields>
+    <fields>
+        <help><!-- 事業区分が③か④の時入力してください。 --></help>
+        <label><!-- 対象分野等名称 --></label>
+        <name>TaisyoBunyaName__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation><!-- Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrator</masterLabel>
+            <translation><!-- Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor</masterLabel>
+            <translation><!-- Investor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press</masterLabel>
+            <translation><!-- Press --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 郵便番号（申請事業所） --></label>
+        <name>YubinBango_Shinsei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 郵便番号（送付先） --></label>
+        <name>YubinBango_Sofusaki__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RoudousyaSyutsuryoku --></label>
+        <name>RoudousyaSyutsuryoku</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<apex:page controller="TestClass">
+	<table>
+	    <apex:repeat value="{!testMap}" var="key">
+	    	<tr>
+		    	<td>
+			        <apex:outputText value="{!listSizeMap[key]}" />
+		        </td>
+	        </tr>
+	    </apex:repeat>
+    </table>
+</apex:page>

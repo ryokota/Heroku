@@ -1,0 +1,104 @@
+<!-- custom button for Approver: Submit Approval Recommendation on Page: RFA_VFP05_ApprovalRecommendation -->
+<apex:page standardController="RFA__c" extensions="RFA_VFC04_ApprovalProcessController" sidebar="false" showHeader="false">
+<apex:includeScript value="{!URLFOR($Resource.RFA_STR02_CustomScript, 'js/rfapopup-1.0.min.js')}"/>        
+      <apex:form >
+        <apex:pageMessages id="pageMessage"></apex:pageMessages>
+          <!-- can not just delete this! updated by Jia Hu on 2013/12/01 -->
+          <!--<apex:outputText value="{!RFA__c.Level__c}" rendered="false"/>-->
+          <apex:outputText value="{!RFA__c.Stage__c}" rendered="false"/>
+          
+          <!-- updated by Jia Hu on 2013/11/05 -->  
+          <!--<apex:outputText value="{!RFA__c.ControlNumber__c }" rendered="false"/> -->    
+          <!--<apex:pageBlock title="Request-{!rfaObj.ControlNumber__c}" id="pageBlock">-->
+          <apex:pageBlock title="{!RFA__c.Name}" id="pageBlock">
+          
+          <apex:pageBlockButtons location="bottom">
+            <!--<apex:commandButton value="Submit" onclick="javascript:if(!confirm('Are you sure?')){ return false; }" action="{!submitRecommendation}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>-->
+            <!--<apex:commandButton value="Submit" onclick="javascript:if(!confirm('よろしいですか？ / Are you sure?')){ return false; }" action="{!submitRecommendation}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>-->                                        
+            <!--<apex:commandButton value="Submit" action="{!submitRecommendation}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>  
+            <apex:commandButton value="Cancel" onClick="{self.close();}"/>-->
+            <apex:commandButton value="{!$Label.RFA_Button_Submit}" action="{!submitRecommendation}" onComplete="window_Close({!hasError});" reRender="pageMessage"/>  
+            <apex:commandButton value="{!$Label.RFA_Button_Cancel}" onClick="{self.close();}"/>            
+             <!--'よろしいですか？ / Are you sure?'-->
+             <script>
+                 function confirmation() {
+                 var flag = confirm( {!$Label.RFA_Msg_Confirmation}                 	
+                 	); 
+                 return flag;
+                 }
+              </script> 
+
+          </apex:pageBlockButtons>
+                <!--<apex:pageBlockSection title="ApprovalRecommendation" columns="1" id="pageBlockSection">-->
+                <!--<apex:pageBlockSection title="承認推奨 / ApprovalRecommendation" columns="1" id="pageBlockSection">-->
+        <table border="0" align="center" width="80%">
+         <tr>
+           <td><font size="2" >{!$Label.RFA_Msg_EJComment_Approval}</font></td>
+           <!--<td><font size="2" >承認プロセスに日本人以外が含まれる場合は、日本語と英語の両方でコメントの記述をお願いします。</font></td>-->
+         </tr>        
+         <!--<tr>
+            <td ><font size="2">Add comment in both Japanese and English, if any non-Japanese recipient is involved in the approval process (either approver or info copy).</font></td>
+         </tr>-->
+        </table>     
+
+                <apex:pageBlockSection title="{!$Label.RFA_Recommendation01}" columns="1" id="pageBlockSection">
+                           <apex:pageBlockSectionItem id="section1">
+                                 <apex:outputPanel >
+                                       <!--<apex:outputLabel >Act on Behalf of</apex:outputLabel>-->
+                                       <!--<apex:outputLabel >承認者（代理）/ Act on Behalf of</apex:outputLabel>-->
+                                       <apex:outputLabel >{!$Label.RFA_Recommendation02}</apex:outputLabel>
+                                 </apex:outputPanel>
+                                 <apex:selectList value="{!selectedWorkItem}" size="1" multiselect="false" required="true">
+                                         <apex:selectOptions value="{!workItemOptions}"/>
+                                   </apex:selectList>
+                                  
+                           </apex:pageBlockSectionItem>
+                           <apex:pageBlockSectionItem id="section2">
+                                 <!-- <apex:outputLabel >Recommendation</apex:outputLabel>-->
+                                 <!--<apex:outputLabel >承認ステータス / Recommendation</apex:outputLabel>-->
+                                 <apex:outputLabel >{!$Label.RFA_Recommendation03}</apex:outputLabel>
+                                 <apex:actionRegion > 
+                                 <apex:selectList value="{!selectedRecommendation}" size="1" multiselect="false" required="true">
+                                       <apex:selectOptions value="{!recommendationOptions}"/>
+                                       <apex:actionSupport event="onchange" reRender="pageBlockSection, section3, section4" />  
+                                       <!-- action="{!testActionSupportForSelection}" -->                                   
+                                 </apex:selectList>
+								</apex:actionRegion>
+                           </apex:pageBlockSectionItem> 
+                           
+                           <apex:pageBlockSectionItem id="section3" rendered="{!selectedRecommendation=='Conditionally Approved / 承認（条件付き）' || selectedRecommendation=='Rejected / 否認' || selectedRecommendation=='Return to Requester / 差し戻し'}">
+                              <!--<apex:outputLabel >Comments</apex:outputLabel>-->
+                              <!--<apex:outputLabel >コメント / Comments</apex:outputLabel>-->
+                              <!-- <apex:pageBlockSection rendered="{!selectedRecommendation =='Unconditionally Approved / 承認（条件なし）'}" > -->
+                              <!--<apex:pageBlockSection rendered="{!selectedRecommendation !='Unconditionally Approved / 承認（条件なし）'}" > -->
+                                 <apex:outputLabel >{!$Label.RFA_Recommendation04}</apex:outputLabel>
+                                 <apex:inputTextArea value="{!approvalComments}" richText="false" rows="10" cols="50"></apex:inputTextArea>
+                              <!--</apex:pageBlockSection> -->
+                           </apex:pageBlockSectionItem>
+                           
+                           <apex:pageBlockSectionItem id="section4" rendered="{!selectedRecommendation=='Unconditionally Approved / 承認（条件なし）'}">
+                             <!--<apex:outputLabel >Comments</apex:outputLabel>-->
+                             <!--<apex:outputLabel >コメント / Comments</apex:outputLabel>-->
+                             <!--<apex:pageBlockSection rendered="{!selectedRecommendation =='Unconditionally Approved / 承認（条件なし）'}" > -->
+                                 <apex:outputLabel >{!$Label.RFA_Recommendation05}</apex:outputLabel>
+                                 <apex:inputTextArea value="{!approvalNotes}" richText="false" rows="5" cols="50"></apex:inputTextArea>
+                            <!--  </apex:pageBlockSection> -->
+                           </apex:pageBlockSectionItem>      
+                           
+                           
+                                                  
+                           
+                </apex:pageBlockSection>
+          </apex:pageBlock>
+      </apex:form>
+      <!--
+        <table border="0" align="center" width="80%">
+         <tr>
+           <td><font size="2" >承認プロセスに日本人以外が含まれる場合は、日本語と英語の両方でコメントの記述をお願いします。</font></td>
+         </tr>        
+          <tr>
+            <td ><font size="2">Add comment in both Japanese and English, if any non-Japanese recipient is involved in the approval process (either approver or info copy).</font></td>
+         </tr>
+        </table>-->      
+      
+</apex:page>

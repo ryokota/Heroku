@@ -1,0 +1,76 @@
+<apex:page standardController="HR_Primary_Evaluators__c" extensions="HR_Evaculation3Controller">
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"/>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+<apex:includeScript value="{!URLFOR($Resource.TableSorter, 'jquery.tablesorter.js')}"/>
+
+<script type="text/javascript">
+    $j = jQuery.noConflict();    
+    $j(document).ready(function () {
+    $j("[id$=theaddrs]").tablesorter({widgets: ['zebra'] ,
+                    headers: {
+                        0: {sorter: 'text'},
+                        1: {sorter: 'text'},
+                        2: {sorter: 'text'},
+                        3: {sorter: 'text'},
+                        4: {sorter: 'text'},
+                        5: {sorter: 'text'},
+                        6: {sorter: 'digit'},
+                        7: {sorter: 'text'},
+                    }
+                });
+	TableSort.arrowUp   = ' ▲';
+	TableSort.arrowDown = ' ▼';
+
+    });
+
+  //some other unrelated js
+
+</script>
+
+<!-- some other visualforce stuff then the heart of the proof of concept: -->
+
+<apex:pageBlock id="theaddrsblock">
+
+                    <apex:pageBlockTable value="{!EvaculationList1}" var="v_Evaculation" id="theaddrs" styleClass="tablesorter" headerClass="header">
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Name}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Primary_Assessment_Rank1__c}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Primary_Assessment_Rank2__c}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Primary_Assessment_Rank3__c}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Primary_Assessment_Rank4__c}" />
+                    </apex:column>
+                    <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputText styleClass="header" value="test"/>
+                            </apex:facet>
+                            <apex:outputField value="{!v_Evaculation.Primary_Assessment_Rank5__c}" />
+                    </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+
+<!-- the other columns, closing tags, and that's it -->
+</apex:page>

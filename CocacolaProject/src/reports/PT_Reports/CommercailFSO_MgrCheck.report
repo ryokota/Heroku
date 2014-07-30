@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User*User$L2_Function_E__c</field>
+    </columns>
+    <columns>
+        <field>User*User$L3_Function_E__c</field>
+    </columns>
+    <columns>
+        <field>User*User$L4_Function_E__c</field>
+    </columns>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Alias</field>
+    </columns>
+    <columns>
+        <field>User$Manager</field>
+    </columns>
+    <columns>
+        <field>User$Manager.Alias</field>
+    </columns>
+    <columns>
+        <field>User$LastModifiedBy</field>
+    </columns>
+    <columns>
+        <field>User$LastModifiedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User$LastModifiedBy</column>
+            <operator>equals</operator>
+            <value>tanaka keiko</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$LastModifiedDate</column>
+            <operator>equals</operator>
+            <value>12/13/2013 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User*User$L2_Function_E__c</column>
+            <operator>equals</operator>
+            <value>Commercial(FSO)</value>
+        </criteriaItems>
+        <language>ja</language>
+    </filter>
+    <format>Tabular</format>
+    <name>CommercailFSO - MgrCheck</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User$Manager</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Milestone__c.Open_Tasks_in_Tasks__c</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Milestone__c.Progress__c</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Milestone__c.Kickoff__c</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Milestone__c.Deadline__c</field>
+    </columns>
+    <columns>
+        <field>Milestone1_Milestone__c.Duration__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Milestone-Task-Percentage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Milestone1_Milestone__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Milestone1_Milestone__c.Progress__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Milestone1_Milestone__c.Deadline__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

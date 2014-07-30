@@ -1,0 +1,25 @@
+#Fri Feb 14 12:18:57 GMT+09:00 2014
+ExecuteAnonymousApex_code=Debug
+ExecuteAnonymousApex_profiling=Info
+ExecuteAnonymousCallout=Info
+ExecuteAnonymousDb=Info
+ExecuteAnonymousValidation=Info
+ExecuteAnonymousWorkflow=Info
+RunTestApex_code=Debug
+RunTestApex_profiling=Info
+RunTestCallout=Info
+RunTestDb=Info
+RunTestValidation=Info
+RunTestWorkflow=Info
+eclipse.preferences.version=1
+endpointApiVersion=28.0
+endpointEnvironment=Sandbox
+endpointServer=test.salesforce.com
+httpsProtocol=true
+ideVersion=28.0
+keependpoint=false
+metadataFormatVersion=28.0
+namespacePrefix=
+packageName=unpackaged
+readTimeout=400
+username=ryokota@pasonatquila.ccej.ep.hryokota

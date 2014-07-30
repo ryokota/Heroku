@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>5日以上承認待ちになっているRFAを承認日数別に表示 / Shows all RFAs with approval process time of more than 5 days.</description>
+    <filter>
+        <criteriaItems>
+            <column>CHILD_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFA__c.Stage__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RFAUserRole__c.ApprovalRequestedOn__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Metrics - Process Time / 集計:承認日数別承認待ちRFA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$RFA__c$RFAUserRole__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2014-02-28</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-12-01</startDate>
+    </timeFrameFilter>
+</Report>

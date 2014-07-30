@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Public</accessType>
+    <name>共有ドキュメント</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+</DocumentFolder>

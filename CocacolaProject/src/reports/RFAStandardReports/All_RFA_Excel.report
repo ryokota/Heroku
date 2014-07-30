@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Stage__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Report_Request_Amount_000JPY__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Cost_Center_Number_Name__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.PrimaryCOACategory__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.PrimaryCOASubCategory__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.PrimaryCOASubCategory2__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.PrimaryCOASubCategory3__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.CirculationDate__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.CompletionDate__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Requested_By__c</field>
+    </columns>
+    <description>すべてのステータスのRFAを表示 / Shows all RFAs the user has access to in any status.</description>
+    <format>Tabular</format>
+    <name>All RFA / 全てのRFA一覧</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$RFA__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.ExpectedCommitmentDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

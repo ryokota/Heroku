@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.UserName__c</field>
+    </columns>
+    <columns>
+        <field>RFAUserRole__c.ApprovalRecommendation__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.RequestTitle__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Stage__c</field>
+    </columns>
+    <columns>
+        <field>RFA__c.Requested_By__c</field>
+    </columns>
+    <description>承認待ちになっているRFAを起案No.別に表示 / Shows all RFAs with awaiting approvals (by remaining approver).</description>
+    <filter>
+        <criteriaItems>
+            <column>CHILD_RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>RFAUserRole__c.RUR_Approver</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFAUserRole__c.ApprovalRecommendation__c</column>
+            <operator>equals</operator>
+            <value>,承認待ち</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RFA__c.Stage__c</column>
+            <operator>notEqual</operator>
+            <value>Draft,Approved,Rejected,Closed,Pre-Circulation,Post-Circulation</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Pending RFAs by RFA# / 起案No.別承認待ちRFA一覧</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$RFA__c$RFAUserRole__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RFA__c.ExpectedCommitmentDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

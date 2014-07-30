@@ -1,0 +1,201 @@
+<apex:page Controller="JFK_Menu_JCJController" showHeader="true" standardStylesheets="true" tabStyle="JCJ_JCR__tab">
+    <apex:pageMessages id="msg" rendered="{!showMessage}"/> 
+
+    <script type="text/javascript"> 
+        <!-- Focusを付けたくない場合 --> 
+        beenFocused = true;
+
+        /* WindowがActiveになった時、表示情報をリフレッシュする。 */
+        window.onfocus = focusText;
+        window.onblur = blurText;
+
+        /* Focusを取得した時 */
+        function focusText() {
+//              console.log("focus event detected!");
+            reSearch();
+        }
+
+        /* Focusが外れた時 */
+        function blurText() {
+//              console.log("blur event detected!");
+        }
+    </script>
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+
+    <apex:form >
+        <!-- 画面がアクティブになった時、データ再取得 --> 
+        <apex:actionFunction action="{!doSearch}" name="reSearch" rerender="buttonSection, resultGroup">
+            <apex:param name="param" value="true" />
+        </apex:actionFunction>
+
+        <apex:pageBlock mode="edit">
+            <apex:pageBlockSection id="criteriaSection" title="" columns="1">
+                <apex:panelGrid width="100%" columns="8">
+                    <apex:pageBlockSectionItem id="bosyuNendoSectionItem">
+                        <apex:outputLabel value="{!$ObjectType.JFK_Bosyu__c.Fields.BosyuNendo__c.label} : " for="bosyuNendo"/>
+                        <apex:selectList id="bosyuNendo" value="{!nendo4Search}" size="1">
+                           <apex:selectOptions Value="{!nendos4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="bosyuKaiSectionItem">
+                        <apex:outputLabel value="{!$ObjectType.JFK_Bosyu__c.Fields.BosyuKai__c.label} : " for="bosyuKai"/>
+                        <apex:selectList id="bosyuKai" value="{!kai4Search}" size="1">
+                           <apex:selectOptions Value="{!kais4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="areaSectionItem">
+                        <apex:outputLabel value="エリア区分: " for="area"/>
+                            <apex:selectList id="area" value="{!area4Search}" size="1">
+                               <apex:selectOptions Value="{!areas4Search}"/>
+                            </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="seiriNoSectionItem">
+                        <apex:outputLabel value="整理番号 : " for="seiriNo"/>
+                        <apex:inputtext id="seiriNo" value="{!seiriNo4Search}" size="10"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem id="shikyuJikiSectionItem">
+                        <apex:outputLabel value="{!$ObjectType.JFK_Bosyu__c.Fields.ShikyuJiki_Sushiki__c.label} : " for="shikyuJiki"/>
+                        <apex:selectList id="shikyuJiki" value="{!jiki4Search}" size="1">
+                           <apex:selectOptions Value="{!jikis4Search}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="事業所名 : " for="jigyosyoMei"/>
+                        <apex:inputtext id="jigyosyoMei" value="{!jigyosyoMei4Search}" size="30"/>
+                    </apex:pageBlockSectionItem>
+                    &nbsp;&nbsp;&nbsp;
+                    <apex:actionStatus id="searchStatus">
+                        <apex:facet name="stop">
+                            <apex:commandButton value="　検　索　" action="{!doSearch}" status="searchStatus" rerender="buttonSection, resultGroup, msg"
+                                                style="color:white; background:royalblue; border-color:dimgray"/>
+                        </apex:facet>
+                        <apex:facet name="start">
+                           <apex:outputPanel >
+                              <apex:commandButton value="実行中..." status="searchStatus" disabled="true"/>
+                              <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                          </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+            <hr/>
+            <apex:outputPanel id="buttonSection">
+                <table width="5.9%" align="left" border="0">
+                    <tr>
+                        <td align="left" width="50%">
+                        </td>
+                        <td align="left" width="50%">
+                            <apex:commandButton id="tokusashi" value="特　差" rendered="{!isBoss}" action="{!tokusashi}" rerender="msg"
+                                                onClick="if (!confirmTokusashi()) return false;"/>
+                            
+                        </td>
+                    </tr>
+                </table>
+                <table width="30%" align="right" border="0">
+                    <tr>
+                        <td align="center">
+                            <!-- First Button -->
+                           <apex:actionStatus id="FirstStatus">
+                                <apex:facet name="stop">
+                                    <apex:commandButton id="firstBlock" value="先頭頁" action="{!showFirstPage}" status="FirstStatus" rerender="buttonSection, resultGroup" disabled="{!firstBtnDisable}"/>
+                                 </apex:facet>
+                                 <apex:facet name="start">
+                                     <apex:outputPanel >
+                                        <apex:commandButton value="実行中..." status="FirstStatus" disabled="true"/>
+                                        <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Previous Button -->
+                               <apex:actionStatus id="PreviousStatus">
+                                   <apex:facet name="stop">
+                                       <apex:commandButton value="前頁" action="{!showPreviousPage}" status="PreviousStatus" rerender="resultGroup, buttonSection," disabled="{!firstBtnDisable}"/>
+                                    </apex:facet>
+                                    <apex:facet name="start">
+                                        <apex:outputPanel >
+                                           <apex:commandButton value="実行中..." status="PreviousStatus" disabled="true"/>
+                                           <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                       </apex:outputPanel>
+                                   </apex:facet>
+                               </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Next Button -->
+                               <apex:actionStatus id="NextStatus">
+                                   <apex:facet name="stop">
+                                        <apex:commandButton value="次頁" action="{!showNextPage}" status="NextStatus"  rerender="resultGroup, buttonSection," disabled="{!lastBtnDisable}"/>
+                                   </apex:facet>
+                                   <apex:facet name="start">
+                                       <apex:outputPanel >
+                                          <apex:commandButton value="実行中..." status="NextStatus" disabled="true"/>
+                                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                       </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            <!-- Last Button -->
+                               <apex:actionStatus id="LastStatus">
+                                    <apex:facet name="stop">
+                                        <apex:commandButton value="最終頁" action="{!showLastPage}" status="LastStatus"  rerender="resultGroup, buttonSection," disabled="{!lastBtnDisable}"/>
+                                     </apex:facet>
+                                     <apex:facet name="start">
+                                         <apex:outputPanel >
+                                            <apex:commandButton value="実行中..." status="LastStatus" disabled="true"/>
+                                            <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                                        </apex:outputPanel>
+                                    </apex:facet>
+                            </apex:actionStatus>
+                        </td>
+                        <td align="center">
+                            Page : {!PageNumber}
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+            <br/><br/>
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!lstJigyoshoTR}" var="jigyoTR" id="resultGroup" border="10px">
+                    <apex:column headerValue="特　差" width="3%" rendered="{!isBoss}">
+                        <apex:inputCheckbox value="{!jigyoTR.isSelected}" 
+                                            rendered="{!IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_1st__c), 'false', 'true')}"/>
+                    </apex:column>
+                    <apex:column headerValue="JCJ審査" width="6%">
+                        <apex:outputLink target="_blank" value="/apex/JFK_JCJ?tanto={!IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_1st__c), '1',IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_2nd__c), '2', '2'))}&nendo={!jigyoTR.jigyoshoTR.BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuNendo__c}&kai={!jigyoTR.jigyoshoTR.BosyuJoho_ShikyuJiki__r.Bosyu__r.BosyuKai__c}&jiki={!jigyoTR.jigyoshoTR.BosyuJoho_ShikyuJiki__r.ShikyuJiki_Sushiki__c}&jigyosyoid={!jigyoTR.jigyoshoTR.Nendo_Kai_Jigyosyo__r.Account__r.id}&jigyosyoTRid={!jigyoTR.jigyoshoTR.id}">
+                            {!IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_1st__c), "１次審査", 
+                                IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_2nd__c), "２次審査", "確認"))}
+                        </apex:outputLink>
+                    </apex:column>
+
+                    <apex:column headerValue="ステータス" style="{!IF(jigyoTR.gs.GS_FirstTantosya_Status__c='差し戻し中','color:red', IF(jigyoTR.gs.GS_FirstTantosya_Status__c='特差し中', 'color:red', 'color:black'))}">
+                        {!IF(ISBLANK(jigyoTR.gs), '未着手', IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_1st__c), jigyoTR.gs.GS_FirstTantosya_Status__c,
+                          IF(ISBLANK(jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi_2nd__c), jigyoTR.gs.GS_FirstTantosya_Status__c, jigyoTR.gs.GS_SecondTantosya_Status__c)))}
+                    </apex:column>
+                    <apex:column headerValue="1次担当者">{!jigyoTR.gs.GS_FirstTantosya__r.Name}</apex:column>
+                    <apex:column headerValue="2次担当者">{!jigyoTR.gs.GS_SecondTantosya__r.Name}</apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_JigyosyoTR__c.Fields.JigyoshoCD__c.label}" value="{!jigyoTR.jigyoshoTR.Nendo_Kai_Jigyosyo__r.JigyoshoCD__c}"/>
+                    <apex:column headerValue="{!$ObjectType.Account.Fields.Name.label}" value="{!jigyoTR.jigyoshoTR.Nendo_Kai_Jigyosyo__r.Account__r.Name}"/>
+                    <apex:column headerValue="{!$ObjectType.JFK_Bosyu__c.Fields.ShikyuJiki_Sushiki__c.label}" value="{!jigyoTR.jigyoshoTR.BosyuJoho_ShikyuJiki__r.ShikyuJiki_Sushiki__c}"/>
+                    <apex:column headerValue="報告書類受領日">
+                        <apex:outputText value="{0, date, yyyy/MM/dd}">
+                            <apex:param value="{!jigyoTR.gs.GS_JissekiHokokusyo_JuryoBi__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="審査着手日">
+                        <apex:outputText value="{0, date, yyyy/MM/dd}">
+                            <apex:param value="{!jigyoTR.gs.GS_JissekiSyoruiShinsa_ChakusyuBi__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="審査完了日">
+                        <apex:outputText value="{0, date, yyyy/MM/dd}">
+                            <apex:param value="{!jigyoTR.gs.GS_JissekiSyoruiShinsa_KanryoBi__c}"/>
+                        </apex:outputText>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

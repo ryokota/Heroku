@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="23" version="2.0">
+<workbenchAdvisor/>
+<window height="728" width="1355" x="-183" y="0">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.salesforce.ide.ui.actionset" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="com.salesforce.ide.ui.editors.apex" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="com.salesforce.ide.ui.editors.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.vf.rich.editor.actionset" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1383896425492" focus="true" label="Workspace - Force.com">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.salesforce.ide.ui.editors.html" name="RFA_VFP12_PrintableView_a_General.page" partName="RFA_VFP12_PrintableView_a_General.page" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page" title="RFA_VFP12_PrintableView_a_General.page" tooltip="CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="RFA_VFP15_PrintableView_c_medium.page" partName="RFA_VFP15_PrintableView_c_medium.page" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP15_PrintableView_c_medium.page" title="RFA_VFP15_PrintableView_c_medium.page" tooltip="CocaColaProject07/src/pages/RFA_VFP15_PrintableView_c_medium.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP15_PrintableView_c_medium.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="RFA_VFP16_PrintableView_d_Small.page" partName="RFA_VFP16_PrintableView_d_Small.page" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP16_PrintableView_d_Small.page" title="RFA_VFP16_PrintableView_d_Small.page" tooltip="CocaColaProject07/src/pages/RFA_VFP16_PrintableView_d_Small.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP16_PrintableView_d_Small.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="RFA_VFP17_PrintableView_e_CokeOne_Travel.page" partName="RFA_VFP17_PrintableView_e_CokeOne_Travel.page" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP17_PrintableView_e_CokeOne_Travel.page" title="RFA_VFP17_PrintableView_e_CokeOne_Travel.page" tooltip="CocaColaProject07/src/pages/RFA_VFP17_PrintableView_e_CokeOne_Travel.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP17_PrintableView_e_CokeOne_Travel.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="RFA_VFP18_PrintableView_f_CokeOne_E.page" partName="RFA_VFP18_PrintableView_f_CokeOne_E.page" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP18_PrintableView_f_CokeOne_E.page" title="RFA_VFP18_PrintableView_f_CokeOne_E.page" tooltip="CocaColaProject07/src/pages/RFA_VFP18_PrintableView_f_CokeOne_E.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP18_PrintableView_f_CokeOne_E.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="HR_Evaculation5.page" partName="HR_Evaculation5.page" path="C:/Users/良/workspace/CocacolaProject/src/pages/HR_Evaculation5.page" title="HR_Evaculation5.page" tooltip="CocacolaProject/src/pages/HR_Evaculation5.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/pages/HR_Evaculation5.page"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="RFA_VFP12_PrintableView_a_General.page-meta.xml" partName="RFA_VFP12_PrintableView_a_General.page-meta.xml" path="C:/Users/良/workspace/CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page-meta.xml" title="RFA_VFP12_PrintableView_a_General.page-meta.xml" tooltip="CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page-meta.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page-meta.xml"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="Milestone1_Charts_GVTasks.page" partName="Milestone1_Charts_GVTasks.page" path="C:/Users/良/workspace/CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page" title="Milestone1_Charts_GVTasks.page" tooltip="CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="Milestone_GanttChart.page" partName="Milestone_GanttChart.page" path="C:/Users/良/workspace/CocacolaProject/src/pages/Milestone_GanttChart.page" title="Milestone_GanttChart.page" tooltip="CocacolaProject/src/pages/Milestone_GanttChart.page" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/pages/Milestone_GanttChart.page"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.html" name="GanttChartComponent.component" partName="GanttChartComponent.component" path="C:/Users/良/workspace/CocacolaProject/src/components/GanttChartComponent.component" title="GanttChartComponent.component" tooltip="CocacolaProject/src/components/GanttChartComponent.component" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/components/GanttChartComponent.component"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.apex" name="Milestone1_Charts_Gantt_Helper.cls" partName="Milestone1_Charts_Gantt_Helper.cls" path="C:/Users/良/workspace/CocacolaProject/src/classes/Milestone1_Charts_Gantt_Helper.cls" title="Milestone1_Charts_Gantt_Helper.cls" tooltip="CocacolaProject/src/classes/Milestone1_Charts_Gantt_Helper.cls" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/classes/Milestone1_Charts_Gantt_Helper.cls"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.apex" name="TestClassChart.cls" partName="TestClassChart.cls" path="C:/Users/良/workspace/CocacolaProject/src/classes/TestClassChart.cls" title="TestClassChart.cls" tooltip="CocacolaProject/src/classes/TestClassChart.cls" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/classes/TestClassChart.cls"/>
+</editor>
+<editor id="com.salesforce.ide.ui.editors.apex" name="Groupfor3RE.cls" partName="Groupfor3RE.cls" path="C:/Users/良/workspace/CocacolaProject/src/classes/Groupfor3RE.cls" title="Groupfor3RE.cls" tooltip="CocacolaProject/src/classes/Groupfor3RE.cls" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocacolaProject/src/classes/Groupfor3RE.cls"/>
+</editor>
+<editor activePart="true" focus="true" id="com.salesforce.ide.ui.editors.apex" name="RFA_AP04_ApprovalWorkItemHelper.cls" partName="RFA_AP04_ApprovalWorkItemHelper.cls" path="C:/Users/良/workspace/CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls" title="RFA_AP04_ApprovalWorkItemHelper.cls" tooltip="CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.team.sync.views.SynchronizeView" partName="Synchronize">
+<viewState/>
+</view>
+<view id="zigen.plugin.db.ui.views.SQLExecuteView" partName="SQL 実行・ビュー">
+<viewState/>
+</view>
+<view id="com.salesforce.ide.ui.view.debugLog" partName="Execute Anonymous">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="227" org.eclipse.ui.ide.severityAndDescriptionField="1322"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="zigen.plugin.db.ui.views.HistoryView" partName="SQL 履歴・ビュー">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="true">
+<userDefinedPatterns>
+<child pattern="*.cls-meta.xml"/>
+<child pattern="*.component-meta.xml"/>
+<child pattern="*.page-meta.xml"/>
+<child pattern="*.trigger-meta.xml"/>
+</userDefinedPatterns>
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="com.salesforce.ide.ui.view.runTest" partName="Apex Test Runner">
+<viewState/>
+</view>
+<view id="zigen.plugin.db.ui.views.TreeView" partName="DB ツリー・ビュー">
+<viewState/>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
+<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
+<sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sort1 sortDirection="1" sortKey="RANK"/>
+<sort2 sortDirection="1" sortKey="DATE_CREATED"/>
+<sort3 sortDirection="1" sortKey="NONE"/>
+<sort4 sortDirection="1" sortKey="NONE"/>
+<sort5 sortDirection="1" sortKey="NONE"/>
+<sort6 sortDirection="1" sortKey="NONE"/>
+<sort7 sortDirection="1" sortKey="NONE"/>
+</sorter>
+</sorter>
+<filteredTreeFindHistory/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.salesforce.ide.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@79a340" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7491749" ratioLeft="454" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@7cb9e9a3" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.5" ratioLeft="227" ratioRight="227" relationship="4" relative="org.eclipse.ui.internal.ViewStack@7cb9e9a3">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.salesforce.ide.ui.perspective.ForcePerspectiveFactory" id="com.salesforce.ide.perspective" label="Force.com"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.salesforce.ide.ui.actionset"/>
+<alwaysOnActionSet id="com.salesforce.ide.ui.actionset.help"/>
+<alwaysOnActionSet id="com.salesforce.ide.ui.editors.intro.menuActionSet"/>
+<alwaysOnActionSet id="com.salesforce.ide.deployment.actionset"/>
+<alwaysOnActionSet id="com.vf.rich.editor.actionset"/>
+<show_view_action id="com.salesforce.ide.ui.view.runTest"/>
+<show_view_action id="com.salesforce.ide.ui.view.debugLog"/>
+<show_view_action id="com.salesforce.ide.ui.view.log"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createProject"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createApexClass"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createApexTrigger"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createCustomApplication"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createCustomObject"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createHomePageComponent"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createHomePageLayout"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createLetterhead"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createProfile"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createApexComponent"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createApexPage"/>
+<new_wizard_action id="com.salesforce.ide.ui.wizards.createWorkflow"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.salesforce.ide.ui.view.runTest"/>
+<view id="com.salesforce.ide.ui.view.debugLog"/>
+<view id="org.eclipse.team.sync.views.SynchronizeView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.2835709" ratioLeft="378" ratioRight="955" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.8391377" ratioLeft="506" ratioRight="97" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="com.salesforce.ide.ui.view.runTest" label="Apex Test Runner"/>
+<page content="com.salesforce.ide.ui.view.debugLog" label="Execute Anonymous"/>
+<page content="org.eclipse.team.sync.views.SynchronizeView" label="Synchronize"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d540ac7" ratio="0.88143176" ratioLeft="788" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="zigen.plugin.db.PerspectiveFactory" id="zigen.plugin.db.PerspectiveFactory" label="DBViewer"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<show_view_action id="zigen.plugin.db.ui.views.TreeView"/>
+<show_view_action id="zigen.plugin.db.ui.views.SQLExecuteView"/>
+<show_view_action id="zigen.plugin.db.ui.views.HistoryView"/>
+<show_view_action id="zigen.plugin.db.ui.views.ContentOutline"/>
+<perspective_action id="zigen.plugin.db.PerspectiveFactory"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="zigen.plugin.db.ui.views.TreeView"/>
+<view id="zigen.plugin.db.ui.views.HistoryView"/>
+<view id="zigen.plugin.db.ui.views.SQLExecuteView"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@67e7d068">&#x0A;<folder activePageID="zigen.plugin.db.ui.views.TreeView" appearance="2" expanded="2">&#x0A;<page content="zigen.plugin.db.ui.views.TreeView" label="DB ツリー・ビュー"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.internal.ViewStack@67e7d068">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="org.eclipse.ui.internal.ViewStack@67e7d068"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1b0da35e" ratio="0.69966996" ratioLeft="424" ratioRight="182" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="zigen.plugin.db.ui.views.SQLExecuteView" appearance="2" expanded="2">&#x0A;<page content="zigen.plugin.db.ui.views.SQLExecuteView" label="SQL 実行・ビュー"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@24239123" ratio="0.69966996" ratioLeft="424" ratioRight="182" relationship="4" relative="org.eclipse.ui.internal.ViewStack@67e7d068">&#x0A;<folder activePageID="zigen.plugin.db.ui.views.HistoryView" appearance="2" expanded="2">&#x0A;<page content="zigen.plugin.db.ui.views.HistoryView" label="SQL 履歴・ビュー"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page-meta.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" path="/CocacolaProject/src/classes/TestClassChart.cls"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" path="/CocacolaProject/src/classes/Groupfor3RE.cls"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" path="/CocacolaProject/src/pages/Graph.page"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" path="/CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/CocaColaProject07/src/objects/RFA__c.object"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" path="/CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls-meta.xml"/>
+</editors>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3725" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3579" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3579" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="8521" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="7480" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="7399" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3384" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3168" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3719" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3579" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3579" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3504" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3446" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3440" y="6"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3446" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="7480" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3504" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3504" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3526" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page" index="1">
+<position info="not_deleted" x="3519" y="0"/>
+</item>
+<item historyLabel="Milestone1_Charts_GVTasks.page-meta.xml" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestClassChart.cls" index="2">
+<position info="not_deleted" x="3123" y="0"/>
+</item>
+<item historyLabel="TestClassChart.cls" index="2">
+<position info="not_deleted" x="1142" y="77"/>
+</item>
+<item historyLabel="Groupfor3RE.cls" index="3"/>
+<item historyLabel="Graph.page" index="4"/>
+<item historyLabel="RFA_AP04_ApprovalWorkItemHelper.cls" index="5"/>
+<item historyLabel="RFA__c.object" index="6"/>
+<item historyLabel="RFA_AP04_ApprovalWorkItemHelper.cls" index="5">
+<position info="not_deleted" x="28857" y="0"/>
+</item>
+<item active="true" historyLabel="RFA_AP04_ApprovalWorkItemHelper.cls-meta.xml" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="RFA__c.object" tooltip="CocaColaProject07/src/objects/RFA__c.object">
+<persistable path="/CocaColaProject07/src/objects/RFA__c.object"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" name="RFA_AP04_ApprovalWorkItemHelper.cls" tooltip="CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls">
+<persistable path="/CocaColaProject07/src/classes/RFA_AP04_ApprovalWorkItemHelper.cls"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="Graph.page" tooltip="CocacolaProject/src/pages/Graph.page">
+<persistable path="/CocacolaProject/src/pages/Graph.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" name="Groupfor3RE.cls" tooltip="CocacolaProject/src/classes/Groupfor3RE.cls">
+<persistable path="/CocacolaProject/src/classes/Groupfor3RE.cls"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" name="TestClassChart.cls" tooltip="CocacolaProject/src/classes/TestClassChart.cls">
+<persistable path="/CocacolaProject/src/classes/TestClassChart.cls"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="RFA_C01_DynamicButton.component" tooltip="CocaColaProject07/src/components/RFA_C01_DynamicButton.component">
+<persistable path="/CocaColaProject07/src/components/RFA_C01_DynamicButton.component"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="RFA_C07_PageButtonSection.component" tooltip="CocaColaProject07/src/components/RFA_C07_PageButtonSection.component">
+<persistable path="/CocaColaProject07/src/components/RFA_C07_PageButtonSection.component"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="RFA_VFP03_ApprovalRouting.page" tooltip="CocaColaProject07/src/pages/RFA_VFP03_ApprovalRouting.page">
+<persistable path="/CocaColaProject07/src/pages/RFA_VFP03_ApprovalRouting.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="RFA_VFP08_ActionButtonTop.page" tooltip="CocaColaProject07/src/pages/RFA_VFP08_ActionButtonTop.page">
+<persistable path="/CocaColaProject07/src/pages/RFA_VFP08_ActionButtonTop.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="RFA_VFP14_PrintableView_b_Capital.page" tooltip="CocacolaProject/src/pages/RFA_VFP14_PrintableView_b_Capital.page">
+<persistable path="/CocacolaProject/src/pages/RFA_VFP14_PrintableView_b_Capital.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.apex" name="Milestone1_Charts_Gantt_Helper.cls" tooltip="CocacolaProject/src/classes/Milestone1_Charts_Gantt_Helper.cls">
+<persistable path="/CocacolaProject/src/classes/Milestone1_Charts_Gantt_Helper.cls"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="GanttChartComponent.component" tooltip="CocacolaProject/src/components/GanttChartComponent.component">
+<persistable path="/CocacolaProject/src/components/GanttChartComponent.component"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="Milestone_GanttChart.page" tooltip="CocacolaProject/src/pages/Milestone_GanttChart.page">
+<persistable path="/CocacolaProject/src/pages/Milestone_GanttChart.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.salesforce.ide.ui.editors.html" name="Milestone1_Charts_GVTasks.page" tooltip="CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page">
+<persistable path="/CocacolaProject/src/pages/Milestone1_Charts_GVTasks.page"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="RFA_VFP12_PrintableView_a_General.page-meta.xml" tooltip="CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page-meta.xml">
+<persistable path="/CocaColaProject07/src/pages/RFA_VFP12_PrintableView_a_General.page-meta.xml"/>
+</file>
+</mruList>
+</workbench>

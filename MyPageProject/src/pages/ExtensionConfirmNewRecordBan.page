@@ -1,0 +1,19 @@
+<apex:page standardController="ExtensionConfirm__c" extensions="NewRecordBanController">
+    <head>
+        <style>
+            .move-link-block {
+                margin-top: 10px;
+            }
+            .move-link {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    
+    
+    <apex:pageMessage severity="WARNING" title="注意" summary="{!$Label.ExtensionConfirmNewRecordBanErrMsg}" strength="2"/>
+    <apex:outputPanel styleClass="move-link-block" layout="block">
+        <apex:outputLink styleClass="first-move-link" value="../../{!staffContractPrefixKey}/o"><br>契約一覧のタブに移動する</br></apex:outputLink>
+        <apex:outputLink styleClass="move-link" value="../../{!ExtensionConfirmPrefixKey}/o"><br>延長確認に戻る</br></apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

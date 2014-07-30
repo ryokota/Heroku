@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>エラーログ</value>
+    </caseValues>
+    <fields>
+        <label><!-- 労働者 --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- エラーログ --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所TR（募集回） --></label>
+        <name>JigyosyoTR_Bosyukai__c</name>
+        <relationshipLabel><!-- エラーログ --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所TR（支給時期） --></label>
+        <name>JigyosyoTR_ShikyuJiki__c</name>
+        <relationshipLabel><!-- エラーログ --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 内容 --></label>
+        <name>Naiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者TR --></label>
+        <name>RodosyaTR__c</name>
+        <relationshipLabel><!-- エラーログ --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>エラーログID</nameFieldLabel>
+</CustomObjectTranslation>

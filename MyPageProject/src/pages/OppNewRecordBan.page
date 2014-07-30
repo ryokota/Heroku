@@ -1,0 +1,20 @@
+<apex:page standardController="Opportunity">
+    <head>
+        <style>
+            .move-link-block {
+                margin-top: 10px;
+            }
+            .move-link {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    
+    
+    <apex:pageMessage severity="WARNING" title="注意" summary="{!$Label.OppNewRecordBanErrMsg}" strength="2"/>
+    <apex:outputPanel styleClass="move-link-block" layout="block">
+        <apex:outputLink styleClass="move-link" value="../../001/o"><br>企業のタブに移動する</br></apex:outputLink>
+        <apex:outputLink styleClass="first-move-link" value="../../006/o"><br>受注管理に戻る</br></apex:outputLink>
+        <apex:outputLink styleClass="move-link" value="{!$Label.OppCreateHelpUrl}"><br>受注管理登録マニュアルを確認する</br></apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

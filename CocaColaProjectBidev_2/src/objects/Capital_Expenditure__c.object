@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount (JPY)</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AssetCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>土地 / Land</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>構築物 / Land Improvements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>建物 / Buildings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>建物改造費 / Building Improvements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>建物付属設備 / Building Fixtures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ﾘｰｽ物件改良費 / Leasehold Improvements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>機械設備 / Machinery &amp; Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>販売機材 - 自販機 / Sales Equipment - VM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>販売機材 - ｸｰﾗｰ / Sales Equipment - Coolers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>販売機材 - ﾃﾞｨｽﾍﾟﾝｻｰ / Sales Equipment - Dispensers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>販売機材 - その他 / Sales Equipment - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT ﾊｰﾄﾞｳｪｱ / IT Hardware</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT ｿﾌﾄｳｪｱ / IT Software</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>車両 - 自動車 / Fleet - Automobiles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>車両 - ﾄﾗｯｸ / Fleet - Trucks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>車両 - その他 / Fleet - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>工具器具備品 / Furniture &amp; Fixtures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>その他無形固定資産 / Other Intangible Assets</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>InvestmentObjectiveCategory__c</fullName>
+        <externalId>false</externalId>
+        <label>Investment Objective Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>法律/法的規制対応 / Legal Regulatory Compliance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>更新投資（老朽に伴う入替） / Maintenance or Replacement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>品質基準対応（環境負荷軽減・労働安全衛生含む） / Quality Standards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>効率性/生産性向上 / Efficiency/Productivity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>顧客ﾆｰｽﾞへの対応 / Customer Specific and Consumer Focus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>販売機材戦略 / Cold Drink Initiatives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>売上成長/営業力強化 / Other Growth Initiatives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>その他の戦略的対応 / Strategic Initiatives</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RFA__c</fullName>
+        <externalId>false</externalId>
+        <label>RFA</label>
+        <referenceTo>RFA__c</referenceTo>
+        <relationshipName>Capital_Expenditures</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Report_Amount_000JPY__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount__c  / 1000</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount (000JPY)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Capital Request Detail</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>RFA__c</columns>
+        <columns>AssetCategory__c</columns>
+        <columns>InvestmentObjectiveCategory__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Report_Amount_000JPY__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CE#-{000000}</displayFormat>
+        <label>Capital Request Detail Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Capital Request Details</pluralLabel>
+    <recordTypeTrackFeedHistory>true</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CapitalProjectRequest</fullName>
+        <active>true</active>
+        <label>Capital Project Request</label>
+        <picklistValues>
+            <picklist>AssetCategory__c</picklist>
+            <values>
+                <fullName>IT ｿﾌﾄｳｪｱ %2F IT Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT ﾊｰﾄﾞｳｪｱ %2F IT Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>その他無形固定資産 %2F Other Intangible Assets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>土地 %2F Land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>工具器具備品 %2F Furniture %26 Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物 %2F Buildings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物付属設備 %2F Building Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物改造費 %2F Building Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>構築物 %2F Land Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>機械設備 %2F Machinery %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - その他 %2F Sales Equipment - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - 自販機 %2F Sales Equipment - VM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ｸｰﾗｰ %2F Sales Equipment - Coolers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ﾃﾞｨｽﾍﾟﾝｻｰ %2F Sales Equipment - Dispensers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - その他 %2F Fleet - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - 自動車 %2F Fleet - Automobiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - ﾄﾗｯｸ %2F Fleet - Trucks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ﾘｰｽ物件改良費 %2F Leasehold Improvements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>InvestmentObjectiveCategory__c</picklist>
+            <values>
+                <fullName>その他の戦略的対応 %2F Strategic Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>効率性%2F生産性向上 %2F Efficiency%2FProductivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>品質基準対応%EF%BC%88環境負荷軽減%E3%83%BB労働安全衛生含む%EF%BC%89 %2F Quality Standards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>売上成長%2F営業力強化 %2F Other Growth Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>更新投資%EF%BC%88老朽に伴う入替%EF%BC%89 %2F Maintenance or Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>法律%2F法的規制対応 %2F Legal Regulatory Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材戦略 %2F Cold Drink Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>顧客ﾆｰｽﾞへの対応 %2F Customer Specific and Consumer Focus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SmallProjectRequest</fullName>
+        <active>true</active>
+        <label>Medium Project Request</label>
+        <picklistValues>
+            <picklist>AssetCategory__c</picklist>
+            <values>
+                <fullName>IT ｿﾌﾄｳｪｱ %2F IT Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT ﾊｰﾄﾞｳｪｱ %2F IT Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>その他無形固定資産 %2F Other Intangible Assets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>土地 %2F Land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>工具器具備品 %2F Furniture %26 Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物 %2F Buildings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物付属設備 %2F Building Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物改造費 %2F Building Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>構築物 %2F Land Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>機械設備 %2F Machinery %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - その他 %2F Sales Equipment - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - 自販機 %2F Sales Equipment - VM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ｸｰﾗｰ %2F Sales Equipment - Coolers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ﾃﾞｨｽﾍﾟﾝｻｰ %2F Sales Equipment - Dispensers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - その他 %2F Fleet - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - 自動車 %2F Fleet - Automobiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - ﾄﾗｯｸ %2F Fleet - Trucks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ﾘｰｽ物件改良費 %2F Leasehold Improvements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>InvestmentObjectiveCategory__c</picklist>
+            <values>
+                <fullName>その他の戦略的対応 %2F Strategic Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>効率性%2F生産性向上 %2F Efficiency%2FProductivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>品質基準対応%EF%BC%88環境負荷軽減%E3%83%BB労働安全衛生含む%EF%BC%89 %2F Quality Standards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>売上成長%2F営業力強化 %2F Other Growth Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>更新投資%EF%BC%88老朽に伴う入替%EF%BC%89 %2F Maintenance or Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>法律%2F法的規制対応 %2F Legal Regulatory Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材戦略 %2F Cold Drink Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>顧客ﾆｰｽﾞへの対応 %2F Customer Specific and Consumer Focus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Small_Project_Request_25MM</fullName>
+        <active>true</active>
+        <label>Small Project Request</label>
+        <picklistValues>
+            <picklist>AssetCategory__c</picklist>
+            <values>
+                <fullName>IT ｿﾌﾄｳｪｱ %2F IT Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT ﾊｰﾄﾞｳｪｱ %2F IT Hardware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>その他無形固定資産 %2F Other Intangible Assets</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>土地 %2F Land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>工具器具備品 %2F Furniture %26 Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物 %2F Buildings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物付属設備 %2F Building Fixtures</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>建物改造費 %2F Building Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>構築物 %2F Land Improvements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>機械設備 %2F Machinery %26 Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - その他 %2F Sales Equipment - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - 自販機 %2F Sales Equipment - VM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ｸｰﾗｰ %2F Sales Equipment - Coolers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材 - ﾃﾞｨｽﾍﾟﾝｻｰ %2F Sales Equipment - Dispensers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - その他 %2F Fleet - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - 自動車 %2F Fleet - Automobiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>車両 - ﾄﾗｯｸ %2F Fleet - Trucks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ﾘｰｽ物件改良費 %2F Leasehold Improvements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>InvestmentObjectiveCategory__c</picklist>
+            <values>
+                <fullName>その他の戦略的対応 %2F Strategic Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>効率性%2F生産性向上 %2F Efficiency%2FProductivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>品質基準対応%EF%BC%88環境負荷軽減%E3%83%BB労働安全衛生含む%EF%BC%89 %2F Quality Standards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>売上成長%2F営業力強化 %2F Other Growth Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>更新投資%EF%BC%88老朽に伴う入替%EF%BC%89 %2F Maintenance or Replacement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>法律%2F法的規制対応 %2F Legal Regulatory Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>販売機材戦略 %2F Cold Drink Initiatives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>顧客ﾆｰｽﾞへの対応 %2F Customer Specific and Consumer Focus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RFA__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AssetCategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InvestmentObjectiveCategory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Report_Amount_000JPY__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

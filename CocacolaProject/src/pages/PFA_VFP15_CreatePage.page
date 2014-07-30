@@ -1,0 +1,37 @@
+<apex:page standardController="RFA__c" applyHtmlTag="false" showHeader="false" renderas="PDF">
+	<apex:stylesheet value="{!$Resource.RPF_VFP14PDF_CSS}"/>
+    <head>
+        <style type="text/css">
+            body{
+                font-family: Arial Unicode MS;
+            }
+		</style>
+	</head>
+    <table width="100%">
+        <tr>
+        <td>
+               <!-- <img src="{!$Resource.coke_RFA_logo}" width="240" height="60"/> -->
+               <img src="{!$Resource.CCEJ_Logo}" width="240" height="60"/> 
+        </td>
+        <td align="left">
+                <a href="javascript:self.close()">Close Window</a><br/>
+                <a href="javascript:window.print();">Print This Page</a>
+        </td>
+        </tr>
+    </table>
+    
+    <apex:detail subject="{!RFA__c}" relatedList="false" title="true"/> 
+    <div>
+      <apex:relatedList list="Three_Year_Cash_Spend__r" rendered="{!RFA__c.RecordTypeId != '01210000000QsJ8AAK'}" /><br/><br/>
+     </div>
+     <div>
+       <apex:relatedList list="RFA_User_Roles__r" pageSize="100" />  
+      </div> 
+      <div>
+       <apex:relatedList list="NotesAndAttachments" pageSize="100" /> 
+      </div> 
+      <!--  
+      <div>
+       <c:RFA_C08_RFAHistory subject="{!RFA__c.ID}"></c:RFA_C08_RFAHistory> 
+      </div> -->
+</apex:page>

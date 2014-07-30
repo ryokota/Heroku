@@ -1,0 +1,30 @@
+<apex:page controller="Groupfor3RE" sidebar="false" showheader="false" readonly="true">
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {packages: ['motionchart']});
+
+    function drawVisualization() {
+var data = new google.visualization.arrayToDataTable([
+          ['Type', 'Date', '3RE'],
+            <apex:repeat value="{!ChartData1}" var="c">
+               ['{!c.entity}','{!c.time1}','{!c.tre}'],
+           </apex:repeat>
+        ]);
+       var formatter_short = new google.visualization.DateFormat({formatType: 'short'});
+     formatter_short.format(data, 1);    
+
+
+       var motionchart = new google.visualization.MotionChart(
+          document.getElementById('chart_div'));
+      motionchart.draw(data, {'width': 800, 'height': 400});
+    }
+
+
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+
+<body style="font-family: Arial;border: 0 none;">
+<div id="chart_div" ></div>
+</body>
+
+</apex:page>

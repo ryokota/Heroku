@@ -1,0 +1,87 @@
+<!-- VF page: RFA_VFP04_CM_DetailsAsPDF  called by class: RFA_AP04_UTIL_PdfCompletionMemo -->
+<!-- Completion Memo uploaded as PDF attachment when RFA approved/rejected/closed -->
+<apex:page standardController="RFA__c" extensions="RFA_VFC04_CompletionMemoController" renderAs="pdf" sidebar="false" showheader="false">
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                @bottom-left {
+                    content: element(footer);
+                }
+            }
+            body {font-family: Arial Unicode MS;}
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }
+            span.FWBold{
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <apex:form >
+        <apex:pageBlock >
+            <div style = "font-style:regular; font-size:14px; ">
+                <p>
+                
+                    <center>
+                        <apex:image url="{!$Label.RFA_CL129}"/>
+                    </center>
+                    
+                    <!--<center><apex:outputText value="Atlanta, Georgia" style="font-weight:bold"/></center>-->
+                    
+                </p>            
+                <p><apex:outputText style="font-weight:bold" value="DATE :"/>&nbsp;{!Month(Today())}/{!Day(Today())}/{!Year(Today())}</p>
+                <p><span class="FWBold" style="text-transform: uppercase;">{!$Label.RFA_CL045}&nbsp;:&nbsp;</span>{!rfaObj.ToEmailAddressCM__c}</p>
+            
+                <p><span class="FWBold" style="text-transform: uppercase;">{!$Label.RFA_CL047}&nbsp;:&nbsp;</span>{!rfaObj.CCEmailAddressCM__c}</p>
+                
+                <p><apex:outputText style="font-weight:bold" value="件名 (SUBJECT) :"/>&nbsp;<apex:outputText value="最終承認ステータス（Final Approval Status） - {!rfaObj.Name}: {!rfaObj.RequestTitle__c}"/></p>            
+
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.Business_Unit__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.Business_Unit__c}</p> -->
+            
+                <!--<p><span class="FWBold" style="text-transform: uppercase;">{!$Label.RFA_CL134}&nbsp;:&nbsp;</span>{!rfaObj.Thefollowingitem__c}</p>-->
+
+                <!--<p><span class="FWBold" style="text-transform: uppercase;">{!$Label.RFA_CL135}&nbsp;:&nbsp;</span>{!rfaObj.Theapprovalstatusofyourrequestis__c}</p>-->
+                <!-- Added OutputField tag  by Ashwani on 6/12/2013 for Release Q1 2013 2013-1Q Enhancements Defect ID #186 -->
+                <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.CommentsConditions__c.Label}&nbsp;:&nbsp;</span><br/><apex:outputfield value="{!rfaObj.CommentsConditions__c}"/></p>
+            
+            	<!--
+                <apex:outputPanel rendered="{!(rfaObj.ApprovalLetterComments__c != 'Not Applicable')}">
+                      <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.ApprovalLetterComments__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.ApprovalLetterComments__c}</p>
+                </apex:outputPanel> 
+                -->
+            
+                <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.RequestTitle__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.RequestTitle__c}</p>
+                
+                <p><span class="FWBold" style="text-transform: uppercase;">承認ステータス(APPROVAL STATUS OF REQUEST): &nbsp;&nbsp;</span>{!RFA__c.Stage__c}</p>
+                
+                <!-- Changed from displaying merge field to using outputfield tag  by Joban on 6/11/2013 for Release Q1 2013 2013-1Q Enhancements  -->
+                <!-- Removed by Jia Hu on 2013/10/24 requested by CCEJ -->
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.ExecutiveSummary__c.Label}&nbsp;:&nbsp;</span><apex:outputfield value="{!RFA__c.ExecutiveSummary__c}"/></p> -->
+                <!-- End of changes -->
+                <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.ProfitCenterName__c.Label}:&nbsp;&nbsp;</span>{!RFA__c.ProfitCenterNumber__r.Name}-{!rfaObj.ProfitCenterName__c}</p>
+
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.ControlNumber__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.ControlNumber__c}</p>-->
+            
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.LocalReferenceNumber__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.LocalReferenceNumber__c}</p> -->
+
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.RequestAmountUSD__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.RequestAmountUSD__c}</p> -->
+
+                <!-- <p><span class="FWBold" style="text-transform: uppercase;">{!$ObjectType.RFA__c.fields.Functional_Currency__c.Label}&nbsp;:&nbsp;</span>{!rfaObj.Functional_Currency__r.Name}</p> -->
+                
+                <p><apex:outputText style="font-weight:bold" value="申請金額(円) (REQUEST AMOUNT):"/>&nbsp;¥ <apex:outputText value="{0,number, #,###}"><apex:param value="{!rfaObj.RequestAmountFunctionalCurrency__c}"/></apex:outputText><br/></p>
+               
+                <apex:outputPanel >
+                   <p><span class="FWBold" style="text-transform: uppercase;">承認申請文書リンク (REQUEST DOCUMENT LINK) :</span><apex:outputLink value="{!$Label.RFA_CL026}/{!rfaObj.Id}" id="theLink"> {!RFA__c.name}</apex:outputLink></p>
+                </apex:outputPanel>
+                <div class="footer">
+                    <div>
+                    	<!--{!now()}-->
+                    	{!LocalDT}
+                    </div>
+                </div> 
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,561 @@
+<apex:page Controller="TimeCardCheckController" sidebar="false">
+    <head>
+        <style type="text/css">
+            .requiredInput {
+                display: inline !important;
+            }
+            .requiredBlock {
+                display: inline !important;
+            }
+        </style>
+        <script type="text/javascript">
+            beenFocused = true;
+        </script>
+        <script type="text/javascript">
+            function disableSelect(n,objKintaiKubunId,objSyussyaTimeHoursId,objSyussyaTimeMinutesId,objTaisyaTimeHoursId,objTaisyaTimeMinutesId,
+                       objRestTimeHoursId,objRestTimeMinutesId,objMidnightRestTimeHoursId,objMidnightRestTimeMinutesId,objWorkingTimeId,
+                       objOverTimeId,objMidnightWorkTimeId,objScheduledWorkingHoursId,objJikanTanka,objSalaryId,objYoubi,objLeader,
+                       objShimeiKana,objgenzaijoukyou,objfixedworktime,objNengetubi){
+
+				//予定勤務時間を初期化
+				document.getElementById(objScheduledWorkingHoursId).value = 0;
+
+				//初期読込み時・・・現在状況が「OJT」または「OFFJT」または「退職など」の状態でまだ退職当日以前の場合は
+				//                  勤怠区分が「--なし--」の場合、「出勤」に変更
+				//上記以外の場合・・・勤怠区分を全て「--なし--」に変更
+                if(n != 0){
+					//今日を設定
+					var today = new Date();
+					//時間を0:00にする
+					today.setHours(0);
+					today.setMinutes(0);
+					today.setSeconds(0);
+					today.setMilliseconds(0);
+					
+					var nengetuDateTime = new Date(objNengetubi);
+					
+                	if(objgenzaijoukyou != 'OffJT' && objgenzaijoukyou != 'OJT'){
+
+                		document.getElementById(objKintaiKubunId).disabled = false;
+                        document.getElementById(objSyussyaTimeHoursId).disabled = true;
+                        document.getElementById(objSyussyaTimeMinutesId).disabled = true;
+                        document.getElementById(objTaisyaTimeHoursId).disabled = true;
+                        document.getElementById(objTaisyaTimeMinutesId).disabled = true;
+                        document.getElementById(objRestTimeHoursId).disabled = true;
+                        document.getElementById(objRestTimeMinutesId).disabled = true;
+                        document.getElementById(objMidnightRestTimeHoursId).disabled = true;
+                        document.getElementById(objMidnightRestTimeMinutesId).disabled = true;
+
+                        document.getElementById(objKintaiKubunId).value = '';
+
+                        document.getElementById(objSyussyaTimeHoursId).value = '00';
+                        document.getElementById(objSyussyaTimeMinutesId).value = '00';
+                        document.getElementById(objTaisyaTimeHoursId).value = '00';
+                        document.getElementById(objTaisyaTimeMinutesId).value = '00';
+                        document.getElementById(objRestTimeHoursId).value = '00';
+                        document.getElementById(objRestTimeMinutesId).value = '00';
+                        document.getElementById(objMidnightRestTimeHoursId).value = '00';
+                        document.getElementById(objMidnightRestTimeMinutesId).value = '00';
+
+                    /*勤怠区分が「出勤」,「--なし--」※初期読込み限定
+                    出社時間(時),出社時間(分),退社時間(時),(退社時間(分),休憩時間(時),休憩時間(分),深夜休憩時間(時),深夜休憩時間(分)・・・全て押下可
+                    出社時間(時),出社時間(分)が00:00の場合・・・09:30を設定
+                    退社時間(時),(退社時間(分)が00:00の場合・・・17:30を設定
+                    休憩時間(時),休憩時間(分)が00:00の場合・・・01:00を設定
+                    */
+                    } else if(document.getElementById(objKintaiKubunId).value == '出勤' || ((n == 2 && document.getElementById(objKintaiKubunId).value == null) &&
+                       objYoubi.style.color != 'red' && objYoubi.style.color != 'blue')){
+
+						//勤怠区分を出勤に変更
+						document.getElementById(objKintaiKubunId).value = '出勤';
+
+                        //今日より日付が後で祝日を除く平日のときに予定勤務時間を入力
+                        if(today.getTime() <= nengetuDateTime.getTime()){
+
+							//リーダーの場合は予定勤務時間に8.0を入力
+							if(objLeader == 'L'){
+
+								//予定勤務時間に8.0を入力
+                        		document.getElementById(objScheduledWorkingHoursId).value = 8.0;
+
+                        	} else {
+
+								//予定勤務時間に7.5を入力
+                        		document.getElementById(objScheduledWorkingHoursId).value = 7.5;
+
+                        	}
+
+                       }
+
+                        document.getElementById(objSyussyaTimeHoursId).disabled = false;
+                        document.getElementById(objSyussyaTimeMinutesId).disabled = false;
+                        document.getElementById(objTaisyaTimeHoursId).disabled = false;
+                        document.getElementById(objTaisyaTimeMinutesId).disabled = false;
+                        document.getElementById(objRestTimeHoursId).disabled = false;
+                        document.getElementById(objRestTimeMinutesId).disabled = false;
+                        document.getElementById(objMidnightRestTimeHoursId).disabled = false;
+                        document.getElementById(objMidnightRestTimeMinutesId).disabled = false;
+
+                        if(document.getElementById(objSyussyaTimeHoursId).value == '00' && document.getElementById(objSyussyaTimeMinutesId).value == '00' &&
+                           document.getElementById(objKintaiKubunId).value == '出勤' && objfixedworktime == 0){
+
+                            document.getElementById(objSyussyaTimeHoursId).value = '09';
+                            document.getElementById(objSyussyaTimeMinutesId).value = '00';
+
+                        }
+
+                        if(document.getElementById(objTaisyaTimeHoursId).value == '00' && document.getElementById(objTaisyaTimeMinutesId).value == '00' &&
+                           document.getElementById(objKintaiKubunId).value == '出勤' && objfixedworktime == 0){
+
+                        	//リーダーの場合は勤務終了時間に8.0を入力
+							if(objLeader == 'L'){
+                            	document.getElementById(objTaisyaTimeHoursId).value = '18';
+                            	document.getElementById(objTaisyaTimeMinutesId).value = '00';
+                            } else {
+                            	document.getElementById(objTaisyaTimeHoursId).value = '17';
+                            	document.getElementById(objTaisyaTimeMinutesId).value = '30';
+                            }
+
+                        }
+
+                        if(document.getElementById(objRestTimeHoursId).value == '00' && document.getElementById(objRestTimeMinutesId).value == '00' &&
+                           document.getElementById(objKintaiKubunId).value == '出勤' && objfixedworktime == 0){
+
+                            document.getElementById(objRestTimeHoursId).value = '01';
+                            document.getElementById(objRestTimeMinutesId).value = '00';
+
+                        }
+
+                    /*有休の場合
+                    出社時間(時),出社時間(分),退社時間(時),(退社時間(分),休憩時間(時),休憩時間(分),深夜休憩時間(時),深夜休憩時間(分)・・・全て押下不可
+                    出社時間(時),出社時間(分)・・・09:30を設定
+                    退社時間(時),(退社時間(分)・・・17:30を設定
+                    休憩時間(時),休憩時間(分)・・・01:00を設定
+                    深夜休憩時間(時),深夜休憩時間(分)・・・00:00を設定
+                    */
+                    } else if(document.getElementById(objKintaiKubunId).value == '有休'){
+
+                        document.getElementById(objSyussyaTimeHoursId).disabled = true;
+                        document.getElementById(objSyussyaTimeMinutesId).disabled = true;
+                        document.getElementById(objTaisyaTimeHoursId).disabled = true;
+                        document.getElementById(objTaisyaTimeMinutesId).disabled = true;
+                        document.getElementById(objRestTimeHoursId).disabled = true;
+                        document.getElementById(objRestTimeMinutesId).disabled = true;
+                        document.getElementById(objMidnightRestTimeHoursId).disabled = true;
+                        document.getElementById(objMidnightRestTimeMinutesId).disabled = true;
+                        document.getElementById(objSyussyaTimeHoursId).value = '09';
+                        document.getElementById(objSyussyaTimeMinutesId).value = '00';
+
+                        //リーダーの場合は勤務終了時間に8.0を入力
+						if(objLeader == 'L'){
+                           	document.getElementById(objTaisyaTimeHoursId).value = '18';
+                           	document.getElementById(objTaisyaTimeMinutesId).value = '00';
+                        } else {
+                           	document.getElementById(objTaisyaTimeHoursId).value = '17';
+                           	document.getElementById(objTaisyaTimeMinutesId).value = '30';
+                        }
+
+                        document.getElementById(objRestTimeHoursId).value = '01';
+                        document.getElementById(objRestTimeMinutesId).value = '00';
+                        document.getElementById(objMidnightRestTimeHoursId).value = '00';
+                        document.getElementById(objMidnightRestTimeMinutesId).value = '00';
+
+                    /*欠勤の場合
+                    出社時間(時),出社時間(分),退社時間(時),(退社時間(分),休憩時間(時),休憩時間(分),深夜休憩時間(時),深夜休憩時間(分)・・・全て押下不可
+                    出社時間(時),出社時間(分)・・・00:00を設定
+                    退社時間(時),(退社時間(分)・・・00:00を設定
+                    休憩時間(時),休憩時間(分)・・・00:00を設定
+                    深夜休憩時間(時),深夜休憩時間(分)・・・00:00を設定
+                    */
+                    } else {
+
+                        document.getElementById(objSyussyaTimeHoursId).disabled = true;
+                        document.getElementById(objSyussyaTimeMinutesId).disabled = true;
+                        document.getElementById(objTaisyaTimeHoursId).disabled = true;
+                        document.getElementById(objTaisyaTimeMinutesId).disabled = true;
+                        document.getElementById(objRestTimeHoursId).disabled = true;
+                        document.getElementById(objRestTimeMinutesId).disabled = true;
+                        document.getElementById(objMidnightRestTimeHoursId).disabled = true;
+                        document.getElementById(objMidnightRestTimeMinutesId).disabled = true;
+                        document.getElementById(objSyussyaTimeHoursId).value = '00';
+                        document.getElementById(objSyussyaTimeMinutesId).value = '00';
+                        document.getElementById(objTaisyaTimeHoursId).value = '00';
+                        document.getElementById(objTaisyaTimeMinutesId).value = '00';
+                        document.getElementById(objRestTimeHoursId).value = '00';
+                        document.getElementById(objRestTimeMinutesId).value = '00';
+                        document.getElementById(objMidnightRestTimeHoursId).value = '00';
+                        document.getElementById(objMidnightRestTimeMinutesId).value = '00';
+
+                    }
+
+                }
+
+                /***************************************************************************************************************************************************
+                勤務時間の計算
+                退社時間(時),退社時間(分)の合計時間が出社時間(時),出社時間(分) + 休憩時間(時),休憩時間(分) + 深夜休憩時間(時),深夜休憩時間(分)よりも値が小さい場合は
+                勤務時間,残業時間,深夜残業時間,日給を全て0に設定
+                退社時間(時),退社時間(分)の合計時間が出社時間(時),出社時間(分) + 休憩時間(時),休憩時間(分) + 深夜休憩時間(時),深夜休憩時間(分)よりも値が大きい場合は
+                合計勤務時間,残業時間,日給の計算をする
+                ・合計勤務時間の計算 = 退社時間(時) + (退社時間(分) / 60) - (出社時間(時) + 出社時間(分) + (休憩時間(時) + (休憩時間(分) / 60)) + (深夜休憩時間(時) + (深夜休憩時間(分) / 60))
+                合計勤務時間が7.5h(リーダーは8.0h)を超える場合は残業時間の計算をする
+                ・合計残業時間(訓練生) = 合計勤務時間 - 7.5
+                ・合計残業時間(リーダー) = 合計勤務時間 - 8.0
+                退社時間(時),退社時間(分)が22時を超える場合は深夜残業時間の計算
+                ・合計深夜残業時間 = 退社時間(時) + (退社時間(分) / 60 ) - 22
+                ・給料計算(平日) = 合計勤務時間 * 時間単価 + (合計残業時間 * (時間単価 * 0.25)) + (合計深夜残業時間 * (時間単価 * 0.25))
+                ・給料計算(土日祝) = 合計勤務時間 * (時間単価 * 1.25) + (合計残業時間 * (時間単価 * 0.25)) + (合計深夜残業時間 * (時間単価 * 0.25))
+                ※計算結果は小数第三位以下四捨五入
+                ****************************************************************************************************************************************************/
+                if(Number(document.getElementById(objTaisyaTimeHoursId).value) + (Number(document.getElementById(objTaisyaTimeMinutesId).value) / 60) >
+                   Number(document.getElementById(objSyussyaTimeHoursId).value) + (Number(document.getElementById(objSyussyaTimeMinutesId).value) / 60) +
+                   Number(document.getElementById(objRestTimeHoursId).value) + (Number(document.getElementById(objRestTimeMinutesId).value) / 60)){
+
+                    document.getElementById(objWorkingTimeId).value =  Math.round((Number(document.getElementById(objTaisyaTimeHoursId).value) +
+                                                                    (Number(document.getElementById(objTaisyaTimeMinutesId).value) / 60) -
+                                                                    (Number(document.getElementById(objSyussyaTimeHoursId).value) +
+                                                                    (Number(document.getElementById(objSyussyaTimeMinutesId).value) / 60) +
+                                                                     Number(document.getElementById(objRestTimeHoursId).value) +
+                                                                    (Number(document.getElementById(objRestTimeMinutesId).value) / 60) +
+                                                                     Number(document.getElementById(objMidnightRestTimeHoursId).value) +
+                                                                    (Number(document.getElementById(objMidnightRestTimeMinutesId).value) / 60))) * 100) / 100;
+
+					//時間外勤務の計算
+                    if(Number(document.getElementById(objWorkingTimeId).value) > 7.5 && objLeader != 'L'){
+
+                        document.getElementById(objOverTimeId).value = Math.round((Number(document.getElementById(objWorkingTimeId).value) - 7.5) * 100) / 100;
+
+                    } else if(Number(document.getElementById(objWorkingTimeId).value) > 8.0 && objLeader == 'L'){
+
+                        document.getElementById(objOverTimeId).value = Math.round((Number(document.getElementById(objWorkingTimeId).value) - 8.0) * 100) / 100;
+
+                    } else {
+
+                    	document.getElementById(objOverTimeId).value = 0;
+
+                    }
+
+                    //深夜残業時間の計算 = 退社時間(時) + (退社時間(分) / 60) - (22時 + (深夜休憩時間(時) + (深夜休憩時間(分) / 60)))
+                    if(Number(document.getElementById(objTaisyaTimeHoursId).value) + (Number(document.getElementById(objTaisyaTimeMinutesId).value) / 60) > 22 +
+                      (Number(document.getElementById(objMidnightRestTimeHoursId).value) + (Number(document.getElementById(objMidnightRestTimeMinutesId).value) / 60))){
+
+                        document.getElementById(objMidnightWorkTimeId).value =  Math.round((Number(document.getElementById(objTaisyaTimeHoursId).value) +
+                                                                               (Number(document.getElementById(objTaisyaTimeMinutesId).value) / 60) - (22 +
+                       															Number(document.getElementById(objMidnightRestTimeHoursId).value) +
+                       														   (Number(document.getElementById(objMidnightRestTimeMinutesId).value) / 60))) * 100) / 100;
+
+                    } else {
+
+                    	document.getElementById(objMidnightWorkTimeId).value = 0;
+
+                    }
+
+                    //休日の場合の給料計算
+                    if(objYoubi.style.color == 'red' || objYoubi.style.color == 'blue'){
+
+                        document.getElementById(objSalaryId).value = Math.round(Number(document.getElementById(objWorkingTimeId).value) *
+                                                                     Number(objJikanTanka) * 1.25 +
+                                                                    (Number(document.getElementById(objOverTimeId).value) *
+                                                                    (Number(objJikanTanka) * 0.25)) +
+                                                                    (Number(document.getElementById(objMidnightWorkTimeId).value) *
+                                                                    (Number(objJikanTanka) * 0.25)));
+                    //平日の場合の給料計算
+                    } else {
+
+                        document.getElementById(objSalaryId).value = Math.round(Number(document.getElementById(objWorkingTimeId).value) *
+                                                                     Number(objJikanTanka) +
+                                                                    (Number(document.getElementById(objOverTimeId).value) *
+                                                                    (Number(objJikanTanka) * 0.25)) +
+                                                                    (Number(document.getElementById(objMidnightWorkTimeId).value) *
+                                                                    (Number(objJikanTanka) * 0.25)));
+                    }
+
+                } else {
+
+                    document.getElementById(objWorkingTimeId).value = 0;
+                    document.getElementById(objOverTimeId).value = 0;
+                    document.getElementById(objMidnightWorkTimeId).value = 0;
+                    document.getElementById(objSalaryId).value = 0;
+                }
+            }
+
+            function getTable(objTableId){
+
+            	var objTable = document.getElementById(objTableId);
+            	clearDisabled(objTable, 'input');
+            	clearDisabled(objTable, 'select');
+
+            }
+
+			function clearDisabled(src, tagName) {
+				var nodes = src.getElementsByTagName(tagName);
+				var i = 0;
+				var len = nodes.length;
+
+				for (; i < len; i++) {
+					nodes[i].disabled = false;
+				}
+			}
+
+        </script>
+    </head>
+    <apex:form >
+        <apex:messages style="color:red;font-size: 30px;" />
+        <apex:outputPanel layout="block">
+            <apex:outputLabel for="Syukkin_Date__c">年月日</apex:outputLabel>
+            <apex:inputField id="Syukkin_Date_From__c" value="{!timeCard.Syukkin_Date__c}"/>
+            <apex:outputLabel for="Syukkin_Date__c">～</apex:outputLabel>
+            <apex:inputField id="Syukkin_Date_To__c" value="{!timeCard.Syukkin_Date_To__c}"/>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block">
+            <apex:outputLabel for="SFOtrainingterm">訓練期間</apex:outputLabel>
+            <apex:inputField id="SFOtrainingterm" value="{!timeCard.trainingtermSearch__c}"/>
+            <apex:outputLabel for="teamSelect">コース</apex:outputLabel>
+            <apex:selectList id="teamSelect" value="{!teamValue}" size="1" multiselect="false">
+                <apex:selectOptions value="{!SFOteamList}"/>
+            </apex:selectList>
+        </apex:outputPanel>
+
+        <apex:outputPanel layout="block" >
+            <apex:outputLabel for="Name">訓練生</apex:outputLabel>
+            <apex:inputField id="SFOstaff" value="{!timeCard.staff_Search__c}" />
+            <apex:outputLabel for="lname_kana_Text__c">姓（カナ）</apex:outputLabel>
+            <apex:inputField id="SFO_lname_kana" value="{!timeCard.lname_kana_Text__c}" />
+        </apex:outputPanel>
+
+    <apex:pageBlock Title="検索結果" id="Select_Error">
+        <apex:pageBlockButtons Location="top" style="align:left;">
+            <apex:commandButton alt="一覧表示" value="一覧表示" action="{!doSearch}"/>
+            <apex:commandButton value="保存" id="SaveButton" onclick="getTable('{!$Component.Select_Error}')" action="{!save}"/>
+            <!--<apex:commandButton value="時間計算" id="CalcButton" action="{!calculate}"/> -->
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection >
+            <apex:outputPanel layout="block" style="overflow:auto;position:relative;" id="TimaCardTable">
+                <table cellspacing="0" cellpadding="4" rules="all" id="TimeCardGrid" bordercolor="#3366CC" border="1" style="overflow:auto;background-color:White;border-width:1px;border-style:double;width:1250px;border-collapse:collapse;">
+                    <thead>
+                        <tr style="color:#000000;background-color:#E5F1FF;font-weight:bold;">
+                            <td>年月日
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectSyukkinDateASC}" style="display:{!SyukkinDateASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectSyukkinDateDESC}" style="display:{!SyukkinDateDESC}"/>
+                            </td>
+                            <td>曜日</td>
+                            <td>氏名</td>
+                            <td>氏名カナ
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectlnamekanaASC}" style="display:{!lnamekanaASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectlnamekanaDESC}" style="display:{!lnamekanaDESC}"/>
+                            </td>
+
+                            <td>SCD
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectSCDASC}" style="display:{!SCDASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectSCDDESC}" style="display:{!SCDDESC}"/>
+                            </td>
+                            <td>現在状況
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectStaffStatusASC}" style="display:{!staffStatusASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectStaffStatusDESC}" style="display:{!staffStatusDESC}"/>
+                            </td>
+                            <td>訓練期間
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectTrainingTermASC}" style="display:{!trainingTermASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectTrainingTermDESC}" style="display:{!trainingTermDESC}"/>
+                            </td>
+                            <td>コース</td>
+                            <td>リーダー
+                               <apex:commandButton alt="▲" value="▲" action="{!doSelectleaderASC}" style="display:{!leaderASC}"/>
+                               <apex:commandButton alt="▼" value="▼" action="{!doSelectleaderDESC}" style="display:{!leaderDESC}"/>
+                            </td>
+
+                            <td>勤怠区分</td>
+                            <td>開始時間</td>
+                            <td>終了時間</td>
+                            <td>休憩時間</td>
+                            <td>深夜休憩時間</td>
+                            <td>勤務時間</td>
+                            <td>うち時間外勤務</td>
+                            <td>うち深夜勤務</td>
+                            <td>予定勤務時間</td>
+                            <td style="display: none;">時間単価（非表示）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!tcwList}" var="v_TimeCard" id="TimeCardRepeat">
+                            <tr style="border:solid 1px #3366CC;background-color:White;">
+                                <td style="width:70px">
+                                    <apex:outputField id="nengetubi" value="{!v_TimeCard.timeCard.Syukkin_Date__c}"/>
+                                </td>
+                                <td>
+                                    <apex:outputLabel id="youbi" value="{!v_TimeCard.youbi}" style="color:{!v_TimeCard.youbiColor};"/>
+                                </td>
+                                <td style="width:110px">
+                                    <apex:outputField id="shimei" value="{!v_TimeCard.timeCard.staff__r.Name}" />
+                                </td>
+
+                                <td style="width:110px">
+                                    <apex:outputField id="shimeiKana" value="{!v_TimeCard.timeCard.lname_kana__c}" />
+                                </td>
+
+                                <td style="width:50px">
+                                    <apex:outputField id="SCD" value="{!v_TimeCard.timeCard.staff__r.purestaffcode__c}"/>
+                                </td>
+                                <td style="width:30px">
+                                   <apex:outputField id="genzai_joukyou" value="{!v_TimeCard.timeCard.Kbn__c}"/>
+                                </td>
+                                <td style="width:40px">
+                                    <apex:outputField id="kunren_kikan" value="{!v_TimeCard.timeCard.staff__r.trainingterm__c}"/>
+                                </td>
+                                <td style="width:50px">
+                                   <apex:outputField id="team" value="{!v_TimeCard.timeCard.staff__r.team__r.Name}"/>
+                                </td>
+
+                                <td style="width:50px">
+                                   <apex:outputField id="leader" value="{!v_TimeCard.timeCard.leader__c}"/>
+                                </td>
+
+                                <td>
+                                    <apex:inputField id="kintai_kubun" value="{!v_TimeCard.timeCard.workrecord__c}" onchange="disableSelect(2,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                    </apex:inputField>
+                                </td>
+                                <td style="width:100px">
+                                    <apex:selectList id="syussya_Time_Hours" value="{!v_TimeCard.syussyaTimeHours}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!hours}"/>
+                                    </apex:selectList>:
+                                    <apex:selectList id="syussya_Time_Minutes" value="{!v_TimeCard.syussyaTimeMinutes}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!minutes}"/>
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:100px">
+                                    <apex:selectList id="taisya_Time_Hours" value="{!v_TimeCard.taisyaTimeHours}" size="1" multiselect="false"
+                                                                                                                    onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!hours}"/>
+                                    </apex:selectList>:
+                                    <apex:selectList id="taisya_Time_Minutes" value="{!v_TimeCard.taisyaTimeMinutes}" size="1" multiselect="false"
+                                                                                                                    onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!minutes}"/>
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:100px">
+                                    <apex:selectList id="rest_Time_Hours" value="{!v_TimeCard.restTimeHours}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!hours}"/>
+                                    </apex:selectList>:
+                                    <apex:selectList id="rest_Time_Minutes" value="{!v_TimeCard.restTimeMinutes}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!minutes}"/>
+                                    </apex:selectList>
+                                </td>
+                                <td style="width:100px">
+                                    <apex:selectList id="midnight_Rest_Time_Hours" value="{!v_TimeCard.midnightRestTimeHours}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!hours}"/>
+                                    </apex:selectList>:
+                                    <apex:selectList id="midnight_Rest_Time_Minutes" value="{!v_TimeCard.midnightRestTimeMinutes}" size="1" multiselect="false"
+                                                                                                                	onchange="disableSelect(0,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')">
+                                        <apex:selectOptions value="{!minutes}"/>
+                                    </apex:selectList>
+                                </td>
+                                <td>
+                                    <apex:inputText disabled="true" id="working_Time" value="{!v_TimeCard.workingTime}" style="width:35px"/>
+                                </td>
+                                <td>
+                                    <apex:inputText disabled="true" id="over_Time" value="{!v_TimeCard.overTime}" style="width:35px"/>
+                                </td>
+                                <td>
+                                    <apex:inputText disabled="true" id="midnight_Work_Time" value="{!v_TimeCard.midnightWorkTime}" style="width:35px"/>
+                                </td>
+                                <td>
+                                    <apex:inputText disabled="true" id="scheduled_Working_Hours" value="{!v_TimeCard.scheduledWorkingHours}" style="width:35px"/>
+
+                                </td>
+
+                                <!-- 非表示項目 -->
+                                <!-- 時間単価 -->
+                                <td style="display: none;">
+                                    <apex:outputLabel id="jikanTanka" value="{!v_TimeCard.timeCard.tanka__c}"/>
+                                </td>
+                                <!-- 給料 -->
+                                <td style="display: none;">
+                                    <apex:inputHidden id="salary" value="{!v_TimeCard.salary}"/>
+                                </td>
+                                <!-- 退職日 -->
+                                <td style="display: none;">
+                                    <apex:outputField style="display:none;" id="logicaldelete_date" value="{!v_TimeCard.timeCard.staff__r.logicaldelete_date__c}"/>
+                                </td>
+                                <!-- 勤怠修正済 -->
+                                <td style="display: none;">
+                                    <apex:outputField style="display:none;" id="fixed_work_time" value="{!v_TimeCard.timeCard.Fixed_Work_Time__c}"/>
+                                </td>
+                                <td style="display: none;">
+                                    <script type="text/javascript">
+                                    	disableSelect(1,'{!$Component.kintai_kubun}','{!$Component.syussya_Time_Hours}','{!$Component.syussya_Time_Minutes}',
+                                                                                                                                            '{!$Component.taisya_Time_Hours}','{!$Component.taisya_Time_Minutes}','{!$Component.rest_Time_Hours}',
+                                                                                                                                            '{!$Component.rest_Time_Minutes}','{!$Component.midnight_Rest_Time_Hours}','{!$Component.midnight_Rest_Time_Minutes}',
+                                                                                                                                            '{!$Component.working_Time}','{!$Component.over_Time}','{!$Component.midnight_Work_Time}',
+                                                                                                                                            '{!$Component.scheduled_Working_Hours}','{!v_TimeCard.timeCard.tanka__c}','{!$Component.salary}',
+                                                                                                                                            '{!v_TimeCard.youbi}','{!v_TimeCard.timeCard.leader__c}','{!v_TimeCard.timeCard.lname_kana__c}',
+                                                                                                                                            '{!v_TimeCard.timeCard.Kbn__c}','{!v_TimeCard.timeCard.Fixed_Work_Time__c}','{!v_TimeCard.timeCard.Syukkin_Date__c}')
+                                	</script>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

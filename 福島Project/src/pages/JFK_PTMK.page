@@ -1,0 +1,69 @@
+<apex:page controller="JFK_PTMKController" showHeader="false" standardStylesheets="true">
+    <head>
+        <style type="text/css">
+            .dateFormat {
+                display: none;
+            }
+
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+    <apex:pageMessages id="msg" rendered="true"/> 
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <apex:pageBlock title="１ヶ月超欠勤" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                <apex:commandButton action="{!close}" value="閉じる"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection id="entrySection" title="" columns="1" collapsible="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.PTMK_KekkinnBi_From__c.label}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!ptmk.PTMK_KekkinnBi_From__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.PTMK_KekkinnBi_To__c.label}"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!ptmk.PTMK_KekkinnBi_To__c}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="1" id="resultGroup" rendered="true" collapsible="true">
+                <apex:pageBlockTable value="{!lstptmkRec}" var="h" width="100%" id="resultTable">
+                    <apex:column >
+                        <apex:commandLink action="{!doDelete}" onClick="if (!confirmDelete()) return false;" reRender="resultGroup">削除
+                            <apex:param name="id" value="{!h.Id}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.PTMK_KekkinnBi_From__c.label}">
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!h.PTMK_KekkinnBi_From__c}"/> 
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column >
+                        <apex:outputLabel value="〜"/>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.PTMK_KekkinnBi_To__c.label}">
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!h.PTMK_KekkinnBi_To__c}"/> 
+                        </apex:outputPanel>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

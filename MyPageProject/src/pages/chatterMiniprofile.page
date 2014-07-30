@@ -1,0 +1,51 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com - 3/1/2010 -->
+<apex:page showheader="false" controller="chatterMiniProfile" action="{!loadProfile}">
+    <apex:stylesheet value="{!URLFOR( $Resource.chatterSidebarProfile, 'styles.css' )}" />
+    <apex:includescript value="{!URLFOR( $Resource.chatterSidebarProfile, 'scripts.js' )}" />
+    <style type="text/css"><!-- add CSS for Japanese Language 2010/04/09 Madoka Fukahori -->
+        .fText{
+            color:#015BA7;
+            font-size:10px;
+        }
+        .bigNumber{
+            color:#000000;
+            font-size:12px;
+        }
+    </style>
+    <apex:form id="theform">
+        
+        <div class="chatter-profile">       
+            <div class="imgRow">
+                <div style="float:left">
+                    <c:userPhoto uid="{!$User.Id}" v="1" height="32" width="32" styleclass="profileImg" title="{!$User.FirstName} {!$User.LastName}" linked="true" target="_top" />
+                </div>
+                <span class="fNumber">
+                    <span class="bigNumber">
+                        {!followers}
+                    </span>
+                    <span class="fText">
+                        <br/>フォロー<br/>されている
+                    </span>
+                </span>
+                <span class="fNumber">
+                    <span class="bigNumber">
+                        {!following}
+                    </span>
+                    <span class="fText">
+                        <br/>フォロー<br/>している
+                    </span>
+                </span>
+                <span class="fNumber">
+                    <span class="bigNumber">
+                        {!updates}
+                    </span>
+                    <span class="fText">
+                        <br/>投稿
+                    </span>
+                </span>
+            </div>
+        </div>
+    
+    </apex:form>
+
+</apex:page>

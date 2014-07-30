@@ -1,0 +1,27 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com -->
+<apex:component access="global" controller="userPhotoCnt">
+    <apex:attribute name="uid" type="string" description="ID of user" required="true" access="global" assignTo="{!userId}"/>
+    <apex:attribute name="v" type="string" description="which photo version to use" required="false" access="global"/>
+    <apex:attribute name="height" type="integer" description="the image height, in pixels, to use" required="false" access="global"/>
+    <apex:attribute name="width" type="integer" description="the image width, in pixels, to use" required="false" access="global"/>
+    <apex:attribute name="styleclass" type="string" description="extra style classes for the image tag" required="false" access="global"/>
+    <apex:attribute name="title" type="string" description="image title" required="false" access="global"/>
+    <apex:attribute name="linked" type="boolean" description="if true, renders as a link to the user's profile." required="false" access="global"/>
+    <apex:attribute name="target" type="string" description="target for the link, if rendering the photo as a link" required="false" access="global"/>
+    
+    <apex:variable var="photoStr" value="{!imgUrl}" />
+    
+    <apex:outputpanel rendered="{!linked}" layout="none">
+        <style>
+            a img { text-decoration: none; }        
+        </style>
+        
+        <apex:outputlink value="/{!uid}" title="{!title}" target="{!target}" styleclass="{!styleclass}">
+            <apex:image value="{!imgUrl}" height="{!height}" width="{!width}" styleclass="{!styleclass}" title="{!title}" />
+        </apex:outputlink>
+    </apex:outputpanel>
+    
+    <apex:outputpanel rendered="{!!linked}" layout="none">
+        <apex:image value="{!imgUrl}" height="{!height}" width="{!width}" styleclass="{!styleclass}" title="{!title}" />
+    </apex:outputpanel>
+</apex:component>

@@ -1,0 +1,429 @@
+<apex:page controller="JFK_HKController" showHeader="false">
+    <apex:pageMessages id="msg" rendered="true"/> 
+    <head>
+        <style type="text/css">
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+
+    <apex:include pageName="JFK_cmnJsScript"/>
+    <apex:form >
+        <apex:pageBlock title="【HK】データ補正" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:actionStatus id="hmStatus"> 
+                    <apex:facet name="stop">
+                        <apex:commandButton action="{!save}" value="　ＨＭ　" rendered="true" status="hmStatus" rerender="hmStatus"
+                                            onclick="return showHMScreen('{!jigyoshoTRId}');"/>
+                   </apex:facet>
+                   <apex:facet name="start">
+                       <apex:outputPanel >
+                          <apex:commandButton value="実行中..." status="hkStatus" disabled="true"/>
+                          <apex:image value="/img/loading32.gif" style="height: 15px;"/>
+                      </apex:outputPanel>
+                  </apex:facet>
+                 </apex:actionStatus>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:commandButton action="{!save}" value="保存" rerender="msg"/>
+                <apex:commandButton action="{!close}" value="戻る"/>
+            </apex:pageBlockButtons>
+
+            <apex:inputHidden value="{!jigyoshoTRId}"/>
+            
+            <apex:pageBlockSection title="" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Account.Fields.Name.label}"/>
+                    <apex:outputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="電話番号"/>
+                    <apex:outputText value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Phone}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="基本情報　/　支給決定時情報" columns="1">
+                <apex:panelGrid columns="2" width="100%">
+                    <apex:pageBlockTable value="{!bosyu}" var="bosyu" width="50%">
+                        <apex:column value="{!bosyu.Bosyu__r.BosyuNendo__c}"/> 
+                        <apex:column value="{!bosyu.Bosyu__r.BosyuKai__c}"/>
+                        <apex:column headerValue="エリア区分" value="{!areaKBN}"/>
+                        <apex:column headerValue="エリア名称" value="{!areaName}"/>
+                        <apex:inputHidden value="{!bosyu.ShikyuJiki_Sushiki__c}"/>
+                        <apex:column value="{!bosyu.ShikyuKaishiBi__c}"/>
+                        <apex:inputHidden value="{!bosyu.ShikyuShimeBi__c}"/>
+                    </apex:pageBlockTable>
+        
+                    <apex:pageBlockTable value="{!jigyosyoTR}" var="jigyosyoTR" width="50%">
+                        <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.JigyoshoCD__c}"/>
+                        <apex:inputHidden value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Name}"/>
+                        <apex:inputHidden value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.DaihyousyaYakusyokuShimei__c}"/>
+                        <apex:inputHidden value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.JigyoKBN__c}"/>
+                        <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Address_Shinsei__c}"/>
+                        <apex:inputHidden value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.Account__r.Address_Taisyo__c}"/>
+                        <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.ShikyuKetteiDate__c}"/>
+                        <apex:column value="{!jigyosyoTR.Nendo_Kai_Jigyosyo__r.ShikyuKetteiNO__c}"/>
+                    </apex:pageBlockTable>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+
+            <table width="100%">
+                <tr>
+                    <td align="right">
+                        <label>１次担当者　：</label>&nbsp;
+                        <label>{!tanto_1st}</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label>２次担当者　：</label>&nbsp;
+                        <label>{!tanto_2nd}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+            </table>
+            <table align="center" height="350px" width="100%" id="resultGroup">
+                <tr>
+                    <td>
+                        <DIV style="height: 350px; width: 100%; overflow: scroll; scrollbar-face-color: #220022; scrollbar-highlight-color: #220022;
+                                    scrollbar-shadow-color: #220022; scrollbar-3dlight-color: #220022; scrollbar-arrow-color: #000000; 
+                                    scrollbar-track-color: #220022; scrollbar-darkshadow-color: #220022; 
+                                    filter:chroma(color=#220022)"> 
+                            
+                            <apex:pageBlockSection title="【JCJ】事業所情報" columns="1" rendered="true" collapsible="true">
+                                <apex:panelGrid columns="1" rendered="{!isRender[0]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCJ_Category001}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection1_1}" var="h" id="resultGroup1_1" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="25%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}"/> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="20%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}" /> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[1]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCJ_Category002}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection1_2}" var="h" id="resultGroup1_2" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="25%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="20%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                            </apex:pageBlockSection>
+                            <apex:pageBlockSection title="【JCR】労働者情報" columns="1" rendered="true" collapsible="true">
+                                <apex:panelGrid columns="1" rendered="{!isRender[2]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category001}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_1}" var="h" id="resultGroup2_1" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[3]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category002}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_2}" var="h" id="resultGroup2_2" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[4]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category003}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_3}" var="h" id="resultGroup2_3" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                    <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[5]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category004}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_4}" var="h" id="resultGroup2_4" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                                    <apex:outputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[6]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category005}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_5}" var="h" id="resultGroup2_5" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                                    <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[7]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_1_Category006}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection2_6}" var="h" id="resultGroup2_6" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                            </apex:pageBlockSection>
+                            <apex:pageBlockSection title="【JCR】補充労働者用情報" columns="1" rendered="true" collapsible="true">
+                                <apex:panelGrid columns="1" rendered="{!isRender[8]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category001}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_1}" var="h" id="resultGroup3_1" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[9]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category002}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_2}" var="h" id="resultGroup3_2" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[10]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category003}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_3}" var="h" id="resultGroup3_3" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[11]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category004}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_4}" var="h" id="resultGroup3_4" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[12]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category005}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_5}" var="h" id="resultGroup3_5" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[13]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category006}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_6}" var="h" id="resultGroup3_6" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                                <apex:panelGrid columns="1" rendered="{!isRender[14]}" width="100%">
+                                    <apex:outputText value="{!$Label.JFK_JCR_3_Category007}"/>
+                                    <apex:pageBlockTable value="{!lstWrapperSection3_7}" var="h" id="resultGroup3_7" width="100%">
+                                        <apex:column headerValue="チェック項目" value="{!h.hk.CheckSheetTR__r.CheckKomoku__c}" width="15%"/>
+                                        <apex:column headerValue="チェック内容解説" value="{!h.hk.CheckSheetTR__r.CheckNaiyo__c}" width="25%"/>
+                                        <apex:column headerValue="労働者名" value="{!h.hk.CheckSheetTR__r.RodosyaMei__c}" width="15%"/>
+                                        <apex:column headerValue="TODO" width="10%">
+                                            <apex:outputPanel styleClass="requiredInput" layout="block">
+                                                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                                <apex:inputField value="{!h.hk.HD_Status__c}"/> 
+                                            </apex:outputPanel>
+                                        </apex:column>
+                                        <apex:column headerValue="１次補正事項" value="{!h.hk.HD_HoseiJiko_1st__c}" width="15%"/>
+                                        <apex:column headerValue="１次補正済" width="5%">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_1st}" rendered="{!is1stTanto}" /> 
+                                        </apex:column>
+                                        <apex:column headerValue="２次補正事項" value="{!h.hk.HD_HoseiJiko_2nd__c}" width="15%" style="background-color:aliceblue"/>
+                                        <apex:column headerValue="２次補正済" width="5%" style="background-color:aliceblue">
+                                            <apex:inputCheckBox value="{!h.hoseizumi_2nd}" rendered="{!NOT(is1stTanto)}"/> 
+                                        </apex:column>
+                                    </apex:pageBlockTable>
+                                </apex:panelGrid>
+                            </apex:pageBlockSection>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

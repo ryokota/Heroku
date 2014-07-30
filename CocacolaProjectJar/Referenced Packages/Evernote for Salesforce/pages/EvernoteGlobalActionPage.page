@@ -1,0 +1,5 @@
+<apex:page Controller="Evernote.EvernoteGlobalActionController">
+<Script>
+   sforce.one.navigateToURL('/apex/EvernoteGlobalActionRedirectPage?id={!RecordId}', false);
+</Script>
+</apex:page>

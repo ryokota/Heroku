@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>審査シートマスタ(JCR_2)テンプレート</value>
+    </caseValues>
+    <fields>
+        <label><!-- 判定後のアクション --></label>
+        <name>ActionAfterJudgement__c</name>
+    </fields>
+    <fields>
+        <label><!-- カテゴリNo. --></label>
+        <name>CategoryNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- チェック項目 --></label>
+        <name>CheckKomoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- チェック内容解説_締め語 --></label>
+        <name>CheckNaiyo_After__c</name>
+    </fields>
+    <fields>
+        <label><!-- チェック内容解説 --></label>
+        <name>CheckNaiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補足 --></label>
+        <name>Hosoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. --></label>
+        <name>NoForShow__c</name>
+    </fields>
+    <fields>
+        <label><!-- No（カテゴリ別) --></label>
+        <name>No__c</name>
+    </fields>
+    <fields>
+        <label><!-- パソナ補正可 --></label>
+        <name>PasonaHoseiKa__c</name>
+    </fields>
+    <fields>
+        <label><!-- SEQNo. --></label>
+        <name>SEQNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 属性 --></label>
+        <name>Zokusei__c</name>
+    </fields>
+</CustomObjectTranslation>

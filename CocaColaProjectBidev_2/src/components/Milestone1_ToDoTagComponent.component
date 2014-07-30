@@ -1,0 +1,39 @@
+<apex:component controller="Milestone1_ToDoTagComponentCtrl" id="comp" allowDML="true">
+	<script type="text/javascript">
+	function inputCheck(tName, todoName){
+		if(tName == null || tName.length() == 0){
+			alert('test');
+			return false;
+		}
+		if(todoName == null || todoName.length() == 0){
+			alert('test22');
+			return false;
+		}
+		return true;
+	}
+	</script>
+	<apex:attribute name="inputId" type="String" assignTo="{!taskId}" description="key"/>
+	<apex:attribute name="PageController" type="Milestone_BI_TagCtrl" assignTo="{!selfReference}" description="key"/>
+	<!-- <apex:attribute name="inputTag" type="String" assignTo="{!inputTag}" description="key"/>
+	<apex:attribute name="inputNote" type="WrapperC[]" assignTo="{!inputNote}" description="key"/>
+	<apex:attribute name="todoMap" type="UserInfoDTO" assignTo="{!todoMap}" description="key"/> 
+	-->
+	<apex:form id="f_comp">
+		<apex:actionFunction name="addSave" action="{!addSave}" rerender="listPanel"/>
+		<apex:pageMessages />
+		<table>
+			<tr>
+				<th>Task Name</th>
+				<th>ToDo Name</th>
+				<th>Tag Name</th>
+				<th>Note</th>
+			</tr>
+			<tr>
+				<td><apex:inputField value="{!inTag.Task__c}" required="true"/></td>
+				<td><apex:inputField value="{!inTag.ToDo__c}" /></td>
+				<td><apex:inputText value="{!inputTag}" /></td>
+				<td><apex:inputField value="{!inTag.Note__c}" /></td>
+			</tr>
+		</table>
+	</apex:form>
+</apex:component>

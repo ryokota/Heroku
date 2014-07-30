@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384307640231
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307710973
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307769659
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384307771390
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307774487
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307793642
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384307800257
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307809343
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307809518
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307809991
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307810159
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307810590
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307810811
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307811226
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307811406
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307811798
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307811982
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307812403
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307812580
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384307819209
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307822969
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307823135
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307824596
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307824792
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307846446
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307878121
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384307882446
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307903481
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307905922
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307906245
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307906384
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307906809
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384307939699
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307983793
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307983977
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984142
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984303
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984471
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984625
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984794
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307984954
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985119
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985261
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985428
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985601
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985785
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307985988
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384307986582
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1384307988654
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308007260
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384308017365
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308039628
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308040558
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384308041642
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308104802
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308105950
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308128353
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308132771
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308224541
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308231498
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308291462
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308295596
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308302397
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308302573
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308302741
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308302920
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308303069
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308303243
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308303414
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308303585
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308303758
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308319077
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308319974
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308323152
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308411893
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308420415
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384308440432
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308492937
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308500592
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308508320
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308542113
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308553990
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308623670
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308626343
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308639531
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308642311
+opened,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308644297
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308644442
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308654624
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308661272
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308662683
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308662830
+activated,view,org.eclipse.jdt.ui,3.6.1.r361_v20100825-0800,"org.eclipse.jdt.ui.PackageExplorer",1384308663694
+opened,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308672014
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308672120
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308681465
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384308681507
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308698267
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384308722934
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308725792
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308729615
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308735966
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384308738536
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308740339
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308745429
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308768640
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308768743
+activated,view,org.eclipse.jdt.ui,3.6.1.r361_v20100825-0800,"org.eclipse.jdt.ui.PackageExplorer",1384308773231
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308782970
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384308803905
+opened,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308804420
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308804557
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308813999
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308817183
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308899683
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308901846
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308903434
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308912169
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308930804
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308947287
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308949956
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308952509
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384308955324
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308957243
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308958975
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308960303
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308961826
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308963118
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384308964946
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308966131
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308970443
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384308972760
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384308974509
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384308975842
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309043383
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309049570
+activated,view,org.eclipse.jdt.ui,3.6.1.r361_v20100825-0800,"org.eclipse.jdt.ui.PackageExplorer",1384309049700
+opened,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309056192
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309056421
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309082614
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384309082638
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309131871
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384309168586
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309170766
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384309175092
+error,log,,,"ERROR [2013-11-13 11:19:35,845] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309175847
+error,log,,,"ERROR [2013-11-13 11:19:35,847] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309175849
+error,log,,,"ERROR [2013-11-13 11:19:35,849] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309175862
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309177406
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.findReplace",1384309177430
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384309179801
+error,log,,,"ERROR [2013-11-13 11:19:42,379] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309182382
+error,log,,,"ERROR [2013-11-13 11:19:42,382] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309182385
+error,log,,,"ERROR [2013-11-13 11:19:42,385] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309182389
+error,log,,,"ERROR [2013-11-13 11:19:43,400] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309183403
+error,log,,,"ERROR [2013-11-13 11:19:43,403] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309183406
+error,log,,,"ERROR [2013-11-13 11:19:43,406] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309183409
+error,log,,,"ERROR [2013-11-13 11:19:46,421] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309186423
+error,log,,,"ERROR [2013-11-13 11:19:46,424] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309186427
+error,log,,,"ERROR [2013-11-13 11:19:46,427] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309186430
+error,log,,,"ERROR [2013-11-13 11:19:48,943] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309188946
+error,log,,,"ERROR [2013-11-13 11:19:48,946] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309188950
+error,log,,,"ERROR [2013-11-13 11:19:48,950] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309188954
+error,log,,,"ERROR [2013-11-13 11:19:49,967] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309189971
+error,log,,,"ERROR [2013-11-13 11:19:49,971] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309189974
+error,log,,,"ERROR [2013-11-13 11:19:49,975] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309189978
+error,log,,,"ERROR [2013-11-13 11:19:51,991] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309191993
+error,log,,,"ERROR [2013-11-13 11:19:51,994] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309191997
+error,log,,,"ERROR [2013-11-13 11:19:51,997] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309192000
+error,log,,,"ERROR [2013-11-13 11:19:54,513] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309194515
+error,log,,,"ERROR [2013-11-13 11:19:54,516] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309194518
+error,log,,,"ERROR [2013-11-13 11:19:54,518] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309194521
+error,log,,,"ERROR [2013-11-13 11:19:56,034] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309196037
+error,log,,,"ERROR [2013-11-13 11:19:56,037] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384309196041
+error,log,,,"ERROR [2013-11-13 11:19:56,041] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384309196044
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309209804
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309212582
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384309215418
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384309216843
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384309224253
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384309233137
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384309236943
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309251338
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309251537
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309251748
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309251941
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309252497
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309252700
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309253799
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309254126
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309254343
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309254543
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309255018
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309255358
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309255571
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384309255778
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384309272230
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384310438198
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384310438351
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384310448648
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384310448945
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310461329
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310462693
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384310610632
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384310610800
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310613887
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310680188
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310707417
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384310710109
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310711443
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310717951
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384310743111
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310747653
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310772516
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310774257
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310778782
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384310781150
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310783896
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310870049
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310871097
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310882731
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310893258
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310897419
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310899942
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384310901518
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310904117
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384310905603
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384310919514
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311000718
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311386216
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311387422
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311424440
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311425388
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311427283
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311429765
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384311433336
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311438983
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.html",1384311440279
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384311443089
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311444002
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384311561577
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384311568555
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384311595319
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311597663
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311624298
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384311626112
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384311631786
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1384311667338
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1384311673752
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384311673923

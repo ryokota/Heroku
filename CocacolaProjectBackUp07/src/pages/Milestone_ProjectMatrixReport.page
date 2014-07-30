@@ -1,0 +1,79 @@
+<apex:page Controller="Milestone_ProjectMatrixReportCtrl" tabStyle="Milestone1_Project__c">
+<style>            
+    #investmentTable td{padding:4px;margin:0px;}
+    #investmentTable tr {padding:4px;margin:0px;}
+  
+</style>
+<apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'jquery.min.js')}"   />
+<script type="text/javascript">
+$j = jQuery.noConflict();
+function getFiltering(){
+    //Type Controll
+    $j("select[id$='id_typeList'] option").each(function(i, k) {
+        
+        var optionValue = $j(this).attr('value').replace(' ', '');
+        var selectValue = $j("select[id$='id_typeList']").val().replace(' ', '');
+        
+        doChangeAttr(optionValue,selectValue);
+    });
+    
+    $j("select[id$='id_statusList'] option").each(function(i, k) {
+        
+        var optionValue = $j(this).attr('value').replace(' ', '');
+        var selectValue = $j("select[id$='id_statusList']").val().replace(' ', '');
+        
+        doChangeAttr(optionValue,selectValue);
+    });
+}
+
+function doChangeAttr(optionValue, selectValue){
+    if(optionValue != 'ALL') {
+        $j("." + optionValue).show();
+    }
+    if(selectValue != 'ALL' && selectValue != optionValue){
+        $j("." + optionValue).hide();
+    }
+}
+</script>
+<apex:sectionheader title="" subtitle="Matrix Report"/>
+<br/> 
+<!-- <apex:outputtext escape="false" value="{!HtmlConvert}"/> -->
+<apex:form >
+<apex:outputPanel id="selectPanel">
+
+<apex:outputLabel value="Type : " styleClass="label"/>
+<apex:selectList id="id_typeList" value="{!selectedTypeValue}" multiselect="false" size="1">
+    <apex:selectOptions value="{!filterProjectType}"/>
+    <!-- <apex:actionSupport event="onchange" reRender="id_carGradeList,id_carEngineList,id_carMissionList,id_carDriveList,id_carColorList,selCorpCtrl"/> -->
+</apex:selectList>
+<apex:outputLabel value="Status : " styleClass="label"/>
+<apex:selectList id="id_statusList" value="{!selectedStatusValue}" multiselect="false" size="1">
+    <apex:selectOptions value="{!filterStatus}"/>
+    <!-- <apex:actionSupport event="onchange" reRender="id_carGradeList,id_carEngineList,id_carMissionList,id_carDriveList,id_carColorList,selCorpCtrl"/> -->
+</apex:selectList>
+<input type="button" class="btn" value="Filter" onclick="getFiltering();"/>
+
+<table id="investmentTable" style="border: 1px solid #D4DADC;border-color:#ECECEC;border-collapse:collapse;" cellspacing="0" cellpadding="0">
+    <tr>
+        <td style="width:200px;text-align: center;font-weight: bold;white-space: normal;border-style:inset;border: 1px solid #D4DADC;border-color:#ECECEC;"></td>
+        <apex:repeat value="{!projectTypeList}" var="headName">
+        <td class="{!SUBSTITUTE(headName, ' ', '')}" id="id_{!SUBSTITUTE(headName, ' ', '')}" style="width:200px;text-align: center;font-weight: bold;white-space: normal;border-style:inset;border: 1px solid #D4DADC;border-color:#ECECEC;">{!headName}</td>
+        </apex:repeat>
+    </tr>
+    <apex:repeat value="{!subFunctionMap}" var="subName">
+    <tr>
+        <td style="text-align: right;font-weight: bold;white-space: normal;border-style:inset;border: 1px solid #D4DADC;border-color:#ECECEC;">{!subName}</td>
+        <apex:repeat value="{!projectTypeList}" var="funcName">
+        <td class="{!SUBSTITUTE(funcName, ' ', '')}" id="{!SUBSTITUTE(funcName, ' ', '')}" style="text-align: left;white-space: normal;border-style:inset;border: 1px solid #D4DADC;border-color:#ECECEC;">
+            <apex:repeat value="{!matrix[subFunctionMap[subName]+projectTypeMap[funcName]]}" var="matx">
+            <div class="{!matx.Project_Status__c}" id="{!matx.Project_Status__c}" style="padding:1px;margin-bottom:5px;background-color:{!IF(matx.Project_Status__c == 'Green', '#D8EDA3', IF(matx.Project_Status__c == 'Yellow', '#FFF891', IF(matx.Project_Status__c == 'Red', '#CC6666', '')))}"><apex:outputLink value="../{!matx.Id}">{!matx.Name}</apex:outputLink></div>
+            
+            </apex:repeat>
+        </td>
+        </apex:repeat>
+    </tr>
+    </apex:repeat>
+</table>
+</apex:outputPanel>
+</apex:form>
+</apex:page>

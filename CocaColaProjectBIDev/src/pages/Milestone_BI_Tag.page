@@ -1,0 +1,206 @@
+<apex:page controller="Milestone_BI_TagCtrl">
+<style>
+.borderTable {
+
+	border: solid 1px black;
+	border-color:#ECECEC;
+	border-collapse:collapse;
+	padding: 5px;
+	width : 100%;
+}
+.borderTable th{
+	font-weight: bold;
+	height:20px;
+	white-space: normal;
+	border: 1px solid black;
+	background-color: #d60016;
+	color: #FFFFFF;
+}
+.borderTable td{
+	white-space: normal;
+	height:20px;
+}
+
+.tdBorder {
+	border: 1px solid black;
+}
+.tdLeftNotBorder {
+	border: 1px solid black;
+	border-left-style:none;
+}
+.tdRightNotBorder {
+	border: 1px solid black;
+	border-right-style:none;
+}
+</style>
+<apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'jquery.min.js')}"   />
+<apex:stylesheet value="{!URLFOR($Resource.jQueryUI, '/css/ui-lightness/jquery-ui-1.9.1.custom.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/js/jquery-1.8.2.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/js/jquery-ui-1.9.1.custom.min.js')}"/>
+
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+
+function buttonDisable() {
+	$j("input[id$=SaveButton]").attr("disabled", true);
+	$j("input[id$=SaveButton]").addClass("btnDisabled");
+	$j("input[id$=DelButton]").attr("disabled", true);
+	$j("input[id$=DelButton]").addClass("btnDisabled");
+}
+
+function buttonEnable() {
+	$j("input[id$=SaveButton]").removeAttr("disabled");
+	$j("input[id$=SaveButton]").removeClass("btnDisabled");
+	$j("input[id$=DelButton]").removeAttr("disabled");
+	$j("input[id$=DelButton]").removeClass("btnDisabled");
+}
+
+$(document).ready(function(){
+	buttonDisable();
+	$j("td[id$=note]").hide();
+});
+
+function doChangeAttr(id){
+	$j("tr[data-parent="+ id + "]").toggle();
+	var v = $j("#span_" + id+ " img");
+	if(v.attr("src") == "{!URLFOR($Resource.treeicon,'expand.png')}"){
+		v.attr("src", "{!URLFOR($Resource.treeicon,'collapse.png')}");
+	} else {
+		v.attr("src", "{!URLFOR($Resource.treeicon,'expand.png')}");
+	}
+}
+
+function doInputFieldSet(strId, strKind, strName, strTag, strNote){
+	$j("input[id$=inputId]").val(strId);
+	$j("input[id$=inputKind]").val(strKind);
+    $j("input[id$=inputName]").val(strName);
+    $j("input[id$=inputTag]").val(strTag);
+    if(strKind == 'Task'){
+    	//$j("input[id$=inputNote]").hide();
+    	$j("td[id$=note]").hide();
+    } else {
+    	//$j("input[id$=inputNote]").show();
+    	$j("td[id$=note]").show();
+    	$j("input[id$=inputNote]").val(strNote);
+    }
+    
+    buttonEnable();
+}
+
+function inputReset(){
+	$j("input[id$=inputId]").val('');
+	$j("input[id$=inputKind]").val('');
+    $j("input[id$=inputName]").val('');
+    $j("input[id$=inputTag]").val('');
+    $j("input[id$=inputNote]").val('');
+    buttonDisable();
+}
+
+</script>
+
+<apex:form >
+<apex:actionFunction name="doData" action="{!doData}" rerender="listPanel" />
+<table>
+    <tr>
+        <td width="140px"><apex:image url="{!URLFOR($Resource.CCEJReportLogo, 'cokeone-logo.png')}" width="120" height="100"/></td>
+        <td>
+            <table>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td style="font-size:xx-large;font-weight: bold;" colspan="3">Tag Management</td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<apex:pageMessages id="error"/>
+<table id="inputArea">
+	<tr valign="bottom">
+		<td style="margin-bottom: 10px;" align="right">Name : <apex:inputText id="inputName" value="{!inputName}" /></td>
+		<td>Tag : <apex:inputText id="inputTag" value="{!inputTag}" size="50"/></td>
+		<td id="note">Note : <apex:inputText id="inputNote" value="{!inputNote}" size="50"/></td>
+		<td><apex:commandButton action="{!doEdit}" value="Save" id="SaveButton" oncomplete="inputReset()" rerender="listPanel, error"/></td>
+		<td><apex:commandButton action="{!doDel}" value="Del" id="DelButton" oncomplete="inputReset()" rerender="listPanel, error"/></td>
+		<td><apex:commandbutton value="New ToDo" rerender="dialogPanel" onClick="jQuery('#dialog-modal').dialog('open');" /></td>
+	</tr>
+</table>
+
+<apex:outputPanel id="listPanel">
+
+<table class="borderTable" id="">
+	<tr>
+		<th width="100px">Function</th>
+		<th width="300px" colspan="2">Name</th>
+		<th width="200px">Tag</th>
+		<th width="200px">Note</th>
+	</tr>
+	<apex:repeat value="{!pList}" var="pw">
+		<tr>
+			<td class="tdBorder">{!pw.Function__c}</td>
+			<td class="tdRightNotBorder"><span id="span_{!pw.Id}"><apex:image url="{!URLFOR($Resource.treeicon,'expand.png')}" onclick="doChangeAttr('{!pw.Id}')" onmouseover="this.style.cursor='pointer'"/></span>&nbsp;</td>
+			<td class="tdLeftNotBorder" >&nbsp;{!pw.Name}&nbsp;({!taskListCntMap[pw.Id]})</td>
+			<td class="tdBorder" ></td>
+			<td class="tdBorder" ></td>
+		</tr>
+		<!-- <apex:repeat value="{!pw.mList}" var="ml">
+			<tr data-parent="{!pw.pId}" class="{!SUBSTITUTE(pw.pId,' ', '')}" style="display: none;">
+				<td class="tdBorder" ></td>
+				<td class="tdBorder" >{!MILESTONE_KIND}</td>
+				<td class="tdRightNotBorder">&nbsp;&nbsp;<span id="span_{!ml.mId}"><apex:image url="{!URLFOR($Resource.treeicon,'expand.png')}" onclick="doChangeAttr('{!ml.mId}')" onmouseover="this.style.cursor='pointer'"/></span>&nbsp;</td>
+				<td class="tdLeftNotBorder" >&nbsp;{!ml.mName}&nbsp;({!taskListCntMap[ml.mId]})</td>
+				<td class="tdBorder" ></td>
+				<td class="tdBorder" ></td>
+			</tr> -->
+			<apex:repeat value="{!taskMap[pw.Id]}" var="tl">
+				<tr data-parent="{!pw.Id}" class="{!SUBSTITUTE(pw.Id,' ', '')}" style="display: none;">
+					<td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', '{!TASK_KIND}', '{!tl.Name}', '{!paramTaskMap[tl.Id]}', '')"></td>
+					<td class="tdRightNotBorder">&nbsp;&nbsp;&nbsp;&nbsp;<span id="span_{!tl.Id}"><apex:image url="{!URLFOR($Resource.treeicon,'expand.png')}" onclick="doChangeAttr('{!tl.Id}')" onmouseover="this.style.cursor='pointer'"/></span>&nbsp;</td>
+					<td class="tdLeftNotBorder" onclick="doInputFieldSet('{!tl.Id}', '{!TASK_KIND}', '{!tl.Name}', '{!paramTaskMap[tl.Id]}', '')">&nbsp;{!tl.Name}&nbsp;({!toDoListCntMap[tl.Id]})</td>
+					<td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', '{!TASK_KIND}', '{!tl.Name}', '{!paramTaskMap[tl.Id]}', '')"><apex:outputText escape="false" value="{!taskTagsMap[tl.Id]}"/></td>
+					<td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', '{!TASK_KIND}', '{!tl.Name}', '{!paramTaskMap[tl.Id]}', '')"></td>
+				</tr>
+				<apex:repeat value="{!toDoMap[tl.Id]}" var="dl">
+					<tr data-parent="{!tl.Id}" class="{!SUBSTITUTE(tl.Id,' ', '')}" style="display: none;">
+						<td class="tdBorder" onclick="doInputFieldSet('{!dl.Id}', '{!TODO_KIND}', '{!dl.ToDo__c}', '{!paramTodoMap[dl.Id]}', '{!dl.Note__c}')"></td>
+						<td class="tdRightNotBorder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td class="tdLeftNotBorder" onclick="doInputFieldSet('{!dl.Id}', '{!TODO_KIND}', '{!dl.ToDo__c}', '{!paramTodoMap[dl.Id]}', '{!dl.Note__c}')"><apex:outputText escape="false" value="{!dl.ToDo__c}" /></td>
+						<td class="tdBorder" onclick="doInputFieldSet('{!dl.Id}', '{!TODO_KIND}', '{!dl.ToDo__c}', '{!paramTodoMap[dl.Id]}', '{!dl.Note__c}')"><apex:outputText escape="false" value="{!todoTagsMap[dl.Id]}"/></td>
+						<td class="tdBorder" onclick="doInputFieldSet('{!dl.Id}', '{!TODO_KIND}', '{!dl.ToDo__c}', '{!paramTodoMap[dl.Id]}', '{!dl.Note__c}')">{!dl.Note__c}</td>
+					</tr>
+				</apex:repeat>
+			</apex:repeat>
+		<!-- </apex:repeat> -->
+	</apex:repeat>
+</table>
+</apex:outputPanel>
+<apex:inputhidden id="inputId" value="{!hiddenId}" />
+<apex:inputhidden id="inputKind" value="{!hiddenKind}" />
+</apex:form>
+
+<div id="dialog-modal" title="New ToDo">
+	<apex:outputPanel id="dialogPanel">
+		<c:Milestone1_ToDoTagComponent inputId="{!hiddenId}" PageController="{!selfReference}" />
+	</apex:outputPanel>
+</div>
+
+<script>
+var j$ = jQuery.noConflict();
+j$(function() {
+	j$("#dialog-modal").dialog({
+		modal: true,
+		autoOpen: false,
+		width: 600,
+		buttons: {
+			"save": function() {
+				addSave();
+				j$( this ).dialog( "close" );
+				doData();
+			},
+				"cancel": function() {
+				j$( this ).dialog( "close" );
+			}
+		}
+	});
+});
+</script>
+
+</apex:page>

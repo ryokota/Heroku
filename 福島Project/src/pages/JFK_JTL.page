@@ -1,0 +1,96 @@
+<apex:page controller="JFK_JTLController" showHeader="false">
+    <head>
+        <style type="text/css">
+            .dateFormat {
+                display: none;
+            }
+            .bPageBlock {
+                border-top: 4px solid rgb(49,148,49);
+            }
+            .pbSubheader {
+                background-color: rgb(126,180,126);
+            }
+        </style>
+    </head>
+    
+    <apex:pageMessages id="msg" rendered="true"/> 
+    <apex:form >
+        <apex:pageBlock title="【JTL】実績報告督促リスト" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="保存" rerender="msg, detailSection, tableSection"/>
+                <apex:commandButton action="{!close}" value="戻る" immediate="true"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="" columns="2" collapsible="true" id="searchSectionSansyo1">
+                    <apex:outputField value="{!JFKCommon.GS_JigyoshoCD__c}"/>
+                    <apex:outputField value="{!JFKCommon.GS_ShikyuJiki__c}"/>
+                    <apex:outputField value="{!JFKCommon.GS_JigyosyoMei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.DaihyousyaYakusyokuShimei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.YubinBango_Shinsei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.Address_Shinsei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.Phone}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_Busyo__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_TantosyaMei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_Renrakusaki__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_IninjoAri__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_Jimusyo_TantosyaMei__c}"/>
+                    <apex:outputField value="{!JFKCommon.JijyosyoTR_ShikyuJiki__r.Account__r.HoseiShido_Aitesaki_Renrakusaki2__c}"/>
+            </apex:pageBlockSection>    
+            
+            <apex:pageBlockSection title="" columns="2" collapsible="true" id="searchSection" rendered="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Kaden_Juryo__c.label}" for="group"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!JTL.JTL_Kaden_Juryo__c}" id="group"/>
+                        <apex:actionSupport event="onchange" action="{!showItems}" rerender="detailSection"/>
+                    </apex:outputPanel>
+              　         </apex:pageBlockSectionItem>
+                <apex:outputLabel value=""/>
+            </apex:pageBlockSection>                
+            
+            <apex:pageBlockSection title="" columns="1" collapsible="true" id="detailSection" rendered="true">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Hizuke__c.label}" rendered="{!renderItems[0]}" for="hizuke"/>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:inputField value="{!JTL.JTL_Hizuke__c}" rendered="{!renderItems[0]}" id="hizuke"/>
+                    </apex:outputPanel>
+              　</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_KadenNaiyo__c.label}" rendered="{!renderItems[2]}" for="naiyo"/>
+                    <apex:inputField value="{!JTL.JTL_KadenNaiyo__c}" rendered="{!renderItems[2]}" id="naiyo" style="width:400px"/>
+              　</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Tantosya__c.label}" rendered="{!renderItems[1]}" for="tanto"/>
+                    <apex:outputField value="{!JTL.JTL_Tantosya__c}" rendered="{!renderItems[1]}" id="tanto"/>
+              　</apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="" columns="1" collapsible="true" id="tableSection" rendered="true">
+                <apex:pageBlockTable value="{!tableJTL}" var="JTL" width="100%" id="blockTable" rendered="true">
+                    <apex:column >
+                        <apex:commandLink action="{!doDelete}" onClick="if (!confirmDelete()) return false;" reRender="blockTable">削除
+                            <apex:param name="id" value="{!JTL.Id}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Kaden_Juryo__c.label}">
+                        <apex:inputField value="{!JTL.JTL_Kaden_Juryo__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Hizuke__c.label}">
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!JTL.JTL_Hizuke__c}"/>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_KadenNaiyo__c.label}">
+                        <apex:inputField value="{!JTL.JTL_KadenNaiyo__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.JFK_CommonTR__c.Fields.JTL_Tantosya__c.label}">
+                        <apex:outputField value="{!JTL.JTL_Tantosya__c}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>審査シート</value>
+    </caseValues>
+    <fields>
+        <label><!-- 判定後のアクション --></label>
+        <name>ActionAfterJudgement__c</name>
+    </fields>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>Biko__c</name>
+    </fields>
+    <fields>
+        <label><!-- カテゴリNo. --></label>
+        <name>CategoryNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- チェック項目 --></label>
+        <name>CheckKomoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- チェック内容解説 --></label>
+        <name>CheckNaiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 審査シート名 --></label>
+        <name>CheckSheetName__c</name>
+        <relationshipLabel><!-- 審査シート --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 判定(1次担当者) --></label>
+        <name>Hantei_1st__c</name>
+        <picklistValues>
+            <masterLabel>NG</masterLabel>
+            <translation><!-- NG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 判定(2次担当者) --></label>
+        <name>Hantei_2nd__c</name>
+        <picklistValues>
+            <masterLabel>NG</masterLabel>
+            <translation><!-- NG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 判定チェックボックス(1次担当者) --></label>
+        <name>Hantei_Checkbox_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- 判定チェックボックス(2次担当者) --></label>
+        <name>Hantei_Checkbox_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補正完了日 --></label>
+        <name>HoseiKanryoBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 補足 --></label>
+        <name>Hosoku__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所名 --></label>
+        <name>JigyosyoMei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所(支給/実績) --></label>
+        <name>JigyosyoTR__c</name>
+        <relationshipLabel><!-- 審査シート --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 人数 --></label>
+        <name>Ninzu__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. --></label>
+        <name>NoForShow__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. --></label>
+        <name>No__c</name>
+    </fields>
+    <fields>
+        <label><!-- P補正済(1次担当者) --></label>
+        <name>P_HoseiZumi_1st__c</name>
+    </fields>
+    <fields>
+        <label><!-- P補正済(2次担当者) --></label>
+        <name>P_HoseiZumi_2nd__c</name>
+    </fields>
+    <fields>
+        <label><!-- パソナ補正可 --></label>
+        <name>PasonaHoseiKa__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者名 --></label>
+        <name>RodosyaMei__c</name>
+    </fields>
+    <fields>
+        <label><!-- 労働者(支給/実績) --></label>
+        <name>RodosyaTR__c</name>
+        <relationshipLabel><!-- 審査シート --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SEQNo --></label>
+        <name>SEQNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 判定用チェックボックス表示 --></label>
+        <name>ShowHanteiCheckBox__c</name>
+    </fields>
+    <fields>
+        <label><!-- テキストボックス表示 --></label>
+        <name>ShowTextBox__c</name>
+    </fields>
+    <fields>
+        <label><!-- 属性 --></label>
+        <name>Zokusei__c</name>
+    </fields>
+    <layouts>
+        <layout>チェックシートレイアウト</layout>
+        <sections>
+            <label><!-- イレギュラー --></label>
+            <section>イレギュラー</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

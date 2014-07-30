@@ -1,0 +1,2693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>BeSureToExploreTheSampleProject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Be sure to explore the sample project, &quot;HOWTO: Get Started with Milestones PM&quot;.</shortDescription>
+        <value>Be sure to explore the sample project, &quot;HOWTO: Get Started with Milestones PM&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Button_Submit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Button_Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>CC_Header</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト詳細画面のヘッダー</shortDescription>
+        <value>の編集</value>
+    </labels>
+    <labels>
+        <fullName>CC_MilestoneTask_SendMail_Flg</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>MilestoneのTaskでのメール送信制御</shortDescription>
+        <value>0</value>
+    </labels>
+    <labels>
+        <fullName>CC_allUserList</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面の選択可能なユーザ</shortDescription>
+        <value>選択可能なユーザ</value>
+    </labels>
+    <labels>
+        <fullName>CC_btn_cancel</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のボタン_キャンセル</shortDescription>
+        <value>キャンセル</value>
+    </labels>
+    <labels>
+        <fullName>CC_btn_save</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のボタン_保存</shortDescription>
+        <value>保存</value>
+    </labels>
+    <labels>
+        <fullName>CC_selectedUserList</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面の選択されたユーザ</shortDescription>
+        <value>選択されたユーザ</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_Delays</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CC_title_Delays</shortDescription>
+        <value>遅延</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_Estimates</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のタイトル_推定</shortDescription>
+        <value>推定</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_UserName</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CC ユーザ名</shortDescription>
+        <value>CC ユーザ名</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_blocked</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のタイトル_ブロック</shortDescription>
+        <value>ブロック</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_info</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のタイトル_情報</shortDescription>
+        <value>情報</value>
+    </labels>
+    <labels>
+        <fullName>CC_title_userList</fullName>
+        <categories>CC_List</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>CCリスト画面のタイトル_ユーザリスト</shortDescription>
+        <value>CCユーザリスト</value>
+    </labels>
+    <labels>
+        <fullName>CapitalExpenditureSTD_01</fullName>
+        <categories>RFA_C04_Capital_Expenditure_STD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CapitalExpenditureSTD_01</shortDescription>
+        <value>Changes made to the Capital Request Details page have not been saved.  To save changes, return to the RFA and press the Complete Update button in Capital Request Details.</value>
+    </labels>
+    <labels>
+        <fullName>Capital_Detail_Guidelines</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capital Detail Guidelines</shortDescription>
+        <value>Select the Investment Objective Category that best represents your overall Capital Project Request and provide a break-out of the request amount by Asset Category. 
+The total of the category amounts entered must match the RFA Request Amount (JPY). Press the ‘Complete Update’ button to save changes.</value>
+    </labels>
+    <labels>
+        <fullName>ClickHere</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click Here</shortDescription>
+        <value>Click Here</value>
+    </labels>
+    <labels>
+        <fullName>ClickHereToInitializeThisApp</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click here to initialize this app</shortDescription>
+        <value>Click here to initialize this app</value>
+    </labels>
+    <labels>
+        <fullName>Community</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Community</shortDescription>
+        <value>Community</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_PreTaskComplete_err</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_PreTaskComplete_err</shortDescription>
+        <value>先行タスクを完了せずにこのタスクの編集はできません。</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Info</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Info</shortDescription>
+        <value>インフォのみ</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Info_En</fullName>
+        <categories>Milestone_Role</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Info_En</shortDescription>
+        <value>Info</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Info_Jp</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Info_Jp</shortDescription>
+        <value>インフォのみ</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_PM</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_PM</shortDescription>
+        <value>プロジェクトマネージャー</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_PM_En</fullName>
+        <categories>Milestone_Role</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_PM_En</shortDescription>
+        <value>Project Manager</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_PM_Jp</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_PM_Jp</shortDescription>
+        <value>プロジェクトマネージャー</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Staff</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Staff</shortDescription>
+        <value>スタッフ</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Staff_En</fullName>
+        <categories>Milestone_Role</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Staff_En</shortDescription>
+        <value>Staff</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Role_Staff_Jp</fullName>
+        <categories>Milestone_Role</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Role_Staff_Jp</shortDescription>
+        <value>スタッフ</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_Task_err_three</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_Task_err_three</shortDescription>
+        <value>７階層の超過作成はできません。</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_err_create</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_err_create</shortDescription>
+        <value>新規作成権限がありません。</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_err_del</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_err_del</shortDescription>
+        <value>削除権限がありません</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_err_edit</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_err_edit</shortDescription>
+        <value>編集権限がありません。</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_err_permission</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_err_permission</shortDescription>
+        <value>権限がありません。</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Milestone_err_pm</fullName>
+        <categories>ErrMsg</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Custom_Milestone_err_pm</shortDescription>
+        <value>プロジェクトチームの追加はプロジェクトマネージャー/所有者のみ可能です。</value>
+    </labels>
+    <labels>
+        <fullName>FR1_70</fullName>
+        <categories>RFA - Q2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FR1.70</shortDescription>
+        <value>Delete Notes &amp; Attachments</value>
+    </labels>
+    <labels>
+        <fullName>ForCommunityAssistance</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For community assistance with Milestones PM, please visit &lt;a href=&quot;http://succes</shortDescription>
+        <value>For community assistance with Milestones PM, please visit &lt;a href=&quot;http://success.salesforce.com/answers&quot;&gt;Salesforce Answers&lt;/a&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>GettingHelp</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Help</shortDescription>
+        <value>Getting Help</value>
+    </labels>
+    <labels>
+        <fullName>ImportantUpper</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>IMPORTANT</shortDescription>
+        <value>IMPORTANT</value>
+    </labels>
+    <labels>
+        <fullName>InitializationComplete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Initialization Complete!</shortDescription>
+        <value>Initialization Complete!</value>
+    </labels>
+    <labels>
+        <fullName>InitializeYourConfiguration</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Initialize your configuration using the button below.</shortDescription>
+        <value>Initialize your configuration using the button below.</value>
+    </labels>
+    <labels>
+        <fullName>LearnMore</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>&lt;a href=&quot;http://blogs.developerforce.com/labs/2011/08/howto-contribute-to-milest</shortDescription>
+        <value>&lt;a href=&quot;http://blogs.developerforce.com/labs/2011/08/howto-contribute-to-milestones-pm-code-not-required-opensource.html&quot;&gt;Learn more&lt;/a&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ALiasNotFound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ALiasNotFound</shortDescription>
+        <value>The alias provided in subject line did not match a milestone alias in Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_AllItems</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AllItems</shortDescription>
+        <value>All Items</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_AllOpenTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AllOpenTasks</shortDescription>
+        <value>All Open Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_AnErrorHasOcurred</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AnErrorHasOcurred</shortDescription>
+        <value>An error has ocurred:</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Back</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_BlockedTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Blocked Tasks</shortDescription>
+        <value>Blocked Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Blocked_Tasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Blocked_Tasks</shortDescription>
+        <value>Blocked Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Calendar</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Calendar</shortDescription>
+        <value>Calendar</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_CalendarLegend</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CalendarLegend</shortDescription>
+        <value>Calendar Legend</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_CheckActive</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Check &quot;Active&quot;</shortDescription>
+        <value>Check &quot;Active&quot;</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ClickNewEmailService</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click &quot;New Email Service&quot;.</shortDescription>
+        <value>Click &quot;New Email Service&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ClickSaveAndNewEmailAddress</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click &quot;Save and New Email Address&quot;.</shortDescription>
+        <value>Click &quot;Save and New Email Address&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ContentIsNotAllowedInProlog</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Content is not allowed in prolog.</shortDescription>
+        <value>Content is not allowed in prolog.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_CurrentExport</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CurrentExport</shortDescription>
+        <value>. Current export would be $1 characters long. Please edit your project and try again</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_DidNotMatch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DidNotMatch</shortDescription>
+        <value>) did not match any milestone.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_EnterAcommand</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EnterAcommand</shortDescription>
+        <value>Enter a command in the form &apos;alias --- description&apos;</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Expenses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Expenses</shortDescription>
+        <value>Expenses</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Filter</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_FilterCalendarBy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FilterCalendarBy</shortDescription>
+        <value>Filter Calendar By</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_FilterProjectBy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestone1_FilterProjectBy</shortDescription>
+        <value>Filter Project By</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Friday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Friday</shortDescription>
+        <value>Friday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_FromUsersNotFound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FromUsersNotFound</shortDescription>
+        <value>The email sender did not match a user in Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_FullMonth</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Full Month</shortDescription>
+        <value>Full Month</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_FullView</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FullView</shortDescription>
+        <value>[Full View]</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_GettingStarted</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Started</shortDescription>
+        <value>Getting Started</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_GiveEmailServiceName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Give a Email Service Name &quot;Email To Milestone Task&quot;.</shortDescription>
+        <value>Give a Email Service Name &quot;Email To Milestone Task&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_GoToSetupDevelopEmailServices</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Go to Setup -&gt; Develop -&gt; Email Services</shortDescription>
+        <value>Go to Setup -&gt; Develop -&gt; Email Services</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Import</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Import</shortDescription>
+        <value>Import</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ImportFailed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Import Failed -- Milestone was unable to import your file.</shortDescription>
+        <value>Import Failed -- Milestone was unable to import your file.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ImportLocalTemplateXML</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ImportLocalTemplateXML</shortDescription>
+        <value>Import Local Template XML</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ImportTemplate</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Import Template</shortDescription>
+        <value>Import Template</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ImportTemplateXML</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ImportTemplateXML</shortDescription>
+        <value>Import Template XML from My Personal Documents</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_InactiveUsersError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestone1_InactiveUsersError</shortDescription>
+        <value>Clone was not successful because one or more records belong to inactive users.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_IncompleteTasksByPriority</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Incomplete Tasks By Priority</shortDescription>
+        <value>Incomplete Tasks By Priority</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_IncompleteTasksByProjects</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Incomplete Tasks By Projects</shortDescription>
+        <value>Incomplete Tasks By Projects</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_InsufficientPrivileges</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insufficient privileges to access project.</shortDescription>
+        <value>Insufficient privileges to access project.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_InsufficientPrivilegesToAccessParentMilestone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Insufficient privileges to access parent milestone.</shortDescription>
+        <value>Insufficient privileges to access parent milestone.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_InvalidName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InvalidName</shortDescription>
+        <value>&apos;Invalid name (length cannot be zero)&apos;</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_InvalidVersion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InvalidVersion</shortDescription>
+        <value>Invalid Version. This project was exported from a different version(</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_LateTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Late Tasks</shortDescription>
+        <value>Late Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Loading</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loading</shortDescription>
+        <value>Loading, please wait...</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Logs</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Logs</shortDescription>
+        <value>Logs</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MainMenu</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MainMenu</shortDescription>
+        <value>Milestones PM - Main Menu</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MaximumPer</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MaximumPer</shortDescription>
+        <value>Maximum per user chatter subscription limit has been exceeded</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestoneApplicationPostInstallation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestone Application Post Installation Instructions</shortDescription>
+        <value>Milestone Application Post Installation Instructions</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestoneClone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MilestoneClone</shortDescription>
+        <value>Milestone Clone</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestoneIsComplete</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestone is Complete, the Task can not be moved</shortDescription>
+        <value>Milestone is Complete, the Task can not be moved</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestoneRecordsToMove</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MilestoneRecordsToMove</shortDescription>
+        <value>Please return to the previous screen and select one or more Milestone records to move.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestoneYouAreAttempting</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>A milestone you are attempting to move is already assigned to this project. Plea</shortDescription>
+        <value>A milestone you are attempting to move is already assigned to this project. Please review your selection and try again.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Milestones</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestones</shortDescription>
+        <value>Milestones</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestonesCalendar</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MilestonesCalendar</shortDescription>
+        <value>Milestones</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestonesOpenTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MilestonesOpenTasks</shortDescription>
+        <value>Milestones &amp; Open Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MilestonesShouldNotBeMoved</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestones should not be moved to different Projects, except through the &quot;Move t</shortDescription>
+        <value>Milestones should not be moved to different Projects, except through the &quot;Move to New Project&quot; button in Milestone list view.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Monday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Monday</shortDescription>
+        <value>Monday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestoneCancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestoneCancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestoneRecordsToMove</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestoneRecordsToMove</shortDescription>
+        <value>Please return to the previous screen and select one or more Milestone records to move.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestoneS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestoneS</shortDescription>
+        <value>Move Milestone(s)</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestoneSave</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestoneSave</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestone_Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestone_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestone_Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestone_Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveMilestone_s</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveMilestone_s</shortDescription>
+        <value>Move Milestone(s)</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskCancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskCancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskDetailAttachmentsRecords</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskDetailAttachmentsRecords</shortDescription>
+        <value>One or more of the selected Task records cannot be moved because it has related Time, Expense, or Notes &amp; Attachments records.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskDetailCancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskDetailCancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskDetailS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskDetailS</shortDescription>
+        <value>Move Task(s)</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskDetailSave</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskDetailSave</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskDetailTaskRecordsToMove</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskDetailTaskRecordsToMove</shortDescription>
+        <value>Please return to the previous screen and select one or more Task records to move.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskRecordsToMove</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskRecordsToMove</shortDescription>
+        <value>Please return to the previous screen and select one or more Task records to move.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskS</shortDescription>
+        <value>Move Task(s)</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MoveTaskSave</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MoveTaskSave</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MyIncompleteTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>My Incomplete Tasks</shortDescription>
+        <value>My Incomplete Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MyMilestonesOnly</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MyMilestonesOnly</shortDescription>
+        <value>My Milestones Only</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MyProjectsAndSubProjectItems</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MyProjectsAndSubProjectItems</shortDescription>
+        <value>My Projects And Sub-Project Items</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MyTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MyTasks</shortDescription>
+        <value>My Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_MyTasksOnly</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>MyTasksOnly</shortDescription>
+        <value>My Tasks Only</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_NewFieldToReplaceInactiveUsers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestone1_NewFieldToReplaceInactiveUsers</shortDescription>
+        <value>Replace All Inactive Users With</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_NewMilestoneName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewMilestoneName</shortDescription>
+        <value>New Milestone Name</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_NewProjectName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NewProjectName</shortDescription>
+        <value>New Project Name</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_NoImportXMLFilesSelected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No import XML files selected. Please select an XML file to import.</shortDescription>
+        <value>No import XML files selected. Please select an XML file to import.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_NoProjects</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No projects!</shortDescription>
+        <value>No projects!</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_OrganizationsVersion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OrganizationsVersion</shortDescription>
+        <value>) than this organizations version(</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_OverdueTasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OverdueTasks</shortDescription>
+        <value>Overdue Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_PleaseUseFormat</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PleaseUseFormat</shortDescription>
+        <value>The line command was incorrect. Please use format &lt;Alias&gt; --- &lt;DESCRIPTION&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectCannotBeNull</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectCannotBeNull</shortDescription>
+        <value>The Project cannot be null. This is a critical error during import of XML. Please try exporting and re-importing.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectClone</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectClone</shortDescription>
+        <value>Project Clone</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectDetail</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectDetail</shortDescription>
+        <value>Project Detail</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectIsTooLarge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectIsTooLarge</shortDescription>
+        <value>Project is too large to export. Total characters must be less than</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectXML</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectXML</shortDescription>
+        <value>Project XML Export Process</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectXMLImport</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectXMLImport</shortDescription>
+        <value>Project XML Import Process</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Projects</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Projects</shortDescription>
+        <value>Projects</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectsCalendar</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectsCalendar</shortDescription>
+        <value>Projects</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ProjectsMustBeExported</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ProjectsMustBeExported</shortDescription>
+        <value>). Projects must be exported and imported in same version.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_QuickSearch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>QuickSearch</shortDescription>
+        <value>Quick Search - Project Components</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_RegexFwdRe</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RegexFwdRe</shortDescription>
+        <value>^[ ]*((([Ff][Ww][Dd])|([Rr][Ee]))[ ]*:[ ]*)*</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SalesforceDMLError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SalesforceDMLError</shortDescription>
+        <value>There was a Salesforce DML Error:</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Saturday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Saturday</shortDescription>
+        <value>Saturday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SelectTheApexClass</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select the Apex Class &quot;Milestone1_Email_Handler&quot;.</shortDescription>
+        <value>Select the Apex Class &quot;Milestone1_Email_Handler&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SetAcceptAttachmentsToAll</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Set &quot;Accept Attachments&quot; to &quot;All&quot;.</shortDescription>
+        <value>Set &quot;Accept Attachments&quot; to &quot;All&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SetAcceptEmailFromToAllEmail</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Set &quot;Accept Email From&quot; to &quot;All Email Addresses&quot;.</shortDescription>
+        <value>Set &quot;Accept Email From&quot; to &quot;All Email Addresses&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SetAllFailureResponseOptions</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Set All Failure Response options to &apos;Bounce Message&apos;.</shortDescription>
+        <value>Set All Failure Response options to &apos;Bounce Message&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SettingsAlreadyExistNoChanges</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Settings already exist.  No changes made.</shortDescription>
+        <value>Settings already exist.  No changes made.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SetupNewEmailAddress</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Setup A New Email Address.</shortDescription>
+        <value>Setup A New Email Address.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SubMilestonesCanOnlyGoOneLevelDeep</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sub-milestones can only go one level deep. Please select a top-level milestone a</shortDescription>
+        <value>Sub-milestones can only go one level deep. Please select a top-level milestone as this record\&apos;s parent milestone.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SubjectMissing</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SubjectMissing</shortDescription>
+        <value>The subject line did is empty.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SubjectMissingAlias</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SubjectMissingAlias</shortDescription>
+        <value>The subject line did not contain a milestone alias.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SubjectMissingTask</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SubjectMissingTask</shortDescription>
+        <value>The subject line did not contain a task.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Submit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Summary</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Summary</shortDescription>
+        <value>Summary</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_SummarySearch</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SummarySearch</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Sunday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sunday</shortDescription>
+        <value>Sunday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TaskNotFound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TaskNotFound</shortDescription>
+        <value>A matching task was not found for this Email thread in Salesforce. Salesforce was unable to attach this email to the notes for a task.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TaskYouAreAttempting</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>A task you are attempting to move is already assigned to this milestone. Please</shortDescription>
+        <value>A task you are attempting to move is already assigned to this milestone. Please review your selection and try again.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Tasks</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tasks</shortDescription>
+        <value>Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TasksCalendar</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TasksCalendar</shortDescription>
+        <value>Tasks</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TheProjectCannotBeNull</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The Project cannot be null. This is a critical error during import of XML. Pleas</shortDescription>
+        <value>The Project cannot be null. This is a critical error during import of XML. Please try exporting and re-importing.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TheXMLFileForYourProjectHasBeenSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The XML file for your project has been successfully created, and can be found in</shortDescription>
+        <value>The XML file for your project has been successfully created, and can be found in the My Personal Documents folder.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TheXMLFileIsTooLarge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>The XML file is too large.</shortDescription>
+        <value>The XML file is too large.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Thealias</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Thealias</shortDescription>
+        <value>The alias(</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Thursday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Thursday</shortDescription>
+        <value>Thursday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Times</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Times</shortDescription>
+        <value>Times</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToConfigureTheEmail</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To configure the Email To Task Service</shortDescription>
+        <value>To configure the Email To Task Service</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToUsersNotFound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ToUsersNotFound</shortDescription>
+        <value>The list of recipients did not have any matches to a user in Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToViewXML_FirstHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click here</shortDescription>
+        <value>Click here</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToViewXML_SecondHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>to view the XML file in the My Personal Documents folder.</shortDescription>
+        <value>to view the XML file in the My Personal Documents folder.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToYourProject_FirstHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Click here</shortDescription>
+        <value>Click here</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_ToYourProject_SecondHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>to return to your project.</shortDescription>
+        <value>to return to your project.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TopLevelMilestoneHasPredecessor</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Top Level Milestone has predecessor and cannot be moved.  Remove that predecesso</shortDescription>
+        <value>Top Level Milestone has predecessor and cannot be moved.  Remove that predecessor and try again.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_TopLevelMilestoneHasSuccessors</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Top Level Milestone has successors and cannot be moved.  Redirect those successo</shortDescription>
+        <value>Top Level Milestone has successors and cannot be moved.  Redirect those successors and try again.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Tuesday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tuesday</shortDescription>
+        <value>Tuesday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_UsersNotFound</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UsersNotFound</shortDescription>
+        <value>The User seaches for Assignment (To Address) and/or Ownership (From Address) did not find matches to users in Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_Wednesday</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Wednesday</shortDescription>
+        <value>Wednesday</value>
+    </labels>
+    <labels>
+        <fullName>Milestone1_YourProjectCouldNotSuccessfully</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your project could not successfully be exported to an XML document.</shortDescription>
+        <value>Your project could not successfully be exported to an XML document.</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_RecordType_BI</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Milestone RecordType(BI)</shortDescription>
+        <value>01210000000QwuaAAC</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_RecordType_CokeOne</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Milestone RecordType(CokeOne)</shortDescription>
+        <value>01210000000QwubAAC</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_RecordType_Finance</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Milestone RecordType(Finance)</shortDescription>
+        <value>01210000000QwucAAC</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_RecordType_General</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Milestone RecordType(General)</shortDescription>
+        <value>01210000000QwudAAC</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_RecordType_Sfdc</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Milestone RecordType(Sfdc)</shortDescription>
+        <value>01210000000QwueAAC</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_ToDo_Err01</fullName>
+        <categories>Milestone ToDo</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>MilestoneのToDoエラーメッセージ01</shortDescription>
+        <value>削除する時に、一覧リストから対象データを選択してください。</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_ToDo_Err02</fullName>
+        <categories>Milestone ToDo</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>MilestoneのToDoエラーメッセージ02</shortDescription>
+        <value>「ToDo名」または「Project」の項目は必須です。</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_ToDo_Err03</fullName>
+        <categories>Milestone ToDo</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>MilestoneのToDoエラーメッセージ03</shortDescription>
+        <value>選択したプロジェクトのメンバーではないとToDo作成ができません。</value>
+    </labels>
+    <labels>
+        <fullName>Milestone_ToDo_Err04</fullName>
+        <categories>Milestone ToDo</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>MilestoneのToDoエラーメッセージ04</shortDescription>
+        <value>プロジェクトが「計画中」または「アクティブ」のみ作成できます。</value>
+    </labels>
+    <labels>
+        <fullName>MilestonesPMISOpenSource</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestones PM is Open Source software.</shortDescription>
+        <value>Milestones PM is Open Source software.</value>
+    </labels>
+    <labels>
+        <fullName>MilestonesPMIsUnsupported</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Milestones PM is unsupported.</shortDescription>
+        <value>Milestones PM is unsupported.</value>
+    </labels>
+    <labels>
+        <fullName>NextSteps</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next Steps</shortDescription>
+        <value>Next Steps</value>
+    </labels>
+    <labels>
+        <fullName>ProjectSummary_FirstHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Project Summary Page</shortDescription>
+        <value>Project Summary Page</value>
+    </labels>
+    <labels>
+        <fullName>ProjectSummary_SecondHalf</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>to start using Milestones PM.</shortDescription>
+        <value>to start using Milestones PM.</value>
+    </labels>
+    <labels>
+        <fullName>Project_RecordType_BI</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Project RecordType(BI)</shortDescription>
+        <value>01210000000QwufAAC</value>
+    </labels>
+    <labels>
+        <fullName>Project_RecordType_CokeOne</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Project RecordType(CokeOne)</shortDescription>
+        <value>01210000000QwugAAC</value>
+    </labels>
+    <labels>
+        <fullName>Project_RecordType_Finance</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Project RecordType(Finance)</shortDescription>
+        <value>01210000000QwuhAAC</value>
+    </labels>
+    <labels>
+        <fullName>Project_RecordType_General</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Project RecordType(General)</shortDescription>
+        <value>01210000000QwuiAAC</value>
+    </labels>
+    <labels>
+        <fullName>Project_RecordType_Sfdc</fullName>
+        <categories>RecordType</categories>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Project RecordType(Sfdc)</shortDescription>
+        <value>01210000000QwujAAC</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalBox00</fullName>
+        <categories>RFA_Button_ApproverList</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalBox00</shortDescription>
+        <value>Approvers</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalBox01</fullName>
+        <categories>RFA_Button_ApproverList</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalBox01</shortDescription>
+        <value>Following is the list of all approvers</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting01</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting01</shortDescription>
+        <value>Approval Routing for</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting02</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting02</shortDescription>
+        <value>RFA Detail</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting03</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting03</shortDescription>
+        <value>Approval Process</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting04</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting04</shortDescription>
+        <value>Approver Order</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting05</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting05</shortDescription>
+        <value>Approver</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting06</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting06</shortDescription>
+        <value>Approval Recommendation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApprovalRouting07</fullName>
+        <categories>VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ApprovalRouting07</shortDescription>
+        <value>Submit for Approval</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ApproverList_Record</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA ApproverList Record</shortDescription>
+        <value>Total Records</value>
+    </labels>
+    <labels>
+        <fullName>RFA_BOD_CC1</fullName>
+        <categories>Corporate Management : Nakano Toshio</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_BOD_CC1</shortDescription>
+        <value>00510000001rhvi</value>
+    </labels>
+    <labels>
+        <fullName>RFA_BOD_CC2</fullName>
+        <categories>Corporate Management : Kawamoto Naruhiko</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_BOD_CC2</shortDescription>
+        <value>00510000001rhvJ</value>
+    </labels>
+    <labels>
+        <fullName>RFA_BOD_CC3</fullName>
+        <categories>Corporate Management : Kato Jun</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_BOD_CC3</shortDescription>
+        <value>00510000001t5tk</value>
+    </labels>
+    <labels>
+        <fullName>RFA_BOD_CC4</fullName>
+        <categories>Corporate Management : Matsuya Yohei</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_BOD_CC4</shortDescription>
+        <value>00510000001t5XH</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_CloseRFA</fullName>
+        <categories>RFA_C07_PageButtonSection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_CloseRFA</shortDescription>
+        <value>Close RFA</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_ReturntoRequester</fullName>
+        <categories>RFA_C07_PageButtonSection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_ReturntoRequester</shortDescription>
+        <value>Return to Requester</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_SendtoCirculation</fullName>
+        <categories>RFA_C07_PageButtonSection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_SendtoCirculation</shortDescription>
+        <value>Send to Circulation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_ShowApprovers</fullName>
+        <categories>RFA_C07_PageButtonSection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_ShowApprovers</shortDescription>
+        <value>Show Approvers</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Button_Submit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Button_Submit</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL010</fullName>
+        <categories>RFA_VFP01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Submission Button Label</shortDescription>
+        <value>Submit Approval Recommendation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL011</fullName>
+        <categories>RFA_VFP01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Complete RFA Button Label</shortDescription>
+        <value>Complete RFA</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL012</fullName>
+        <categories>RFA_VFP01</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Completion Memo Button Label</shortDescription>
+        <value>Create Completion Memo</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL0133</fullName>
+        <categories>RFA_AP05</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL0133</shortDescription>
+        <value>Please add Primary Point of Contact in the RFA Approver/User section</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL026</fullName>
+        <categories>Salesforce.com Current Host</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL026</shortDescription>
+        <value>https://ap.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL043</fullName>
+        <categories>VFT01_UponPostCirculation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL043</shortDescription>
+        <value>00X10000000e7AN</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL044</fullName>
+        <categories>VFT05_Upon Pre-Circulation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL044</shortDescription>
+        <value>00X10000000e7AS</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL045</fullName>
+        <categories>RFA_VFP04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL045</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL046</fullName>
+        <categories>RFA_VFP04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL046</shortDescription>
+        <value>From</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL047</fullName>
+        <categories>RFA_VFP04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL047</shortDescription>
+        <value>CC</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL048</fullName>
+        <categories>VFT07_Completion_Memo</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL048</shortDescription>
+        <value>00X10000000eAx3</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL049</fullName>
+        <categories>VFT08_RFA_Resumes_From_Return_To_Sender</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL049</shortDescription>
+        <value>00X10000000e7AV</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL050</fullName>
+        <categories>RFA_AP05, RFA_AP06</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Small Project Request ( 25MM＜≦50MM )</shortDescription>
+        <value>Medium Project Request</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL051</fullName>
+        <categories>RFA_AP05, RFA_AP06</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Capital Project Request</shortDescription>
+        <value>Capital Project Request</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL057</fullName>
+        <categories>RFAUserRoleTrigger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL057</shortDescription>
+        <value>Unconditionally Approved</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL061</fullName>
+        <categories>RFAGlobalConstants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approver List is not ordered properly</shortDescription>
+        <value>Approver List is not ordered properly</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL062</fullName>
+        <categories>RFAGlobalConstants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please add Approvers to the process before submitting it for Approval</shortDescription>
+        <value>Please add Approvers to the process before submitting it for Approval.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL063</fullName>
+        <categories>RFAGlobalConstants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>There should be either Approvers OR Reviewers to push the RFA into Circulation</shortDescription>
+        <value>There should be either Approvers OR Reviewers to push the RFA into Circulation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL070</fullName>
+        <categories>RFAGLOBALCONSTANTS, RFA_AP05_RFATrigger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cash Spent Additional Years</shortDescription>
+        <value>Additional Years</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL071</fullName>
+        <categories>RFAGlobalConstants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Process has already been submitted for Approval</shortDescription>
+        <value>Process has already been submitted for Approval</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL086</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL086</shortDescription>
+        <value>Update Capital Request Details</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL087</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL087</shortDescription>
+        <value>Complete Update</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL088</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL088</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL089</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL089</shortDescription>
+        <value>Asset Category</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL090</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL090</shortDescription>
+        <value>JPY</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL092</fullName>
+        <categories>RFA_C04</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL092</shortDescription>
+        <value>Investment Category</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL093</fullName>
+        <categories>VFT08 RFA Resumes From Return To Sender</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL093</shortDescription>
+        <value>00X10000000e7AV</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL094</fullName>
+        <categories>RFA_AP05</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL094</shortDescription>
+        <value>The Three Year Cash Spend Total is</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL095</fullName>
+        <categories>RFA_AP05</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL095</shortDescription>
+        <value>The Capital Request Details Total is</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL096</fullName>
+        <categories>RFA_AP05</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL096</shortDescription>
+        <value>less than the RFA Request Amount.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL097</fullName>
+        <categories>RFA_AP05</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL097</shortDescription>
+        <value>greater than the RFA Request Amount.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL100</fullName>
+        <categories>RFA_VF03</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>You do not have permission to override the stage.</shortDescription>
+        <value>You do not have permission to override the stage.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL103</fullName>
+        <categories>RFA_WS_getRFADetails</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>https://fina--sbtest1.cs9.my.salesforce.com</shortDescription>
+        <value>https://ap.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL107</fullName>
+        <categories>RFA_VR02_RequestAmountRequired</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL107</shortDescription>
+        <value>Enter the Request Amount (JPY)</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL111</fullName>
+        <categories>RFA_VR06_InitialBudgetYearRequired</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL111</shortDescription>
+        <value>Select the Budget Year</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL112</fullName>
+        <categories>RFA_VR07_CapitalPlanIndicatorRequired</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL112</shortDescription>
+        <value>Is this an Annual Capital Plan request?  Select Yes or No</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL113</fullName>
+        <categories>RFA_VR08_BudgetTypeRequired</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL113</shortDescription>
+        <value>Select the Budget Type</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL118</fullName>
+        <categories>RFA_VR15_UpdateCordAdmFields</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL118</shortDescription>
+        <value>Coordinator Administration fields cannot be modified while the RFA is in Return to Sender.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL119</fullName>
+        <categories>RFA_VR16_ReturnReasonMandatory</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL119</shortDescription>
+        <value>Please provide the reason for Return. Return Reason is required when selected level for RFA is Return To Sender</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL123</fullName>
+        <categories>Approval Batch Reminder - Subject</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL123</shortDescription>
+        <value>承認待ちRFA申請 / Summary of Pending RFAs for Approval</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL124</fullName>
+        <categories>Approval Batch Reminder - Body1</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL124</shortDescription>
+        <value>&lt;p&gt;
+以下は未承認のRFA申請一覧です。&lt;br/&gt;
+The following RFA(s) are pending your review and approval :&lt;BR/&gt;&lt;BR/&gt;
+&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL125</fullName>
+        <categories>Batch Remonder Genric Body3</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL125</shortDescription>
+        <value>&lt;p&gt;
+&lt;div style=&quot;font-weight:bold&quot;&gt;
+内容を確認する場合にはリンクをクリックし、承認申請リクエストの文書を開いてください。&lt;br/&gt;
+
+Click each link to open the RFA Request Document.
+&lt;/div&gt;
+&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL126</fullName>
+        <categories>Batch Remonder Genric Body Bottom</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL126</shortDescription>
+        <value>&lt;div&gt;
+&lt;span style=&quot;color:red;&quot;&gt;注意：本メールは配信専用のため、返信はできません。&lt;/span&gt;&lt;br/&gt;
+&lt;span style=&quot;color:red;&quot;&gt;NOTE: THIS IS A SYSTEM GENERATED MESSAGE.&lt;/span&gt; Please &lt;span style=&quot;color:red&quot;&gt;DO NOT RESPOND&lt;/span&gt; to this email.
+&lt;/div&gt;</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL127</fullName>
+        <categories>DRAFT Batch Reminder - Subject</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL127</shortDescription>
+        <value>差し戻しRFA申請 / Summary of Return to Requester RFAs Requiring your Attention</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL128</fullName>
+        <categories>DRAFT Batch Reminder - Body1</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL128</shortDescription>
+        <value>&lt;p&gt;
+以下のRFA申請は差し戻しの状態です。申請もしくは申請の取り下げを行ってください。&lt;br/&gt;
+The following RFA(s) in the RFA System created by you are still in Return to Requester Status and require your attention to complete or close the RFA(s).&lt;br/&gt;
+&lt;/p&gt;</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL129</fullName>
+        <categories>Completion Memo Coke Corporate Logo</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL129</shortDescription>
+        <value>https://ap.salesforce.com/servlet/servlet.ImageServer?id=01510000001fC5F&amp;oid=00DN0000000Pze9</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL130</fullName>
+        <categories>CRON Expression for RFA Draft Stage reminder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CL130</shortDescription>
+        <value>0 0 23 1 OCT,JAN,APR,JUL ? 2012-2099</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL131</fullName>
+        <categories>RFA_CL131</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Org Wide Email Address</shortDescription>
+        <value>0D210000000TO7sCAG</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL132</fullName>
+        <categories>RFA_AP09_Realignment</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BCC in case of error in PC Realignment</shortDescription>
+        <value>rfa@ccej.co.jp</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL134</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL134</shortDescription>
+        <value>申請が送信されました / REQUEST HAS BEEN SUBMITTED TO</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL135</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL135</shortDescription>
+        <value>申請の承認ステータス / APPROVAL STATUS OF REQUEST</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL136</fullName>
+        <categories>RFA_VFP06</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL136</shortDescription>
+        <value>The RFA cannot be completed because one or more Approvers have not approved or one or more Info Copy Only users have not been notified.  Please put the RFA back into circulation to notify the pending Approver(s) or Info Copy Only user(s) , or delete them from the Approver list.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL137</fullName>
+        <categories>RUR_RFAUserRoleTrigger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL137</shortDescription>
+        <value>You cannot delete Approver during Circulation Stage. If the Approver is no longer needed, you may Edit the Approver record and enter an Approval Recommendation of No Longer Needed. Approver may be deleted during Pre-Circulation or Post-Circulation stage</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL138</fullName>
+        <categories>RUR_RFAUserRoleTrigger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL138</shortDescription>
+        <value>System has already sent a notification to this user.  The record cannot be modified or deleted. Contact your Location Coordinators.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL139</fullName>
+        <categories>RUR_RFAUserRoleTrigger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CL139</shortDescription>
+        <value>Approver cannot be added to a completed RFA.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL140</fullName>
+        <categories>RFA_VFP13_New_Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approver</shortDescription>
+        <value>01210000000QsJj</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL141</fullName>
+        <categories>RFA_VFP13_New_Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Info Copy Only</shortDescription>
+        <value>01210000000QsJl</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL142</fullName>
+        <categories>RFA_VFP13_New_Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Primary Point of Contact</shortDescription>
+        <value>01210000000QsJm</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL144</fullName>
+        <categories>RFA_VFP13_New_Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA lookup field ID</shortDescription>
+        <value>00N10000003LqJn</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CL145</fullName>
+        <categories>RFA_VFP13_New_Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salesforce ID of RFA Approver/User custom Object</shortDescription>
+        <value>01I10000000tF11</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CapitalExpenditure_Guideline</fullName>
+        <categories>RFA_C04_Capital_Expenditure_STD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_CapitalExpenditure_Guideline</shortDescription>
+        <value>Guideline</value>
+    </labels>
+    <labels>
+        <fullName>RFA_CapitalMgmt_Approver_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA CapitalMgmt Approver 1</shortDescription>
+        <value>00510000001rhua</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Capital_Fix_Asset_Mgr</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA Capital Fix Asset Mgr</shortDescription>
+        <value>00510000001t5aQ</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Capital_Treasury_Mgr</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA Capital Treasury Mgr</shortDescription>
+        <value>00510000001t5YU</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Delete_Flag</fullName>
+        <categories>RFA CCEJ</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA Delete Flag</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Email_BoardApproval</fullName>
+        <categories>To: Requester, PPOC</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Email BoardApproval</shortDescription>
+        <value>00X10000000eC4o</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Email_CloseRFA</fullName>
+        <categories>To: Requester, PPOC (in Draft) &amp; Info Copy, Approver ( Approved / Awaiting Approval ) (in Return to Requester)</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Email CloseRFA</shortDescription>
+        <value>00X10000000eC11</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Email_CompleteRFA</fullName>
+        <categories>To: Requester, PPOC, Info Copy, Approver</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Email CompleteRFA</shortDescription>
+        <value>00X10000000eAx3</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Email_ResumefromReturntoRequester</fullName>
+        <categories>To: Approver(&quot;Approved&quot;/&quot;Awaiting for Approval&quot; at last time)</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Email ResumefromReturntoRequester</shortDescription>
+        <value>00X10000000eAwy</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Email_ReturntoRequester</fullName>
+        <categories>To: Requester, PPOC, Info Copy, Approver(Approved/Waiting for Approval)</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Email ReturntoRequester</shortDescription>
+        <value>00X10000000eBWr</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_AssignPPOC_Approver</fullName>
+        <categories>RFA_VFP03_ApprovalRouting</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_AssignPPOC_Approver</shortDescription>
+        <value>There should be either Approvers OR Reviewers to push the RFA into Circulation.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_Attachment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_Attachment</shortDescription>
+        <value>Attachment is needed.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_CapitalExpenditureNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_CapitalExpenditureNumber</shortDescription>
+        <value>Please enter the whole number without any commas or special characters.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_CommentRQ</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_CommentRQ</shortDescription>
+        <value>Please enter Condition / Reason.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_DeleteCM_Mgr</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_DeleteCM_Mgr</shortDescription>
+        <value>Capital Management or Manager can&apos;t be deleted.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_MissingData</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_MissingData</shortDescription>
+        <value>Error: Missing or Invalid Data for Required Fields.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_NoEditPermission</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_NoEditPermission</shortDescription>
+        <value>You don&apos;t have edit permission during circulation.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_PPOC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_PPOC</shortDescription>
+        <value>Can&apos;t delete all Primary Point of Contact.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_RQAmount_3year</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_RQAmount_3year</shortDescription>
+        <value>The Three Year Cash Spend Total is less/more than the RFA Request Amount.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_RQAmount_CapitalR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_RQAmount_CapitalR</shortDescription>
+        <value>The Capital Request Details Total is less/more than the RFA Request Amount.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_ReturnReason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_ReturnReason</shortDescription>
+        <value>Please input Return Reason.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_ErrorMsg_SelectRecommendation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_ErrorMsg_SelectRecommendation</shortDescription>
+        <value>Please select a Recommendation.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_FR1_50</fullName>
+        <categories>RFA - Phase2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_FR1.50</shortDescription>
+        <value>Show Coordinator</value>
+    </labels>
+    <labels>
+        <fullName>RFA_FR1_51_01</fullName>
+        <categories>RFA - Phase2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_FR1.51_01</shortDescription>
+        <value>7. Viewer - All</value>
+    </labels>
+    <labels>
+        <fullName>RFA_FR1_51_02</fullName>
+        <categories>RFA - Phase2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_FR1.51_02</shortDescription>
+        <value>8. Viewer - Capital Only</value>
+    </labels>
+    <labels>
+        <fullName>RFA_FR1_89</fullName>
+        <categories>RFA - Phase2</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_FR1.89</shortDescription>
+        <value>Not Applicable</value>
+    </labels>
+    <labels>
+        <fullName>RFA_History</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA History</shortDescription>
+        <value>RFA History</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_CapitalExpenditureUpdate</fullName>
+        <categories>RFA_C04_Capital_Expenditure_STD</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_CapitalExpenditureUpdate</shortDescription>
+        <value>Changes made to the Capital Request Details page have not been saved. To save changes, return to the RFA and press the Complete Update button in Capital Request Details.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_CloseReason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_CloseReason</shortDescription>
+        <value>Please input Close Reason.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_Confirmation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_Confirmation</shortDescription>
+        <value>Are you sure?</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_EJComment_Approval</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_EJComment_Approval</shortDescription>
+        <value>Add comment in both Japanese and English, if any non-Japanese recipient is involved in the approval process (either approver or info copy).</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_EJComment_Circulation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_EJComment_Circulation</shortDescription>
+        <value>Both Japanese and English comments are required, if non-Japanese recipients are involved in the approval process.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_SelectApprover</fullName>
+        <categories>Interface Caution</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_SelectApprover</shortDescription>
+        <value>In the case that the pre-set route does not reflect the up-to-date reporting line,
+requester will modify the pre-set approvers.</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Msg_SelectApprover2</fullName>
+        <categories>Interface Caution</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Msg_SelectApprover2</shortDescription>
+        <value>( e.g. Should no manager show up in the default loading, please add them manually.)</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Override01</fullName>
+        <categories>VFP02_Override</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Override01</shortDescription>
+        <value>RFA Override Action</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Override02</fullName>
+        <categories>VFP02_Override</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Override02</shortDescription>
+        <value>Return Reason</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDFGuideline1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA PDFGuideline1</shortDescription>
+        <value>Objectives/Rationale/Background</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDFGuideline2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA PDFGuideline2</shortDescription>
+        <value>Benefits/Financial Metrics/Assumptions</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDFGuideline3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA PDFGuideline3</shortDescription>
+        <value>Cost Estimates</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDFGuideline4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA PDFGuideline4</shortDescription>
+        <value>Risks and Alternatives</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDFGuideline5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA PDFGuideline5</shortDescription>
+        <value>Other Considerations</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Attendees</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Attendees</shortDescription>
+        <value>参加者情報</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Benefits_Financial_Metrics_Assumptions</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Benefits / Financial Metrics / Assumptions</shortDescription>
+        <value>実施効果(定性・定量)と前提条件</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Business_Case</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Business Case</shortDescription>
+        <value>ビジネスケース</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Business_Case_Financials</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Business Case Financials</shortDescription>
+        <value>ビジネスケース 財務管理</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_COA_Category</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>COA Category</shortDescription>
+        <value>COAカテゴリー</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Capital_Request_Details</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Capital Request Details</shortDescription>
+        <value>資産申請詳細</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Cost_Estimates</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Cost Estimates</shortDescription>
+        <value>費用見積り</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Costs</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Costs</shortDescription>
+        <value>費用詳細</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Detailed_Business_Trip_Information</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Detailed Business Trip Information</shortDescription>
+        <value>出張情報</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Detailed_Entertainment_Information</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Detailed Entertainment Information</shortDescription>
+        <value>詳細</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_General_Information</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>General Information</shortDescription>
+        <value>一般情報</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_In_the_case_of_overseas_trip_please_fill_in_fields_below_for_insurance</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>In the case of overseas trip, please fill in fields below for insurance purpose.</shortDescription>
+        <value>海外出張の場合は、保険手続きのため下記項目を記入してください</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_NotesAndAttachments</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>NotesAndAttachments</shortDescription>
+        <value>メモ＆添付ファイル</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Objectives_Rationale_Background</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Objectives/Rationale/Background</shortDescription>
+        <value>目的 / 根拠 / 背景</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Other_Considerations</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Other Considerations</shortDescription>
+        <value>その他備考</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Other_Supporting_Documents</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Other Supporting Documents</shortDescription>
+        <value>その他補足資料</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_RFA_Approvers_Users</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>RFA Approvers/Users</shortDescription>
+        <value>RFA承認者/ユーザ</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Related_RFA</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Related RFA</shortDescription>
+        <value>関連RFA(1)</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Related_RFA_2</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Related RFA 2</shortDescription>
+        <value>関連RFA(2)</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Related_RFA_3</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Related RFA 3</shortDescription>
+        <value>関連RFA(3)</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Remarks</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Remarks</shortDescription>
+        <value>備考</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Request_Details</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Request Details</shortDescription>
+        <value>申請詳細</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Risks_and_Alternatives</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Risks and Alternatives</shortDescription>
+        <value>リスクとリスク軽減策</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Three_Year_Cash_Spend</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Three Year Cash Spend</shortDescription>
+        <value>3ヵ年現金支出</value>
+    </labels>
+    <labels>
+        <fullName>RFA_PDF_Where_the_costs_per_person_exceed_15_000_please_provide_further</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Where the costs per person exceed ¥15,000, please provide further explanation.</shortDescription>
+        <value>一人当たりの単価が15,000円を超える場合、理由を記載してください。</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Project_Finance</fullName>
+        <categories>1st Approver for CokeOne Travel Expense/Entertainment</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA Project Finance</shortDescription>
+        <value>00510000001t5jY</value>
+    </labels>
+    <labels>
+        <fullName>RFA_RQClose01</fullName>
+        <categories>RFA_Requester_Close</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_RQClose01</shortDescription>
+        <value>RFA Close Action</value>
+    </labels>
+    <labels>
+        <fullName>RFA_RQClose02</fullName>
+        <categories>RFA_Requester_Close</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_RQClose02</shortDescription>
+        <value>Close Reason</value>
+    </labels>
+    <labels>
+        <fullName>RFA_RQClose03</fullName>
+        <categories>RFA_Requester_Close</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_RQClose03</shortDescription>
+        <value>Close RFA</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Recommendation01</fullName>
+        <categories>VFP05_ApprovalRecommendation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Recommendation01</shortDescription>
+        <value>Approval Recommendation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Recommendation02</fullName>
+        <categories>VFP05_ApprovalRecommendation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Recommendation02</shortDescription>
+        <value>Act on Behalf of</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Recommendation03</fullName>
+        <categories>VFP05_ApprovalRecommendation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Recommendation03</shortDescription>
+        <value>Recommendation</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Recommendation04</fullName>
+        <categories>VFP05_ApprovalRecommendation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Recommendation04</shortDescription>
+        <value>Condition / Reason</value>
+    </labels>
+    <labels>
+        <fullName>RFA_Recommendation05</fullName>
+        <categories>VFP05_ApprovalRecommendation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA_Recommendation05</shortDescription>
+        <value>Comment</value>
+    </labels>
+    <labels>
+        <fullName>RFA_System</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RFA System</shortDescription>
+        <value>00510000001roUK</value>
+    </labels>
+    <labels>
+        <fullName>Small_Request_Guidelines</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Small Request Guidelines</shortDescription>
+        <value>The Small Project Capital Budget Request template may be used to facilitate the completion of this section as it will enable you to enter multiple projects or investments and summarize the request amounts by Asset Category and Investment Objective Category. 
+The total of the category amounts entered must match the RFA Request Amount (JPY). Press the ‘Complete Update’ button to save changes.</value>
+    </labels>
+    <labels>
+        <fullName>StartCreatingYourFirstProject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Start creating your first project.</shortDescription>
+        <value>Start creating your first project.</value>
+    </labels>
+    <labels>
+        <fullName>ThisSampleProjectIncludes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>This sample project includes the remaining configuration steps as well as ideas</shortDescription>
+        <value>This sample project includes the remaining configuration steps as well as ideas on how you can get the most out of Milestones PM.</value>
+    </labels>
+    <labels>
+        <fullName>Three_Year_Cash_Spend</fullName>
+        <language>ja</language>
+        <protected>false</protected>
+        <shortDescription>Three Year Cash Spend</shortDescription>
+        <value>3ヵ年現金支出</value>
+    </labels>
+    <labels>
+        <fullName>ToSubmitIdeasOrIssues</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To submit ideas or issues, please visit &lt;a href=&quot;https://github.com/ForceDotComL</shortDescription>
+        <value>To submit ideas or issues, please visit &lt;a href=&quot;https://github.com/ForceDotComLabs/Milestones-PM&quot;&gt;Milestones PM on Github&lt;/a&gt;.</value>
+    </labels>
+    <labels>
+        <fullName>ViewTheGettingStartedProject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View the &quot;Getting Started&quot; project created as part of your initial configuration</shortDescription>
+        <value>View the &quot;Getting Started&quot; project created as part of your initial configuration.</value>
+    </labels>
+    <labels>
+        <fullName>WeWelcomeYourIssueReports</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>We welcome your issue reports, ideas, documentation, code tweaks and all other p</shortDescription>
+        <value>We welcome your issue reports, ideas, documentation, code tweaks and all other participation.</value>
+    </labels>
+    <labels>
+        <fullName>WelcomeToMilestonesPM</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Welcome to Milestones PM - Project Management</shortDescription>
+        <value>Welcome to Milestones PM - Project Management</value>
+    </labels>
+    <labels>
+        <fullName>YouCanNowGoTo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You can now go to your project summary page to see the sample project we install</shortDescription>
+        <value>You can now go to your project summary page to see the sample project we installed.</value>
+    </labels>
+    <labels>
+        <fullName>YourNextFewSteps</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your next few steps are easy.</shortDescription>
+        <value>Your next few steps are easy.</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244243979
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244244337
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244248030
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244252025
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244253305
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244253688
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244305238
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244305872
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244320551
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244323380
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244324564
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244488247
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244490505
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244518757
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244520405
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244525482
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244525714
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244526016
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244528754
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244545259
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244555232
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244559510
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244562570
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244565364
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244569119
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244572083
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244575044
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244577742
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244580258
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244582219
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244584802
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244587687
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244590637
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244593190
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244595568
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244598382
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244600378
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244602562
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244606024
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244607816
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244608762
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244610039
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244610272
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244610490
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244610747
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244622864
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244626048
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244626702
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244627504
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244628219
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244628798
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244655788
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244658335
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244662189
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244664853
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244669588
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244674363
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244679499
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244683168
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244687674
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244692369
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244699148
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244703975
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244708588
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244713089
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244717483
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244734620
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244735383
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244752617
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1384244767765
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244769359
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244772867
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384244774297
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244777322
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244777822
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244799491
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244807630
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244811123
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244834951
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244836360
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244838805
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244851541
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244857039
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244865982
+activated,editor,com.salesforce.ide.ui.editors,28.0.1.201309101331,"com.salesforce.ide.ui.editors.apex",1384244867778
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244871754
+error,log,,,"ERROR [2013-11-12 17:27:52,723] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244872728
+error,log,,,"ERROR [2013-11-12 17:27:52,728] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244872731
+error,log,,,"ERROR [2013-11-12 17:27:52,731] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244872734
+error,log,,,"ERROR [2013-11-12 17:27:59,741] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244879744
+error,log,,,"ERROR [2013-11-12 17:27:59,744] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244879748
+error,log,,,"ERROR [2013-11-12 17:27:59,749] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244879752
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244881685
+error,log,,,"ERROR [2013-11-12 17:28:06,763] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244886766
+error,log,,,"ERROR [2013-11-12 17:28:06,766] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244886769
+error,log,,,"ERROR [2013-11-12 17:28:06,769] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244886772
+error,log,,,"ERROR [2013-11-12 17:28:16,794] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244896797
+error,log,,,"ERROR [2013-11-12 17:28:16,798] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244896801
+error,log,,,"ERROR [2013-11-12 17:28:16,801] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244896804
+error,log,,,"ERROR [2013-11-12 17:28:18,809] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244898812
+error,log,,,"ERROR [2013-11-12 17:28:18,812] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244898816
+error,log,,,"ERROR [2013-11-12 17:28:18,816] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244898820
+error,log,,,"ERROR [2013-11-12 17:28:21,325] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244901328
+error,log,,,"ERROR [2013-11-12 17:28:21,328] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244901331
+error,log,,,"ERROR [2013-11-12 17:28:21,331] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244901334
+error,log,,,"ERROR [2013-11-12 17:28:24,341] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244904344
+error,log,,,"ERROR [2013-11-12 17:28:24,344] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244904348
+error,log,,,"ERROR [2013-11-12 17:28:24,348] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244904351
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244922067
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244922445
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244922992
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244923497
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244923891
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244924114
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244924315
+error,log,,,"ERROR [2013-11-12 17:28:44,867] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244924868
+error,log,,,"ERROR [2013-11-12 17:28:44,868] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244924869
+error,log,,,"ERROR [2013-11-12 17:28:44,869] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244924870
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244925652
+error,log,,,"ERROR [2013-11-12 17:28:46,375] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244926377
+error,log,,,"ERROR [2013-11-12 17:28:46,378] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244926380
+error,log,,,"ERROR [2013-11-12 17:28:46,380] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244926384
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244927581
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244927811
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244928111
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244928305
+error,log,,,"ERROR [2013-11-12 17:28:48,888] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244928891
+error,log,,,"ERROR [2013-11-12 17:28:48,891] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244928893
+error,log,,,"ERROR [2013-11-12 17:28:48,894] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244928897
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244929702
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244929915
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244930118
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244930311
+error,log,,,"ERROR [2013-11-12 17:28:50,901] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244930904
+error,log,,,"ERROR [2013-11-12 17:28:50,904] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244930907
+error,log,,,"ERROR [2013-11-12 17:28:50,907] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244930910
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244932026
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244932205
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244932370
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384244932554
+error,log,,,"ERROR [2013-11-12 17:28:53,415] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244933418
+error,log,,,"ERROR [2013-11-12 17:28:53,418] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244933421
+error,log,,,"ERROR [2013-11-12 17:28:53,421] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244933424
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244952810
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244954502
+error,log,,,"ERROR [2013-11-12 17:29:15,439] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244955442
+error,log,,,"ERROR [2013-11-12 17:29:15,442] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244955445
+error,log,,,"ERROR [2013-11-12 17:29:15,445] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244955448
+error,log,,,"ERROR [2013-11-12 17:29:19,952] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244959955
+error,log,,,"ERROR [2013-11-12 17:29:19,955] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244959958
+error,log,,,"ERROR [2013-11-12 17:29:19,958] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244959962
+error,log,,,"ERROR [2013-11-12 17:29:21,966] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244961969
+error,log,,,"ERROR [2013-11-12 17:29:21,969] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244961972
+error,log,,,"ERROR [2013-11-12 17:29:21,972] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244961975
+error,log,,,"ERROR [2013-11-12 17:29:24,607] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244964608
+error,log,,,"ERROR [2013-11-12 17:29:24,608] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244964609
+error,log,,,"ERROR [2013-11-12 17:29:24,609] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244964610
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244968677
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244969656
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244974468
+error,log,,,"ERROR [2013-11-12 17:29:35,187] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244975190
+error,log,,,"ERROR [2013-11-12 17:29:35,190] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244975193
+error,log,,,"ERROR [2013-11-12 17:29:35,193] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244975196
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384244978527
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384244981159
+error,log,,,"ERROR [2013-11-12 17:29:41,720] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244981723
+error,log,,,"ERROR [2013-11-12 17:29:41,723] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384244981736
+error,log,,,"ERROR [2013-11-12 17:29:41,737] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384244981740
+error,log,,,"ERROR [2013-11-12 17:30:01,757] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245001761
+error,log,,,"ERROR [2013-11-12 17:30:01,761] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245001764
+error,log,,,"ERROR [2013-11-12 17:30:01,765] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245001768
+error,log,,,"ERROR [2013-11-12 17:30:03,773] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245003775
+error,log,,,"ERROR [2013-11-12 17:30:03,776] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245003779
+error,log,,,"ERROR [2013-11-12 17:30:03,779] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245003782
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245013816
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245015906
+error,log,,,"ERROR [2013-11-12 17:30:20,370] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245020372
+error,log,,,"ERROR [2013-11-12 17:30:20,372] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245020374
+error,log,,,"ERROR [2013-11-12 17:30:20,374] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245020376
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245032875
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245034795
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245043909
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245045440
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245056748
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245058762
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245069118
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245073430
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245086249
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245090526
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245102948
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104054
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104254
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104446
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104612
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104787
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245104947
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245105125
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245105286
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245105526
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245105993
+error,log,,,"ERROR [2013-11-12 17:31:46,840] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245106843
+error,log,,,"ERROR [2013-11-12 17:31:46,843] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245106845
+error,log,,,"ERROR [2013-11-12 17:31:46,846] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245106848
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.cut",1384245115137
+error,log,,,"ERROR [2013-11-12 17:31:56,862] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245116865
+error,log,,,"ERROR [2013-11-12 17:31:56,865] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245116867
+error,log,,,"ERROR [2013-11-12 17:31:56,867] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245116871
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245118120
+error,log,,,"ERROR [2013-11-12 17:31:58,875] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245118879
+error,log,,,"ERROR [2013-11-12 17:31:58,879] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245118883
+error,log,,,"ERROR [2013-11-12 17:31:58,883] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245118887
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.undo",1384245119249
+error,log,,,"ERROR [2013-11-12 17:32:01,894] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245121898
+error,log,,,"ERROR [2013-11-12 17:32:01,898] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245121902
+error,log,,,"ERROR [2013-11-12 17:32:01,902] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245121905
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245122058
+error,log,,,"ERROR [2013-11-12 17:32:02,908] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245122929
+error,log,,,"ERROR [2013-11-12 17:32:02,929] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245122934
+error,log,,,"ERROR [2013-11-12 17:32:02,934] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245122937
+error,log,,,"ERROR [2013-11-12 17:32:10,449] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245130452
+error,log,,,"ERROR [2013-11-12 17:32:10,452] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245130455
+error,log,,,"ERROR [2013-11-12 17:32:10,455] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245130458
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245132710
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245132882
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133043
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133212
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133378
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133536
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133693
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245133873
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134048
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134223
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134369
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134525
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134677
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245134854
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245135027
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1384245135308
+error,log,,,"ERROR [2013-11-12 17:32:15,963] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245135965
+error,log,,,"ERROR [2013-11-12 17:32:15,966] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245135968
+error,log,,,"ERROR [2013-11-12 17:32:15,968] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245135972
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245146641
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245147648
+error,log,,,"ERROR [2013-11-12 17:32:28,483] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245148484
+error,log,,,"ERROR [2013-11-12 17:32:28,484] (AstUtils.java:getOffsetFromRowColumn:231) - Unable to compute offset\r\n",1384245148485
+error,log,,,"ERROR [2013-11-12 17:32:28,485] (AstUtils.java:getLength:339) - Unable to compute length\r\n",1384245148486
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245152572
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245154115
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1384245163308
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1384245163832

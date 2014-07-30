@@ -1,0 +1,123 @@
+<apex:page standardController="RFA__c" showHeader="false"  sidebar="false" extensions="RFA_VC_DeleteNotesAndAttachments" id="theMainPage">
+
+<script type="text/javascript">
+
+    
+     
+     if(window.opener==null)
+     {
+      alert('このページをブラウザで直接開くことはできません / Sorry ! You are not allowed to open this page directly in Browser.');
+      window.location='{!defaultURL}';
+     } 
+ 
+      function window_Close() 
+            {
+            try{
+                var elms = document.getElementsByTagName('input'); 
+                var haschecked = false; 
+                    for(var i = 0; i<elms.length; i++)
+                            {
+                                     
+                                    if(elms[i].type =='checkbox' && elms[i].checked == true)
+                                        {
+                                            haschecked = true; 
+                                            break; 
+                                        } 
+                            }
+                if(haschecked)
+                { 
+                    if(window.opener &&  window.opener.parentReload){
+                      
+                      confirmOK=window.confirm( {!$Label.RFA_Msg_Confirmation}
+                        //'よろしいですか？ / Are you Sure?'
+                        );
+                      if(confirmOK) 
+                        {
+                          deleteAttachmentJs();
+                          
+                        }
+                      else
+                        {
+                          return null;
+                        }
+                    }
+                else
+                    {
+                      window.close();
+                    }
+                
+                }
+                else
+                {
+                    alert('削除する添付ファイルまたは備考を選択してください / Please select Attachment/Note to delete.');
+                    return null;
+                }
+                }
+                catch(e){
+                            window.opener.parentReload();
+                           
+                        }
+                        
+                        return false;
+            }
+            
+       function cancel_ParentRefresh()
+            {
+                window.opener.parentReload();
+            }
+</script>
+
+<apex:form >
+<apex:actionFunction action="{!deleteAttachment}" name="deleteAttachmentJs" reRender="thePage" onComplete="window.opener.parentReload();" />
+<apex:pageBlock title="メモ & 添付ファイル / Notes and Attachments" id="thePage">
+
+<apex:pageBlockButtons location="Top">
+<apex:commandButton value="Delete"  onClick="window_Close(); return false;" />
+<apex:commandButton value="Close" onClick="cancel_ParentRefresh()" />
+
+</apex:pageBlockButtons>
+<apex:outputPanel rendered="{!ListCount==0}">
+添付ファイルが見つかりません! / No Attachments and Notes found!
+</apex:outputPanel>
+<apex:pageBlockTable value="{!AttachmentList}" var="n" align="center"  rendered="{!ListCount>0}">
+    <apex:column >
+        
+        <apex:inputCheckbox value="{!n.selected}" />
+    </apex:column> 
+    
+    <apex:column value="{!n.type}" headerValue="種別/Type"/>
+   
+    <apex:column >
+    <apex:facet name="header">題名/Title</apex:facet>
+    <apex:outputField value="{!n.att.name}" rendered="{!n.type=='Attachment'}"/>
+    <apex:outputField value="{!n.nt.title}" rendered="{!n.type=='Note'}"/>
+   </apex:column>
+   
+      <apex:column >
+    <apex:facet name="header">最終更新/Last Modified</apex:facet>
+    <apex:outputField value="{!n.att.LastModifieddate}" rendered="{!n.type=='Attachment'}"/>
+    <apex:outputField value="{!n.nt.LastModifieddate}" rendered="{!n.type=='Note'}"/>
+   </apex:column>
+   
+    <apex:column >
+    <apex:facet name="header">作成者/Created By</apex:facet>
+    <apex:outputField value="{!n.att.createdById}" rendered="{!n.type=='Attachment'}"/>
+    <apex:outputField value="{!n.nt.createdById}" rendered="{!n.type=='Note'}"/>
+    </apex:column>
+    
+    <apex:column >
+    <apex:facet name="header">参照/View File</apex:facet>
+   <apex:outputlink value="{!n.fileURL}" target="_blank" rendered="{!n.type=='Attachment'}"> View </apex:outputlink>
+   </apex:column>
+    
+   
+   
+   
+    
+    
+    
+    
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

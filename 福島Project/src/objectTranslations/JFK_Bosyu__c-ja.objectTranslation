@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>募集M</value>
+    </caseValues>
+    <fields>
+        <label><!-- 募集回 --></label>
+        <name>BosyuKai__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集年度 --></label>
+        <name>BosyuNendo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集 --></label>
+        <name>Bosyu__c</name>
+        <relationshipLabel><!-- 募集M --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所区分 --></label>
+        <name>JigyosyoKBN__c</name>
+        <relationshipLabel><!-- 募集M (事業所区分) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 助成対象期単価(1年目) --></label>
+        <name>JyoseiTanka_1stYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- 助成対象期単価(2年目) --></label>
+        <name>JyoseiTanka_2nsYear__c</name>
+    </fields>
+    <fields>
+        <label><!-- ○回目 --></label>
+        <name>KaiMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用区分 --></label>
+        <name>KoyoKBN__c</name>
+        <relationshipLabel><!-- 募集M (雇用区分) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- この日以降に雇用を開始した労働者が申請対象となる --></help>
+        <label><!-- 募集回基点日 --></label>
+        <name>KoyoKaishiSaihayaBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 雇用形態 --></label>
+        <name>KoyoKeitai__c</name>
+        <relationshipLabel><!-- 募集M (労働時間) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ○年目 --></label>
+        <name>NenMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- ユニークキー --></label>
+        <name>PK__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給時期 --></label>
+        <name>ShikyuJiki_Sushiki__c</name>
+    </fields>
+    <fields>
+        <help><!-- 支給開始日の算出方法
+支給決定日 → 支給決定日が全ての労働者の支給開始日
+未達解消次第 → 支給開始最早日以降、未達が解消次第 --></help>
+        <label><!-- 支給開始日決定方法 --></label>
+        <name>ShikyuKaishiBi_Kettei__c</name>
+        <picklistValues>
+            <masterLabel>支給決定日</masterLabel>
+            <translation><!-- 支給決定日 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>未達解消次第</masterLabel>
+            <translation><!-- 未達解消次第 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 支給対象期間 開始日 --></label>
+        <name>ShikyuKaishiBi__c</name>
+    </fields>
+    <fields>
+        <help><!-- 県庁から指定された、支給開始日となりうる最も早い日付
+各労働者の支給開始日はこの日以降に設定される
+支給開始日が一律に決まる＝支給決定日の場合、こには何も指定しない --></help>
+        <label><!-- 県庁指定日 --></label>
+        <name>ShikyuKaishiSaihayaBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給対象期間 締日 --></label>
+        <name>ShikyuShimeBi__c</name>
+    </fields>
+    <fields>
+        <help><!-- この日までに雇用された労働者が申請対象となる --></help>
+        <label><!-- 申請期間最終日 --></label>
+        <name>ShinseiKikanSaisyuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 助成対象期単価(3年目) --></label>
+        <name>SyoseiTanka_3rdYear__c</name>
+    </fields>
+    <layouts>
+        <layout>JFK_BosyuYoryoレイアウト</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>助成対象期単価</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>募集回</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+        <sections>
+            <label><!-- 支給開始日関連 --></label>
+            <section>支給開始日関連</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>支給時期</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>募集名</nameFieldLabel>
+    <recordTypes>
+        <label><!-- 支給時期 --></label>
+        <name>BosyuYoryo_ShikyuJiki</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 助成対象期単価 --></label>
+        <name>BosyuYoryo_ShikyugakuSansyutu</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 募集回 --></label>
+        <name>BosyuYoryo_YearTimes</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- 日付の大小に誤りがあります。 --></errorMessage>
+        <name>JFK_Bosyu_chkDate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- JDMSyutsuryoku --></label>
+        <name>JDMSyutsuryoku</name>
+    </webLinks>
+</CustomObjectTranslation>

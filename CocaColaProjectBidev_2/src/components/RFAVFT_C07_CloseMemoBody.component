@@ -1,0 +1,38 @@
+<apex:component access="global">
+    <style type="text/css" >
+            .div
+            {
+                 
+                max-width:600px;  
+                           
+            }
+    </style>
+       <apex:attribute name="rfaObj" type="RFAUserRole__c" description="Related to Object for displaying all the related fields"/>
+        <div>
+
+             <p>
+                <u><apex:outputText style="font-style:regular; font-weight:bold; font-size:14px; " value="案件名 (Request Title) :"/></u><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.RequestTitle__c}"/><br/>
+            </p>
+            <p>
+                <u><apex:outputText style="font-style:regular; font-weight:bold; font-size:14px; " value="取り下げ理由(Close Reason) :"/></u><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.RequestTitle__c}"/><br/>
+            </p>
+
+             <!--<p>
+                <u><apex:outputText style="font-style:regular; font-weight:bold; font-size:14px; " value="コストセンター (Cost Center) :"/></u><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.Cost_Center_Number__r.Name}"/><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.Cost_Center_Number__r.Function__c}"/> &nbsp; 
+                <apex:outputText value="{!rfaObj.RFA__r.Cost_Center_Number__r.Cost_Center_Name__c}"/><br/>
+                <apex:outputText value="{!rfaObj.RFA__r.Cost_Center_Number__r.Function_En__c}"/> &nbsp; 
+                <apex:outputText value="{!rfaObj.RFA__r.Cost_Center_Number__r.Cost_Center_Name_En__c}"/><br/>
+             </p>-->             
+             
+             <!--<p>              
+                <u><apex:outputText style="font-style:regular; font-weight:bold; font-size:14px; " value="申請金額 (Request Amount) :"/></u><br/>
+                ¥<apex:outputText value="{0, number, #,###}"><apex:param value="{!rfaObj.RFA__r.RequestAmountFunctionalCurrency__c}"/></apex:outputText><br/>
+           </p>-->
+
+        </div>
+            
+</apex:component>

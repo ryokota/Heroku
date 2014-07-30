@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>事業所TR</value>
+    </caseValues>
+    <fields>
+        <label><!-- 事業所 --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- 事業所TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- エリア区分 --></label>
+        <name>Area_Kubun__c</name>
+    </fields>
+    <fields>
+        <label><!-- エリア名称 --></label>
+        <name>Area_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- エリア --></label>
+        <name>Area__c</name>
+        <picklistValues>
+            <masterLabel>1:県北</masterLabel>
+            <translation><!-- 1:県北 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:県中</masterLabel>
+            <translation><!-- 2:県中 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:県南</masterLabel>
+            <translation><!-- 3:県南 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:会津</masterLabel>
+            <translation><!-- 4:会津 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:南会津</masterLabel>
+            <translation><!-- 5:南会津 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:相双</masterLabel>
+            <translation><!-- 6:相双 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:いわき</masterLabel>
+            <translation><!-- 7:いわき --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 備考 --></label>
+        <name>Biko__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集情報（支給時期） --></label>
+        <name>BosyuJoho_ShikyuJiki__c</name>
+        <relationshipLabel><!-- 事業所TR (募集情報（支給時期）) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 募集情報（年度・募集回） --></label>
+        <name>BosyuJoho_YearTime__c</name>
+        <relationshipLabel><!-- 事業所TR (募集情報（年度・募集回）) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 募集回 --></label>
+        <name>BosyuKai__c</name>
+    </fields>
+    <fields>
+        <label><!-- 募集年度 --></label>
+        <name>BosyuNendo__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生日 --></label>
+        <name>Error_HasseiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生 --></label>
+        <name>Error_Hassei__c</name>
+    </fields>
+    <fields>
+        <label><!-- エラー発生時の担当者 --></label>
+        <name>Error_HasseijinoTantosya__c</name>
+        <relationshipLabel><!-- 事業所TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- エラー内容 --></label>
+        <name>Error_Naiyo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 事業所区分 --></label>
+        <name>JigyoKBN__c</name>
+        <relationshipLabel><!-- 事業所TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 事業所コード --></label>
+        <name>JigyoshoCD__c</name>
+    </fields>
+    <fields>
+        <label><!-- ○回目 --></label>
+        <name>KaiMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 完了報告雇用実績報告書日付 --></label>
+        <name>KanryoHokoku_KoyoJissekiHokokuBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- ○年目 --></label>
+        <name>NenMe__c</name>
+    </fields>
+    <fields>
+        <label><!-- 年度・募集回別事業所TR --></label>
+        <name>Nendo_Kai_Jigyosyo__c</name>
+        <relationshipLabel><!-- 事業所TR --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 整理番号 --></label>
+        <name>SeiriNO__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定日 --></label>
+        <name>ShikyuKetteiDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給決定番号 --></label>
+        <name>ShikyuKetteiNO__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給終了 --></label>
+        <name>Shikyu_Syuryo__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給取消 --></label>
+        <name>Shikyu_Torikeshi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 支給対象締日 --></label>
+        <name>Shikyutaisyo_ShimeBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 申請日 --></label>
+        <name>ShinseiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 提出期間開始日 --></label>
+        <name>TeisyutsuKikan_KaishiBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 提出期間終了日 --></label>
+        <name>TeisyutsuKikan_SyuryouBi__c</name>
+    </fields>
+    <fields>
+        <label><!-- 受付日 --></label>
+        <name>UketsukeBi__c</name>
+    </fields>
+    <layouts>
+        <layout>事業所TRレイアウト</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>事業所情報（募集回）</layout>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>事業所情報（支給時期）</layout>
+        <sections>
+            <label><!-- エラー内容（1列） --></label>
+            <section>エラー内容（1列）</section>
+        </sections>
+        <sections>
+            <label><!-- エラー情報 --></label>
+            <section>エラー情報</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>ID</nameFieldLabel>
+    <recordTypes>
+        <label><!-- 事業所情報（支給時期） --></label>
+        <name>JigyoshoShikyu_Shikyujiki</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 事業所情報（募集回） --></label>
+        <name>JigyoshoShikyu_YearTimes</name>
+    </recordTypes>
+</CustomObjectTranslation>

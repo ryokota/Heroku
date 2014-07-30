@@ -1,0 +1,242 @@
+<apex:page controller="Milestone_BI_ToDoCtrl">
+<style>
+.borderTable {
+
+    border: solid 1px black;
+    border-color:#ECECEC;
+    border-collapse:collapse;
+    padding: 5px;
+    width : 100%;
+}
+.borderTable th{
+    font-weight: bold;
+    height:20px;
+    white-space: normal;
+    border: 1px solid black;
+    background-color: #d60016;
+    color: #FFFFFF;
+}
+.borderTable td{
+    white-space: normal;
+    height:20px;
+}
+
+.tdBorder {
+    border: 1px solid black;
+}
+.tdLeftNotBorder {
+    border: 1px solid black;
+    border-left-style:none;
+}
+.tdRightNotBorder {
+    border: 1px solid black;
+    border-right-style:none;
+}
+
+span.dateFormat {display: none;}
+</style>
+<apex:includeScript value="{!URLFOR($Resource.jQueryGantt, 'jquery.min.js')}"   />
+<apex:stylesheet value="{!URLFOR($Resource.jQueryUI, '/css/ui-lightness/jquery-ui-1.9.1.custom.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/js/jquery-1.8.2.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/js/jquery-ui-1.9.1.custom.min.js')}"/>
+
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+$(document).ready(function(){
+    $j("td[id$=note]").hide();
+    $j("span[id$=inputProject]").hide();
+    $j("span[id$=inputFunc]").show();
+});
+
+function buttonDisable() {
+    $j("input[id$=SaveButton]").attr("disabled", true);
+    $j("input[id$=SaveButton]").addClass("btnDisabled");
+    $j("input[id$=DelButton]").attr("disabled", true);
+    $j("input[id$=DelButton]").addClass("btnDisabled");
+}
+
+function buttonEnable() {
+    $j("input[id$=SaveButton]").removeAttr("disabled");
+    $j("input[id$=SaveButton]").removeClass("btnDisabled");
+    $j("input[id$=DelButton]").removeAttr("disabled");
+    $j("input[id$=DelButton]").removeClass("btnDisabled");
+}
+
+function doChangeAttr(id){
+    $j("tr[data-parent="+ id + "]").toggle();
+    var v = $j("#span_" + id+ " img");
+    if(v.attr("src") == "{!URLFOR($Resource.treeicon,'expand.png')}"){
+        v.attr("src", "{!URLFOR($Resource.treeicon,'collapse.png')}");
+    } else {
+        v.attr("src", "{!URLFOR($Resource.treeicon,'expand.png')}");
+    }
+}
+
+function doInputFieldSet(strId, strKind){
+    
+    var sName = $j("span[id$=todo_" + strId + "]").text();
+    var sTag = $j("span[id$=tag_" + strId + "]").text();
+    var sNote = $j("span[id$=note_" + strId + "]").text();
+    var sDue = $j("span[id$=due_" + strId + "]").text();
+    var sCompleted = $j("input[id$=flg_" + strId + "]").val();
+    
+    $j("input[id$=inputId]").val(strId);
+    $j("input[id$=inputName]").val(sName);
+    $j("input[id$=inputTag]").val(sTag);
+    $j("input[id$=inputNote]").val(sNote);
+    if(sCompleted == "true"){
+        $j("input[id*=inputCompleted]").prop("checked", true);
+    } else {
+        $j("input[id*=inputCompleted]").prop("checked", false);
+    }
+    
+    if(sDue != ''){
+        var date= new Date(Date.parse(sDue));
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        if(month < 10) month = "0" + month;
+        var days = date.getDate();
+        if(days < 10) days = "0" + days;
+        $j("input[id$=inputDate]").val(year + "/" + month + "/" + days);
+    }
+    
+    if(strKind == 'Task'){
+        var sFunc = $j("span[id$=func_" + strId + "]").text();
+        $j("span[id$=inputProject]").hide();
+        $j("span[id$=inputFunc]").show();
+        $j("input[id$=inputFunction]").val(sFunc);
+        $j("[id*=chk]").attr("checked", false);
+        $j("input[id$=inputPro]").val('');
+        //$j("input[id$=inputPro_lkid]").val('');
+    } else {
+        var sProName = $j("span[id$=pro_" + strId + "]").text();
+        //$j("input[id$=inputPro_lkid]").val(strId);
+        $j("input[id$=inputPro]").val(sProName);
+        $j("[id*=chk]").attr("checked", true);
+        $j("span[id$=inputProject]").show();
+        $j("span[id$=inputFunc]").hide();
+        $j("input[id$=inputFunction]").val('');
+    }
+    
+}
+
+//初期化
+function inputReset(){
+    $j("input[id$=inputId]").val('');
+    $j("input[id$=inputFunction]").val('');
+    $j("input[id$=inputName]").val('');
+    $j("input[id$=inputTag]").val('');
+    $j("input[id$=inputNote]").val('');
+    $j("input[id$=inputPro]").val('');
+    $j("input[id$=inputPro_lkid]").val('');
+    $j("input[id$=inputDate]").val('');
+    $j("input[id$=inputCompleted]").attr("checked", false);
+    $j("[id*=chk]").attr("checked", false);
+    checkFlg();
+}
+
+//チェックボックス制御
+function checkFlg(){
+    if($j("[id*=chk]").attr("checked")){
+        $j("span[id$=inputProject]").show();
+        $j("span[id$=inputFunc]").hide();
+        $j("input[id$=inputFunction]").val('');
+        
+    }else{
+        $j("span[id$=inputProject]").hide();
+        $j("span[id$=inputFunc]").show();
+        $j("input[id$=inputPro]").val('');
+        $j("input[id$=inputPro_lkid]").val('');
+    }
+}
+</script>
+
+<apex:form >
+<table>
+    <tr>
+        <td width="140px"><apex:image url="{!URLFOR($Resource.CCEJReportLogo, 'cokeone-logo.png')}" width="120" height="100"/></td>
+        <td>
+            <table>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td style="font-size:xx-large;font-weight: bold;" colspan="3">Tag Management</td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<apex:pageMessages id="error"/>
+<apex:pageBlock title="Input Field">
+    <apex:pageBlockButtons >
+        <apex:commandButton action="{!doSave}" value="Save" id="SaveButton" oncomplete="inputReset()" rerender="listPanel, error"/>
+        <apex:commandButton action="{!doDel}" value="Del" id="DelButton" oncomplete="inputReset()" rerender="listPanel, error"/>
+        <input type="button" class="btn" value="Reset" onclick="inputReset()"/>
+        <br/>
+    </apex:pageBlockButtons>
+    <table>
+        <tr>
+            <td width="5px"><apex:inputCheckBox value="{!inputChk}" id="chk" onclick="checkFlg()"/></td>
+            <td><span style="font-weight:bold;"  id="inputProject">Project : <apex:inputField id="inputPro" value="{!inputObj.Project__c}" /> </span>
+                <span style="font-weight:bold;" id="inputFunc">Function : <apex:inputText id="inputFunction" value="{!inputObj.Function__c}" /></span>
+                            &nbsp;&nbsp;<span style="font-weight:bold;">ToDo : <apex:inputText id="inputName" value="{!inputObj.ToDo__c}" size="50"/></span>
+                            &nbsp;&nbsp;<span style="font-weight:bold;">Completed : <apex:inputField id="inputCompleted" value="{!inputObj.Completed__c}"/> </span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span style="font-weight:bold;">DueDate : </span><apex:inputField id="inputDate" value="{!inputObj.Due_Date__c}"/>&nbsp;&nbsp;<span style="font-weight:bold;">Tag : </span><apex:inputText id="inputTag" value="{!inputTag}" size="50"/>
+            &nbsp;&nbsp;<span style="font-weight:bold;">Note : </span><apex:inputText id="inputNote" value="{!inputObj.Note__c}" size="50"/></td>
+        </tr>
+    </table>
+</apex:pageBlock>
+
+<apex:outputPanel id="listPanel">
+<apex:selectList id="id_carKindList" value="{!selectedValue}" multiselect="false" size="1">
+    <apex:selectOptions value="{!FilterStatus}"/>
+    <apex:actionSupport event="onchange" action="{!onChangeEventAction}" reRender="listPanel"/>
+</apex:selectList>
+<table class="borderTable" id="">
+    <tr>
+        <th width="100px">Function</th>
+        <th width="300px" colspan="2">ToDo</th>
+        <th width="200px">Tag</th>
+        <th width="200px">Note</th>
+        <th>DueDate</th>
+    </tr>
+    <apex:repeat value="{!proRelMap}" var="pw">
+        <tr>
+            <td class="tdBorder"><apex:outputField value="{!proRelMap[pw].proObj.Function__c}" /></td>
+            <td width="10px" class="tdRightNotBorder"><span id="span_{!proRelMap[pw].proObj.Id}"><apex:image url="{!URLFOR($Resource.treeicon,'expand.png')}" onclick="doChangeAttr('{!proRelMap[pw].proObj.Id}')" onmouseover="this.style.cursor='pointer'"/></span></td>
+            <td class="tdLeftNotBorder" >&nbsp;<a href="../{!proRelMap[pw].proObj.Id}">{!proRelMap[pw].proObj.Name}&nbsp;({!proRelMap[pw].childTodoList.size})</a></td>
+            <td class="tdBorder" ></td>
+            <td class="tdBorder" ></td>
+            <td class="tdBorder" ></td>
+        </tr>
+            <apex:repeat value="{!proRelMap[pw].childTodoList}" var="tl">
+                <tr data-parent="{!proRelMap[pw].proObj.Id}" style="display: none;" bgcolor="{!IF(tl.Completed__c,'Silver','')}">
+                    <td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', 'Pro')"><span id="func_{!tl.Id}">{!tl.Function__c}</span><span id="pro_{!tl.Id}" ><apex:outputText style="display:none;" value="{!proRelMap[pw].proObj.Name}"/></span></td>
+                    <td width="10px" class="tdRightNotBorder"></td>
+                    <td class="tdLeftNotBorder" onclick="doInputFieldSet('{!tl.Id}', 'Pro')">&nbsp;&nbsp;<span id="todo_{!tl.Id}">{!tl.ToDo__c}</span>&nbsp;</td>
+                    <td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', 'Pro')"><span id="tag_{!tl.Id}"><apex:outputText escape="false" value="{!todoTagMap[tl.Id]}"/></span></td>
+                    <td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', 'Pro')"><span id="note_{!tl.Id}">{!tl.Note__c}</span></td>
+                    <td class="tdBorder" onclick="doInputFieldSet('{!tl.Id}', 'Pro')"><span id="due_{!tl.Id}" ><apex:outputText value="{0,date,yyyy/MM/dd}"><apex:param value="{!tl.Due_Date__c}" /></apex:outputText></span><input type="hidden" id="flg_{!tl.Id}" value="{!tl.completed__c}"/></td>
+                    
+                </tr>
+                
+            </apex:repeat>
+    </apex:repeat>
+    <apex:repeat value="{!notProjectTodoList}" var="todo">
+        <tr bgcolor="{!IF(todo.Completed__c,'Silver','')}">
+            <td class="tdBorder" onclick="doInputFieldSet('{!todo.Id}', 'Task')"><span id="func_{!todo.Id}">{!todo.Function__c}</span></td>
+            <td colspan="2" class="tdBorder" onclick="doInputFieldSet('{!todo.Id}', 'Task')">&nbsp;<span id="todo_{!todo.Id}">{!todo.ToDo__c}</span>&nbsp;</td>
+            <td class="tdBorder" onclick="doInputFieldSet('{!todo.Id}', 'Task')"><span id="tag_{!todo.Id}"><apex:outputText escape="false" value="{!todoTagMap[todo.Id]}"/></span></td>
+            <td class="tdBorder" onclick="doInputFieldSet('{!todo.Id}', 'Task')"><span id="note_{!todo.Id}">{!todo.Note__c}</span></td>
+            <td class="tdBorder" onclick="doInputFieldSet('{!todo.Id}', 'Task')"><span id="due_{!todo.Id}"><apex:outputText value="{0,date,yyyy/MM/dd}"><apex:param value="{!todo.Due_Date__c}" /></apex:outputText></span><input type="hidden" id="flg_{!todo.Id}" value="{!todo.completed__c}"/></td>
+            
+        </tr>
+        
+    </apex:repeat>
+</table>
+</apex:outputPanel>
+<apex:inputhidden id="inputId" value="{!hiddenId}" />
+</apex:form>
+</apex:page>

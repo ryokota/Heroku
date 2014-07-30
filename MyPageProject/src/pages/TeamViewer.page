@@ -1,0 +1,12 @@
+<apex:page >
+
+<!--タイトル-->
+<apex:sectionheader title="チームのサマリー"></apex:sectionheader>
+<P style="padding-bottom:10px"></P>
+
+<c:ClippingReport reportUrl="/00O10000002yki3" reportTitle="今月の受注の状況"/>
+<c:ClippingReport reportUrl="/00O100000030DQp" reportTitle="延長確認進捗状況"/>
+<c:ClippingReport reportUrl="/00O10000002yo1Y" reportTitle="注意すべき受注進捗（未処理10日経過）"/>
+<c:ClippingReport reportUrl="/00O10000002yo4h" reportTitle="アポ後24時間経過"/>
+<c:ClippingReport reportUrl="/00O10000002yyQa" reportTitle="キャンセル一覧"/>
+</apex:page>

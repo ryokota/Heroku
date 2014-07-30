@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/octet-stream</contentType>
+    <description>Custom javascript code extending the Jquery library. Code contains logic for the opening of popups and parent refresh</description>
+</StaticResource>

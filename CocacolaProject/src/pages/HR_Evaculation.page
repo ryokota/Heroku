@@ -1,0 +1,275 @@
+<apex:page >
+<!-- jquery -->
+<apex:includeScript value="{!$Resource.jQuery}"/>
+<apex:includeScript value="{!$Resource.tableFix}"/>
+<apex:includeScript value="{!URLFOR($Resource.sortableTable, 'tablesorter.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.sortableTable, 'jquery-latest.js')}"/>
+<apex:stylesheet value="{!$Resource.TableSample}"/>
+        <style type="text/css">
+        
+			.sample_02{
+				width:100%;
+				border-collapse: separate;
+				border-spacing: 0px;
+				border-top: 1px solid #ccc;
+				border-left: 1px solid #ccc;
+			}
+			.sample_02 th{
+				width: 25%;
+				padding: 4px;
+				text-align: left;
+				vertical-align: top;
+				color: #444;
+				background-color: #ccc;
+				border-top: 1px solid #fff;
+				border-left: 1px solid #fff;
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+			.sample_02 td{
+				padding: 4px;
+				background-color: #fafafa;
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+			
+		#sortable-table1 {
+			width: 50%;
+			border-collapse: collapse;
+		}
+		#sortable-table1 td, #sortable-table1 th {
+			border: solid 1px black;
+		}
+			
+        </style>
+	<script type="text/javascript">
+	
+
+	    
+	/*
+	$(function(){
+	alert('ファンクション');
+		$('#sortable-table1 tbody').sortable({helper: helper1, cursor: "move", opacity: 0.5});
+		
+	});
+	
+	function helper1(e, tr) {
+		alert('ヘルパー');
+		var $originals = tr.children();
+		var $helper = tr.clone();
+		$helper.children().each(function(index) {
+			$(this).width($originals.eq(index).width());
+		});
+		return $helper;
+	}*/
+	
+	/*
+	var tds = [
+	  ["メラ", "  2"],
+	  ["メラミ", "  6"],
+	  ["トラマナ", "  2"]
+	  ["どらえもん, "  4"]
+	];
+	
+	$(function() {
+	  function draw() {
+	    var tag = '';
+	    $.each(tds, function(i, val) {
+	      tag += '<tr><td>'+ val[0] + '</td><td>' + val[1] + '</td></tr>';
+	    });
+	    $('tbody').html(tag);
+	  }
+	  $('th').click(function() {
+	    var arrow = $('span', this);
+	    var col = $('th').index(this);
+	    if (arrow.html() == '▼') {
+	      arrow.html('▲');
+	      tds.sort(function(a, b) { return a[col] < b[col] ? -1 : 1; });
+	    } else {
+	      arrow.html('▼');
+	      tds.sort(function(a, b) { return b[col] < a[col] ? -1 : 1; });
+	    }
+	    $(this).siblings().find('span').html('');
+	    draw();
+	  });
+	  draw();
+	});
+	
+	
+	*/
+	
+	    //jqueryの場合、$がすでに利用中なのでnoConflictを実行する
+	    jQuery.noConflict();
+	
+	$j(document).ready(function () {
+    $j("[id$=theaddrs]").tablesorter({
+                    headers: {
+                        0: {sorter: 'text'},
+                        1: {sorter: 'text'},
+                        2: {sorter: 'text'},
+                        3: {sorter: 'text'},
+                        4: {sorter: 'text'},
+                        5: {sorter: 'text'},
+                        6: {sorter: 'digit'},
+                        7: {sorter: 'text'},
+                    }
+                });
+
+    });
+	</script>
+	
+<apex:pageBlock id="theaddrsblock">
+
+                    <apex:pageBlockTable value="{!1}" var="a" id="theaddrs" styleClass="tablesorter" headerClass="header">
+                    <apex:column >
+                            <apex:facet name="header">
+                            	I'm Ready
+                            </apex:facet>
+                            	Are You Ready?
+
+                        </apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+<!-- the other columns, closing tags, and that's it -->
+
+<table cellspacing="1" class="tablesorter">             
+    <thead>> 
+        <tr> 
+            <th>first name</th> 
+            <th>last name</th> 
+            <th>age</th> 
+            <th>total</th> 
+            <th>discount</th> 
+            <th>diff</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <tr> 
+            <td>peter</td> 
+            <td>parker</td> 
+            <td>28</td> 
+            <td>9.99</td> 
+            <td>20.3%</td> 
+            <td>+3</td> 
+        </tr> 
+        <tr> 
+            <td>john</td> 
+            <td>hood</td> 
+            <td>33</td> 
+            <td>19.99</td> 
+            <td>25.1%</td> 
+            <td>-7</td> 
+        </tr> 
+        <tr> 
+            <td>clark</td> 
+            <td>kent</td> 
+            <td>18</td> 
+            <td>15.89</td> 
+            <td>44.2%</td> 
+            <td>-15</td> 
+        </tr> 
+        <tr> 
+            <td>bruce</td> 
+            <td>almighty</td> 
+            <td>45</td> 
+            <td>153.19</td> 
+            <td>44%</td> 
+            <td>+19</td> 
+        </tr> 
+        <tr> 
+            <td>bruce</td> 
+            <td>evans</td> 
+            <td>56</td> 
+            <td>153.19</td> 
+            <td>23%</td> 
+            <td>+9</td> 
+        </tr> 
+    </tbody> 
+</table>
+
+	<table class="sample_02" id="sortable-table1">
+		<thead>
+			<tr>
+				<th>SAMPLE02</th>
+				<th>デザイン</th>
+				<th>枠線</th>
+				<th>カラー</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>有料</td>
+				<td>プロ</td>
+				<td>有り</td>
+				<td>２１６色</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+			<tr>
+				<td>無料</td>
+				<td>アマチュア</td>
+				<td>なし</td>
+				<td>モノトーン</td>
+			</tr>
+		</tbody>
+	</table>
+
+</apex:page>
